@@ -10,7 +10,7 @@
         $Name = $_SESSION['user_name'];
         
         $sql = "SELECT u.user_id, u.user_name, u.user_email, u.acc_type, u.since,
-            d.org_name, d.description, d.contact_email, d.contact_phone, d.address, 
+            d.org_id, d.org_name, d.description, d.contact_email, d.contact_phone, d.address, 
             d.website, d.logo_path, d.established_date, d.location, d.mission_and_vision, 
             d.reviews_testimonials, d.country FROM user_account AS u LEFT JOIN org_details AS d 
             ON u.user_name = d.user_name Where u.user_name = '$Name'";
@@ -18,23 +18,25 @@
 
         if (mysqli_num_rows($sql_result) == 1) {
             $row = mysqli_fetch_array($sql_result);
-            $userid = $row['user_id'];
-            $username = $row['user_name'];
-            $useremail = $row['user_email'];
-            $acctype = $row['acc_type'];
+
+            $user_id = $row['user_id'];
+            $user_name = $row['user_name'];
+            $user_email = $row['user_email'];
+            $acc_type = $row['acc_type'];
             $since = $row['since'];
-            $orgname = $row['org_name'];
+            $org_id = $row['org_id'];
+            $org_name = $row['org_name'];
             $description = $row['description'];
-            $emailcontact = $row['contact_email'];
-            $phonecontact = $row['contact_phone'];
-            $established = $row['established_date'];
+            $contact_email = $row['contact_email'];
+            $contact_phone = $row['contact_phone'];
+            $established_date = $row['established_date'];
             $address = $row['address'];
             $website = $row['website'];
             $location = $row['location'];
-            $vision = $row['mission_and_vision'];
-            $rating = $row['reviews_testimonials'];
+            $mission_and_vision = $row['mission_and_vision'];
+            $reviews_testimonials = $row['reviews_testimonials'];
             $country = $row['country'];
-            $logo = $row['logo_path'];
+            $logo_path = $row['logo_path'];
         } 
         else {
             echo "User data not found.";

@@ -39,7 +39,7 @@ body::-webkit-scrollbar {
       rgba(0, 0, 0, 0.9),
       rgba(0, 0, 0, 0.3)
     ),
-    url("/Img/child_pic5.jpg");
+    url("/Root/Landing_Page/bg_4.jpg");
   background-position: center center;
   background-size: cover;
   background-repeat: no-repeat;
@@ -164,10 +164,10 @@ body::-webkit-scrollbar {
   margin-bottom: var(--m-0-6);
 }
 .container .left_portion .work .primary p {
-  margin-bottom: var(--m-1-8);
-  font-size: var(--m-fs);
+  margin-bottom: 10px;
+  font-size: small;
   color: rgba(0, 0, 0, 0.6);
-  line-height: 1.6rem;
+  /* //line-height: 1.6rem; */
 }
 .container .options {
   margin: 4rem 3rem 0 0;
