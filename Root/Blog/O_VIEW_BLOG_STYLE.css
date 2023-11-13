@@ -12,7 +12,7 @@
   --color3: #526D82;      
   --color4: #FF597B;       
   --color5: #f3254e;
-  --color6: #62CDFF;
+  --color6: rgb(97, 205, 255);
   --color7: #0099cc;
   --color8: #33ccff;
   --f1-color: #fff;
@@ -182,46 +182,55 @@
 .blog-details-container h2 {
   margin: 20px 8rem;
   border-bottom: 2px solid black;
+  font-size: medium;
+}
+
+.blog-details-container h4 {
+  margin: 4rem 8rem 0 8rem;
 }
 
 .comments {
     display: flex;
     flex-direction: column;
     margin-top: 1rem;
-    margin: 0 12rem 2rem 12rem;
+    margin: 0 17rem 0 8rem;
 }
 
+.comments .cmnt{
+  padding: 0;
+  margin: 0 0 20px 40px;
+  padding-left: 10px;
+  border-left: 2px solid black;
+}
 .comments .comment {
-    padding: 12px;
-    margin-bottom: 1.3rem;
+    font-size: 1.3rem;
+    padding: 0;
     border-radius: 10px;
-    box-shadow: 0 0 25px rgba(255, 255, 255, 0.5), 0 0 40px rgba(0, 0, 0, 0.3);
 }
-
 .comments .comment-author {
   font-weight: 300;
-  padding: 2px 0;
-  font-size: 1rem;
+  font-size: .7rem;
   color: gray;
 }
-
-.comment-content {
-    margin-left: 10px;
+.comments .time {
+  font-weight: 300;
+  font-size: .7rem;
+  color: gray;
+  margin-left: 1rem;
 }
-
 input[type="text"] {
-    width: 100%;
+    width: 60%;
     padding: 10px;
     border: 1px solid #ddd;
     border-radius: 5px;
+    margin: 0 8rem 1rem 8rem;
 }
-
 button[type="submit"] {
-    background-color: #007bff;
-    color: #fff;
+    background-color: var(--color4);
+    color: var(--f2-color);
     padding: 10px 20px;
     border: none;
     border-radius: 5px;
     cursor: pointer;
-    margin-top: 10px;
+
 }

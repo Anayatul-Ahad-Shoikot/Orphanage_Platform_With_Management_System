@@ -8,7 +8,7 @@
     if (mysqli_num_rows($result) > 0) {
         while ($row = mysqli_fetch_assoc($result)) {
             echo '<div class="blog-post">';
-            echo '<div class="blog-post_img"><img src="' . $row['img_path'] . '" alt="' . $row['title'] . '"></div>';
+            echo '<div class="blog-post_img"><img src="..//..//Blog/' . $row['img_path'] . '" alt="' . $row['title'] . '"></div>';
             echo '<div class="blog-post_info">';
             echo '<h1 class="blog-post_title">' . $row['title'] . '</h1>';
             echo '<div class="blog-post_date">';

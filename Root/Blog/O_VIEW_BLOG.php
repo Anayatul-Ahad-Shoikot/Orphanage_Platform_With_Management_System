@@ -44,30 +44,27 @@
         </div>
         
             <div class="blog-actions">
-                <form action="-----------------" method="post">
-                <input type="hidden" name="post_id" value="<?php echo $post_id; ?>">
+                <form action="/Root/Blog/LIKES_HANDLE_BE.php" method="post">
+                <input type="hidden" name="post_id" value="<?php echo $post_id ?>">
                 <button type="submit" name="like"><i class='bx bxs-like'></i></button>
             </form>
                 <p class="likes-count"><?php echo $likes ?></p>
             </div>
 
             <h2><i class='bx bxs-message-dots'></i> Comments:</h2>
-        
-        <div class="comments">
-            <div>
-            <span class="comment-author">comenter's user_name here</span>
-            <div class="comment">
-                <p class="comment-content">different's user comment here</p>
+
+            <div class="comments">
+              <?php include('/xampp/htdocs/DBMS_Project_Organized_One/Root/Blog/FETCH_COMMENTS_BE.php'); ?>
             </div>
-        </div>
-        </div>
+            
 
-        <form action="process_comment.php" method="post">
-            <input type="text" name="comment" placeholder="Add a comment" required>
-            <button type="submit" name="submit">Submit</button>
-        </form>
+            <h4>Add a comment :</h4>
+            <form action="/Root/Blog/COMMENT_HANDLE_BE.php" method="post">
+                <input type="hidden" name="user_name" value="<?php echo $user_name ?>">
+                <input type="hidden" name="post_id" value="<?php echo $post_id ?>">
+                <input type="text" name="comments" placeholder="Add a comment" required>
+                <button type="submit" name="submit">Comment</button>
+            </form>
     </div>
-
-    <script src="/Frontend_code/Blog/like_handle.js"></script>
 </body>
 </html>
