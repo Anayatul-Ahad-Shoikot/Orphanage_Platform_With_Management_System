@@ -23,7 +23,7 @@
                         header("Location: /Root/Dashboards/Admin/ADMIN_DASH.php");
                         exit(0);
                     } else if ($_SESSION['acc_type'] == "org") {
-                        header("Location: /Root/Dashboards/org.php");
+                        header("Location: /Root/Dashboards/Own-Profiles/Org/PROFILE_DETAILS.php");
                         exit(0);
                     } else {
                         header("Location: /Root/Dashboards/user.php");
