@@ -45,9 +45,8 @@
                         <label>Account type</label>
                         <select name="acc_type" >
                             <option value=''>Select</option>
-                            <option value="male">user</option>
-                            <option value="female">org</option>
-                            <option value="other">admin</option>
+                            <option value="user">user</option>
+                            <option value="org">org</option>
                         </select>
                     </div>
                 </div>

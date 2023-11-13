@@ -19,11 +19,14 @@
                     $_SESSION['user_name'] = $row['user_name'];
                     $_SESSION['acc_type'] = $row['acc_type'];
 
-                    if($_SESSION['acc_type'] == "user") {
-                        header("Location: /Root/Dashboards/user.php");
+                    if($_SESSION['acc_type'] == "admin") {
+                        header("Location: /Root/Dashboards/Admin/ADMIN_DASH.php");
+                        exit(0);
+                    } else if ($_SESSION['acc_type'] == "org") {
+                        header("Location: /Root/Dashboards/org.php");
                         exit(0);
                     } else {
-                        header("Location: /Root/Dashboards/org.php");
+                        header("Location: /Root/Dashboards/user.php");
                         exit(0);
                     }
                 } else {
