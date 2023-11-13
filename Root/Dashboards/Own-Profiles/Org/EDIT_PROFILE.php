@@ -19,15 +19,15 @@
     <header class="header">
         <nav>
             <div class="logo">
-                <a href="/Root/Landing_Page/INDEX.php"><img src="/Root/Landing_Page/LOGO_NoBackground.png" alt="LOGO"></a>
+                <a href="/Root/Home_Page/O_HOME.php"><img src="/Root/Landing_Page/LOGO_NoBackground.png" alt="LOGO"></a>
             </div>
             <div class="links">
                 <ul>
-                    <li><a href="/Root/Landing_Page/INDEX.php">Home</a></li>
+                    <li><a href="/Root/Home_Page/O_HOME.php">Home</a></li>
                     <li><a href="#">Orgs.</a></li>
                     <li><a href="#">Donations</a></li>
                     <li><a href="#">Adoption Rrequest</a></li>
-                    <li><a href="/Root/Dashboards/Own-Profiles/Org/PROFILE_DETAILS.php" class="edit_profile">My Profile</a></li>
+                    <li><a href="/Root/Dashboards/Own-Profiles/Org/PROFILE_DETAILS.php" class="edit_profile">Profile</a></li>
                 </ul>
             </div>
         </nav>
