@@ -10,11 +10,19 @@
     <title>Home</title>
 </head>
 <body>
-    <div class="alert">
+    <div class="alert one">
         <?php
             if(isset($_SESSION['notify'])){
                 echo "<h5>".$_SESSION['notify']."</h5>";
                 unset($_SESSION['notify']);
+            }
+        ?>
+    </div>
+    <div class="alert two">
+        <?php
+            if(isset($_SESSION['status-2'])){
+                echo "<h5>".$_SESSION['status-2']."</h5>";
+                unset($_SESSION['status-2']);
             }
         ?>
     </div>

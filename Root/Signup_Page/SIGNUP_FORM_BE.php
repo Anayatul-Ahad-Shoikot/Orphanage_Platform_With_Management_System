@@ -47,7 +47,8 @@
             $query2 = "INSERT INTO user_details (user_name, full_name, birthdate, user_contact, gender, NID, address, website, work_name, work_add, area, country, image_path) VALUES ('$name', '', '','','','','','','','','','','')";
 
             if (mysqli_query($con, $query1) && mysqli_query($con, $query2)) {
-                header("Location: /Root/Dashboards/user.php");
+                $_SESSION['status-2'] = "Success! Login to continue";
+                header("Location: /Root/Login_page/LOGIN_FORM.php");
                 exit();
             } else {
                 echo "Error: " . mysqli_error($con);
@@ -57,7 +58,8 @@
             $query3 = "INSERT INTO org_details ( org_name, user_name, description, contact_email, contact_phone, address, website, logo_path, established_date, location, mission_and_vision, reviews_testimonials , country) VALUES ('', '$name', '','','','','','','','','','','')";
 
             if (mysqli_query($con, $query1) && mysqli_query($con, $query3)) {
-                header("Location: /Root/Dashboards/org.php");
+                $_SESSION['status-2'] = "Success! Login to continue";
+                header("Location: /Root/Login_page/LOGIN_FORM.php");
                 exit();
             } else {
                 echo "Error: " . mysqli_error($con);
