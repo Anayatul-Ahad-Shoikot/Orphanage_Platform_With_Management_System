@@ -1,7 +1,8 @@
 <?php
 
     include('/xampp/htdocs/DBMS_Project_Organized_One/Includes/db_con.php');
-
+    session_start();
+    $username = $_SESSION['user_name'];
     if (isset($_GET['org_id'])) {
         $org_id = $_GET['org_id'];
         $sql = "SELECT * FROM org_details Where org_id = $org_id";

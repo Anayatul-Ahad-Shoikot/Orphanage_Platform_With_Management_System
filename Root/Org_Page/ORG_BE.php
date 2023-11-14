@@ -3,7 +3,8 @@
     session_start();
     
     $acc_type = $_SESSION['acc_type'];
-    $query = "SELECT * FROM org_details";
+    $user_name = $_SESSION['user_name'];
+    $query = "SELECT * FROM org_details WHERE user_name != '$user_name'";
     $result = mysqli_query($con, $query);
     if (mysqli_num_rows($result) > 0) {
         while ($row = mysqli_fetch_assoc($result)) {
