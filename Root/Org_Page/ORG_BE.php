@@ -9,7 +9,7 @@
         while ($row = mysqli_fetch_assoc($result)) {
             echo '<div class="blog-post">';
             echo '<div class="x">';
-            echo '<div class="blog-post_img"><img src="../../Dashboards/Own-Profiles/Org/' . $row['logo_path'] . '" alt=""></div>';
+            echo '<div class="blog-post_img"><img src="..//..//Dashboards/Own-Profiles/Org/' . $row['logo_path'] . '" alt=""></div>';
             echo '<div class="blog-post_info">';
             echo '<h1 class="blog-post_title">' . $row['org_name'] . '</h1>';
             echo '<div class="blog-post_date">';
@@ -20,10 +20,12 @@
             echo '</div>';
             echo '</div>';
             echo '<div class="info">';
-            if ( $acc == 'org') {
-                echo '<a href="/Frontend_code/Organizations/o_orgView.php?SI=' . $row['SI'] . '"  class="blog-post_cta" > View </a>';
+            if ( $acc_type == 'org' ) {
+                echo '<a href="/Root/Org_Page/O_VIEW_ORG.php?org_id=' . $row['org_id'] . '"  class="blog-post_cta" > View </a>';
+            } else if ( $acc_type == 'admin' ) {
+                echo '<a href="/Root/Org_Page/O_VIEW_ORG.php?org_id=' . $row['org_id'] . '"  class="blog-post_cta" > View </a>';
             } else {
-                echo '<a href="/Frontend_code/Organizations/u_orgView.php?SI=' . $row['SI'] . '"  class="blog-post_cta" > View </a>';
+                echo '<a href="/Root/Org_Page/O_VIEW_ORG.php?org_id=' . $row['org_id'] . '"  class="blog-post_cta" > View </a>';
             }
             echo '</div>';
             echo '</div>';

@@ -32,7 +32,7 @@ body::-webkit-scrollbar {
       rgba(0, 0, 0, 0.9),
       rgba(0, 0, 0, 0.3)
     ),
-    url("/Img/child_pic5.jpg");
+    url("/Root/Landing_Page/bg_4.jpg");
   background-position: center center;
   background-size: cover;
   background-repeat: no-repeat;
