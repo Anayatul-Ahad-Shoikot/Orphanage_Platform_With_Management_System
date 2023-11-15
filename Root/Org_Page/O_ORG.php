@@ -27,11 +27,20 @@
           </div>
       </nav>
     </header>
-    
+    <div class="ctn">
+      <form action="#" method="GET">
+          <input type="text" name="query" placeholder="Search Child">
+          <button type="submit" class="btn"><i class="ri-search-line"></i></button>
+      </form>
+    </div>
     <div class="container">
-        <?php 
+      <?php 
+          if (isset($_GET['query'])){
+            include('/xampp/htdocs/DBMS_Project_Organized_One/Root/Org_Page/SEARCH_ORG_BE.php');
+          } else {
             include('/xampp/htdocs/DBMS_Project_Organized_One/Root/Org_Page/ORG_BE.php');
-        ?>
+          }
+      ?>
     </div>
 </body>
 </html>

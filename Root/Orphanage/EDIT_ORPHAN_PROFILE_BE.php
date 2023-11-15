@@ -168,7 +168,7 @@
         if (isset($_FILES["image"]["name"]) && !empty($_FILES["image"]["name"])) {
             $image_name = $_FILES["image"]["name"];
             $image_tmp_name = $_FILES["image"]["tmp_name"];
-            $image_path = "Uploads/" . $image_name;
+            $image_path = "img/" . $image_name;
             move_uploaded_file($image_tmp_name, $image_path);
             $SQL="UPDATE orphan_profiles SET image_path = '$image_path' WHERE orphan_id= $child LIMIT 1";
             mysqli_query($con, $SQL);

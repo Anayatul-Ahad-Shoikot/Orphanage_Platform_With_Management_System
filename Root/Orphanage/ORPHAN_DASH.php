@@ -67,7 +67,7 @@
             <div class="options">
                 <a href="/Root/Orphanage/REMOVED_ORPHAN_DASH.php" class="btn">Removed Child</a>
                 <a href="/Root/Orphanage/ADD_ORPHAN.php" class="btn">Add Child</a>
-                <form action="/" method="GET">
+                <form action="#" method="GET">
                     <input type="text" name="query" placeholder="Search Child">
                     <button type="submit" class="btn"><i class="ri-search-line"></i></button>
                 </form>
@@ -75,7 +75,11 @@
 
             <div class="plate">
                 <?php
+                if (isset($_GET['query'])){
+                    include('/xampp/htdocs/DBMS_Project_Organized_One/Root/Orphanage/SEARCH_ORPHAN_BE.php');
+                } else {
                     include ('/xampp/htdocs/DBMS_Project_Organized_One/Root/Orphanage/VIEW_ORPHANS_BE.php');
+                }
                 ?>
             </div>
         </div>

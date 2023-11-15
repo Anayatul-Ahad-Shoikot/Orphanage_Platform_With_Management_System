@@ -35,16 +35,24 @@
     <div class="container">
         <h2>Edit Profile</h2>
         <form action="/Root/Dashboards/Own-Profiles/Org/EDIT_PROFILE_BE.php" method="post" enctype="multipart/form-data">
-                
-            <input type="text" name="org_name" placeholder="Organization's Name :" >
-            <input type="text" name="description" placeholder="Description :" >
-            <input type="text" name="contact_email" placeholder="Organization's Email :">
-            <input type="text" name="contact_phone" placeholder="Organization Contact :" >
-            <input type="text" name="address" placeholder="Orgamization's Address :" >
-            <input type="text" name="website" placeholder="Organization's Website :" >
-            <input type="text" name="location" placeholder="Area :">
-            <input type="text" name="mission_and_vision"  placeholder="Vision :">
-            <input type="text" name="country" placeholder="Country :">
+            <label>Organization's Name :</label>
+            <input type="text" name="org_name" placeholder="<?php echo $org_name ?>" >
+            <label>Description :</label>
+            <input type="text" name="description" placeholder="<?php echo $description ?>" >
+            <label>Organization's Email :</label>
+            <input type="text" name="contact_email" placeholder="<?php echo $contact_email ?>">
+            <label>Organization Contact :</label>
+            <input type="text" name="contact_phone" placeholder="<?php echo $contact_phone ?>" >
+            <label>Orgamization's Address :</label>
+            <input type="text" name="address" placeholder="<?php echo $address ?>" >
+            <label>Organization's Website :</label>
+            <input type="text" name="website" placeholder="<?php echo $website ?>" >
+            <label>Area :</label>
+            <input type="text" name="location" placeholder="<?php echo $location ?>">
+            <label>Vision :</label>
+            <input type="text" name="mission_and_vision"  placeholder="<?php echo $mission_and_vision ?>">
+            <label>Country :</label>
+            <input type="text" name="country" placeholder="<?php echo $country ?>">
             <div class="opt">
                 <div class="part">
                     <label>Orginization's Logo :</label>
