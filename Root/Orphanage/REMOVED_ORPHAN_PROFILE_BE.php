@@ -5,7 +5,7 @@
 
     if (isset($_GET['orphan_id'])) {
         $orphanId = mysqli_real_escape_string($con, $_GET['orphan_id']);
-        $fetchOrphanQuery = "SELECT * FROM orphan_profiles WHERE orphan_id = '$orphanId'";
+        $fetchOrphanQuery = "SELECT * FROM removed_orphans WHERE orphan_id = '$orphanId'";
         $result = mysqli_query($con, $fetchOrphanQuery);
         if (mysqli_num_rows($result) == 1 ) {
             $row = mysqli_fetch_assoc($result);

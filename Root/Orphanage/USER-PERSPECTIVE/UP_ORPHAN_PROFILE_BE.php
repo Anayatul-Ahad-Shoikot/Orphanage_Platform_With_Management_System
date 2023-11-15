@@ -11,6 +11,7 @@
             $row = mysqli_fetch_assoc($result);
             $orphan_id = $row['orphan_id'];
             $org_id = $row['org_id'];
+            $org_name = $row['org_name'];
             $first_name = $row['first_name'];
             $last_name = $row['last_name'];
             $age = $row['age'];

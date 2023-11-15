@@ -73,8 +73,7 @@
 
             <div class="plate">
                 <?php
-                    //include ('/xampp/htdocs/DBMS_Project_Organized_One/Root/Orphanage/VIEW_ORPHANS_BE.php');
-                    include ('/xampp/htdocs/DBMS_Project_Organized_One/Root/Orphanage/VIEW_ORPHANS_BE.php');
+                    include ('/xampp/htdocs/DBMS_Project_Organized_One/Root/Orphanage/USER-PERSPECTIVE/FETCH_ORPHAN_CARD_BE.php');
                 ?>
             </div>
         </div>

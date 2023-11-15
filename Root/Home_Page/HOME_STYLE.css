@@ -267,7 +267,8 @@ body::-webkit-scrollbar {
   color: #4facfe;
 }
 .blog-post_date {
-  margin-left: 1.5rem;
+  margin-top: -10px;
+  margin-left: 1px;
   margin-bottom: 1.5rem;
 }
 .blog-post_date span {
@@ -300,10 +301,10 @@ body::-webkit-scrollbar {
     color: #fff;
     text-decoration: none;
     border-radius: .8rem;
-    background: linear-gradient(to right, #c945cf 0%, #04a6bd 100%);
+    background: linear-gradient(to right, var(--color4) 0%, var(--color6) 100%);
 }
 .blog-post_cta:hover {
-    background: linear-gradient(to right, #04a6bd 0%, #c945cf 100%);
+    background: linear-gradient(to right, var(--color6) 0%, var(--color4) 100%);
 }
 
 @media screen and (max-width: 1068px) {
