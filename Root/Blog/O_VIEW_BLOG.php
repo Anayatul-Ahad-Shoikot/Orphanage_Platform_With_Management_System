@@ -1,5 +1,5 @@
 <?php
-        include ('/xampp/htdocs/DBMS_Project_Organized_One/Root/Blog/FETCH_BLOG_BE.php');
+    include ('/xampp/htdocs/DBMS_Project_Organized_One/Root/Blog/FETCH_BLOG_BE.php');
 ?>
 
 <!DOCTYPE html>

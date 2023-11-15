@@ -80,7 +80,7 @@
 
         <div class="options">
             <a href="#" class="btn x">Oldage</a>
-            <a href="#" class="btn y">Orphanage</a>
+            <a href="/Root/Orphanage/ORPHAN_DASH.php" class="btn y">Orphanage</a>
         </div>
 
 
