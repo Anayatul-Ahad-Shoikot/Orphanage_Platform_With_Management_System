@@ -9,7 +9,7 @@
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css"/>
         <link rel="stylesheet" href="/Root/Orphanage/ORPHAN_DASH_STYLE.css">
         <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
-        <title>CareSenerity.org | Orphanage</title>
+        <title>CareSenerity.org | Removed Child</title>
     </head>
     <body>
         <?php
@@ -63,10 +63,9 @@
                     </div>
                 </div>
             </div>
-            
+
             <div class="options">
-                <a href="/Root/Orphanage/REMOVED_ORPHAN_DASH.php" class="btn">Removed Child</a>
-                <a href="/Root/Orphanage/ADD_ORPHAN.php" class="btn">Add Child</a>
+                <a href="/Root/Orphanage/ORPHAN_DASH.php" class="btn"> Orphanage </a>
                 <form action="/" method="GET">
                     <input type="text" name="query" placeholder="Search Child">
                     <button type="submit" class="btn"><i class="ri-search-line"></i></button>
@@ -75,7 +74,7 @@
 
             <div class="plate">
                 <?php
-                    include ('/xampp/htdocs/DBMS_Project_Organized_One/Root/Orphanage/VIEW_ORPHANS_BE.php');
+                    include ('/xampp/htdocs/DBMS_Project_Organized_One/Root/Orphanage/VIEW_REMOVED_BE.php');
                 ?>
             </div>
         </div>
