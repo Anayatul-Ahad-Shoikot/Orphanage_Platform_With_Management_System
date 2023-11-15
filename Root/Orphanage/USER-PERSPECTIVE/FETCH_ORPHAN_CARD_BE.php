@@ -1,8 +1,8 @@
 <?php
     include('/xampp/htdocs/DBMS_Project_Organized_One/Includes/db_con.php');
 
-    $Name = $_SESSION['user_name'];
-    $query = "SELECT * FROM orphan_profiles Where org_name = '$Name'";
+    $org_id = $_GET['org_id'];
+    $query = "SELECT * FROM orphan_profiles Where org_id = '$Name'";
     $result = mysqli_query($con, $query);
     if (mysqli_num_rows($result) > 0) {
         while ($row = mysqli_fetch_assoc($result)) {

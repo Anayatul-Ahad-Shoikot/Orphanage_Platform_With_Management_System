@@ -1,6 +1,9 @@
 <?php
 
     include('/xampp/htdocs/DBMS_Project_Organized_One/Includes/db_con.php');
+    session_start();
+
+    $Name = $_SESSION['user_name'];
     if (isset($_GET['orphan_id'])) {
         $orphanId = mysqli_real_escape_string($con, $_GET['orphan_id']);
         $fetchOrphanQuery = "SELECT * FROM orphan_profiles WHERE orphan_id = '$orphanId'";
@@ -30,11 +33,10 @@
             $problems = $row['problems'];
             $other_comments = $row['other_comments'];
             $image_path = $row['image_path'];
-            $backupQuery = "INSERT INTO removed_orphans ( orphan_id ,org_id, first_name, last_name, age, address, guardian_name, guardian_contact, gender, religion, date_of_birth, since, family_status, physical_condition, education_level, medical_history, hobby, favorite_food, favorite_games, skills, dreams, problems, other_comments, image_path) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
+            $backupQuery = "INSERT INTO removed_orphans (orphan_id ,org_id, org_name ,first_name, last_name, age, address, guardian_name, guardian_contact, gender, religion, date_of_birth, since, family_status, physical_condition, education_level, medical_history, hobby, favorite_food, favorite_games, skills, dreams, problems, other_comments, image_path) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
             $backupResult = mysqli_prepare($con, $backupQuery);
 
-            mysqli_stmt_bind_param($backupResult, "isssisssssssssssssssssss", $orphan_id, $org_id, $first_name, $last_name, $age, $address, $guardian_name, $guardian_contact, $gender, $religion, $date_of_birth, $since, $family_status, $physical_condition, $education_level, $medical_history, $hobby, $favorite_food, $favorite_games, $skills, $dreams, $problems, $other_comments, $image_path);
-
+            mysqli_stmt_bind_param($backupResult, "iisssisssssssssssssssssss", $orphan_id, $org_id, $Name, $first_name, $last_name, $age, $address, $guardian_name, $guardian_contact, $gender, $religion, $date_of_birth, $since, $family_status, $physical_condition, $education_level, $medical_history, $hobby, $favorite_food, $favorite_games, $skills, $dreams, $problems, $other_comments, $image_path);
             if (mysqli_stmt_execute($backupResult)) {
                 $deleteQuery = "DELETE FROM orphan_profiles WHERE orphan_id = '$orphanId'";
                 $deleteResult = mysqli_query($con, $deleteQuery);

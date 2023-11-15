@@ -1,7 +1,7 @@
 <?php
     include('/xampp/htdocs/DBMS_Project_Organized_One/Includes/db_con.php');
     $Name = $_SESSION['user_name'];
-    $query = "SELECT * FROM removed_orphans where org_id = '$Name'";
+    $query = "SELECT * FROM removed_orphans where org_name = '$Name'";
     $result = mysqli_query($con, $query);
     if (mysqli_num_rows($result) > 0) {
         while ($row = mysqli_fetch_assoc($result)) {

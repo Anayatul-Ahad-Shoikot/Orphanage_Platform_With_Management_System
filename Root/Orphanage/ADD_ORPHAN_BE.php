@@ -5,7 +5,10 @@
 
     $user_name = $_SESSION['user_name'];
     $acc_type = $_SESSION['acc_type'];
-
+    $query2 = "SELECT * FROM org_details WHERE user_name = '$user_name'";
+    $result2 = mysqli_query($con, $query2);
+    $row2 = mysqli_fetch_assoc($result2);
+    $org_id = $row2['org_id'];
     if(isset($_SESSION['user_name']) && $acc_type == "org") {
         if (isset($_POST['Register'])) {
             $first_name = $_POST['first_name'];
@@ -34,12 +37,12 @@
             $image_path = "img/" . $image_name;
             move_uploaded_file($image_tmp_name, $image_path);
 
-            $query = "INSERT INTO orphan_profiles (org_id, first_name, last_name, age, address, guardian_name, guardian_contact, gender, religion, date_of_birth, since, family_status, physical_condition, education_level, medical_history, hobby, favorite_food, favorite_games, skills, dreams, problems, other_comments, image_path) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
+            $query = "INSERT INTO orphan_profiles (org_id, org_name, first_name, last_name, age, address, guardian_name, guardian_contact, gender, religion, date_of_birth, since, family_status, physical_condition, education_level, medical_history, hobby, favorite_food, favorite_games, skills, dreams, problems, other_comments, image_path) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
 
             $stmt = mysqli_prepare($con, $query);
 
             if ($stmt) {
-                mysqli_stmt_bind_param($stmt, "sssisssssssssssssssssss", $user_name, $first_name, $last_name, $age, $address, $guardian_name, $guardian_contact, $gender, $religion, $date_of_birth, $time, $family_status, $physical_condition, $education_level, $medical_history, $hobby, $favorite_food, $favorite_games, $skills, $dreams, $problems, $other_comments, $image_path);
+                mysqli_stmt_bind_param($stmt, "isssisssssssssssssssssss", $org_id ,$user_name, $first_name, $last_name, $age, $address, $guardian_name, $guardian_contact, $gender, $religion, $date_of_birth, $time, $family_status, $physical_condition, $education_level, $medical_history, $hobby, $favorite_food, $favorite_games, $skills, $dreams, $problems, $other_comments, $image_path);
                 if (mysqli_stmt_execute($stmt)) {
                     header("Location: /Root/Orphanage/ORPHAN_DASH.php");
                     exit(0);

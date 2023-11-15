@@ -37,7 +37,7 @@
         <div class="left_portion">
             <div class="userDetails1">
                 <div class="profile">
-                    <figure><img src= "..//..//Dashboards/Own-Profiles/Org/<?php echo $logo_path ?>" alt="profile" width="250px" height="250px"></figure>
+                    <figure><img src= "..//..//..//Dashboards/Own-Profiles/Org/<?php echo $logo_path ?>" alt="profile" width="250px" height="250px"></figure>
                 </div>
                 <div class="userDetails">
                     <div class="userName">
@@ -73,7 +73,7 @@
 
         <div class="options">
             <a href="#" class="btn x">Oldage</a>
-            <a href="#" class="btn y">Orphanage</a>
+            <a href="/Root/Orphanage/USER-PERSPECTIVE/UP_ORPHAN_DASH.php?org_id=<?php echo $org_id ?>" class="btn y">Orphanage</a>
         </div>
 
 
