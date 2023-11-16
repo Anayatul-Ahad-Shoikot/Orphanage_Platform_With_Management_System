@@ -105,21 +105,21 @@
 
         <div class="box-info fst">
           <li>
-            <i class="fas fa-people-group"></i>
+            <a href="/Root/Admin_Side//Dash/Orphans/ORPHAN_DASH.php"><i class="fas fa-people-group"></i></a>
             <span class="text">
               <p>Total Orphans</p>
               <h3><?php echo $totalOrphans ?></h3>
             </span>
           </li>
           <li>
-            <i class="fas fa-people-group"></i>
+           <a href="#"><i class="fas fa-people-group"></i></a>
             <span class="text">
               <p>Total Organizations</p>
               <h3><?php echo $totalOrgs ?></h3>
             </span>
           </li>
           <li>
-            <i class="fas fa-people-group"></i>
+            <a href="#"><i class="fas fa-people-group"></i></a>
             <span class="text">
               <p>Total Users</p>
               <h3><?php echo $totalusers ?></h3>
@@ -129,14 +129,14 @@
 
         <div class="box-info sec">
           <li>
-            <i class="fas fa-calendar-check"></i>
+            <a href="#"><i class="fas fa-calendar-check"></i></a>
             <span class="text">
               <p>Total Old</p>
               <h3>1.5K</h3>
             </span>
           </li>
           <li>
-            <i class="fas fa-people-group"></i>
+            <a href="#"><i class="fas fa-people-group"></i></a>
             <span class="text">
               <p>Total Admins</p>
               <h3><?php echo $totaladmins ?></h3>
