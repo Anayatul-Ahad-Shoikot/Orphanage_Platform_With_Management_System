@@ -96,14 +96,14 @@
       <main>
         <div class="head-title">
             <div class="left">
-                <h1>Dashboard</h1>
+                <h1>Orphans</h1>
                 <ul class="breadcrumb">
 						<li>
 							<a class="active" href="/Root/Admin_Side/Dash/ADMIN_DASH.php">Dashboard</a>
 						</li>
 						<li>></li>
 						<li>
-							<a class="active" href="#">Orphans</a>
+							<a class="active" href="/Root/Admin_Side//Dash/Orphans/ORPHAN_DASH.php">Orphans</a>
 						</li>
 					</ul>
             </div>

@@ -1,6 +1,5 @@
 <?php
     include('/xampp/htdocs/DBMS_Project_Organized_One/Includes/db_con.php');
-
     $query = "SELECT * FROM orphan_profiles";
     $result = mysqli_query($con, $query);
     if (mysqli_num_rows($result) > 0) {
