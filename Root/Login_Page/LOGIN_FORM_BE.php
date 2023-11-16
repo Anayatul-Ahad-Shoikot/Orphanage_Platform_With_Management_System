@@ -20,7 +20,7 @@
                     $_SESSION['acc_type'] = $row['acc_type'];
 
                     if($_SESSION['acc_type'] == "admin") {
-                        header("Location: /Root/Dashboards/Admin/ADMIN_DASH.php");
+                        header("Location: /Root/Admin_Side/Dash/ADMIN_DASH.php");
                         exit(0);
                     } else if ($_SESSION['acc_type'] == "org") {
                         header("Location: /Root/Dashboards/Own-Profiles/Org/PROFILE_DETAILS.php");

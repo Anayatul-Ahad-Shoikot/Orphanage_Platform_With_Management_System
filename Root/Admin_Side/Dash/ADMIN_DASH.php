@@ -1,3 +1,8 @@
+<?php 
+  include('/xampp/htdocs/DBMS_Project_Organized_One/Root/Admin_Side/Dash/ADMIN_DASH_BE.php');
+  include('/xampp/htdocs/DBMS_Project_Organized_One/Root/Admin_Side/Dash/COUNTERS_BE.php');
+?>
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -5,19 +10,18 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
-    <link rel="stylesheet" href="/Root/Dashboards/Admin/ADMIN_DASH_STYLE.css" />
+    <link rel="stylesheet" href="/Root/Admin_Side/Dash/ADMIN_DASH_STYLE.css" />
     <title>Admin Panel</title>
   </head>
   <body>
     <section class="sidebar">
       <a href="#" class="logo">
-        <img src="/Root/Landing_Page//LOGO_NoBackground.png" alt="Logo" />
-        <span class="text">Admin Panel</span>
+        <img src="/Root/Landing_Page/LOGO_NoBackground.png" alt="Logo" />
       </a>
 
       <ul class="side-menu top">
         <li class="active">
-          <a href="#" class="nav-link">
+          <a href="/Root/Admin_Side/Dash/ADMIN_DASH.php" class="nav-link">
             <i class="fas fa-border-all"></i>
             <span class="text">Dashboard</span>
           </a>
@@ -25,13 +29,13 @@
         <li>
           <a href="#" class="nav-link">
             <i class="fas fa-shopping-cart"></i>
-            <span class="text">My Store</span>
+            <span class="text">Website</span>
           </a>
         </li>
         <li>
-          <a href="#" class="nav-link">
+          <a href="/Root/Admin_Side/Donation/DONATION_DASH.php" class="nav-link">
             <i class="fas fa-chart-simple"></i>
-            <span class="text">Analytics</span>
+            <span class="text">Donations</span>
           </a>
         </li>
         <li>
@@ -46,9 +50,6 @@
             <span class="text">Team</span>
           </a>
         </li>
-      </ul>
-
-      <ul class="side-menu">
         <li>
           <a href="#">
             <i class="fas fa-cog"></i>
@@ -56,7 +57,7 @@
           </a>
         </li>
         <li>
-          <a href="#" class="logout">
+          <a href="/Includes/logout.php" class="logout">
             <i class="fas fa-right-from-bracket"></i>
             <span class="text">Logout</span>
           </a>
@@ -86,7 +87,7 @@
         </a>
 
         <a href="#" class="profile">
-          <img src="/Root/Dashboards/Admin/admin.png" alt="" />
+          <img src="<?php echo $image ?>" alt="profile" />
         </a>
       </nav>
 
@@ -94,15 +95,6 @@
         <div class="head-title">
           <div class="left">
             <h1>Dashboard</h1>
-            <ul class="breadcrumb">
-              <li>
-                <a href="#">Dashboard</a>
-              </li>
-              <i class="fas fa-chevron-right"></i>
-              <li>
-                <a href="#" class="active">Home</a>
-              </li>
-            </ul>
           </div>
 
           <a href="#" class="download-btn">
@@ -111,26 +103,50 @@
           </a>
         </div>
 
-        <div class="box-info">
+        <div class="box-info fst">
           <li>
-            <i class="fas fa-calendar-check"></i>
+            <i class="fas fa-people-group"></i>
             <span class="text">
-              <h3>1.5K</h3>
-              <p>New Orders</p>
+              <p>Total Orphans</p>
+              <h3><?php echo $totalOrphans ?></h3>
             </span>
           </li>
           <li>
             <i class="fas fa-people-group"></i>
             <span class="text">
-              <h3>1M</h3>
-              <p>Clients</p>
+              <p>Total Organizations</p>
+              <h3><?php echo $totalOrgs ?></h3>
             </span>
           </li>
           <li>
-            <i class="fas fa-dollar-sign"></i>
+            <i class="fas fa-people-group"></i>
             <span class="text">
-              <h3>$900k</h3>
-              <p>Turnover</p>
+              <p>Total Users</p>
+              <h3><?php echo $totalusers ?></h3>
+            </span>
+          </li>
+        </div>
+
+        <div class="box-info sec">
+          <li>
+            <i class="fas fa-calendar-check"></i>
+            <span class="text">
+              <p>Total Old</p>
+              <h3>1.5K</h3>
+            </span>
+          </li>
+          <li>
+            <i class="fas fa-people-group"></i>
+            <span class="text">
+              <p>Total Admins</p>
+              <h3><?php echo $totaladmins ?></h3>
+            </span>
+          </li>
+          <li class="hideee">
+            <i class="fas fa-calendar-check"></i>
+            <span class="text">
+              <p>Total Old</p>
+              <h3>1.5K</h3>
             </span>
           </li>
         </div>
@@ -230,6 +246,6 @@
       </main>
     </section>
 
-    <script src="/Root/Dashboards/Admin/ADMIN_DASH_JS.js"></script>
+    <script src="/Root/Admin_Side/Dash/ADMIN_DASH_JS.js"></script>
   </body>
 </html>
