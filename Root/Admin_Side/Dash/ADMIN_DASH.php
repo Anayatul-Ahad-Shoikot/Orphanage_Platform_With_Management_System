@@ -112,7 +112,7 @@
             </span>
           </li>
           <li>
-           <a href="#"><i class="fas fa-people-group"></i></a>
+           <a href="/Root/Admin_Side//Dash/Organizations/ORG_DASH.php"><i class="fas fa-people-group"></i></a>
             <span class="text">
               <p>Total Organizations</p>
               <h3><?php echo $totalOrgs ?></h3>

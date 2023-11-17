@@ -11,7 +11,7 @@
     <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet"/>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css"/>
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
-    <link rel="stylesheet" href="/Root/Admin_Side/Dash/Orphans/ORPHAN_DASH_STYLE.css" />
+    <link rel="stylesheet" href="/Root/Admin_Side/Dash/Organizations/ORG_DASH_STYLE.css" />
     <title>orphans</title>
   </head>
   <body>
@@ -95,14 +95,14 @@
       <main>
         <div class="head-title">
             <div class="left">
-                <h1>Orphans</h1>
+                <h1>Organizations</h1>
                 <ul class="breadcrumb">
 						<li>
 							<a class="active" href="/Root/Admin_Side/Dash/ADMIN_DASH.php">Dashboard</a>
 						</li>
 						<li>></li>
 						<li>
-							<a class="active" href="/Root/Admin_Side//Dash/Orphans/ORPHAN_DASH.php">Orphans</a>
+							<a class="active" href="/Root/Admin_Side/Dash/Organizations/ORG_DASH.php">Organizations</a>
 						</li>
 					</ul>
             </div>
@@ -116,13 +116,12 @@
         </div>
 
         <div class="plate">
-            
             <?php 
-            if (isset($_GET['query'])){
-                include('/xampp/htdocs/DBMS_Project_Organized_One/Root/Admin_Side/Dash/Orphans/SEARCH_BE.php');
-            } else {
-                include('/xampp/htdocs/DBMS_Project_Organized_One/Root/Admin_Side/Dash/Orphans/FETCH_ORPHANS_BE.php');
-            }
+                if (isset($_GET['query'])){
+                    include('/xampp/htdocs/DBMS_Project_Organized_One/Root/Admin_Side/Dash/Organizations/SEARCH_BE.php');
+                } else {
+                    include('/xampp/htdocs/DBMS_Project_Organized_One/Root/Admin_Side/Dash/Organizations/FETCH_ORG_BE.php');
+                }
             ?>
         </div>
       </main>
