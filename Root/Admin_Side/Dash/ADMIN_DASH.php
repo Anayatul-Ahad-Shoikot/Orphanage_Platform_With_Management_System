@@ -27,7 +27,7 @@
           </a>
         </li>
         <li>
-          <a href="#" class="nav-link">
+          <a href="/Root/Admin_Side/website/HOME.php" class="nav-link">
             <i class="fas fa-shopping-cart"></i>
             <span class="text">Website</span>
           </a>
@@ -66,9 +66,8 @@
     </section>
 
     <section class="content">
-      <nav>
+      <nav class="e">
         <i class="fas fa-bars menu-btn"></i>
-        <a href="#" class="nav-link">Categories</a>
         <form action="#">
           <div class="form-input">
             <input type="search" placeholder="search..." />
@@ -154,7 +153,7 @@
         <div class="table-data">
           <div class="order">
             <div class="head">
-              <h3>Recent Orders</h3>
+              <h3>Recent Blogs</h3>
               <i class="fas fa-search"></i>
               <i class="fas fa-filter"></i>
             </div>
@@ -162,56 +161,18 @@
             <table>
               <thead>
                 <tr>
-                  <th>User</th>
-                  <th>Order Date</th>
-                  <th>Status</th>
+                  <th>Title</th>
+                  <th>From</th>
+                  <th>-----</th>
                 </tr>
               </thead>
               <tbody>
-                <tr>
-                  <td>
-                    <img src="profile.png" alt="" />
-                    <p>User Name</p>
-                  </td>
-                  <td>07-05-2023</td>
-                  <td><span class="status pending">Pending</span></td>
-                </tr>
-                <tr>
-                  <td>
-                    <img src="profile.png" alt="" />
-                    <p>User Name</p>
-                  </td>
-                  <td>07-05-2023</td>
-                  <td><span class="status pending">Pending</span></td>
-                </tr>
-                <tr>
-                  <td>
-                    <img src="profile.png" alt="" />
-                    <p>User Name</p>
-                  </td>
-                  <td>07-05-2023</td>
-                  <td><span class="status process">Process</span></td>
-                </tr>
-                <tr>
-                  <td>
-                    <img src="profile.png" alt="" />
-                    <p>User Name</p>
-                  </td>
-                  <td>07-05-2023</td>
-                  <td><span class="status process">Process</span></td>
-                </tr>
-                <tr>
-                  <td>
-                    <img src="profile.png" alt="" />
-                    <p>User Name</p>
-                  </td>
-                  <td>07-05-2023</td>
-                  <td><span class="status complete">Complete</span></td>
-                </tr>
+              <?php
+                include('/xampp/htdocs/DBMS_Project_Organized_One/Root/Admin_Side/Dash/Post_Tab/FETCH_POST_BE.php');
+              ?>
               </tbody>
             </table>
           </div>
-
           <div class="todo">
             <div class="head">
               <h3>Todos</h3>

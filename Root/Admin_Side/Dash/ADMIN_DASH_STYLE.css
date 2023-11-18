@@ -194,7 +194,7 @@ body.dark {
   left: 60px;
 }
 
-.content nav {
+.content .e {
   height: 56px;
   background: var(--light);
   padding: 0 24px;
@@ -208,7 +208,7 @@ body.dark {
   z-index: 1000;
 }
 
-.content nav::before {
+.content .e::before {
   content: "";
   position: absolute;
   width: 40px;
@@ -219,37 +219,37 @@ body.dark {
   box-shadow: -20px -20px 0 var(--light);
 }
 
-.content nav a {
+.content .e a {
   color: var(--dark);
 }
 
-.content nav .fa-bars {
+.content .e .fa-bars {
   cursor: pointer;
   color: var(--dark);
 }
 
-.content nav .nav-link {
+.content .e .nav-link {
   font-size: 16px;
   transition: 0.3s ease;
 }
 
-.content nav .nav-link:hover {
+.content .e .nav-link:hover {
   color: var(--blue);
 }
 
-.content nav form {
+.content .e form {
   max-width: 400px;
   width: 400px;
   margin-right: auto;
 }
 
-.content nav form .form-input {
+.content .e form .form-input {
   display: flex;
   align-items: center;
   height: 36px;
 }
 
-.content nav form .form-input input {
+.content .e form .form-input input {
   flex-grow: 1;
   padding: 0 16px;
   height: 100%;
@@ -261,7 +261,7 @@ body.dark {
   color: var(--dark);
 }
 
-.content nav form .form-input button {
+.content .e form .form-input button {
   width: 36px;
   height: 100%;
   display: flex;
@@ -276,7 +276,7 @@ body.dark {
   cursor: pointer;
 }
 
-.content nav .switch-mode {
+.content .e .switch-mode {
   display: block;
   min-width: 50px;
   height: 25px;
@@ -286,7 +286,7 @@ body.dark {
   position: relative;
 }
 
-.content nav .switch-mode::before {
+.content .e .switch-mode::before {
   content: "";
   position: absolute;
   top: 2px;
@@ -298,16 +298,16 @@ body.dark {
   transition: 0.3s ease;
 }
 
-.content nav #switch-mode:checked + .switch-mode::before {
+.content .e #switch-mode:checked + .switch-mode::before {
   left: calc(100% - (25px - 4px) - 2px);
 }
 
-.content nav .notification {
+.content .e .notification {
   font-size: 20px;
   position: relative;
 }
 
-.content nav .notification .num {
+.content .e .notification .num {
   position: absolute;
   top: -6px;
   right: -6px;
@@ -324,7 +324,7 @@ body.dark {
   justify-content: center;
 }
 
-.content nav .profile img {
+.content .e .profile img {
   width: 36px;
   height: 36px;
   border-radius: 50%;
