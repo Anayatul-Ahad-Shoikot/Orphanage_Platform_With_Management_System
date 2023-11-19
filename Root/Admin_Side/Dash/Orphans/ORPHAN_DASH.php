@@ -97,14 +97,14 @@
             <div class="left">
                 <h1>Orphans</h1>
                 <ul class="breadcrumb">
-						<li>
-							<a class="active" href="/Root/Admin_Side/Dash/ADMIN_DASH.php">Dashboard</a>
-						</li>
-						<li>></li>
-						<li>
-							<a class="active" href="/Root/Admin_Side//Dash/Orphans/ORPHAN_DASH.php">Orphans</a>
-						</li>
-					</ul>
+                  <li>
+                    <a class="active" href="/Root/Admin_Side/Dash/ADMIN_DASH.php">Dashboard</a>
+                  </li>
+                  <li>></li>
+                  <li>
+                    <a class="active" href="#">Orphans</a>
+                  </li>
+					      </ul>
             </div>
 
             <div class="ctn">
@@ -116,7 +116,6 @@
         </div>
 
         <div class="plate">
-            
             <?php 
             if (isset($_GET['query'])){
                 include('/xampp/htdocs/DBMS_Project_Organized_One/Root/Admin_Side/Dash/Orphans/SEARCH_BE.php');

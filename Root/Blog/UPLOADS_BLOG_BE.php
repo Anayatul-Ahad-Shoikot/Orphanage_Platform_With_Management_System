@@ -17,7 +17,6 @@
                 $image_tmp = $_FILES["img"]["tmp_name"];
                 $image_path = "img/" . $image; 
                 move_uploaded_file($image_tmp, $image_path);
-
                 $query = "INSERT INTO blog_post (title, user_name, content, category, img_path, published) VALUES (?, ?, ?, ?, ?, ?)";
                 $stmt = mysqli_prepare($con, $query);
                 if ($stmt) {
@@ -29,7 +28,10 @@
                             if($_SESSION['acc_type']=='user'){
                                 header("Location: /Root/Home_Page/U_HOME.php");
                                 exit(0);
-                            } else {
+                            }   elseif ($_SESSION['acc_type']=='admin') {
+                                header("Location: /Root/Admin_Side/website/HOME.php");
+                                exit(0);
+                            }   else {
                                 header("Location: /Root/Home_Page/O_HOME.php");
                                 exit(0);
                             }

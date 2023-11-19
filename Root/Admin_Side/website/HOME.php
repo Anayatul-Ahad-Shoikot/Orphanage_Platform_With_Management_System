@@ -24,13 +24,13 @@
       </a>
 
       <ul class="side-menu top">
-        <li class="active">
+        <li>
           <a href="/Root/Admin_Side/Dash/ADMIN_DASH.php" class="nav-link">
             <i class="fas fa-border-all"></i>
             <span class="text">Dashboard</span>
           </a>
         </li>
-        <li>
+        <li  class="active">
           <a href="/Root/Admin_Side/website/HOME.php" class="nav-link">
             <i class="fas fa-shopping-cart"></i>
             <span class="text">Website</span>
@@ -89,7 +89,7 @@
             </a>
 
             <a href="#" class="profile">
-            <img src="<?php echo $image ?>" alt="profile" />
+            <img src="..//..//Dash//<?php echo $image ?>" alt="profile" />
             </a>
         </nav>
         <main>
@@ -122,7 +122,7 @@
             </header>
             <div class="container">
                 <div class="option">
-                <h2><a href="/Root/Blog/O_CREATE_BLOG.php">CreatePost</a></h2>
+                <h2><a href="/Root/Admin_Side/website/CREATE_BLOG.php">CreatePost</a></h2>
                 </div>
                 <?php 
                     include('/xampp/htdocs/DBMS_Project_Organized_One/Root/Admin_Side/website/FETCH_BLOGS_BE.php');

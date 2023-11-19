@@ -118,7 +118,7 @@
             </span>
           </li>
           <li>
-            <a href="#"><i class="fas fa-people-group"></i></a>
+            <a href="/Root/Admin_Side/Dash/Users/USER_DASH.php"><i class="fas fa-people-group"></i></a>
             <span class="text">
               <p>Total Users</p>
               <h3><?php echo $totalusers ?></h3>
