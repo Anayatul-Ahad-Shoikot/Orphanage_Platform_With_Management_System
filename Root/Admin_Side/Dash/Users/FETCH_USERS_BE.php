@@ -13,6 +13,7 @@
                         <td>' . $row['user_email'] . '</td>
                         <td>' . $row['acc_type'] . '</td>
                         <td>' . $row['since'] . '</td>
+                        <td><a href="#"> Edit </a><a href="#">Remove</a></td>
                   </tr>';
         }
     } else {

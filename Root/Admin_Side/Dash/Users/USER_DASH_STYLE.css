@@ -430,27 +430,33 @@ body.dark {
 .content main .plate {
   height: 100vh;
   display: grid;
-  /* //justify-content: center; */
-  /* align-items: center; */
-  color: #db504a;
+  color: black;
+  font-size: o.9rem;
 }
 .plate table {
-  width: 100%;
   border-collapse: collapse;
+  box-shadow: 0 5px 10px gray;
+  background-color: white;
+  overflow: hidden;
+  border-radius: 5px;
 }
 
-.plate th,
+.plate table thead {
+  box-shadow: 0 5px 10px gray;
+}
+
+.plate table tr {
+  
+}
+.plate table th{
+  padding: 1rem;
+  text-transform: uppercase;
+  font-size: 0.7rem;
+  font-weight: 900;
+}
 .plate td {
-  border: 1px solid #dddddd;
-  padding: 8px;
-  text-align: left;
+ padding: 5px 5px;
 }
-
-.plate th {
-  background-color: #f2f2f2;
-}
-
-/* Alternating row colors */
 .plate tbody tr:nth-child(even) {
   background-color: #f9f9f9;
 }
