@@ -69,7 +69,6 @@
     <section class="content">
       <nav>
         <i class="fas fa-bars menu-btn"></i>
-        <a href="#" class="nav-link">Categories</a>
         <form action="#">
           <div class="form-input">
             <input type="search" placeholder="search..." />
@@ -102,7 +101,7 @@
                   </li>
                   <li>></li>
                   <li>
-                    <a class="active" href="#">Orphans</a>
+                    <a class="active" href="/Root/Admin_Side//Dash/Orphans/ORPHAN_DASH.php">Orphans</a>
                   </li>
 					      </ul>
             </div>

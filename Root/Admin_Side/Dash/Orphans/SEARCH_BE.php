@@ -15,8 +15,8 @@
                     echo '<h1>' . $row['first_name'] . '  ' . $row['last_name'] . '</h1>';
                     echo '</div>';
                     echo '<div class="buttons">';
-                    echo '<a href="#?orphan_id=' . $row['orphan_id'] . '" class="message">Remove</a>';
-                    echo '<a href="#?orphan_id=' . $row['orphan_id'] . '" class="message"> View </a>';
+                    echo '<a href="/Root/Admin_Side/Dash/Orphans/VIEW_REMOVE_BE.php?orphan_id=' . $row['orphan_id'] . '" class="message">Remove</a>';
+                    echo '<a href="/Root/Admin_Side/Dash/Orphans/VIEW_CHILD.php?orphan_id=' . $row['orphan_id'] . '" class="message"> View </a>';
                     echo '</div>';
                     echo '</div>';
                 }

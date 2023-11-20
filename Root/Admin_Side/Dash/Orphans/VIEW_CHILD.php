@@ -98,11 +98,11 @@
                     <h1>Organizations</h1>
                     <ul class="breadcrumb">
                             <li>
-                                <a class="active" href="#">Dashboard</a>
+                                <a class="active" href="/Root/Admin_Side/Dash/ADMIN_DASH.php">Dashboard</a>
                             </li>
                             <li>></li>
                             <li>
-                                <a class="active" href="#">Orphans</a>
+                                <a class="active" href="/Root/Admin_Side//Dash/Orphans/ORPHAN_DASH.php">Orphans</a>
                             </li>
                             <li>></li>
                             <li>
@@ -127,26 +127,46 @@
                 <form action="/Root/Admin_Side/Dash/Orphans/VIEW_UPDATE_BE.php" method="post" enctype="multipart/form-data">
 
                     <!-- <img src="../../../Orphanage/<?php echo $image_path ?>" alt="picture"> -->
-                    <label>Orphan ID:</label>
-                    <input type="text" name="orphan_id " placeholder="<?php echo $orphanId ?>" disabled>
-                    <label>Organization ID:</label>
-                    <input type="number" name="org_id " placeholder="<?php echo $org_id ?>">
-                    <label>Organization Name:</label>
-                    <input type="text" name="org_name " placeholder="<?php echo $org_name ?>">
-                    <label>First Name:</label>
-                    <input type="text" name="first_name" placeholder="<?php echo $first_name ?>" >
-                    <label>Last Name:</label>
-                    <input type="text" name="last_name" placeholder="<?php echo $last_name ?>" >
-                    <label>Age:</label>
-                    <input type="number" name="age" placeholder="<?php echo $age ?>">
-                    <label>Since:</label>
-                    <input type="number" name="Since" placeholder="<?php echo $since ?>">
-                    <label>Address:</label>
-                    <input type="text" name="address" placeholder="<?php echo $address ?>" >
-                    <label>Guardian Name:</label>
-                    <input type="text" name="guardian_name" placeholder="<?php echo $guardian_name ?>" >
-                    <label>Guardian Contact:</label>
-                    <input type="text" name="guardian_contact" placeholder="<?php echo $guardian_contact ?>" >
+                    <div class="row">
+                      <label>Orphan ID:</label>
+                      <input type="text" name="orphan_id " placeholder="<?php echo $orphanId ?>" disabled>
+                    </div>
+                    <div class="row">
+                      <label>Organization ID:</label>
+                      <input type="number" name="org_id " placeholder="<?php echo $org_id ?>" disabled>
+                    </div>
+                    <div class="row">
+                      <label>Organization Name:</label>
+                      <input type="text" name="org_name " placeholder="<?php echo $org_name ?>" disabled>
+                    </div>
+                    <div class="row">
+                      <label>First Name:</label>
+                      <input type="text" name="first_name" placeholder="<?php echo $first_name ?>" >
+                    </div>
+                    <div class="row">
+                      <label>Last Name:</label>
+                      <input type="text" name="last_name" placeholder="<?php echo $last_name ?>" >
+                    </div>
+                    <div class="row">
+                      <label>Age:</label>
+                      <input type="number" name="age" placeholder="<?php echo $age ?>">
+                    </div>
+                    <div class="row">
+                      <label>Since:</label>
+                      <input type="number" name="Since" placeholder="<?php echo $since ?>">
+                    </div>
+                    <div class="row">
+                      <label>Address:</label>
+                      <input type="text" name="address" placeholder="<?php echo $address ?>" >
+                    </div>
+                    <div class="row">
+                      <label>Guardian Name:</label>
+                      <input type="text" name="guardian_name" placeholder="<?php echo $guardian_name ?>" >
+                    </div>
+                    <div class="row">
+                      <label>Guardian Contact:</label>
+                      <input type="text" name="guardian_contact" placeholder="<?php echo $guardian_contact ?>" >
+                    </div>
                     <div class="opt">
                         <div class="part">
                         <label>Gender :</label>
@@ -210,22 +230,38 @@
                             </select>
                         </div>
                     </div>
-                    <label>Medical History:</label>
-                    <input type="text" name="medical_history" placeholder="<?php echo $medical_history ?>">
-                    <label>Hobby:</label>
-                    <input type="text" name="hobby"  placeholder="<?php echo $hobby ?>">
-                    <label>Favourite Food:</label>
-                    <input type="text" name="favorite_food" placeholder="<?php echo $favorite_food ?>">
-                    <label>Favourite Games:</label>
-                    <input type="text" name="favorite_games" placeholder="<?php echo $favorite_games ?>">
-                    <label>Skills:</label>
-                    <input type="text" name="skills" placeholder="<?php echo $skills ?>">
-                    <label>Dreams:</label>
-                    <input type="text" name="dreams" placeholder="<?php echo $dreams ?>">
-                    <label>Problems:</label>
-                    <input type="text" name="problems" placeholder="<?php echo $problems ?>">
-                    <label>Comments:</label>
-                    <input  type="text" name="other_comments" placeholder="<?php echo $other_comments ?>">
+                    <div class="row">
+                      <label>Medical History:</label>
+                      <input type="text" name="medical_history" placeholder="<?php echo $medical_history ?>">
+                    </div>
+                    <div class="row">
+                      <label>Hobby:</label>
+                      <input type="text" name="hobby"  placeholder="<?php echo $hobby ?>">
+                    </div>
+                    <div class="row">
+                      <label>Favourite Food:</label>
+                      <input type="text" name="favorite_food" placeholder="<?php echo $favorite_food ?>">
+                    </div>
+                    <div class="row">
+                      <label>Favourite Games:</label>
+                      <input type="text" name="favorite_games" placeholder="<?php echo $favorite_games ?>">
+                    </div>
+                    <div class="row">
+                      <label>Skills:</label>
+                      <input type="text" name="skills" placeholder="<?php echo $skills ?>">
+                    </div>
+                    <div class="row">
+                      <label>Dreams:</label>
+                      <input type="text" name="dreams" placeholder="<?php echo $dreams ?>">
+                    </div>
+                    <div class="row">
+                      <label>Problems:</label>
+                      <input type="text" name="problems" placeholder="<?php echo $problems ?>">
+                    </div>
+                    <div class="row">
+                      <label>Comments:</label>
+                      <input  type="text" name="other_comments" placeholder="<?php echo $other_comments ?>">
+                    </div>
                     <label>Image:</label>
                     <input type="file" name="image" accept="image/*">
                     <input type="hidden" name="orphan_id" value="<?php echo $row['orphan_id'] ?>">

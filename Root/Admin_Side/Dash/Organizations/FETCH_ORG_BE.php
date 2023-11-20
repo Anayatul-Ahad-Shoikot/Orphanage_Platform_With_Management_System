@@ -18,7 +18,7 @@
             echo '</div>';
             echo '</div>';
             echo '<div class="info">';
-            echo '<a href="#?org_id=' . $row['org_id'] . '"  class="blog-post_cta" > View </a>';
+            echo '<a href="/Root/Admin_Side/Dash/Organizations/VIEW_ORG.php?org_id=' . $row['org_id'] . '"  class="blog-post_cta" > View </a>';
             echo '</div>';
             echo '</div>';
         }
