@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Nov 15, 2023 at 03:46 PM
+-- Generation Time: Nov 20, 2023 at 06:10 PM
 -- Server version: 10.4.28-MariaDB
 -- PHP Version: 8.2.4
 
@@ -34,6 +34,13 @@ CREATE TABLE `admin_details` (
   `priyority` int(11) NOT NULL,
   `image` varchar(255) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Dumping data for table `admin_details`
+--
+
+INSERT INTO `admin_details` (`admin_id`, `user_id`, `user_name`, `priyority`, `image`) VALUES
+(1, 38, 'admin', 1, 'admin.png');
 
 -- --------------------------------------------------------
 
@@ -70,7 +77,9 @@ CREATE TABLE `blog_actions` (
 
 INSERT INTO `blog_actions` (`id`, `post_id`, `likes`, `comments`) VALUES
 (17, 47, 2, ''),
-(18, 48, 1, '');
+(18, 48, 2, ''),
+(19, 49, 0, ''),
+(20, 50, 0, '');
 
 -- --------------------------------------------------------
 
@@ -94,7 +103,9 @@ INSERT INTO `blog_comment` (`comment_id`, `post_id`, `user_name`, `comments`, `d
 (10, 47, 'ela2', 'HIII', '2023-11-15 03:20:11'),
 (11, 47, 'ela2', 'HELLOW', '2023-11-15 03:20:17'),
 (12, 47, 'ela2', 'dawdas', '2023-11-15 03:20:42'),
-(13, 48, 'ela2', 'qwe', '2023-11-15 14:38:43');
+(13, 48, 'ela2', 'qwe', '2023-11-15 14:38:43'),
+(14, 47, 'ela2', 'dfgSDfsAE', '2023-11-15 16:28:46'),
+(15, 47, 'ela2', 'sadawd', '2023-11-20 06:55:02');
 
 -- --------------------------------------------------------
 
@@ -113,9 +124,10 @@ CREATE TABLE `blog_likes` (
 --
 
 INSERT INTO `blog_likes` (`like_id`, `post_id`, `viewer_username`) VALUES
-(40, 47, 'ela2'),
 (41, 47, 'sabrina2'),
-(42, 48, 'ela2');
+(42, 48, 'ela2'),
+(43, 47, 'ela2'),
+(44, 48, 'ls_foundation');
 
 -- --------------------------------------------------------
 
@@ -139,7 +151,9 @@ CREATE TABLE `blog_post` (
 
 INSERT INTO `blog_post` (`post_id`, `title`, `user_name`, `content`, `category`, `img_path`, `published`) VALUES
 (47, 'ahad shoikot', 'ela2', 'Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source. Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of \"de Finibus Bonorum et Malorum\" (The Extremes of Good and Evil) by Cicero, written in 45 BC. This book is a treatise on the theory of ethics, very popular during the Renaissance. The first line of Lorem Ipsum, \"Lorem ipsum dolor sit amet..\", comes from a line in section 1.10.32.', 'child', 'img/Screenshot 2023-09-19 000957.png', '2023-11-15 04:19:53'),
-(48, 'qwert', 'ela2', 'qwe', 'old', 'img/Screenshot 2023-11-10 194906.png', '2023-11-15 15:38:38');
+(48, 'qwert', 'ela2', 'qwe', 'old', 'img/Screenshot 2023-11-10 194906.png', '2023-11-15 15:38:38'),
+(49, 'Testing from admin side', 'admin', 'asdA:IWEFhdklsfiepofhsjdlfbaiwgfUQeo:F', 'child', 'img/IMG_20190310_164429.jpg', '2023-11-19 06:34:11'),
+(50, 'd', 'ls_foundation', 'adw', 'child', 'img/default-avatar.png', '2023-11-20 07:18:00');
 
 -- --------------------------------------------------------
 
@@ -169,9 +183,11 @@ CREATE TABLE `org_details` (
 --
 
 INSERT INTO `org_details` (`org_id`, `org_name`, `user_name`, `description`, `contact_email`, `contact_phone`, `address`, `website`, `logo_path`, `established_date`, `location`, `mission_and_vision`, `reviews_testimonials`, `country`) VALUES
-(12, 'Charity By Ela2', 'ela2', 'it is the oldest charity. We a', 'CharityByEla2@gmail.com', '01973336001', 'Madani avenew, Notun bazar, Dh', 'https://www.ela2Charity.com', 'img/Screenshot 2023-10-05 145951.png', '1985-07-17', 'Dhanmondi', 'To complete every child\'s wish', '', 'Bangladesh'),
+(12, 'Charity By Ela2', 'ela2', 'aaaa', 'CharityByEla2@gmail.com', '01973336001', 'Madani avenew, Notun bazar, Dh', 'https://www.ela2Charity.com', 'img/Screenshot 2023-10-05 145951.png', '1985-07-17', 'Dhanmondi', 'To complete every child\'s wish', '', 'Bangladesh'),
 (14, 'Sabrina Charity 123', 'sabrina2', 'We take care our childs like a mother', 'SC@gmail.com.org', '12345678910', 'mohakhali, dhaka - 1212', 'https://www.sab2Charity.com', 'img/Screenshot 2023-11-10 185814.png', '2023-03-09', 'Dhaka', 'To complete every child\'s wish', '', 'India'),
-(15, 'shetu charity', 'shetu', 'it is the oldest charity. We all known as for our ', 'salim@gmail.com', '+8801973336001', 'mirpur -2', 'Charity By Ela2', 'img/Screenshot 2023-09-19 215724.png', '2023-11-11', 'Boshundhora , Dhaka - 1216', 'adswdaSD', '', 'Bangladesh');
+(15, 'shetu charity', 'shetu', 'it is the oldest charity. We all known as for our ', 'salim@gmail.com', '+8801973336001', 'mirpur -2', 'Charity By Ela2', 'img/Screenshot 2023-09-19 215724.png', '2023-11-11', 'Boshundhora , Dhaka - 1216', 'adswdaSD', '', 'Bangladesh'),
+(16, 'Little Sprouts Foundation', 'ls_foundation', 'Child Welfare Organization', 'info@littlesproutsfoundation.o', '+880667788990', '40 Child Care Lane, Mohakhali, Dhaka', 'www.littlesproutsfoundation.or', 'img/vector-charitable-foundation-logo-illustration.jpg', '2005-05-19', 'Mohakhali, Dhaka', 'Nurturing and educating vulner', '', 'Bangladesh'),
+(17, 'Safe Haven Orphanage', 'safe_haven', 'Providing a safe and nurturing environment for orp', 'info@safehaven.org', '+880112233445', '40 Safe Haven Road, mirpur -2, Dhaka', 'www.safehaven.org', 'img/8ddd1ee70aedfb9dc38884330abaf0e3_resize.jpg', '2023-11-07', 'mirpur - 2', 'Child Care and Protection', '', 'Bangladesh');
 
 -- --------------------------------------------------------
 
@@ -212,10 +228,10 @@ CREATE TABLE `orphan_profiles` (
 --
 
 INSERT INTO `orphan_profiles` (`orphan_id`, `org_id`, `org_name`, `first_name`, `last_name`, `age`, `address`, `guardian_name`, `guardian_contact`, `gender`, `religion`, `date_of_birth`, `since`, `family_status`, `physical_condition`, `education_level`, `medical_history`, `hobby`, `favorite_food`, `favorite_games`, `skills`, `dreams`, `problems`, `other_comments`, `image_path`) VALUES
-(10, 14, 'sabrina2', 'asd', 'xyz', 12, 'asd', 'asd', 'asd', '', '', '0000-00-00', '2023-11-14', '', '', '', 'asd', 'asd', 'asd', 'asd', 'asd', 'asd', 'asd', 'asd', 'img/011-201-021.jpg'),
-(12, 14, 'sabrina2', 'Anayatul', 'Shoikot', 23, 'dadw', 'bahar uddin', '+8801973336001', 'female', 'cristian', '2023-11-11', '2023-11-15', 'unknow', 'disabled', 'primary_school', 'wad', 'awd', 'asdwd', 'asd', 'fyj', 'dfyjf', 'adf', 'Wjuyighjfy', 'img/Screenshot 2023-10-30 232034.png'),
-(13, 12, 'ela2', 'Shorifa', 'Rani', 25, 'mirpur -2', 'bahar uddin', '+8801973336001', 'female', 'buddha', '2023-11-13', '2023-11-15', 'unknow', 'deaf', 'senior_high_school', 'wad', 'awd', 'asdwd', 'asd', 'fyj', 'dfyjf', 'adf', 'Wjuyighjfy', 'img/Screenshot 2023-11-05 231333.png'),
-(16, 15, 'shetu', 'Anayatul', 'Shoikot', 0, 'Madani avenew, Notun bazar, Dhaka - 1216', '', '0324325436', '', '', '0000-00-00', '2023-11-15', '', '', '', '', '', '', '', '', '', '', '', 'img/Screenshot 2023-10-24 095707.png');
+(12, 14, 'sabrina2', 'ahad', 'Shoikot', 9, '40 Child Care Lane, Mohakhali, Dhaka', 'bahar uddin', '+8801973336001', 'male', 'muslim', '2023-11-30', '2023-11-15', 'other', 'good', 'secondary_school', 'Good', 'Gamming', 'Fast Food', 'Badminton', 'Fast learners', 'Full Stack Developer', 'Addicted to games', 'All okay', 'img/Screenshot 2023-10-30 232034.png'),
+(16, 16, 'ls_foundation', 'Zohura', 'Alim', 0, 'Madani avenew, Notun bazar, Dhaka', '', '0324325436', 'female', 'hindu', '2023-11-15', '2014-11-11', '', '', '', '', '', '', '', '', '', '', '', 'img/011-201-021.jpg'),
+(19, 16, 'ls_foundation', 'Tasnim', 'Rahman', 13, '25 Mirpur Road, Dhaka', 'Abu Islam', '+880998877665', 'female', 'hindu', '2023-11-06', '2023-11-15', 'unknow', 'deaf', 'primary_school', 'Allergy to Dust', 'Singing', 'Ice Cream', 'Hide and Seek', 'Singing', 'Become a Singer', 'none', 'Loves exploring new things', 'img/xyz.jpg'),
+(20, 17, 'safe_haven', 'Arham', 'Hasan', 4, '89 Mohammadpur Street, Dhaka', 'Rubina Hasan', '+880778899665', 'male', 'cristian', '2023-11-08', '2023-11-16', 'abondoned', 'autistic', 'kindergarten', 'none', 'playing', 'polaw', 'cricket', 'none', 'none', 'none', 'Enjoys playing with siblings', 'img/da.jpg');
 
 -- --------------------------------------------------------
 
@@ -261,7 +277,8 @@ INSERT INTO `removed_orphans` (`si`, `orphan_id`, `org_id`, `org_name`, `first_n
 (5, 11, 14, 'sabrina2', 'Anayatul', 'Shoikot', 0, '', '', '+8801973336001', '', '', '0000-00-00', '2023-11-15', 'other', '', '', 'wad', 'awd', 'Hadudu', '', '', '', '', '', 'img/Screenshot 2023-09-23 193732.png'),
 (6, 15, 12, 'ela2', 'Anayatul', 'Shoikot', 0, 'dadw', '', '+8801973336001', '', '', '0000-00-00', '2023-11-15', '', '', '', '', '', '', '', '', '', '', '', 'img/Screenshot 2023-09-29 090840.png'),
 (7, 14, 12, 'ela2', 'sabrina zaman', 'Rani', 11, 'mirpur -2', 'bahar uddin', '+8801973336001', '', '', '0000-00-00', '2023-11-15', '', '', '', 'wad', 'awd', 'asdwd', 'asd', 'fyj', 'dfyjf', 'adf', 'Wjuyighjfy', 'img/Screenshot 2023-10-26 225946.png'),
-(8, 17, 15, 'shetu', 'Shorifa', 'Rani', 0, 'mirpur -2', '', '+8801973336001', '', '', '0000-00-00', '2023-11-15', '', '', '', '', '', '', '', '', '', '', '', 'img/Screenshot 2023-11-08 102338.png');
+(8, 17, 15, 'shetu', 'Shorifa', 'Rani', 0, 'mirpur -2', '', '+8801973336001', '', '', '0000-00-00', '2023-11-15', '', '', '', '', '', '', '', '', '', '', '', 'img/Screenshot 2023-11-08 102338.png'),
+(9, 21, 16, 'ls_foundation', 'Tahmin Ahnaf', 'limon', 12, '', '', '', '', '', '0000-00-00', '2023-11-20', '', '', '', '', '', '', '', '', '', '', '', 'img/404434189_721834109974763_6012777654000677673_n.jpg');
 
 -- --------------------------------------------------------
 
@@ -287,7 +304,9 @@ INSERT INTO `user_account` (`user_id`, `user_name`, `user_pass`, `user_email`, `
 (37, 'ela2', '$2y$10$YqAs/fajdTKen9wPtrcQv.Cj0.ns4H0Ydfb.DQ9y1oWHcFanESp6q', 'ela2@gmail.com', 'org', '2023-11-13 11:55:57'),
 (38, 'admin', '$2y$10$iVwuPBUbsEzjPvrChuN5FemjrzGTc0LIlACDGgr14av6y3VW6cxFy', 'admin@gmail.com', 'admin', '2023-11-13 11:58:59'),
 (39, 'sabrina2', '$2y$10$Kv0HzjPhb3D3owqS7cUSHu5b818mAwntx2FrzUWclGfiJvXR0sKFy', 's@gmail.com', 'org', '2023-11-14 15:39:35'),
-(40, 'shetu', '$2y$10$KtKQjX9t0DG2cpXHIZFwc.AGOzbJ1U/me5IiydbhPImVx77onUWqm', 'shet', 'org', '2023-11-15 08:33:59');
+(40, 'shetu', '$2y$10$KtKQjX9t0DG2cpXHIZFwc.AGOzbJ1U/me5IiydbhPImVx77onUWqm', 'shet', 'org', '2023-11-15 08:33:59'),
+(41, 'ls_foundation', '$2y$10$fF4QdVWFXa/Ty3ierooxR.InuvYn1v9/lQVHsy1F9L6IQ6nyzIDG.', 'info@littlesproutsfoundation.o', 'org', '2023-11-15 19:21:00'),
+(42, 'safe_haven', '$2y$10$jxjXemx5tM5zYCLzurTexOhnTrprpH4KqceCw3ScGcpUpX5sNM6E2', 'info@safehaven.org', 'org', '2023-11-16 06:09:54');
 
 -- --------------------------------------------------------
 
@@ -381,15 +400,13 @@ ALTER TABLE `removed_orphans`
 -- Indexes for table `user_account`
 --
 ALTER TABLE `user_account`
-  ADD PRIMARY KEY (`user_id`),
-  ADD UNIQUE KEY `user_name` (`user_name`);
+  ADD PRIMARY KEY (`user_id`);
 
 --
 -- Indexes for table `user_details`
 --
 ALTER TABLE `user_details`
-  ADD PRIMARY KEY (`SI`),
-  ADD UNIQUE KEY `user_name` (`user_name`);
+  ADD PRIMARY KEY (`SI`);
 
 --
 -- AUTO_INCREMENT for dumped tables
@@ -399,7 +416,7 @@ ALTER TABLE `user_details`
 -- AUTO_INCREMENT for table `admin_details`
 --
 ALTER TABLE `admin_details`
-  MODIFY `admin_id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `admin_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- AUTO_INCREMENT for table `adoptions`
@@ -411,49 +428,49 @@ ALTER TABLE `adoptions`
 -- AUTO_INCREMENT for table `blog_actions`
 --
 ALTER TABLE `blog_actions`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=19;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=21;
 
 --
 -- AUTO_INCREMENT for table `blog_comment`
 --
 ALTER TABLE `blog_comment`
-  MODIFY `comment_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
+  MODIFY `comment_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=16;
 
 --
 -- AUTO_INCREMENT for table `blog_likes`
 --
 ALTER TABLE `blog_likes`
-  MODIFY `like_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=43;
+  MODIFY `like_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=46;
 
 --
 -- AUTO_INCREMENT for table `blog_post`
 --
 ALTER TABLE `blog_post`
-  MODIFY `post_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=49;
+  MODIFY `post_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=51;
 
 --
 -- AUTO_INCREMENT for table `org_details`
 --
 ALTER TABLE `org_details`
-  MODIFY `org_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=16;
+  MODIFY `org_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=18;
 
 --
 -- AUTO_INCREMENT for table `orphan_profiles`
 --
 ALTER TABLE `orphan_profiles`
-  MODIFY `orphan_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=18;
+  MODIFY `orphan_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=22;
 
 --
 -- AUTO_INCREMENT for table `removed_orphans`
 --
 ALTER TABLE `removed_orphans`
-  MODIFY `si` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
+  MODIFY `si` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
 
 --
 -- AUTO_INCREMENT for table `user_account`
 --
 ALTER TABLE `user_account`
-  MODIFY `user_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=41;
+  MODIFY `user_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=43;
 
 --
 -- AUTO_INCREMENT for table `user_details`
