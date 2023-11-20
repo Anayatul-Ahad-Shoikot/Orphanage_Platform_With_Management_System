@@ -92,6 +92,7 @@
         </a>
       </nav>
         <main>
+
             <div class="head-title">
                 <div class="left">
                     <h1>Organizations</h1>
@@ -117,12 +118,13 @@
                     </form>
                 </div>
             </div>
+
             <div class="container">
                 <?php
                     include("/xampp/htdocs/DBMS_Project_Organized_One/Root/Admin_Side/Dash/Organizations/VIEW_ORG_BE.php");
                 ?>
                 <h2>Profile</h2>
-                <form action="#" method="post" enctype="multipart/form-data">
+                <form action="/Root/Admin_Side/Dash/Organizations/VIEW_UPDATE_BE.php" method="post" enctype="multipart/form-data">
                     <div class="row">
                         <label>User ID :</label>
                         <input type="text" name="user_id" placeholder="<?php echo $user_id ?>" disabled>
@@ -137,11 +139,11 @@
                     </div>
                     <div class="row">
                         <label>Account Type :</label>
-                        <input type="text" name="acc_type" placeholder="<?php echo $acc_type ?>" >
+                        <input type="text" name="acc_type" placeholder="<?php echo $acc_type ?>" disabled>
                     </div>
                     <div class="row">
                         <label>Since :</label>
-                        <input type="text" name="since" placeholder="<?php echo $since ?>" >
+                        <input type="text" name="since" placeholder="<?php echo $since ?>" disabled>
                     </div>
                     <div class="row">
                         <label>Organization ID :</label>
@@ -149,7 +151,7 @@
                     </div>
                     <div class="row">
                         <label>Organization's Name :</label>
-                        <input type="text" name="org_name" placeholder="<?php echo $org_name ?>" >
+                        <input type="text" name="org_name" placeholder="<?php echo $org_name ?>" disabled>
                     </div>
                     <div class="row">
                         <label>Established Date :</label>
@@ -189,10 +191,22 @@
                     </div>
                     <label>Orginization's Logo :</label>
                     <input type="file" name="image" accept="image/*">
+                    <input type="hidden" name="org_id" value="<?php echo $org_id ?>">
                     <div class="btn">
                         <button type="submit" name="update">Update</button>
                     </div>
                 </form>
+            </div>
+
+            <div class="container_2">
+                <div class="left">
+                    <h1>Orphans</h1>
+                </div>
+                <div class="plate">
+                    <?php 
+                        include('/xampp/htdocs/DBMS_Project_Organized_One/Root/Admin_Side/Dash/Organizations/FETCH_ORPHAN_FROM_ORG_BE.php');
+                    ?>
+                </div>
             </div>
         </main>
     </section>

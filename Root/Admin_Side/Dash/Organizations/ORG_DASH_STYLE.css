@@ -516,6 +516,14 @@ body.dark {
 .content main .plate .blog-post_cta:hover {
     background: var(--color3);
 }
+
+
+.content main .container_2 .left {
+  border-bottom: 1px solid black;
+  color: var(--color4);
+}
+
+
 @media screen and (max-width: 1068px) {
     .blog-post {
         max-width: 80rem;

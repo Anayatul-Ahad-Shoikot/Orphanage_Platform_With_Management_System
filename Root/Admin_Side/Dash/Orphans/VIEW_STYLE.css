@@ -67,3 +67,125 @@ button:hover {
   justify-content: space-evenly;
   padding: 10px;
 }
+
+
+
+
+
+
+
+.content main .container_2 .plate {
+  margin: 5rem 2rem 6rem 2rem;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  row-gap: 60px;
+  column-gap: 20px; 
+}
+.content main .plate .card a{
+text-decoration: none;
+}
+
+.content main .plate .card h1{
+  font-weight: 800;
+  font-size: 25px;
+  color: var(--color7);
+  text-transform: capitalize;
+}
+
+.content main .plate .card {
+  position: relative;
+  background-color: white;
+  width: 350px;
+  height: 200px;
+  box-shadow: 0 15px 50px rgba(0, 0, 0, 0.35);
+  border-radius: 15px;
+  transition: all 0.4s ease-in-out;
+}
+
+.content main .plate .card:hover {
+  height: 350px;
+}
+
+.content main .plate .card .pb {
+  position: absolute;
+  top: -45px;
+  left: 50%;
+  transform: translate(-50%, 0%);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  height: 150px;
+  width: 150px;
+  border-radius: 15px;
+  box-shadow: 0 15px 50px rgba(0, 0, 0, 0.35);
+  transition: all 0.4s ease-in-out;
+}
+
+
+.content main .plate .card:hover .pb{
+  height: 250px;
+  width: 250px;
+}
+
+.content main .plate .card .info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 125px 0px 10px 0px;
+  transition: all 0.4s ease-in-out;
+}
+.content main .plate .card:hover .info {
+  display: flex;
+  padding: 230px  0px 10px 0px;
+}
+
+.content main .plate .card .buttons {
+  position: relative;
+  display: flex;
+  opacity: 0;
+  z-index: -10px;
+  padding: 10px 50px;
+  justify-content: space-between;
+  transform: translate(-20px);
+  transition-timing-function: linear;
+  transition-duration: 0s, 0.2s, 0.2s;
+  transition-property: z-index, opacity, transform;
+  transition-delay: 0.2s, 0s, 0s;
+  gap: 2rem;
+}
+
+.content main .plate .card button {
+  width: 7rem;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  border: none;
+  font-size: medium;
+}
+
+.content main .plate a {
+  text-align: center;
+  color: white;
+  background-color: var(--color4);
+  width: 150px;
+  padding: 10px;
+  border-radius: 15px;
+  transition: .5s;
+}
+
+.content main .plate a:hover {
+transition: .5s;
+background-color: var(--color6);
+font-weight: 900;
+}
+.content main .plate .card:hover .details ,
+.content main .plate .card:hover .buttons{
+  opacity: 1;
+  z-index: 0;
+  transform: translate(0px);
+  transition-timing-function: linear;
+  transition-duration: 0s, 0.3s, 0.3s;
+  transition-property: z-index, opacity, transform;
+  transition-delay: 0s, 0.2s, 0.2s;
+}
