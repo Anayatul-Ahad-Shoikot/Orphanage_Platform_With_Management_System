@@ -44,9 +44,9 @@
         </div>
         
             <div class="blog-actions">
-                <form action="/Root/Blog/LIKES_HANDLE_BE.php" method="post">
+                <form id="LIKE" action="/Root/Blog/LIKES_HANDLE_BE.php" method="post">
                 <input type="hidden" name="post_id" value="<?php echo $post_id ?>">
-                <button type="submit" name="like"><i class='bx bxs-like'></i></button>
+                <button type="submit" name="like" onclick="storeScrollPosition('LIKE')"><i class='bx bxs-like'></i></button>
             </form>
                 <p class="likes-count"><?php echo $likes ?></p>
             </div>
@@ -59,12 +59,32 @@
             
 
             <h4>Add a comment :</h4>
-            <form action="/Root/Blog/COMMENT_HANDLE_BE.php" method="post">
+            <form id="COMMENT" action="/Root/Blog/COMMENT_HANDLE_BE.php" method="post">
                 <input type="hidden" name="user_name" value="<?php echo $user_name ?>">
                 <input type="hidden" name="post_id" value="<?php echo $post_id ?>">
                 <input type="text" name="comments" placeholder="Add a comment" required>
-                <button type="submit" name="submit">Comment</button>
+                <button type="submit" name="submit" onclick="storeScrollPosition('COMMENT')">Comment</button>
             </form>
     </div>
+
+
+    <script>
+      function storeScrollPosition(formId) {
+        const form = document.getElementById(formId);
+        const scrollPosition = window.scrollY || window.pageYOffset;
+        sessionStorage.setItem(formId, scrollPosition);
+      }
+      document.addEventListener('DOMContentLoaded', function() {
+        const likeFormScroll = sessionStorage.getItem('LIKE');
+        const commentFormScroll = sessionStorage.getItem('COMMENT');
+        if (likeFormScroll !== null) {
+          window.scrollTo(0, likeFormScroll);
+          sessionStorage.removeItem('LIKE');
+        } else if (commentFormScroll !== null) {
+          window.scrollTo(0, commentFormScroll);
+          sessionStorage.removeItem('COMMENT');
+        }
+      });
+  </script>
 </body>
 </html>
