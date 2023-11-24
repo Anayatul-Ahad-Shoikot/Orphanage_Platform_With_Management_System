@@ -45,7 +45,7 @@
           </a>
         </li>
         <li>
-          <a href="#" class="nav-link">
+          <a href="/Root/Admin_Side/Dash/Admin/ADMIN_PROFILE.php" class="nav-link">
             <i class="fas fa-people-group"></i>
             <span class="text">Team</span>
           </a>
@@ -84,12 +84,10 @@
           <i class="fas fa-bell"></i>
           <span class="num">28</span>
         </a>
-
-        <a href="#" class="profile">
-          <img src="<?php echo $image ?>" alt="profile" />
+        <a href="/Root/Admin_Side/Dash/Admin/ADMIN_PROFILE.php" class="profile">
+          <img src="Admin/<?php echo $image ?>" alt="profile" />
         </a>
       </nav>
-
       <main>
         <div class="head-title">
           <div class="left">
@@ -106,21 +104,21 @@
           <li>
             <a href="/Root/Admin_Side//Dash/Orphans/ORPHAN_DASH.php"><i class="fas fa-people-group"></i></a>
             <span class="text">
-              <p>Total Orphans</p>
+              <p>Orphans</p>
               <h3><?php echo $totalOrphans ?></h3>
             </span>
           </li>
           <li>
            <a href="/Root/Admin_Side//Dash/Organizations/ORG_DASH.php"><i class="fas fa-people-group"></i></a>
             <span class="text">
-              <p>Total Organizations</p>
+              <p>Organizations</p>
               <h3><?php echo $totalOrgs ?></h3>
             </span>
           </li>
           <li>
             <a href="/Root/Admin_Side/Dash/Users/USER_DASH.php"><i class="fas fa-people-group"></i></a>
             <span class="text">
-              <p>Total Users</p>
+              <p>Users</p>
               <h3><?php echo $totalusers ?></h3>
             </span>
           </li>
@@ -130,21 +128,21 @@
           <li>
             <a href="#"><i class="fas fa-calendar-check"></i></a>
             <span class="text">
-              <p>Total Old</p>
+              <p>Old</p>
               <h3>1.5K</h3>
             </span>
           </li>
           <li>
-            <a href="#"><i class="fas fa-people-group"></i></a>
+            <a href="/Root/Admin_Side/Dash/Admin/ADMIN_PROFILE.php"><i class="fas fa-people-group"></i></a>
             <span class="text">
-              <p>Total Admins</p>
+              <p>Admins</p>
               <h3><?php echo $totaladmins ?></h3>
             </span>
           </li>
-          <li class="hideee">
+          <li>
             <i class="fas fa-calendar-check"></i>
             <span class="text">
-              <p>Total Old</p>
+              <p>Accounts</p>
               <h3>1.5K</h3>
             </span>
           </li>
@@ -162,8 +160,8 @@
               <thead>
                 <tr>
                   <th>Title</th>
-                  <th>From</th>
-                  <th>-----</th>
+                  <th>By</th>
+                  <th class="x">Action</th>
                 </tr>
               </thead>
               <tbody>

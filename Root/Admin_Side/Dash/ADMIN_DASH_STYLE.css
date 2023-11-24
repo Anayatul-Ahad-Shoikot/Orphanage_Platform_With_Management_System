@@ -502,6 +502,11 @@ body.dark {
   border-bottom: 1px solid var(--grey);
 }
 
+.content main .table-data .order table .x {
+  display: flex;
+  justify-content: center;
+}
+
 .content main .table-data .order table td {
   padding: 16px 0;
 }
@@ -530,6 +535,11 @@ body.dark {
   color: var(--light);
   border-radius: 20px;
   font-weight: 700;
+}
+
+.content main .table-data .order table td .btn{
+  display: flex;
+  justify-content: space-evenly;
 }
 
 .content main .table-data .order table tr td .status.pending {

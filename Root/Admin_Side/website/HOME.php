@@ -49,7 +49,7 @@
           </a>
         </li>
         <li>
-          <a href="#" class="nav-link">
+          <a href="/Root/Admin_Side/Dash/Admin/ADMIN_PROFILE.php" class="nav-link">
             <i class="fas fa-people-group"></i>
             <span class="text">Team</span>
           </a>
@@ -88,8 +88,8 @@
             <span class="num">28</span>
             </a>
 
-            <a href="#" class="profile">
-            <img src="..//..//Dash//<?php echo $image ?>" alt="profile" />
+            <a href="/Root/Admin_Side/Dash/Admin/ADMIN_PROFILE.php" class="profile">
+            <img src="../Dash/Admin/<?php echo $image ?>" alt="profile" />
             </a>
         </nav>
         <main>

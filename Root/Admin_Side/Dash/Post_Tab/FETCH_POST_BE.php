@@ -11,7 +11,12 @@
                     <p>' . $row['title'] . '</p>
                     </td>
                     <td>' . $row['user_name'] . '</td>
-                    <td><span class="status published"> View </span></td>
+                    <td>
+                        <div class="btn">
+                            <a href="#">View</a>
+                            <a href="#">remove</a>
+                        </div>
+                    </td>
                 </tr>';
         }
     } else {

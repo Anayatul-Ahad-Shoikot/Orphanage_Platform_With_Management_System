@@ -72,7 +72,7 @@
         </a>
 
         <a href="#" class="profile">
-          <img src="../Dash/<?php echo $image ?>" alt="profile" />
+          <img src="../Admin/<?php echo $image ?>" alt="profile" />
         </a>
       </nav>
 

@@ -14,10 +14,10 @@
                 $row = mysqli_fetch_array($username_check_run);
                 $stored_hashed_password = $row['user_pass'];
 
-                // Verify the entered password against the stored hashed password
                 if (password_verify($entered_password, $stored_hashed_password)) {
                     $_SESSION['user_name'] = $row['user_name'];
                     $_SESSION['acc_type'] = $row['acc_type'];
+                    $_SESSION['user_id'] = $row['user_id'];
 
                     if($_SESSION['acc_type'] == "admin") {
                         header("Location: /Root/Admin_Side/Dash/ADMIN_DASH.php");
@@ -44,6 +44,9 @@
             header("Location: /Root/Login_Page/LOGIN_FORM.php");
             exit(0);
         }
+    }
+    else {
+        echo "Error";
     }
 
     mysqli_close($con);
