@@ -3,18 +3,19 @@
     include('/xampp/htdocs/DBMS_Project_Organized_One/Includes/db_con.php');
     session_start();
 
-    if (!isset($_SESSION['user_id']) && !isset($_SESSION['acc_type'])) {
+    if (!isset($_SESSION['user_name']) && !isset($_SESSION['acc_type'])) {
         $_SESSION['notify'] = "user_id not seted";
         header("Location: /Root/Login_Page/LOGIN_FORM.php");
         exit();
     } else {
-        $id = $_SESSION['user_id'];
-        $sql = "SELECT * FROM admin_details Where user_id = $id";
+        $user_name = $_SESSION['user_name'];
+        $sql = "SELECT * FROM admin_details Where user_name = '$user_name'";
         $sql_result = mysqli_query($con, $sql);
         if (mysqli_num_rows($sql_result) == 1) {
             $row = mysqli_fetch_array($sql_result);
             $admin_id = $row['admin_id'];
-            $user_id = $row['user_id'];
+            $user_name = $row['user_name'];
+            $contact = $row['contact'];
             $priyority = $row['priyority'];
             $image = $row['image'];
         } 

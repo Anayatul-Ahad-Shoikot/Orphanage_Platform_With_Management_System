@@ -115,6 +115,11 @@
         </div>
 
         <div class="container">
+          <div class="box st st">
+              <?php
+                  include('/xampp/htdocs/DBMS_Project_Organized_One/Root/Admin_Side/Dash/Admin/FETCH_ADMINS.php');
+              ?>
+          </div>
           <div class="box st">
                 <h1>My Deteails</h1>
               <div>
@@ -123,16 +128,12 @@
               <form action="/Root/Admin_Side/Dash/Admin/UPDATE_ADMIN_BE.php" method="POST" enctype="multipart/form-data">
                   <input type="text" name="user_name" placeholder="<?php echo $user_name ?>" disabled>
                   <input type="text" name="user_email" placeholder="<?php echo $user_email ?>">
+                  <input type="text" name="contact" placeholder="<?php echo $contact ?>">
                   <input type="text" name="priyority" placeholder="<?php echo $priyority ?>" disabled>
                   <input type="text" name="since" placeholder="<?php echo $since ?>" disabled>
                   <input type="file" name="image" accept="image/*">
                   <button type="submit" name="submit1">Update</button>
               </form>
-          </div>
-          <div class="box st st">
-              <?php
-                  include('/xampp/htdocs/DBMS_Project_Organized_One/Root/Admin_Side/Dash/Admin/FETCH_ADMINS.php');
-              ?>
           </div>
           <div class="box nd">
             <h1>Add Admin</h1>
@@ -140,6 +141,7 @@
               <form action="/Root/Admin_Side/Dash/Admin/NEW_ADDMIN_BE.php" method="POST" enctype="multipart/form-data">
                   <input type="text" name="user_name" placeholder="Admin Name" required>
                   <input type="text" name="user_email" placeholder="Admin Email" required>
+                  <input type="text" name="contact" placeholder="contact number" required>
                   <input type="text" name="priyority" placeholder="Set priyority" required>
                   <input type="password" name="user_pass" placeholder="Password" required>
                   <input type="password" name="con_pass" placeholder="Confirm Password" required>
