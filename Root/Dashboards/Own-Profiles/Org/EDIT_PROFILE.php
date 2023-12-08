@@ -25,8 +25,6 @@
                 <ul>
                     <li><a href="/Root/Home_Page/O_HOME.php">Home</a></li>
                     <li><a href="/Root/Org_Page/O_ORG.php">Orgs.</a></li>
-                    <li><a href="#">Donations</a></li>
-                    <li><a href="#">Adoption Rrequest</a></li>
                     <li><a href="/Root/Dashboards/Own-Profiles/Org/PROFILE_DETAILS.php" class="edit_profile">Profile</a></li>
                 </ul>
             </div>
@@ -38,21 +36,17 @@
             <label>Organization's Name :</label>
             <input type="text" name="org_name" placeholder="<?php echo $org_name ?>" >
             <label>Description :</label>
-            <input type="text" name="description" placeholder="<?php echo $description ?>" >
+            <input type="text" name="org_description" placeholder="<?php echo $org_description ?>" >
             <label>Organization's Email :</label>
-            <input type="text" name="contact_email" placeholder="<?php echo $contact_email ?>">
+            <input type="text" name="org_email" placeholder="<?php echo $org_email ?>">
             <label>Organization Contact :</label>
-            <input type="text" name="contact_phone" placeholder="<?php echo $contact_phone ?>" >
+            <input type="text" name="org_phone" placeholder="<?php echo $org_phone ?>" >
             <label>Orgamization's Address :</label>
-            <input type="text" name="address" placeholder="<?php echo $address ?>" >
+            <input type="text" name="org_location" placeholder="<?php echo $org_location ?>" >
             <label>Organization's Website :</label>
-            <input type="text" name="website" placeholder="<?php echo $website ?>" >
-            <label>Area :</label>
-            <input type="text" name="location" placeholder="<?php echo $location ?>">
+            <input type="text" name="org_website" placeholder="<?php echo $org_website ?>" >
             <label>Vision :</label>
-            <input type="text" name="mission_and_vision"  placeholder="<?php echo $mission_and_vision ?>">
-            <label>Country :</label>
-            <input type="text" name="country" placeholder="<?php echo $country ?>">
+            <input type="text" name="org_vision"  placeholder="<?php echo $org_vision ?>">
             <div class="opt">
                 <div class="part">
                     <label>Orginization's Logo :</label>
@@ -60,7 +54,7 @@
                 </div>
                 <div class="part">
                     <label>Established At :</label>
-                    <input type="date" name="established_date" >
+                    <input type="date" name="established" >
                 </div>
             </div>
             <div class="btn">

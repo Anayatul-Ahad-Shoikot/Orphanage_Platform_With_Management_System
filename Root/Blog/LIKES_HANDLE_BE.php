@@ -4,17 +4,18 @@
 
         if (isset($_POST['like']) && isset($_POST['post_id'])) {
             $post_id = $_POST['post_id'];
-            $viewerUsername = $_SESSION['user_name'];
+            $role = $_SESSION['role'];
+            $viewer_acc_id = $_SESSION['acc_id'];
             $unlikeQuery = "";
             $likeQuery = "";
-            $checkQuery = "SELECT * FROM blog_likes WHERE post_id = $post_id AND viewer_username = '$viewerUsername'";
+            $checkQuery = "SELECT * FROM like_handle WHERE post_id = $post_id AND viewer_acc_id = $viewer_acc_id";
             $checkResult = mysqli_query($con, $checkQuery);
             if (mysqli_num_rows($checkResult) > 0) {
-                $remove = "DELETE FROM blog_likes WHERE post_id = $post_id AND viewer_username = '$viewerUsername'";
+                $remove = "DELETE FROM like_handle WHERE post_id = $post_id AND viewer_acc_id = '$viewer_acc_id'";
                 mysqli_query($con, $remove);
-                $reduceLike = "UPDATE blog_actions SET likes = (likes - 1) WHERE post_id = $post_id";
+                $reduceLike = "UPDATE blog_likes SET likes = (likes - 1) WHERE post_id = $post_id";
                 mysqli_query($con, $reduceLike);
-                if($_SESSION['acc_type']=='user'){
+                if($_SESSION['role']=='user'){
                     header("Location: /Root/Blog/U_VIEW_BLOG.php?post_id=$post_id");
                     exit(0);
                 } else {
@@ -23,11 +24,11 @@
                 }
             exit(0);
             } else {
-                $add = "INSERT INTO blog_likes (post_id, viewer_username) VALUES ('$post_id', '$viewerUsername')";
+                $add = "INSERT INTO like_handle (post_id, viewer_acc_id) VALUES ($post_id, $viewer_acc_id)";
                 mysqli_query($con, $add);
-                $increaseLike = "UPDATE blog_actions SET likes = (likes + 1) WHERE post_id = $post_id";
+                $increaseLike = "UPDATE blog_likes SET likes = (likes + 1) WHERE post_id = $post_id";
                 mysqli_query($con, $increaseLike);
-                if($_SESSION['acc_type']=='user'){
+                if($_SESSION['role']=='user'){
                     header("Location: /Root/Blog/U_VIEW_BLOG.php?post_id=$post_id");
                     exit(0);
                 } else {

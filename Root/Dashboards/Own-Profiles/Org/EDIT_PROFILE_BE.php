@@ -2,101 +2,91 @@
     include('/xampp/htdocs/DBMS_Project_Organized_One/Includes/db_con.php');
     session_start();
 
-    if (!isset($_SESSION['user_name']) && !isset($_SESSION['acc_type'])) {
+    if (!isset($_SESSION['acc_id']) && !isset($_SESSION['role'])) {
         header("Location: /Root/Login_Page/LOGIN_FORM.php");
         exit();
     } else {
         if (isset($_POST['update'])) {
-                $Name = $_SESSION['user_name'];
-            
+                $org_id = $_SESSION['org_id'];
+   
                 if (isset($_POST['org_name']) && !empty($_POST['org_name'])) {
                     $org_name = $_POST['org_name'];
-                    $SQL = "UPDATE org_details SET org_name = ? WHERE user_name = ? LIMIT 1";
+                    $SQL = "UPDATE org_list SET org_name = ? WHERE org_id = ? LIMIT 1";
                     $stmt = mysqli_prepare($con, $SQL);
-                    mysqli_stmt_bind_param($stmt, "ss", $org_name, $Name);
+                    mysqli_stmt_bind_param($stmt, "si", $org_name, $org_id);
                     mysqli_stmt_execute($stmt);
                     mysqli_stmt_close($stmt);
                 }
-                if (isset($_POST['contact_email']) && !empty($_POST['contact_email'])) {
-                    $contact_email = $_POST['contact_email'];
-                    $SQL = "UPDATE org_details SET contact_email = ? WHERE user_name = ? LIMIT 1";
+                if (isset($_POST['org_email']) && !empty($_POST['org_email'])) {
+                    $org_email = $_POST['org_email'];
+                    $SQL = "UPDATE org_list SET org_email = ? WHERE org_id = ? LIMIT 1";
                     $stmt = mysqli_prepare($con, $SQL);
-                    mysqli_stmt_bind_param($stmt, "ss", $contact_email, $Name);
+                    mysqli_stmt_bind_param($stmt, "si", $org_email, $org_id);
                     mysqli_stmt_execute($stmt);
                     mysqli_stmt_close($stmt);
                 }
-                if (isset($_POST['contact_phone']) && !empty($_POST['contact_phone'])) {
-                    $contact_phone = $_POST['contact_phone'];
-                    $SQL = "UPDATE org_details SET contact_phone = ? WHERE user_name = ? LIMIT 1";
+                if (isset($_POST['org_phone']) && !empty($_POST['org_phone'])) {
+                    $org_phone = $_POST['org_phone'];
+                    $SQL = "UPDATE org_list SET org_phone = ? WHERE org_id = ? LIMIT 1";
                     $stmt = mysqli_prepare($con, $SQL);
-                    mysqli_stmt_bind_param($stmt, "ss", $contact_phone, $Name);
-                    mysqli_stmt_execute($stmt);
-                    mysqli_stmt_close($stmt);
-
-                }
-                if (isset($_POST['established_date']) && !empty($_POST['established_date'])) {
-                    $established_date = $_POST['established_date'];
-                    $SQL = "UPDATE org_details SET established_date = ? WHERE user_name = ? LIMIT 1";
-                    $stmt = mysqli_prepare($con, $SQL);
-                    mysqli_stmt_bind_param($stmt, "ss", $established_date, $Name);
+                    mysqli_stmt_bind_param($stmt, "si", $org_phone, $org_id);
                     mysqli_stmt_execute($stmt);
                     mysqli_stmt_close($stmt);
 
                 }
-                if (isset($_POST['description']) && !empty($_POST['description'])) {
-                    $description = $_POST['description'];
-                    $SQL = "UPDATE org_details SET description = ? WHERE user_name = ? LIMIT 1";
+                if (isset($_POST['established']) && !empty($_POST['established'])) {
+                    $established = $_POST['established'];
+                    $SQL = "UPDATE org_list SET established = ? WHERE org_id = ? LIMIT 1";
                     $stmt = mysqli_prepare($con, $SQL);
-                    mysqli_stmt_bind_param($stmt, "ss", $description, $Name);
+                    mysqli_stmt_bind_param($stmt, "si", $established, $org_id);
+                    mysqli_stmt_execute($stmt);
+                    mysqli_stmt_close($stmt);
+
+                }
+                if (isset($_POST['org_description']) && !empty($_POST['org_description'])) {
+                    $org_description = $_POST['org_description'];
+                    $SQL = "UPDATE org_list SET org_description = ? WHERE org_id = ? LIMIT 1";
+                    $stmt = mysqli_prepare($con, $SQL);
+                    mysqli_stmt_bind_param($stmt, "si", $org_description, $org_id);
                     mysqli_stmt_execute($stmt);
                     mysqli_stmt_close($stmt);
                 }
-                if (isset($_POST['website']) && !empty($_POST['website'])) {
-                    $website = $_POST['website'];
-                    $SQL = "UPDATE org_details SET website = ? WHERE user_name = ? LIMIT 1";
+                if (isset($_POST['org_website']) && !empty($_POST['org_website'])) {
+                    $org_website = $_POST['org_website'];
+                    $SQL = "UPDATE org_list SET org_website = ? WHERE org_id = ? LIMIT 1";
                     $stmt = mysqli_prepare($con, $SQL);
-                    mysqli_stmt_bind_param($stmt, "ss", $website, $Name);
+                    mysqli_stmt_bind_param($stmt, "si", $org_website, $org_id);
                     mysqli_stmt_execute($stmt);
                     mysqli_stmt_close($stmt);
                 }
-                if (isset($_POST['address']) && !empty($_POST['address'])) {
-                    $address = $_POST['address'];
-                    $SQL = "UPDATE org_details SET address = ? WHERE user_name = ? LIMIT 1";
+                if (isset($_POST['org_location']) && !empty($_POST['org_location'])) {
+                    $org_location = $_POST['org_location'];
+                    $SQL = "UPDATE org_list SET org_location = ? WHERE org_id = ? LIMIT 1";
                     $stmt = mysqli_prepare($con, $SQL);
-                    mysqli_stmt_bind_param($stmt, "ss", $address, $Name);
+                    mysqli_stmt_bind_param($stmt, "si", $org_location, $org_id);
                     mysqli_stmt_execute($stmt);
                     mysqli_stmt_close($stmt);
                 }
-                if (isset($_POST['location']) && !empty($_POST['location'])) {
-                    $location = $_POST['location'];
-                    $SQL = "UPDATE org_details SET location = ? WHERE user_name = ? LIMIT 1";
+                if (isset($_POST['org_vision']) && !empty($_POST['org_vision'])) {
+                    $org_vision = $_POST['org_vision'];
+                    $SQL = "UPDATE org_list SET org_vision = ? WHERE org_id = ? LIMIT 1";
                     $stmt = mysqli_prepare($con, $SQL);
-                    mysqli_stmt_bind_param($stmt, "ss", $location, $Name);
-                    mysqli_stmt_execute($stmt);
-                    mysqli_stmt_close($stmt);
-                }
-                if (isset($_POST['country']) && !empty($_POST['country'])) {
-                    $country = $_POST['country'];
-                    $SQL = "UPDATE org_details SET country = ? WHERE user_name = ? LIMIT 1";
-                    $stmt = mysqli_prepare($con, $SQL);
-                    mysqli_stmt_bind_param($stmt, "ss", $country, $Name);
-                    mysqli_stmt_execute($stmt);
-                    mysqli_stmt_close($stmt);      
-                }
-                if (isset($_POST['mission_and_vision']) && !empty($_POST['mission_and_vision'])) {
-                    $mission_and_vision = $_POST['mission_and_vision'];
-                    $SQL = "UPDATE org_details SET mission_and_vision = ? WHERE user_name = ? LIMIT 1";
-                    $stmt = mysqli_prepare($con, $SQL);
-                    mysqli_stmt_bind_param($stmt, "ss", $mission_and_vision, $Name);
+                    mysqli_stmt_bind_param($stmt, "si", $org_vision, $org_id);
                     mysqli_stmt_execute($stmt);
                     mysqli_stmt_close($stmt);
                 }
                 if (isset($_FILES["image"]["name"]) && !empty($_FILES["image"]["name"])) {
                     $image_name = $_FILES["image"]["name"];
                     $image_tmp_name = $_FILES["image"]["tmp_name"];
-                    $image_path = "img/" . $image_name;
+                    $sql = "SELECT org_name FROM org_list WHERE org_id = $org_id";
+                    $row = mysqli_fetch_assoc(mysqli_query($con, $sql));
+                    $org_name = $row['org_name'];
+                    $org_name = preg_replace("/[^a-zA-Z0-9]/", "", $org_name);
+                    $file_extension = pathinfo($image_name, PATHINFO_EXTENSION);
+                    $new_image_name = $org_name . "_" . uniqid() . "." . $file_extension;
+                    $image_path = "img/" . $new_image_name;
                     move_uploaded_file($image_tmp_name, $image_path);
-                    $SQL="UPDATE org_details SET logo_path = '$image_path' WHERE user_name='$Name' LIMIT 1";
+                    $SQL="UPDATE org_list SET org_logo = '$image_path' WHERE org_id = $org_id LIMIT 1";
                     mysqli_query($con, $SQL);
                 }
                 header("Location: /Root/Dashboards/Own-Profiles/Org/PROFILE_DETAILS.php");

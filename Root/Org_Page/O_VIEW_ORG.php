@@ -22,8 +22,6 @@
             <ul>
             <li><a href="/Root/Home_Page/O_HOME.php">Home</a></li>
             <li><a href="/Root/Org_Page/O_ORG.php">Orgs.</a></li>
-            <li><a href="#">Donation</a></li>
-            <li><a href="#">Adoption Request</a></li>
             <li><a href="/Root/Dashboards/Own-Profiles/Org/PROFILE_DETAILS.php">Profile</a></li>
             </ul>
           </div>
@@ -37,7 +35,7 @@
         <div class="left_portion">
             <div class="userDetails1">
                 <div class="profile">
-                    <figure><img src= "..//..//..//Dashboards/Own-Profiles/Org/<?php echo $logo_path ?>" alt="profile" width="250px" height="250px"></figure>
+                    <figure><img src= "..//..//..//Dashboards/Own-Profiles/Org/<?php echo $org_logo ?>" alt="profile" width="250px" height="250px"></figure>
                 </div>
                 <div class="userDetails">
                     <div class="userName">
@@ -45,7 +43,7 @@
                     </div>
                     <div class="map">
                         <i class="ri-map-pin-fill ri"></i>
-                        <p><?php echo $location ?>, <?php echo $country ?></p>
+                        <p><?php echo $org_location ?></p>
                     </div>
                     <div class="inner_container">
                         <div class="map">
@@ -65,15 +63,14 @@
                     <p>Motive</p>
                 </div>
                 <div class="primary">
-                    <h1><?php echo $mission_and_vision ?></h1>
-                    <p><?php echo $description ?></p>
+                    <h1><?php echo $org_vision ?></h1>
+                    <p><?php echo $org_description ?></p>
                 </div>
             </div>
         </div>
-
         <div class="options">
             <a href="#" class="btn x">Oldage</a>
-            <a href="/Root/Orphanage/USER-PERSPECTIVE/UP_ORPHAN_DASH.php?org_id=<?php echo $org_id ?>" class="btn y">Orphanage</a>
+            <a href="/Root/Orphanage/USER-PERSPECTIVE/O_UP_ORPHAN_DASH.php?org_id=<?php echo $org_id ?>" class="btn y">Orphanage</a>
         </div>
 
 
@@ -84,23 +81,23 @@
                     <div class="top">
                         <div class="cel">
                             <label>Established :</label>
-                            <input placeholder="<?php echo $established_date ?>" disabled>
+                            <input placeholder="<?php echo $established ?>" disabled>
                         </div>
                         <div class="cel">
                             <label>Phone :</label>
-                            <input placeholder="<?php echo $contact_phone ?>" disabled>
+                            <input placeholder="<?php echo $org_phone ?>" disabled>
                         </div>
                         <div class="cel">
                             <label>Email :</label>
-                            <input placeholder="<?php echo $contact_email ?>" disabled>
+                            <input placeholder="<?php echo $org_email ?>" disabled>
                         </div>
                         <div class="cel">
                             <label>Web Site :</label>
-                            <input placeholder="<?php echo $website ?>" disabled>
+                            <input placeholder="<?php echo $org_website ?>" disabled>
                         </div>
                         <div class="cel">
                             <label>Address :</label>
-                            <input placeholder="<?php echo $address ?>" disabled>
+                            <input placeholder="<?php echo $org_location ?>" disabled>
                         </div>
                     </div>
                 </div>

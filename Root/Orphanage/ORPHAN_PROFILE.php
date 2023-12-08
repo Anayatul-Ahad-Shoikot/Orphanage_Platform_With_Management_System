@@ -26,8 +26,6 @@
                 <ul>
                     <li><a href="/Root/Home_Page/O_HOME.php">Home</a></li>
                     <li><a href="/Root/Org_Page/O_ORG.php">Orgs.</a></li>
-                    <li><a href="#">Donations</a></li>
-                    <li><a href="#">Adoption Rrequest</a></li>
                     <li><a href="/Root/Dashboards/Own-Profiles/Org/EDIT_PROFILE.php" class="edit_profile">Edit Profile</a></li>
                 </ul>
                 </div>
@@ -38,7 +36,7 @@
         <div class="left_portion">
             <div class="userDetails1">
                 <div class="profile">
-                    <figure><img src= "<?php echo $image_path ?>" alt="profile" width="250px" height="250px"></figure>
+                    <figure><img src= "<?php echo $orphan_image ?>" alt="profile" width="250px" height="250px"></figure>
                 </div>
                 <div class="userDetails">
                     <div class="userName">
@@ -50,7 +48,7 @@
                     </div>
                     <div class="map">
                         <i class="ri-map-pin-fill ri"></i>
-                        <p><?php echo $org_address ?></p>
+                        <p><?php echo $org_location ?></p>
                     </div>
                     <div class="inner_container">
                         <div class="map">
@@ -72,7 +70,7 @@
                 <div class="primary">
                     <h1><?php echo $guardian_name ?></h1>
                     <p><?php echo $guardian_contact ?></p>
-                    <p><?php echo $address ?></p>
+                    <p><?php echo $guardian_location ?></p>
                 </div>
             </div>
         </div>  
@@ -120,8 +118,15 @@
                             <input placeholder="<?php echo $since ?>" disabled>
                         </div>
                         <div class="cel">
-                            <label>Comments :</label>
-                            <input placeholder="<?php echo $other_comments ?>" disabled>
+                            <label>Adoption Status :</label>
+                            <?php
+                                if ($adoption_status == '0'){
+                                    $adoption_status = 'Available';
+                                } else {
+                                    $adoption_status = 'Adopted';
+                                }
+                            ?>
+                            <input placeholder="<?php echo $adoption_status ?>" disabled>
                         </div>
                     </div>
                 </div>
@@ -156,7 +161,7 @@
                         </div>
                         <div class="cel">
                             <label>Favourite Games :</label>
-                            <input placeholder="<?php echo $favorite_games ?>" disabled>
+                            <input placeholder="<?php echo $favorite_game ?>" disabled>
                         </div>
                         <div class="cel">
                             <label>Skills :</label>
@@ -169,6 +174,10 @@
                         <div class="cel">
                             <label>Problems :</label>
                             <input placeholder="<?php echo $problems ?>" disabled>
+                        </div>
+                        <div class="cel">
+                            <label>Comments :</label>
+                            <input placeholder="<?php echo $other_comments ?>" disabled>
                         </div>
                     </div>
                 </div>

@@ -3,32 +3,35 @@
     include('/xampp/htdocs/DBMS_Project_Organized_One/Includes/db_con.php');
     session_start();
 
-    if(!isset($_SESSION['user_name']) && !isset($_SESSION['acc_type'])){
+    if(!isset($_SESSION['acc_id']) && !isset($_SESSION['role'])){
         header("Location: /Root/Login_Page/LOGIN_FORM.php");
         exit();
     }   else {
             if (isset($_POST['submit'])) {
-                $Name = $_SESSION['user_name'];
-                $title = $_POST['title'];
-                $content = $_POST['content'];
-                $category = $_POST['category'];
-                $datee = date("Y-m-d H:i:s");
+                $acc_id = $_SESSION['acc_id'];
+                $post_title = $_POST['post_title'];
+                $post_content = $_POST['post_content'];
+                $post_category = $_POST['post_category'];
+                $date = date("Y-m-d");
                 $image = $_FILES["img"]["name"];
                 $image_tmp = $_FILES["img"]["tmp_name"];
-                $image_path = "img/" . $image; 
+                $img_name = preg_replace("/[^a-zA-Z0-9]/", "", $post_title);
+                $file_extension = pathinfo($image, PATHINFO_EXTENSION);
+                $new_image_name = $img_name . "_" . uniqid() . "." . $file_extension;
+                $image_path = "img/" . $new_image_name;
                 move_uploaded_file($image_tmp, $image_path);
-                $query = "INSERT INTO blog_post (title, user_name, content, category, img_path, published) VALUES (?, ?, ?, ?, ?, ?)";
+                $query = "INSERT INTO blog_post (acc_id, post_title, post_content, post_category, post_image, published) VALUES (?, ?, ?, ?, ?, ?)";
                 $stmt = mysqli_prepare($con, $query);
                 if ($stmt) {
-                    mysqli_stmt_bind_param($stmt, "ssssss", $title, $Name, $content, $category, $image_path, $datee);
+                    mysqli_stmt_bind_param($stmt, "isssss", $acc_id, $post_title, $post_content, $post_category, $image_path, $date);
                     if (mysqli_stmt_execute($stmt)) {
                         $post_id = mysqli_insert_id($con);
-                        $query2 = "INSERT INTO blog_actions (post_id, likes, comments) VALUES ('$post_id', 0, '')";
-                        if (mysqli_query($con, $query2)) {
-                            if($_SESSION['acc_type']=='user'){
+                        $query1 = "INSERT INTO blog_likes (post_id) VALUES ($post_id)";
+                        if (mysqli_query($con, $query1)) {
+                            if($_SESSION['role']=='user'){
                                 header("Location: /Root/Home_Page/U_HOME.php");
                                 exit(0);
-                            }   elseif ($_SESSION['acc_type']=='admin') {
+                            }   elseif ($_SESSION['role']=='admin') {
                                 header("Location: /Root/Admin_Side/website/HOME.php");
                                 exit(0);
                             }   else {
@@ -43,7 +46,9 @@
                 } else {
                     echo "Error: " . mysqli_error($con);
                 }
-                }
+            } else {
+                echo "Upload Error";
             }
+        }
     mysqli_close($con);
 ?>

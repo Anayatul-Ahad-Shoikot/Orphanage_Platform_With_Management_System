@@ -32,19 +32,19 @@
     
     <div class="blog-details-container">
         <div class="IMG">
-          <img src="<?php echo $img_path ?>" alt="image name here">
+          <img src="<?php echo $post_image ?>" alt="image name here">
         </div>
     
         <div class="blog-details">
-          <h1 class="blog-details-title"><?php echo $title; ?></h1>
-          <h3 class="blog-details-author">By <?php echo $user_name . ", " . $published ?></h3>
+          <h1 class="blog-details-title"><?php echo $post_title ?></h1>
+          <h3 class="blog-details-author">By <?php echo $acc_name . ", " . $published ?></h3>
           <p class="blog-details-content">
-             <?php echo $content ?>
+             <?php echo $post_content ?>
           </p>
         </div>
         
             <div class="blog-actions">
-                <form id="LIKE" action="/Root/Blog/LIKES_HANDLE_BE.php" method="post">
+                <form action="/Root/Blog/LIKES_HANDLE_BE.php" method="post">
                 <input type="hidden" name="post_id" value="<?php echo $post_id ?>">
                 <button type="submit" name="like" onclick="storeScrollPosition('LIKE')"><i class='bx bxs-like'></i></button>
             </form>
@@ -60,9 +60,8 @@
 
             <h4>Add a comment :</h4>
             <form id="COMMENT" action="/Root/Blog/COMMENT_HANDLE_BE.php" method="post">
-                <input type="hidden" name="user_name" value="<?php echo $user_name ?>">
                 <input type="hidden" name="post_id" value="<?php echo $post_id ?>">
-                <input type="text" name="comments" placeholder="Add a comment" required>
+                <input type="text" name="comment" placeholder="Add a comment" required>
                 <button type="submit" name="submit" onclick="storeScrollPosition('COMMENT')">Comment</button>
             </form>
     </div>

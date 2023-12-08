@@ -21,8 +21,6 @@
                 <ul>
                     <li><a href="/Root/Home_Page/O_HOME.php">Home</a></li>
                     <li><a href="/Root/Org_Page/O_ORG.php">Orgs.</a></li>
-                    <li><a href="#">Donations</a></li>
-                    <li><a href="#">Adoption Rrequest</a></li>
                     <li><a href="/Root/Dashboards/Own-Profiles/Org/EDIT_PROFILE.php" class="edit_profile">Edit Profile</a></li>
                 </ul>
                 </div>
@@ -39,11 +37,11 @@
 
                 <input type="number" name="age" placeholder="Age">
 
-                <input type="text" name="address" placeholder="Address" >
-
-                <input type="text" name="guardian_name" placeholder="Local Gaurdian's name" >
+                <input type="text" name="guardian_name" placeholder="Local Gaurdian's Name" >
                 
                 <input type="text" name="guardian_contact" placeholder="Local Guardian's Contact Number" >
+
+                <input type="text" name="guardian_location" placeholder="Local Gaurdian's Address" >
                 
                 <div class="opt">
                     <div class="part">
@@ -77,7 +75,7 @@
                         <label>Family Status :</label>
                         <select name="family_status" >
                             <option value=''>Select</option>
-                            <option value="abondoned">Abondoned</option>
+                            <option value="abondoned">Abandoned</option>
                             <option value="past Away">Past Away</option>
                             <option value="unknow">Unknow</option>
                             <option value="lost">Lost</option>
@@ -118,7 +116,7 @@
                 
                 <input type="text" name="favorite_food" placeholder="Favourite Food">
 
-                <input type="text" name="favorite_games" placeholder="Favourite Games">
+                <input type="text" name="favorite_game" placeholder="Favourite Game">
 
                 <input type="text" name="skills" placeholder="Skills">
 

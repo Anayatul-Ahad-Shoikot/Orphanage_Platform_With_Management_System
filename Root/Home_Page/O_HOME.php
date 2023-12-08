@@ -20,8 +20,7 @@
             <ul>
             <li><a href="/Root/Dashboards/Own-Profiles/Org/PROFILE_DETAILS.php">Profile</a></li>
             <li><a href="/Root/Org_Page/O_ORG.php">Orgs.</a></li>
-            <li><a href="#">Donations</a></li>
-            <li><a href="#">Adoption Request</a></li>
+            <li><a href="#">Gallery</a></li>
             <li><a href="/Includes/logout.php" class="btn">LogOut</a></li>
             </ul>
           </div>

@@ -1,0 +1,16 @@
+ls_foundation ---- 12345
+Anayatul Ahad Shoikot ---- 123xyz
+AAS_charity ----abc123
+DhakaFoundation-----DhakaF
+ShomajSeba--------ShomajS
+RuralEmpower--------RuralE
+GrameenHelp-------GrameenH
+ShishuKalyan-------ShishuK
+ProjonmoSathi----ProjonmoS
+JibonSonglap------JibonS
+NariShakti---------NariS
+AgroVista-----------AgroV
+SustainableBD-------SustainableB
+sayma ---------- 12345
+
+

@@ -26,8 +26,6 @@
                 <ul>
                     <li><a href="/Root/Home_Page/O_HOME.php">Home</a></li>
                     <li><a href="/Root/Org_Page/O_ORG.php">Orgs.</a></li>
-                    <li><a href="#">Donations</a></li>
-                    <li><a href="#">Adoption Rrequest</a></li>
                     <li><a href="/Root/Dashboards/Own-Profiles/Org/EDIT_PROFILE.php" class="edit_profile">Edit Profile</a></li>
                 </ul>
                 </div>
@@ -38,11 +36,11 @@
         <div class="left_portion">
             <div class="userDetails1">
                 <div class="profile">
-                    <figure><img src= "<?php echo $image_path ?>" alt="profile" width="250px" height="250px"></figure>
+                    <figure><img src= "<?php echo $orphan_image ?>" alt="profile" width="250px" height="250px"></figure>
                 </div>
                 <div class="userDetails">
                     <div class="userName">
-                        <h1><?php echo $first_name, " " ,$last_name ?></h1>
+                        <h1><?php echo $first_name, " " , $last_name ?></h1>
                     </div>
                     <div class="map">
                         <i class='bx bxs-briefcase'></i>
@@ -50,7 +48,7 @@
                     </div>
                     <div class="map">
                         <i class="ri-map-pin-fill ri"></i>
-                        <p><?php echo $org_address ?></p>
+                        <p><?php echo $org_location ?></p>
                     </div>
                     <div class="inner_container">
                         <div class="map">
@@ -72,12 +70,12 @@
                 <div class="primary">
                     <h1><?php echo $guardian_name ?></h1>
                     <p><?php echo $guardian_contact ?></p>
-                    <p><?php echo $address ?></p>
+                    <p><?php echo $guardian_location ?></p>
                 </div>
             </div>
         </div>  
         <div class="options">
-            <a href="#" class="btn x">Restore</a>
+            <a href="/Root/Orphanage/RESTORE_ORPHAN_BE.php?orphan_id=<?php echo $orphan_id ?>" class="btn x">Restore</a>
             <a href="/Root/Orphanage/ORPHAN_DASH.php" class="btn y">Orphanage</a>
         </div>
 
@@ -156,7 +154,7 @@
                         </div>
                         <div class="cel">
                             <label>Favourite Games :</label>
-                            <input placeholder="<?php echo $favorite_games ?>" disabled>
+                            <input placeholder="<?php echo $favorite_game ?>" disabled>
                         </div>
                         <div class="cel">
                             <label>Skills :</label>

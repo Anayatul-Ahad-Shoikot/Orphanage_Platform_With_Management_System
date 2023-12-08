@@ -2,7 +2,7 @@
 
     include('/xampp/htdocs/DBMS_Project_Organized_One/Includes/db_con.php');
     
-    $q1 = "SELECT COUNT(*) AS total_orphans FROM orphan_profiles";
+    $q1 = "SELECT COUNT(*) AS total_orphans FROM orphan_list";
     $r1 = mysqli_query($con, $q1);
     if ($r1 && mysqli_num_rows($r1) > 0) {
         $row = mysqli_fetch_assoc($r1);
@@ -11,7 +11,7 @@
         echo "Failed to count total orphans.";
     }
 
-    $q2 = "SELECT COUNT(*) AS total_orgs FROM org_details";
+    $q2 = "SELECT COUNT(*) AS total_orgs FROM org_list";
     $r2 = mysqli_query($con, $q2);
     if ($r2 && mysqli_num_rows($r2) > 0) {
         $row2 = mysqli_fetch_assoc($r2);
@@ -21,7 +21,7 @@
     }
 
 
-    $q3 = "SELECT COUNT(*) AS total_users FROM user_details";
+    $q3 = "SELECT COUNT(*) AS total_users FROM user_list";
     $r3 = mysqli_query($con, $q3);
     if ($r3 && mysqli_num_rows($r3) > 0) {
         $row3 = mysqli_fetch_assoc($r3);
@@ -30,7 +30,7 @@
         echo "Failed to count total users.";
     }
 
-    $q4 = "SELECT COUNT(*) AS total_admin FROM admin_details";
+    $q4 = "SELECT COUNT(*) AS total_admin FROM admin_list";
     $r4 = mysqli_query($con, $q4);
     if ($r4 && mysqli_num_rows($r4) > 0) {
         $row4 = mysqli_fetch_assoc($r4);

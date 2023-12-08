@@ -20,8 +20,6 @@
             <ul>
             <li><a href="/Root/Home_Page/O_HOME.php">Home</a></li>
             <li><a href="/Root/Org_Page/O_ORG.php">Orgs.</a></li>
-            <li><a href="#">Donation</a></li>
-            <li><a href="#">Adoption Request</a></li>
             <li><a href="/Root/Dashboards/Own-Profiles/Org/PROFILE_DETAILS.php">Profile</a></li>
             </ul>
           </div>
@@ -29,7 +27,7 @@
     </header>
     <div class="ctn">
       <form action="#" method="GET">
-          <input type="text" name="query" placeholder="Search Child">
+          <input type="text" name="query" placeholder="Search Organizations...">
           <button type="submit" class="btn"><i class="ri-search-line"></i></button>
       </form>
     </div>

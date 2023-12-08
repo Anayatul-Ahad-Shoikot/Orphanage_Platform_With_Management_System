@@ -28,10 +28,10 @@
     <div class="container">
         <h1>Create a Blog Post</h1>
         <form action="/Root/Blog/UPLOADS_BLOG_BE.php" method="POST" enctype="multipart/form-data">
-            <input type="text" name="title" placeholder="Title" required>
-            <textarea name="content" required placeholder="Content"></textarea>
+            <input type="text" name="post_title" placeholder="Title" required>
+            <textarea name="post_content" required placeholder="Content"></textarea>
             <div class="xxx">
-            <select name="category">
+            <select name="post_category">
               <option value="">Category</option>
                 <option value="child">Child</option>
                 <option value="old">Old</option>

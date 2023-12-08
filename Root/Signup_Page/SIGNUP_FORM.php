@@ -24,16 +24,16 @@
                 <h1>SignUp</h1>
                 <div class="row">  
                     <div class="input-container">
-                        <label>Username</label>
-                        <input type="text" name="user_name" required>
+                        <label>Account Name</label>
+                        <input type="text" name="acc_name" required>
                     </div>
                     <div class="input-container">
-                        <label>Email</label>
-                        <input type="text" name="user_email" required>
+                        <label>Account Email</label>
+                        <input type="text" name="acc_email" required>
                     </div>
                     <div class="input-container">
-                        <label>Password</label>
-                        <input type="password" name="user_pass" required>
+                        <label>Account Password</label>
+                        <input type="password" name="acc_pass" required>
                     </div>
                     <div class="input-container">
                         <label>Confirm password</label>
@@ -43,7 +43,7 @@
                 <div class="row_row">
                     <div class="input-container1">
                         <label>Account type</label>
-                        <select name="acc_type" >
+                        <select name="role" >
                             <option value=''>Select</option>
                             <option value="user">user</option>
                             <option value="org">org</option>

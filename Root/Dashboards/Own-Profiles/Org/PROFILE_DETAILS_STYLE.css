@@ -182,8 +182,7 @@ body::-webkit-scrollbar {
   text-decoration: none;
 }
 .options .btn {
-  width: 7rem;
-  padding: 10px;
+  padding: 7px 25px;
   font-size: 1rem; 
   background-color: var(--color4);
   border-radius: 5rem;
@@ -194,9 +193,6 @@ body::-webkit-scrollbar {
   color: var(--bg1-color);
   transition: .5s;
   margin-bottom: 1.5rem;
-}
-.options .btn.y {
-  width: 10rem;
 }
 .options .btn:hover {
   background-color: var(--color6);

@@ -21,8 +21,6 @@
                 <ul>
                     <li><a href="/Root/Home_Page/O_HOME.php">Home</a></li>
                     <li><a href="/Root/Org_Page/O_ORG.php">Orgs.</a></li>
-                    <li><a href="#">Donations</a></li>
-                    <li><a href="#">Adoption Rrequest</a></li>
                     <li><a href="/Root/Dashboards/Own-Profiles/Org/EDIT_PROFILE.php" class="edit_profile">Edit Profile</a></li>
                 </ul>
                 </div>
@@ -43,7 +41,7 @@
                 <label>Age:</label>
                 <input type="number" name="age" placeholder="<?php echo $age ?>">
                 <label>Address:</label>
-                <input type="text" name="address" placeholder="<?php echo $address ?>" >
+                <input type="text" name="guardian_location" placeholder="<?php echo $guardian_location ?>" >
                 <label>Guardian Name:</label>
                 <input type="text" name="guardian_name" placeholder="<?php echo $guardian_name ?>" >
                 <label>Guardian Contact:</label>
@@ -114,6 +112,10 @@
                         </select>
                     </div>
                 </div>
+                <label>adoption_status :</label>
+                <input type="text" name="adoption_status" placeholder="<?php echo $adoption_status ?>" disabled>
+                <label>Medical History:</label>
+                <input type="text" name="medical_history" placeholder="<?php echo $medical_history ?>">
                 <label>Medical History:</label>
                 <input type="text" name="medical_history" placeholder="<?php echo $medical_history ?>">
                 <label>Hobby:</label>
@@ -121,7 +123,7 @@
                 <label>Favourite Food:</label>
                 <input type="text" name="favorite_food" placeholder="<?php echo $favorite_food ?>">
                 <label>Favourite Games:</label>
-                <input type="text" name="favorite_games" placeholder="<?php echo $favorite_games ?>">
+                <input type="text" name="favorite_game" placeholder="<?php echo $favorite_game ?>">
                 <label>Skills:</label>
                 <input type="text" name="skills" placeholder="<?php echo $skills ?>">
                 <label>Dreams:</label>
@@ -135,7 +137,7 @@
                 <input type="file" name="image" accept="image/*">
 
                 <input type="hidden" name="orphan_id" value="<?php echo $row['orphan_id'] ?>">
-
+                <input type="hidden" name="guardian_id" value="<?php  echo $row['guardian_id'] ?>">
                 <div class="btn">
                     <button type="submit" name="update">Update</button>
                 </div>

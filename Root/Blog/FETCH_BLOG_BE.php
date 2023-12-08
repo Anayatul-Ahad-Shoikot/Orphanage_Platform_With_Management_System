@@ -3,23 +3,27 @@
 
         if (isset($_GET['post_id'])) {
             $post_id = $_GET['post_id'];
-            $query = "SELECT * FROM blog_post WHERE post_id = ?";
-            $stmt = mysqli_prepare($con, $query);
-            mysqli_stmt_bind_param($stmt, 'i', $post_id);
-            mysqli_stmt_execute($stmt);
-            $result = mysqli_stmt_get_result($stmt);
-            if (mysqli_num_rows($result) > 0) {
-                $row = mysqli_fetch_assoc($result);
-                $img_path = $row['img_path'];
-                $title = $row['title'];
-                $user_name = $row['user_name'];
-                $published = $row['published'];
-                $content = $row['content'];
-                $query2 = "SELECT * FROM blog_actions WHERE post_id = $post_id";
+            $query1 = "SELECT * FROM blog_post WHERE post_id = ?";
+            $stmt1 = mysqli_prepare($con, $query1);
+            mysqli_stmt_bind_param($stmt1, 'i', $post_id);
+            mysqli_stmt_execute($stmt1);
+            $result1 = mysqli_stmt_get_result($stmt1);
+            if (mysqli_num_rows($result1) > 0) {
+                $row = mysqli_fetch_assoc($result1);
+                $acc_id = $row['acc_id'];
+                $query2 = "SELECT acc_name FROM accounts WHERE acc_id = $acc_id";
                 $result2 = mysqli_query($con, $query2);
-                if (mysqli_num_rows($result2) > 0) {
-                    $row2= mysqli_fetch_assoc($result2);
-                    $likes = $row2['likes'];
+                $row2 = mysqli_fetch_assoc($result2);
+                $acc_name = $row2['acc_name'];
+                $post_title = $row['post_title'];
+                $post_content = $row['post_content'];
+                $post_image = $row['post_image'];
+                $published = $row['published'];
+                $query3 = "SELECT likes FROM blog_likes WHERE post_id = $post_id";
+                $result3 = mysqli_query($con, $query3);
+                if (mysqli_num_rows($result3) > 0) {
+                    $row3= mysqli_fetch_assoc($result3);
+                    $likes = $row3['likes'];
                 }
             } else {
                 echo 'Blog post not found.';

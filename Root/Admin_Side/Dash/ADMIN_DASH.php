@@ -85,7 +85,7 @@
           <span class="num">28</span>
         </a>
         <a href="/Root/Admin_Side/Dash/Admin/ADMIN_PROFILE.php" class="profile">
-          <img src="Admin/<?php echo $image ?>" alt="profile" />
+          <img src="Admin/<?php echo $admin_image ?>" alt="profile" />
         </a>
       </nav>
       <main>

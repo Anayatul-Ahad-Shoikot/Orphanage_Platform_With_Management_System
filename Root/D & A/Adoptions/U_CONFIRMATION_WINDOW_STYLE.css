@@ -1,0 +1,134 @@
+@import url("https://fonts.googleapis.com/css2?family=Lora:wght@600;700&family=Poppins:wght@400;500;600;700&display=swap");
+
+:root {
+  --text-dark: #18181b;
+  --white: #ffffff;
+  --color1: #DDE6ED;
+  --color2: #27374D;   
+  --color3: #526D82;      
+  --color4: #FF597B;       
+  --color5: #f3254e;
+  --color6: #62CDFF;
+  --color7: #0099cc;
+  --color8: #33ccff;
+  --f3-color: rgba(0, 0, 0, 0.8);
+  --bg1-color: #fff;
+  --bg2-color: #000;
+  --l-fs: 1.4rem;
+  --m-fs: 1.2rem;
+  --m-1-8: 1.8rem;
+  --m-0-6: 0.6rem;
+  --p-2-5: 2.5rem;
+  --p-1-5: 1.5rem;
+}
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+body {
+  scroll-behavior: smooth;
+  font-family: "Poppins", sans-serif;
+}
+body::-webkit-scrollbar {
+  display: none;
+}
+.header {
+  background-image: linear-gradient(
+      to bottom,
+      rgba(0, 0, 0, 0.9),
+      rgba(0, 0, 0, 0.3)
+    ),
+    url("/Root/Landing_Page/bg_4.jpg");
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.header nav {
+  max-width: 100%;
+  margin: 0;
+  padding: 10px 50px 6px 50px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  backdrop-filter: blur(10px);
+}
+.header nav .logo img{
+  flex: 1;
+  width: 160px;
+  transition: .4s;
+  cursor: pointer;
+}
+.header nav .logo img:hover {
+  transform: scale(1.3);
+  transition: .4s;
+}
+.header nav .links ul{
+  list-style: none;
+  display: flex;
+  align-items: center;
+}
+.header nav .links a {
+  margin-left: 4.5rem;
+  display: inline-block;
+  font-size: 1.2rem;
+  font-weight: bolder;
+  color: var(--color1);
+  transition: 0.5s;
+  text-decoration: none;
+}
+.header nav .links .edit_profile{
+  color: var(--color4);
+}
+.header nav .links a:hover {
+  text-shadow: 2px 5px 45px var(--white);
+  transform: scale(1.5);
+  color: var(--color6);
+  transition: 0.5s;
+}
+
+
+.confirmation {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    justify-items: center;
+    margin-top: 15rem;
+}
+
+.confirmation .main {
+  width: 650px;
+  text-align: center;
+  padding: 2rem;
+  border-radius: 15px;
+  background: transparent;
+  border: 2px solid silver;
+}
+
+.confirmation .main h1 {
+    font-size: xxx-large;
+    padding: 20px;
+}
+
+.confirmation .main button {
+    width: 7rem;
+    height: 2.5rem;
+    border-radius: 10px;
+    margin: 2rem 0 0 0;
+    background: skyblue;
+    border: none;
+    font-size: large;
+    font-weight: 700;
+    transition: .5s;
+}
+
+.confirmation .main button:hover {
+  background: var(--color4);
+  transition: .5s;
+}
+
+.confirmation .main a {
+    text-decoration: none;
+    color: black;
+    font-size: large;
+}

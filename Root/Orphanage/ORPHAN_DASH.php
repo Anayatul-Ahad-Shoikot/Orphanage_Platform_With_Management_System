@@ -24,8 +24,6 @@
                 <ul>
                     <li><a href="/Root/Home_Page/O_HOME.php">Home</a></li>
                     <li><a href="/Root/Org_Page/O_ORG.php">Orgs.</a></li>
-                    <li><a href="#">Donations</a></li>
-                    <li><a href="#">Adoption Rrequest</a></li>
                     <li><a href="/Root/Dashboards/Own-Profiles/Org/EDIT_PROFILE.php" class="edit_profile">Edit Profile</a></li>
                 </ul>
                 </div>
@@ -36,7 +34,7 @@
             <div class="left_portion">
                 <div class="userDetails1">
                     <div class="profile">
-                        <figure><img src= "..//..//Dashboards/Own-Profiles/Org/<?php echo $logo_path ?>" alt="profile" width="250px" height="250px"></figure>
+                        <figure><img src= "..//..//Dashboards/Own-Profiles/Org/<?php echo $org_logo ?>" alt="profile" width="250px" height="250px"></figure>
                     </div>
                     <div class="userDetails">
                         <div class="userName">
@@ -44,11 +42,11 @@
                         </div>
                         <div class="map">
                             <i class="ri-map-pin-fill ri"></i>
-                            <p><?php echo $location ?>, <?php echo $country ?></p>
+                            <p><?php echo $org_location ?></p>
                         </div>
                         <div class="map">
                             <i class='bx bxs-briefcase'></i>
-                            <p><?php echo $acc_type ?></p>
+                            <p><?php echo $role ?></p>
                         </div>
                         <div class="inner_container">
                             <div class="map">
@@ -68,7 +66,7 @@
                 <a href="/Root/Orphanage/REMOVED_ORPHAN_DASH.php" class="btn">Removed Child</a>
                 <a href="/Root/Orphanage/ADD_ORPHAN.php" class="btn">Add Child</a>
                 <form action="#" method="GET">
-                    <input type="text" name="query" placeholder="Search Child">
+                    <input type="text" name="query" placeholder="Search Child...">
                     <button type="submit" class="btn"><i class="ri-search-line"></i></button>
                 </form>
             </div>

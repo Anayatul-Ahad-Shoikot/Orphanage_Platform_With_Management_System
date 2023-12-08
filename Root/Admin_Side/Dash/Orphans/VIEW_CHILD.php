@@ -126,7 +126,7 @@
                 <h2>Orphan Details</h2>
                 <form action="/Root/Admin_Side/Dash/Orphans/VIEW_UPDATE_BE.php" method="post" enctype="multipart/form-data">
 
-                    <!-- <img src="../../../Orphanage/<?php echo $image_path ?>" alt="picture"> -->
+                    <!-- <img src="../../../Orphanage/<?php echo $orphan_image ?>" alt="picture"> -->
                     <div class="row">
                       <label>Orphan ID:</label>
                       <input type="text" name="orphan_id " placeholder="<?php echo $orphanId ?>" disabled>
@@ -156,16 +156,16 @@
                       <input type="number" name="Since" placeholder="<?php echo $since ?>">
                     </div>
                     <div class="row">
-                      <label>Address:</label>
-                      <input type="text" name="address" placeholder="<?php echo $address ?>" >
-                    </div>
-                    <div class="row">
                       <label>Guardian Name:</label>
                       <input type="text" name="guardian_name" placeholder="<?php echo $guardian_name ?>" >
                     </div>
                     <div class="row">
                       <label>Guardian Contact:</label>
                       <input type="text" name="guardian_contact" placeholder="<?php echo $guardian_contact ?>" >
+                    </div>
+                    <div class="row">
+                      <label>Guardian Location:</label>
+                      <input type="text" name="guardian_location" placeholder="<?php echo $guardian_contact ?>" >
                     </div>
                     <div class="opt">
                         <div class="part">
@@ -244,7 +244,7 @@
                     </div>
                     <div class="row">
                       <label>Favourite Games:</label>
-                      <input type="text" name="favorite_games" placeholder="<?php echo $favorite_games ?>">
+                      <input type="text" name="favorite_game" placeholder="<?php echo $favorite_game ?>">
                     </div>
                     <div class="row">
                       <label>Skills:</label>
@@ -264,7 +264,7 @@
                     </div>
                     <label>Image:</label>
                     <input type="file" name="image" accept="image/*">
-                    <input type="hidden" name="orphan_id" value="<?php echo $row['orphan_id'] ?>">
+                    <input type="hidden" name="orphan_id" value="<?php echo $orphan_id ?>">
                     <div class="btn">
                         <button type="submit" name="update">Update</button>
                     </div>

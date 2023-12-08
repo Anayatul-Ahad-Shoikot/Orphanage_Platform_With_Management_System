@@ -27,8 +27,6 @@
           <ul>
             <li><a href="/Root/Home_Page/O_HOME.php">Home</a></li>
             <li><a href="/Root/Org_Page/O_ORG.php">Orgs.</a></li>
-            <li><a href="#">Donations</a></li>
-            <li><a href="#">Adoption Rrequest</a></li>
             <li><a href="/Root/Dashboards/Own-Profiles/Org/EDIT_PROFILE.php" class="edit_profile">Edit Profile</a></li>
           </ul>
         </div>
@@ -40,7 +38,7 @@
         <div class="left_portion">
             <div class="userDetails1">
                 <div class="profile">
-                    <figure><img src= "<?php echo $logo_path ?>" alt="profile" width="250px" height="250px"></figure>
+                    <figure><img src= "<?php echo $org_logo ?>" alt="profile" width="250px" height="250px"></figure>
                 </div>
                 <div class="userDetails">
                     <div class="userName">
@@ -48,11 +46,11 @@
                     </div>
                     <div class="map">
                         <i class="ri-map-pin-fill ri"></i>
-                        <p><?php echo $location ?>, <?php echo $country ?></p>
+                        <p><?php echo $org_location ?></p>
                     </div>
                     <div class="map">
                         <i class='bx bxs-briefcase'></i>
-                        <p><?php echo $acc_type ?></p>
+                        <p><?php echo $role ?></p>
                     </div>
                     <div class="inner_container">
                         <div class="map">
@@ -72,13 +70,14 @@
                     <p>Motive</p>
                 </div>
                 <div class="primary">
-                    <h1><?php echo $mission_and_vision ?></h1>
-                    <p><?php echo $description ?></p>
+                    <h1><?php echo $org_vision ?></h1>
+                    <p><?php echo $org_description ?></p>
                 </div>
             </div>
         </div>
 
         <div class="options">
+            <a href="/Root/D & A/DON_ADOP.php" class="btn z">Donation & Adoptions</a>
             <a href="#" class="btn x">Oldage</a>
             <a href="/Root/Orphanage/ORPHAN_DASH.php" class="btn y">Orphanage</a>
         </div>
@@ -90,36 +89,28 @@
                 <div class="info_box">
                     <div class="top">
                         <div class="cel">
-                            <label>User Name :</label>
-                            <input placeholder="<?php echo $user_name ?>" disabled>
+                            <label>Account Name :</label>
+                            <input placeholder="<?php echo $acc_name ?>" disabled>
                         </div>
                         <div class="cel">
-                            <label>User Email :</label>
-                            <input placeholder="<?php echo $user_email ?>" disabled>
-                        </div>
-                        <div class="cel">
-                            <label>User ID :</label>
-                            <input placeholder="<?php echo $user_id ?>" disabled>
+                            <label>Account Email :</label>
+                            <input placeholder="<?php echo $acc_email ?>" disabled>
                         </div>
                         <div class="cel">
                             <label>Account Type :</label>
-                            <input placeholder="<?php echo $acc_type ?>" disabled>
+                            <input placeholder="<?php echo $role ?>" disabled>
                         </div>
                         <div class="cel">
-                            <label>Org Name :</label>
+                            <label>Organization Name :</label>
                             <input placeholder="<?php echo $org_name ?>" disabled>
                         </div>
                         <div class="cel">
-                            <label>Org ID :</label>
-                            <input placeholder="<?php echo $org_id ?>" disabled>
-                        </div>
-                        <div class="cel">
                             <label>Established :</label>
-                            <input placeholder="<?php echo $established_date ?>" disabled>
+                            <input placeholder="<?php echo $established ?>" disabled>
                         </div>
                         <div class="cel">
                             <label>Since :</label>
-                            <input placeholder="<?php echo $since ?>" disabled>
+                            <input placeholder="<?php echo $acc_join_date ?>" disabled>
                         </div>
                     </div>
                 </div>
@@ -129,20 +120,20 @@
                 <div class="info_box">
                     <div class="top">
                         <div class="cel">
-                            <label>Phone :</label>
-                            <input placeholder="<?php echo $contact_phone ?>" disabled>
+                            <label>Contact :</label>
+                            <input placeholder="<?php echo $org_phone ?>" disabled>
                         </div>
                         <div class="cel">
                             <label>Email :</label>
-                            <input placeholder="<?php echo $contact_email ?>" disabled>
+                            <input placeholder="<?php echo $org_email ?>" disabled>
                         </div>
                         <div class="cel">
-                            <label>Web Site :</label>
-                            <input placeholder="<?php echo $website ?>" disabled>
+                            <label>Website :</label>
+                            <input placeholder="<?php echo $org_website ?>" disabled>
                         </div>
                         <div class="cel">
                             <label>Address :</label>
-                            <input placeholder="<?php echo $address ?>" disabled>
+                            <input placeholder="<?php echo $org_location ?>" disabled>
                         </div>
                     </div>
                 </div>
