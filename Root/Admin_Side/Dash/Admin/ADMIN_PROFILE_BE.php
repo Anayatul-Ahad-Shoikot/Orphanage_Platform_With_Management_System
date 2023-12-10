@@ -1,19 +1,19 @@
 <?php 
     include('/xampp/htdocs/DBMS_Project_Organized_One/Includes/db_con.php');
     session_start();
-    if (isset($_SESSION['user_name']) && isset($_SESSION['acc_type'])) {
-        $name = $_SESSION['user_name'];
-        $acc = $_SESSION['acc_type'];
-        $sql = "SELECT u.user_name, u.since, u.user_email, d.contact, d.user_name, d.priyority, d.image FROM user_account AS u LEFT JOIN admin_details AS d ON u.user_name = d.user_name WHERE u.user_name = '$name'";
+    if (isset($_SESSION['acc_id']) && isset($_SESSION['role'])) {
+        $acc_id = $_SESSION['acc_id'];
+        $role = $_SESSION['role'];
+        $sql = "SELECT u.acc_name, u.acc_join_date, u.acc_email, d.admin_contact, d.admin_name, d.admin_priyority, d.admin_image FROM accounts AS u LEFT JOIN admin_list AS d ON u.acc_id = d.acc_id WHERE u.acc_id = $acc_id";
         $result = mysqli_query($con, $sql);
             if (mysqli_num_rows($result) == 1) {
                 $row = mysqli_fetch_array($result);
-                $user_name = $row['user_name'];
-                $since = $row['since'];
-                $user_email = $row['user_email'];
-                $contact = $row['contact'];
-                $priyority = $row['priyority'];
-                $img = $row['image'];
+                $admin_name = $row['admin_name'];
+                $acc_join_date = $row['acc_join_date'];
+                $acc_email = $row['acc_email'];
+                $admin_contact = $row['admin_contact'];
+                $admin_priyority = $row['admin_priyority'];
+                $admin_image = $row['admin_image'];
             } else {
                 echo "Failed to fetch data";
             }

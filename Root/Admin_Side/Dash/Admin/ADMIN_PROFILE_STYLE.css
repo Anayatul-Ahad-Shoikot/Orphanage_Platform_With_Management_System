@@ -339,6 +339,31 @@ body.dark {
   overflow-y: auto;
 }
 
+.content main .alert {
+  width: -webkit-fill-available;
+  text-align: center;
+  margin: 2rem 0rem;
+}
+.content main .alert.two h5 {
+  padding: 8px;
+  background-color: rgba(255, 170, 170, 0.5);
+  border: 1px solid rgb(255, 0, 0);
+  border-radius: 8px;
+  color: rgb(0, 0, 0);
+  font-weight: 600;
+  font-size: medium;
+}
+.content main .alert.one h5 {
+  padding: 8px;
+  background-color: rgb(170, 255, 170, 0.5);
+  border: 1px solid rgb(0, 255, 0);
+  border-radius: 8px;
+  color: rgb(0, 0, 0);
+  font-weight: 600;
+  font-size: medium;
+}
+
+
 .content main .head-title {
   display: flex;
   align-items: center;

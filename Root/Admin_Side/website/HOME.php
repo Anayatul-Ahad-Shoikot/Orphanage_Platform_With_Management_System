@@ -19,7 +19,7 @@
 
   <body>
     <section class="sidebar">
-      <a href="#" class="logo">
+      <a href="/Root/Admin_Side/Dash/ADMIN_DASH.php" class="logo">
         <img src="/Root/Landing_Page/LOGO_NoBackground.png" alt="Logo" />
       </a>
 

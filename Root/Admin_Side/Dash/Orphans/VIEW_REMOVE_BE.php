@@ -4,14 +4,14 @@
 
     if (isset($_GET['orphan_id'])) {
         $id = $_GET['orphan_id'];
-        $Query = "DELETE FROM orphan_list WHERE orphan_id = $id AND removed_status = 1";
-        $result = mysqli_query($con, $Query);
-        if ($result){
-            header("Location: /Root/Admin_Side//Dash/Orphans/ORPHAN_DASH.php");
-            exit(0);
+        $Query = "UPDATE orphan_list SET removed_status = 1 WHERE orphan_id = $id";
+        if (mysqli_query($con, $Query)){
+            $_SESSION['notification-1'] = "Orphan removed successfully.";
+            header("Location: /Root/Admin_Side/Dash/Orphans/ORPHAN_DASH.php");
         }
     }   else {
-            echo "error";
+            $_SESSION['notification-2'] = "Failed to remove orphan.";
+            header("Location: /Root/Admin_Side/Dash/Orphans/ORPHAN_DASH.php");
     }
     mysqli_close($con);
 ?>

@@ -16,7 +16,7 @@
   </head>
   <body>
     <section class="sidebar">
-      <a href="#" class="logo">
+      <a href="/Root/Admin_Side/Dash/ADMIN_DASH.php" class="logo">
         <img src="/Root/Landing_Page/LOGO_NoBackground.png" alt="Logo" />
       </a>
 
@@ -28,7 +28,7 @@
           </a>
         </li>
         <li>
-          <a href="#" class="nav-link">
+          <a href="/Root/Admin_Side/website/HOME.php" class="nav-link">
             <i class="fas fa-shopping-cart"></i>
             <span class="text">Website</span>
           </a>
@@ -46,7 +46,7 @@
           </a>
         </li>
         <li>
-          <a href="#" class="nav-link">
+          <a href="/Root/Admin_Side/Dash/Admin/ADMIN_PROFILE.php" class="nav-link">
             <i class="fas fa-people-group"></i>
             <span class="text">Team</span>
           </a>
@@ -69,7 +69,7 @@
     <section class="content">
       <nav>
         <i class="fas fa-bars menu-btn"></i>
-        <form action="#">
+        <form action="#" style="visibility: hidden;">
           <div class="form-input">
             <input type="search" placeholder="search..." />
             <button class="search-btn">
@@ -83,15 +83,31 @@
 
         <a href="#" class="notification">
           <i class="fas fa-bell"></i>
-          <span class="num">28</span>
+          <span class="num">1</span>
         </a>
 
         <a href="#" class="profile">
-          <img src="<?php echo $img ?>" alt="profile" />
+          <img src="<?php echo $admin_image ?>" alt="profile" />
         </a>
       </nav>
 
       <main>
+        <div class="alert one">
+          <?php
+              if(isset($_SESSION['notification-1'])){
+                  echo "<h5>".$_SESSION['notification-1']."</h5>";
+                  unset($_SESSION['notification-1']);
+              }
+          ?>
+        </div>
+        <div class="alert two">
+            <?php
+                if(isset($_SESSION['notification-2'])){
+                    echo "<h5>".$_SESSION['notification-2']."</h5>";
+                    unset($_SESSION['notification-2']);
+                }
+            ?>
+        </div>
         <div class="head-title">
             <div class="left">
                 <h1>Admin</h1>
@@ -106,7 +122,7 @@
 					      </ul>
             </div>
 
-            <div class="ctn">
+            <div class="ctn" style="visibility: hidden;">
                 <form action="#" method="GET">
                     <input type="text" name="query" placeholder="Search Child">
                     <button type="submit" class="btn"><i class="ri-search-line"></i></button>
@@ -123,14 +139,14 @@
           <div class="box st">
                 <h1>My Deteails</h1>
               <div>
-                  <img src="<?php echo $img ?>" alt="User Image">
+                  <img src="<?php echo $admin_image ?>" alt="User Image">
               </div>
               <form action="/Root/Admin_Side/Dash/Admin/UPDATE_ADMIN_BE.php" method="POST" enctype="multipart/form-data">
-                  <input type="text" name="user_name" placeholder="<?php echo $user_name ?>" disabled>
-                  <input type="text" name="user_email" placeholder="<?php echo $user_email ?>">
-                  <input type="text" name="contact" placeholder="<?php echo $contact ?>">
-                  <input type="text" name="priyority" placeholder="<?php echo $priyority ?>" disabled>
-                  <input type="text" name="since" placeholder="<?php echo $since ?>" disabled>
+                  <input type="text" name="admin_name" placeholder="<?php echo $admin_name ?>">
+                  <input type="text" name="acc_email" placeholder="<?php echo $acc_email ?>">
+                  <input type="text" name="admin_contact" placeholder="<?php echo $admin_contact ?>">
+                  <input type="text" name="admin_priyority" placeholder="<?php echo $admin_priyority ?>" disabled>
+                  <input type="text" name="acc_join_date" placeholder="<?php echo $acc_join_date ?>" disabled>
                   <input type="file" name="image" accept="image/*">
                   <button type="submit" name="submit1">Update</button>
               </form>
@@ -139,11 +155,12 @@
             <h1>Add Admin</h1>
             <div>
               <form action="/Root/Admin_Side/Dash/Admin/NEW_ADDMIN_BE.php" method="POST" enctype="multipart/form-data">
-                  <input type="text" name="user_name" placeholder="Admin Name" required>
-                  <input type="text" name="user_email" placeholder="Admin Email" required>
-                  <input type="text" name="contact" placeholder="contact number" required>
-                  <input type="text" name="priyority" placeholder="Set priyority" required>
-                  <input type="password" name="user_pass" placeholder="Password" required>
+                  <input type="text" name="acc_name" placeholder="Account Name" required>
+                  <input type="text" name="admin_name" placeholder="Admin Name" required>
+                  <input type="text" name="acc_email" placeholder="Admin Email" required>
+                  <input type="text" name="admin_contact" placeholder="contact number" required>
+                  <input type="text" name="admin_priyority" placeholder="Set priyority" required>
+                  <input type="password" name="acc_pass" placeholder="Password" required>
                   <input type="password" name="con_pass" placeholder="Confirm Password" required>
                   <input type="password" name = "Admin_pass" placeholder="Enter Your Password" required>
                   <input type="file" name="image" accept="image/*">

@@ -17,7 +17,7 @@
   </head>
   <body>
     <section class="sidebar">
-      <a href="#" class="logo">
+      <a href="/Root/Admin_Side/Dash/ADMIN_DASH.php" class="logo">
         <img src="/Root/Landing_Page/LOGO_NoBackground.png" alt="Logo" />
       </a>
 
@@ -70,7 +70,7 @@
     <section class="content">
       <nav>
         <i class="fas fa-bars menu-btn"></i>
-        <a href="#" class="nav-link">Categories</a>
+        <!-- <a href="#" class="nav-link">Categories</a> -->
         <form action="#">
           <div class="form-input">
             <input type="search" placeholder="search..." />
@@ -88,8 +88,8 @@
           <span class="num">28</span>
         </a>
 
-        <a href="#" class="profile">
-          <img src="../Admin/<?php echo $image ?>" alt="profile" />
+        <a href="/Root/Admin_Side/Dash/Admin/ADMIN_PROFILE.php" class="profile">
+          <img src="../Admin/<?php echo $admin_image ?>" alt="profile" />
         </a>
       </nav>
         <main>

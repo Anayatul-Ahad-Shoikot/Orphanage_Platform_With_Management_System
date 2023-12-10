@@ -92,6 +92,22 @@
       </nav>
 
       <main>
+        <div class="alert one">
+            <?php
+                if(isset($_SESSION['notification-1'])){
+                    echo "<h5>".$_SESSION['notification-1']."</h5>";
+                    unset($_SESSION['notification-1']);
+                }
+            ?>
+          </div>
+          <div class="alert two">
+              <?php
+                  if(isset($_SESSION['notification-2'])){
+                      echo "<h5>".$_SESSION['notification-2']."</h5>";
+                      unset($_SESSION['notification-2']);
+                  }
+              ?>
+          </div>
         <div class="head-title">
             <div class="left">
                 <h1>Orphans</h1>

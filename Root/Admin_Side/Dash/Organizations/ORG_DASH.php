@@ -88,7 +88,7 @@
         </a>
 
         <a href="#" class="profile">
-          <img src="../Admin/<?php echo $image ?>" alt="profile" />
+          <img src="../Admin/<?php echo $admin_image ?>" alt="profile" />
         </a>
       </nav>
 

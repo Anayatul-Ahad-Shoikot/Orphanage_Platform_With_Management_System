@@ -2,52 +2,57 @@
 
     include('/xampp/htdocs/DBMS_Project_Organized_One/Includes/db_con.php');
     session_start();
-    if (isset($_SESSION['user_name']) && isset($_SESSION['acc_type'])) {
-        $name = $_SESSION['user_name'];
+    if (isset($_SESSION['acc_id']) && isset($_SESSION['role'])) {
+        $acc_id = $_SESSION['acc_id'];
         if (isset($_POST['submit2'])) {
-            $user_name = $_POST['user_name'];
-            $user_email = $_POST['user_email'];
-            $priyority = $_POST['priyority'];
-            $user_pass = $_POST['user_pass'];
+            $acc_name = $_POST['acc_name'];
+            $admin_name = $_POST['admin_name'];
+            $acc_email = $_POST['acc_email'];
+            $admin_priyority = $_POST['admin_priyority'];
+            $acc_pass = $_POST['acc_pass'];
             $con_pass = $_POST['con_pass'];
-            $contact = $_POST['contact'];
+            $admin_contact = $_POST['admin_contact'];
             $Admin_pass = $_POST['Admin_pass'];
             $image_name = $_FILES["image"]["name"];
             $image_tmp_name = $_FILES["image"]["tmp_name"];
             $image_path = "img/" . $image_name;
             move_uploaded_file($image_tmp_name, $image_path);
             $time = date("Y-m-d H:i:s");
-            $acc = "admin";
-            $sql = "SELECT u.user_name, u.user_pass ,d.user_name FROM user_account AS u LEFT JOIN admin_details AS d ON u.user_name = d.user_name WHERE u.user_name = '$name'";
+            $role = "admin";
+            $sql = "SELECT u.acc_pass ,d.acc_id, d.admin_priyority FROM accounts AS u LEFT JOIN admin_list AS d ON u.acc_id = d.acc_id WHERE u.acc_id = $acc_id";
             $result = mysqli_query($con, $sql);
             if (mysqli_num_rows($result) == 1) {
                 $row = mysqli_fetch_array($result);
-                $stored_password = $row['user_pass'];
-                if ($user_pass == $con_pass){
+                $stored_password = $row['acc_pass'];
+                $admin_priyority = $row['admin_priyority'];
+                if (($acc_pass == $con_pass) && ($admin_priyority == 1)){
                     if (password_verify($Admin_pass, $stored_password)) {
-                        $hashed_password = password_hash($user_pass, PASSWORD_DEFAULT);
-                        $sql = "INSERT INTO user_account (user_name, user_email, user_pass, acc_type, since) VALUES (?, ?, ?, ?, ?)";
-                        $stmt = $con->prepare($sql);
-                        $stmt->bind_param("sssss", $user_name, $user_email, $hashed_password, $acc, $time);
+                        $hashed_password = password_hash($acc_pass, PASSWORD_DEFAULT);
+                        $sql = "INSERT INTO accounts (acc_name, acc_email, acc_pass, role, acc_join_date) VALUES (?, ?, ?, ?, ?)";
+                        $stmt  = $con->prepare($sql);
+                        $stmt->bind_param("sssss", $acc_name, $acc_email, $hashed_password, $role, $time);
                         $stmt->execute();
                         $userid = $stmt->insert_id;
-                        $sql2 = "INSERT INTO admin_details (contact, user_name, priyority, image) VALUES (?, ?, ?, ?)";
+                        $sql2 = "INSERT INTO admin_list (acc_id, admin_contact, admin_name, admin_priyority, admin_image) VALUES (?, ?, ?, ?, ?)";
                         $stmt2 = $con->prepare($sql2);
-                        $stmt2->bind_param("ssis",  $contact, $user_name, $priyority, $image_path);
+                        $stmt2->bind_param("issis", $userid ,$admin_contact, $admin_name, $admin_priyority, $image_path);
                         if ($stmt2->execute()) {
-                            echo "New record created successfully";
+                            $_SESSION['notification-1'] = "Admin Added successfully";
                             header("Location: /Root/Admin_Side/Dash/Admin/ADMIN_PROFILE.php");
                             exit();
                         } else {
-                            echo "Error: " . $stmt2->error;
+                            $_SESSION['notification-2'] = "Failed to add admin";
+                            header("Location: /Root/Admin_Side/Dash/Admin/ADMIN_PROFILE.php");
                         }
                         $stmt->close();
                         $stmt2->close();
                     } else {
-                        echo "Incorrect Password";
+                        $_SESSION['notification-2'] = "Incorrect Password";
+                        header("Location: /Root/Admin_Side/Dash/Admin/ADMIN_PROFILE.php");
                     }
                 } else {
-                    echo "password not matched";
+                    $_SESSION['notification-2'] = "password not matched";
+                    header("Location: /Root/Admin_Side/Dash/Admin/ADMIN_PROFILE.php");
                 }
             } else {
                 echo "Admin not found";

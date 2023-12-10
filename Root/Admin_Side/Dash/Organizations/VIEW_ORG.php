@@ -88,7 +88,7 @@
         </a>
 
         <a href="#" class="profile">
-          <img src="../Admin/<?php echo $image ?>" alt="profile" />
+          <img src="../Admin/<?php echo $admin_image ?>" alt="profile" />
         </a>
       </nav>
         <main>
@@ -111,12 +111,12 @@
                         </ul>
                 </div>
 
-                <div class="ctn">
+                <!-- <div class="ctn">
                     <form action="#" method="GET">
                         <input type="text" name="query" placeholder="Search Child">
                         <button type="submit" class="btn"><i class="ri-search-line"></i></button>
                     </form>
-                </div>
+                </div> -->
             </div>
 
             <div class="container">
@@ -127,27 +127,23 @@
                 <form action="/Root/Admin_Side/Dash/Organizations/VIEW_UPDATE_BE.php" method="post" enctype="multipart/form-data">
                     <div class="row">
                         <label>User ID :</label>
-                        <input type="text" name="user_id" placeholder="<?php echo $user_id ?>" disabled>
+                        <input type="text" name="acc_id" placeholder="<?php echo $acc_id ?>" disabled>
                     </div>
                     <div class="row">
                         <label>User Name :</label>
-                        <input type="text" name="user_name" placeholder="<?php echo $user_name ?>" disabled>
+                        <input type="text" name="acc_name" placeholder="<?php echo $acc_name ?>" disabled>
                     </div>
                     <div class="row">
                         <label>User Email :</label>
-                        <input type="text" name="user_email" placeholder="<?php echo $user_email ?>" disabled>
+                        <input type="text" name="acc_email" placeholder="<?php echo $acc_email ?>" disabled>
                     </div>
                     <div class="row">
                         <label>Account Type :</label>
-                        <input type="text" name="acc_type" placeholder="<?php echo $acc_type ?>" disabled>
+                        <input type="text" name="role" placeholder="<?php echo $role ?>" disabled>
                     </div>
                     <div class="row">
                         <label>Since :</label>
-                        <input type="text" name="since" placeholder="<?php echo $since ?>" disabled>
-                    </div>
-                    <div class="row">
-                        <label>Organization ID :</label>
-                        <input type="text" name="org_id" placeholder="<?php echo $org_id ?>" disabled>
+                        <input type="text" name="acc_join_date" placeholder="<?php echo $acc_join_date ?>" disabled>
                     </div>
                     <div class="row">
                         <label>Organization's Name :</label>
@@ -155,39 +151,31 @@
                     </div>
                     <div class="row">
                         <label>Established Date :</label>
-                        <input type="date" name="established_date" value="<?php echo $established_date ?>">
+                        <input type="date" name="established" value="<?php echo $established ?>">
                     </div>
                     <div class="row">
                         <label>Description :</label>
-                        <input type="text" name="description" placeholder="<?php echo $description ?>" >
+                        <input type="text" name="org_description" placeholder="<?php echo $org_description ?>" >
                     </div>
                     <div class="row">
                         <label>Organization's Email :</label>
-                        <input type="text" name="contact_email" placeholder="<?php echo $contact_email ?>">
+                        <input type="text" name="org_email" placeholder="<?php echo $org_email ?>">
                     </div>
                     <div class="row">
                         <label>Organization Contact :</label>
-                        <input type="text" name="contact_phone" placeholder="<?php echo $contact_phone ?>" >
+                        <input type="text" name="org_phone" placeholder="<?php echo $org_phone ?>" >
                     </div>
                     <div class="row">
                         <label>Orgamization's Address :</label>
-                        <input type="text" name="address" placeholder="<?php echo $address ?>" >
+                        <input type="text" name="org_location" placeholder="<?php echo $org_location ?>" >
                     </div>
                     <div class="row">
                         <label>Organization's Website :</label>
-                        <input type="text" name="website" placeholder="<?php echo $website ?>" >
-                    </div>
-                    <div class="row">
-                        <label>Area :</label>
-                        <input type="text" name="location" placeholder="<?php echo $location ?>">
+                        <input type="text" name="org_website" placeholder="<?php echo $org_website ?>" >
                     </div>
                     <div class="row">
                         <label>Vision :</label>
-                        <input type="text" name="mission_and_vision"  placeholder="<?php echo $mission_and_vision ?>">
-                    </div>
-                    <div class="row">
-                        <label>Country :</label>
-                        <input type="text" name="country" placeholder="<?php echo $country ?>">
+                        <input type="text" name="org_vision"  placeholder="<?php echo $org_vision ?>">
                     </div>
                     <label>Orginization's Logo :</label>
                     <input type="file" name="image" accept="image/*">

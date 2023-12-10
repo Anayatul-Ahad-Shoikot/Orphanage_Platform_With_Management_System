@@ -1,22 +1,24 @@
 <?php 
     include('/xampp/htdocs/DBMS_Project_Organized_One/Includes/db_con.php');
     
-    if (isset($_SESSION['user_name']) && isset($_SESSION['acc_type'])) {
-        $name = $_SESSION['user_name'];
-        $sql = "SELECT x.user_name, x.priyority, x.image, x.contact, y.user_name, y.user_email, y.since  FROM admin_details AS x LEFT JOIN user_account AS y ON x.user_name = y.user_name WHERE x.user_name != '$name'";
+    if (isset($_SESSION['acc_id']) && isset($_SESSION['role'])) {
+        $acc_iddd = $_SESSION['acc_id'];
+        $sql = "SELECT x.acc_id, x.admin_name, x.admin_contact, x.admin_image, x.admin_priyority, y.acc_name, y.acc_email, y.acc_join_date  FROM admin_list AS x LEFT JOIN accounts AS y ON x.acc_id = y.acc_id WHERE x.acc_id != $acc_iddd";
         $result = mysqli_query($con, $sql);
             if (mysqli_num_rows($result) > 0) {
                 while ($row = mysqli_fetch_assoc($result)) {
                     echo  '<div class="box st">
                     <div>
-                        <img src="' . $row['image'] . '" alt="User Image">
+                        <img src="' . $row['admin_image'] . '" alt="">
                     </div>
-                    <form>
-                        <input type="text" name="user_name" placeholder="' . $row['user_name'] . '" disabled>
-                        <input type="text" name="user_email" placeholder="' . $row['user_email'] . '" disabled>
-                        <input type="text" name="contact" placeholder="' . $row['contact'] . '" disabled>
-                        <input type="text" name="priyority" placeholder="' . $row['priyority'] . '" disabled>
-                        <input type="text" name="priyority" placeholder="' . $row['since'] . '" disabled>
+                    <form action="/Root/Admin_Side/Dash/Admin/REMOVE_ADMIN.php" method="POST">
+                        <input type="text" name="admin_name" placeholder="' . $row['admin_name'] . '" disabled>
+                        <input type="text" name="acc_email" placeholder="' . $row['acc_email'] . '" disabled>
+                        <input type="text" name="admin_contact" placeholder="' . $row['admin_contact'] . '" disabled>
+                        <input type="text" name="admin_priyority" placeholder="' . $row['admin_priyority'] . '" disabled>
+                        <input type="text" name="acc_join_date" placeholder="' . $row['acc_join_date'] . '" disabled>
+                        <input type="hidden" name="acc_id" value="' . $row['acc_id'] . '">
+                        <button type="submit" name="delete">Remove</button>
                     </form>
                     </div>';
                 }

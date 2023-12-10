@@ -18,7 +18,7 @@
   </head>
   <body>
     <section class="sidebar">
-      <a href="#" class="logo">
+      <a href="/Root/Admin_Side/Dash/ADMIN_DASH.php" class="logo">
         <img src="/Root/Landing_Page/LOGO_NoBackground.png" alt="Logo" />
       </a>
       <ul class="side-menu top">
@@ -84,7 +84,7 @@
             <span class="num">28</span>
             </a>
             <a href="#" class="profile">
-            <img src="..//..//Dash//<?php echo $image ?>" alt="profile" />
+            <img src="..//..//Dash//<?php echo $admin_image ?>" alt="profile" />
             </a>
         </nav>
         <main>
@@ -95,8 +95,8 @@
                     </div>
                     <div class="links">
                         <ul>
-                        <li><a href="#">Profile</a></li>
-                        <li><a href="#">Orgs.</a></li>
+                        <li><a href="/Root/Admin_Side/Dash/ADMIN_DASH.php">Profile</a></li>
+                        <li><a href="/Root//Admin_Side//Dash//Organizations//">Orgs.</a></li>
                         <li><a href="/Includes/logout.php" class="btn">LogOut</a></li>
                         </ul>
                     </div>

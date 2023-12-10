@@ -179,7 +179,7 @@
             $image_tmp_name = $_FILES["image"]["tmp_name"];
             $image_path = "img/" . $image_name;
             move_uploaded_file($image_tmp_name, $image_path);
-            $SQL="UPDATE orphan_list SET orphan_image = '$image_path' WHERE orphan_id= $child LIMIT 1";
+            $SQL="UPDATE orphan_list SET orphan_image = '$image_path' WHERE orphan_id = $child LIMIT 1";
             mysqli_query($con, $SQL);
         }
         header("Location: /Root/Admin_Side/Dash/Orphans/VIEW_CHILD.php?orphan_id=$child");
