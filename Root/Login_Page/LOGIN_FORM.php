@@ -34,13 +34,13 @@
                 <input type="text" name="acc_name" required>
             </div>
             <div class="input-container">
-                <label>Account Password</label>
+                <label>Password</label>
                 <input type="password" name="acc_pass" required>
             </div>
             <button type="submit" name="login_btn">LogIn</button>
         </form>
         <div class="forgetPass">
-            <a href="resetpassPage.php">Forget password?</a>
+            <a href="/Root/Reset_Password/RESET.php">Forget password?</a>
         </div>
         <p>Don't have an account?  <a href="/Root/Signup_Page/SIGNUP_FORM.php">SignUp</a></p>
         <a href="/Root/Landing_Page/INDEX.php" class="goback">Go Back</a>

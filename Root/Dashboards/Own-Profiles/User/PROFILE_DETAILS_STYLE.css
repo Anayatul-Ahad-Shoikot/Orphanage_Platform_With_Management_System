@@ -127,8 +127,9 @@ body::-webkit-scrollbar {
     transition: 0.5s;
     text-decoration: none;
 }
-.header nav .links .edit_profile{
-  color: var(--color4);
+.header nav .links .active{
+  transform: scale(1.5);
+  text-decoration: underline 4px var(--color5);
 }
 .header nav .links a:hover {
   text-shadow: 2px 5px 45px var(--white);
@@ -140,49 +141,57 @@ body::-webkit-scrollbar {
 
 
 
-/*----------------------------------Main body-------------------------------------*/
 .container {
-  width: 100%;
-  /* height: 90vh; */
-  box-shadow: 0 0 5px rgba(255, 255, 255, 0.5), 0 0 25px rgba(0, 0, 0, 0.08);
-  display: flex;
-  justify-content: center;
-}
-.container .left_portion {
-  /* height: 700px; */
   display: flex;
   flex-direction: column;
-  justify-content: none;
+  justify-content: center;
+  margin: 2rem 9rem;
+  align-items: center;
+}
+.container p {
+  font-weight: bold;
+}
+
+.container .msg {
+  color: var(--color5);
+  padding: 0;
+  margin: 0;
+}
+.container .left_portion {
+  display: flex;
+  gap: 2rem;
   background: rgba(255, 255, 255, .8);
   backdrop-filter: blur(10px);
-  border-radius: 0.5rem;
+  border-radius: 15px;
   box-shadow: 0 0 25px rgba(255, 255, 255, 0.5);
-  margin: 2rem 2rem 2rem 2rem;
-  padding: 0 30px 0 0;
+  align-items: center;
 }
 .container .left_portion .profile {
   width: 12.5rem;
   height: 12.5rem;
   border-radius: 50%;
   background: rgb(0, 0, 0);
-  margin: 50px 0 0 50px;
+  margin: var(--p-1-5) var(--p-2-5);
 }
 .container .left_portion .profile figure img {
   width: 12rem;
   height: 12rem;
   border-radius: 50%;
-  margin: 3.7px 0 0 4px;
+  margin: 3.7px 0 0 3.95px;
 }
  .container .left_portion .userDetails {
-  position: relative;
+  min-width: 550px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   padding: var(--p-1-5) var(--p-2-5);
 }
-
 .container .left_portion .userDetails1 {
+  display: flex;
+  justify-content: center;
   background-color: #dbf4ff21;
   box-shadow: 1rem 1rem 4rem rgba(0, 0, 0, 0.3);
   border-radius: 15px;
-  margin-bottom: 1.2rem;
 }
 .container .left_portion .userDetails .userName h1 {
   font-size: 3rem;
@@ -200,7 +209,8 @@ body::-webkit-scrollbar {
   margin-top: 1rem;
 }
 .container .left_portion .work {
-  padding: 1.5rem;
+  min-width: 500px;
+  padding: 2.5rem;
   background-color: #dbf4ff21;
   box-shadow: 1rem 1rem 4rem rgba(0, 0, 0, 0.3);
   border-radius: 15px;
@@ -225,19 +235,44 @@ body::-webkit-scrollbar {
   color: rgba(0, 0, 0, 0.6);
   line-height: 1.6rem;
 }
+.container .options {
+  margin: 4rem 3rem 0 0;
+  display: flex;
+  align-items: center;
+  justify-content: right;
+  gap: 20px;
+}
+.options a {
+  display: inline-block;
+  text-decoration: none;
+}
+.options .btn {
+  width: 7rem;
+  padding: 10px;
+  font-size: 1rem; 
+  background-color: var(--color4);
+  border-radius: 5rem;
+  cursor: pointer;
+  transition: 0.5s;
+  font-weight: 700;
+  text-align: center;
+  color: var(--bg1-color);
+  transition: .5s;
+  margin-bottom: 1.5rem;
+}
+.options .btn.y {
+  width: 10rem;
+}
+.options .btn:hover {
+  background-color: var(--color6);
+  color: var(--text-dark);
+  transition: .5s;
+}
 .container .right_portion {
-  width: 740px;
-  height: 670px;
+  width: 1600px;
   display: flex;
   flex-direction: column;
-  backdrop-filter: blur(10px);
-  margin: 2rem 0 0 0;
-  padding: 2.5rem 2.5rem 0 2.5rem;
-  background-color: #dbf4ff21;
-  box-shadow: 1rem 1rem 4rem rgba(0, 0, 0, 0.3);
-  border-radius: 15px;
 }
-
 .container .right_portion .tabs {
   display: flex;
   font-weight: 700;
@@ -248,39 +283,50 @@ body::-webkit-scrollbar {
   align-items: center;
 }
 
+.container .right_portion .plate {
+  background-color: #dbf4ff21;
+  box-shadow: 1rem 1rem 4rem rgba(0, 0, 0, 0.3);
+  margin: 1.5rem 0rem;
+  border-radius: 15px;
+}
 .container .right_portion h1 {
   color: var(--color4);
-  margin-bottom: 1rem;
+  margin: 2rem;
 } 
 .container .right_portion .info_box {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   margin-bottom: 2rem;
+  font-size: 20px;
+  padding-left: 2.5rem;
+  align-items: center;
+}
+.container .right_portion .info_box .top{
+  margin-left: 4rem;
+  display: flex;
+  flex-direction: column;
+  width: 95%;
 }
 .container .right_portion .info_box .cel {
   width: 90%;
   display: flex;
   align-items: center;
   background-color: #dbf4ff21;
-  box-shadow: -1rem -0.5rem 20px rgba(0, 0, 0, 0.2);
+  box-shadow: -2rem -0.5rem 5rem rgba(0, 0, 0, 0.2);
   margin: 5px;
   justify-content: space-between;
   border-radius: 15px;
 } 
 .cel label {
-  font-weight: bold;
+  width: 20rem;
   display: block;
-  margin-left: 1rem;
-  font-size: 16px;
+  margin-left: 1.5rem;
 }
 .cel input {
-  width: 73%;
-  height: 20px;
-  padding: 5px;
-  font-size: 16px;
-  font-weight: 600;
+  width: 85%;
+  padding: 12px;
+  font-size: 1.2rem;
   border: none;
   box-sizing: border-box;
-  justify-content: right;
   color: var(--text-dark);
 }

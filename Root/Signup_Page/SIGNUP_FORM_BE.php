@@ -41,9 +41,9 @@
         $acc_id = mysqli_insert_id($con);
         
         if ($role == "user"){
-            $SignUp_Query_1 = "INSERT INTO user_list (acc_id) VALUES ($acc_id)";
+            $SignUp_Query_1 = "INSERT INTO user_list (acc_id, user_image) VALUES ($acc_id , 'img/user.jpg')";
             if (mysqli_query($con, $SignUp_Query_1)) {
-                $_SESSION['status-2'] = "Success! Login to continue.";
+                $_SESSION['status-2'] = "SignUp Successfull! Login to continue.";
                 header("Location: /Root/Login_page/LOGIN_FORM.php");
                 exit(0);
             } else {
@@ -52,7 +52,7 @@
                 exit(0);
             }
         } else {
-            $SignUp_Query_2 = "INSERT INTO org_list (acc_id) VALUES ($acc_id)";
+            $SignUp_Query_2 = "INSERT INTO org_list (acc_id, org_logo) VALUES ($acc_id, 'img/user.jpg')";
             if (mysqli_query($con, $SignUp_Query_2)) {
                 $_SESSION['status-2'] = "Success! Login to continue";
                 header("Location: /Root/Login_page/LOGIN_FORM.php");

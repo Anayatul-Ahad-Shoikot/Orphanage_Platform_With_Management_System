@@ -24,9 +24,12 @@
             </div>
             <div class="links">
                 <ul>
-                    <li><a href="/Root/Home_Page/U_HOME.php">Home</a></li>
-                    <li><a href="/Root/Org_Page/U_ORG.php">Orgs.</a></li>
-                    <li><a href="/Root/Dashboards/Own-Profiles/User/PROFILE_DETAILS.php" class="edit_profile">Profile</a></li>
+                <li><a href="/Root/Home_Page/U_HOME.php">Home</a></li>
+                <li><a href="/Root/Dashboards/Own-Profiles/User/PROFILE_DETAILS.php">Profile</a></li>
+                <li><a href="/Root/Org_Page/U_ORG.php">Orgs.</a></li>
+                <li><a href="/Root//D & A//DON_ADOP.php">Donate</a></li>
+                <li><a href="/Root/D & A/Adoptions/U_ADOPTION_DASH.php">Adopt</a></li>
+                <li><a href="/Root/Dashboards/Own-Profiles/User/EDIT_PROFILE.php" class="active">Edit Profile</a></li>
                     <?php
                         include('/xampp/htdocs/DBMS_Project_Organized_One/Root/Notifications/MAIN_NOTIFI.php');
                     ?>
@@ -37,22 +40,39 @@
     <div class="container">
         <h2>Edit Profile</h2>
         <form action="/Root/Dashboards/Own-Profiles/User/EDIT_PROFILE_BE.php" method="post" enctype="multipart/form-data">
-            <label>User Name :</label>
+            <label>Full Name :</label>
             <input type="text" name="user_name" placeholder="<?php echo $user_name ?>" >
-            <label>User Contact :</label>
+            <label>Contact :</label>
             <input type="text" name="user_contact" placeholder="<?php echo $user_contact ?>" >
-            <label>User Gender :</label>
-            <input type="text" name="user_gender" placeholder="<?php echo $user_gender ?>">
-            <label>User NID :</label>
+            <label>Gender :</label>
+                <select name="user_gender">
+                    <option value=''><?php echo $user_gender ?></option>
+                    <option value="male">Male</option>
+                    <option value="female">Female</option>
+                    <option value="other">Other</option>
+                </select>
+            <label>NID :</label>
             <input type="text" name="user_NID" placeholder="<?php echo $user_NID ?>" >
-            <label>User Website :</label>
+            <label>Website (if any):</label>
             <input type="text" name="user_website" placeholder="<?php echo $user_website ?>" >
-            <label>User Job :</label>
+            <label>Occupation :</label>
             <input type="text" name="user_job" placeholder="<?php echo $user_job ?>" >
-            <label>User Location :</label>
-            <input type="text" name="user_location"  placeholder="<?php echo $user_location ?>">
-            <label>User Address :</label>
+
+            <label>Select Division :</label>
+                <select name="user_location">
+                    <option value="" disabled selected>Select Division</option>
+                    <option value="Dhaka">Dhaka</option>
+                    <option value="Chittagong">Chittagong</option>
+                    <option value="Khulna">Khulna</option>
+                    <option value="Barisal">Barisal</option>
+                    <option value="Rajshahi">Rajshahi</option>
+                    <option value="Sylhet">Sylhet</option>
+                    <option value="Rangpur">Rangpur</option>
+                </select>
+
+            <label> Address :</label>
             <input type="text" name="user_address"  placeholder="<?php echo $user_address ?>">
+
             <div class="opt">
                 <div class="part">
                     <label>Profile Picture :</label>
@@ -71,5 +91,6 @@
 
     <script src="/Root/Notifications/Notification_POPUP.js"></script>
     <script src="/Root/Notifications/Notification_color.js"></script>
+    
 </body>
 </html>

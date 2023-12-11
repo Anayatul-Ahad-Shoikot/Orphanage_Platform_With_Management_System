@@ -22,7 +22,7 @@
           </div>
           <div class="links">
             <ul>
-              <li><a href="/Root/Home_Page/O_HOME.php">Home</a></li>
+              <li><a href="/Root/Home_Page/O_HOME.php" class="active">Home</a></li>
               <li><a href="/Root/Org_Page/O_ORG.php">Orgs.</a></li>
               <<li><a href="/Root/Dashboards/Own-Profiles/Org/PROFILE_DETAILS.php">Profile</a></li>
             </ul>

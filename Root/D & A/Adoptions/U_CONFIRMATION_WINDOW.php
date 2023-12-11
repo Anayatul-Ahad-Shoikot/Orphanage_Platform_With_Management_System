@@ -21,9 +21,12 @@
             </div>
             <div class="links">
             <ul>
-                <li><a href="/Root/Home_Page/U_HOME.php">Home</a></li>
-                <li><a href="/Root/Org_Page/U_ORG.php">Orgs.</a></li>
-                <li><a href="/Root/Dashboards/Own-Profiles/User/EDIT_PROFILE.php" class="edit_profile">Edit Profile</a></li>
+            <li><a href="/Root/Home_Page/U_HOME.php">Home</a></li>
+            <li><a href="/Root/Dashboards/Own-Profiles/User/PROFILE_DETAILS.php">Profile</a></li>
+            <li><a href="/Root/Org_Page/U_ORG.php">Orgs.</a></li>
+            <li><a href="/Root//D & A//DON_ADOP.php">Donate</a></li>
+            <li><a href="/Root/D & A/Adoptions/U_ADOPTION_DASH.php" class="active">Adopt</a></li>
+            <li><a href="/Root/Dashboards/Own-Profiles/User/EDIT_PROFILE.php">Edit Profile</a></li>
             </ul>
             </div>
         </nav>

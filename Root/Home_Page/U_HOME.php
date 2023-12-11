@@ -23,12 +23,13 @@
           </div>
           <div class="links">
             <ul>
-            <li><a href="/Root/Dashboards/Own-Profiles/User/PROFILE_DETAILS.php">Profile</a></li>
-            <li><a href="/Root/Org_Page/U_ORG.php">Orgs.</a></li>
-            <li><a href="/Root/D & A/Donations/U_DONATION_DASH.php">Donate</a></li>
-            <li><a href="/Root/D & A/Adoptions/U_ADOPTION_DASH.php">Adopt</a></li>
-            <li><a href="#">Gallery</a></li>
-            <li><a href="/Includes/logout.php" class="btn">LogOut</a></li>
+              <li><a href="/Root/Home_Page/U_HOME.php" class="active">Home</a></li>
+              <li><a href="/Root/Dashboards/Own-Profiles/User/PROFILE_DETAILS.php">Profile</a></li>
+              <li><a href="/Root/Org_Page/U_ORG.php">Orgs.</a></li>
+              <li><a href="/Root/D & A/Donations/U_DONATION_DASH.php">Donate</a></li>
+              <li><a href="/Root/D & A/Adoptions/U_ADOPTION_DASH.php">Adopt</a></li>
+              <li><a href="#">Gallery</a></li>
+              <li><a href="/Includes/logout.php" class="btn">LogOut</a></li>
             <?php
                 include('/xampp/htdocs/DBMS_Project_Organized_One/Includes/db_con.php');
                 $acc_id = $_SESSION['acc_id'];

@@ -16,8 +16,10 @@
           </div>
           <div class="links">
             <ul>
-              <li><a href="/Root//AboutUs_Page//ABOUTUS_PAGE.php">About Us</a></li>
+              <li><a href="/Root//Landing_Page//INDEX.php" class="active">Home</a></li>
+              <li><a href="#">Donate</a></li>
               <li><a href="#">Blogs</a></li>
+              <li><a href="/Root/AboutUs_Page/ABOUTUS_PAGE.php">About Us</a></li>
               <li><a href="/Root//Login_Page//LOGIN_FORM.php" class="btn">LogIn</a></li>
             </ul>
           </div>

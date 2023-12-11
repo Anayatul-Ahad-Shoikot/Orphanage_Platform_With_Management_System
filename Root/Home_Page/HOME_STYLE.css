@@ -104,6 +104,11 @@ body::-webkit-scrollbar {
     transition: 0.5s;
     text-decoration: none;
 }
+
+.header nav .links .active{
+  transform: scale(1.5);
+  text-decoration: underline 4px var(--color5);
+}
 .header nav .links ul a:hover {
   text-shadow: 2px 5px 45px var(--white);
   transform: scale(1.5);
