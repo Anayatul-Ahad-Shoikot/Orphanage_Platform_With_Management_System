@@ -1,3 +1,7 @@
+<?php 
+    session_start();
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -13,22 +17,22 @@
 </head>
 
 <body>
-<header class="header">
-      <nav>
-          <div class="logo">
-            <a href="/Root/Home_Page/U_HOME.php"><img src="/Root/Landing_Page/LOGO_NoBackground.png" alt="LOGO"></a>
-          </div>
-          <div class="links">
-            <ul>
-                <li><a href="/Root/Home_Page/U_HOME.php">Home</a></li>
-                <li><a href="/Root/Dashboards/Own-Profiles/User/PROFILE_DETAILS.php">Profile</a></li>
-                <li><a href="/Root/Org_Page/U_ORG.php" class="active">Orgs.</a></li>
-                <li><a href="/Root//D & A//DON_ADOP.php">Donate</a></li>
-                <li><a href="/Root/D & A/Adoptions/U_ADOPTION_DASH.php">Adopt</a></li>
-                <li><a href="/Root/Dashboards/Own-Profiles/User/EDIT_PROFILE.php">Edit Profile</a></li>
-            </ul>
-          </div>
-      </nav>
+    <header class="header">
+        <nav>
+            <div class="logo">
+                <a href="/Root/Home_Page/U_HOME.php"><img src="/Root/Landing_Page/LOGO_NoBackground.png" alt="LOGO"></a>
+            </div>
+            <div class="links">
+                <ul>
+                    <li><a href="/Root/Home_Page/U_HOME.php">Home</a></li>
+                    <li><a href="/Root/Dashboards/Own-Profiles/User/PROFILE_DETAILS.php">Profile</a></li>
+                    <li><a href="/Root/Org_Page/U_ORG.php" class="active">Orgs.</a></li>
+                    <li><a href="/Root//D & A//DON_ADOP.php">Donate</a></li>
+                    <li><a href="/Root/D & A/Adoptions/U_ADOPTION_DASH.php">Adopt</a></li>
+                    <li><a href="/Root/Dashboards/Own-Profiles/User/EDIT_PROFILE.php">Edit Profile</a></li>
+                </ul>
+            </div>
+        </nav>
     </header>
     
     <div class="container">
@@ -37,8 +41,8 @@
         ?>
         <div class="left_portion">
             <div class="userDetails1">
-                <div class="profile">
-                    <figure><img src= "..//..//..//Dashboards/Own-Profiles/Org/<?php echo $org_logo ?>" alt="profile" width="250px" height="250px"></figure>
+                <div>
+                    <img src= "..//..//..//Dashboards/Own-Profiles/Org/<?php echo $org_logo ?>" alt="profile" width="250px" height="250px">
                 </div>
                 <div class="userDetails">
                     <div class="userName">
@@ -51,7 +55,7 @@
                     <div class="inner_container">
                         <div class="map">
                             <i class='bx bxs-send'></i>
-                            <p>Messages</p>
+                            <button id="showChatBtn">msg_btn</button>
                         </div>
                         <div class="map">
                             <i class='bx bxs-error-alt'></i>
@@ -108,6 +112,50 @@
             </div>
         </div>
     </div>
+
+    <div id="chatContainer" class="chat-container clearfix" style="display: none;">
+        <div class="chat">
+            <div class="chat-header clearfix">
+                <div>
+                    <img src="..//..//..//Dashboards/Own-Profiles/Org/<?php echo $org_logo ?>" alt="avatar" />
+                    <div class="chat-about">
+                        <div class="chat-with"><?php echo $org_name ?></div>
+                        <div class="chat-num-messages"> last_date_of_chat </div>
+                    </div>
+                </div>
+                <i class='bx bxs-message-square-x' id="closeChat"></i>
+            </div> 
+            <div class="chat-history">
+                <ul>
+                    <?php
+                        include('/xampp/htdocs/DBMS_Project_Organized_One/Root/Chats/FETCH_CHATS_BE.php');
+                    ?>
+                </ul>
+            </div> 
+            <div class="chat-message clearfix">
+                <form action="/Root/Chats/CHAT_INSERT_BE.php" method="POST">
+                    <input name="msg" id="message-to-send" placeholder ="Type your message"></input>
+                    <input type="hidden" name="org_id" id="org_id" value="<?php echo $org_id ?>"></input>
+                    <input type="hidden" name="org_name" id="acc_id" value="<?php echo $org_name ?>"></input>
+                    <i class="fa fa-file-o"></i> &nbsp;&nbsp;&nbsp;
+                    <i class="fa fa-file-image-o"></i>
+                    <button id="sendMessageBtn">Send</button>
+                </form>
+            </div> 
+        </div>
+    </div>
+    
+    <script>
+        const showChatBtn = document.getElementById('showChatBtn');
+        const chatContainer = document.getElementById('chatContainer');
+        const closeChat = document.getElementById('closeChat');
+        showChatBtn.addEventListener('click', function() {
+            chatContainer.style.display = chatContainer.style.display === 'none' ? 'block' : 'none';
+        });
+        closeChat.addEventListener('click', function() {
+            chatContainer.style.display = 'none';
+        });
+    </script>
 </body>
 
 </html>
