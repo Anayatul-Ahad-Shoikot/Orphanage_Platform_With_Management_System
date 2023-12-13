@@ -18,6 +18,9 @@
         } else {
 
         }
+    } else {
+        header("Location: Location: /Root/Org_Page/U_VIEW_ORG.php?org_id=' . $org_id . '");
+        exit();
     }
     mysqli_close($con);
 ?>

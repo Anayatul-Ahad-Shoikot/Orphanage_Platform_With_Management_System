@@ -45,5 +45,6 @@
             }
         }
     }
+    $_SESSION['showChatBox'] = 1;
     mysqli_close($con);
 ?>

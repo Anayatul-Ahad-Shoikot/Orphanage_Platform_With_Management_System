@@ -28,23 +28,37 @@
             <li><a href="/Root/Home_Page/U_HOME.php">Home</a></li>
             <li><a href="/Root/Dashboards/Own-Profiles/User/PROFILE_DETAILS.php" class="active">Profile</a></li>
             <li><a href="/Root/Org_Page/U_ORG.php">Orgs.</a></li>
-            <li><a href="/Root//D & A//DON_ADOP.php">Donate</a></li>
+            <li><a href="/Root/Org_Page/U_ORG.php">Donate</a></li>
             <li><a href="/Root/D & A/Adoptions/U_ADOPTION_DASH.php">Adopt</a></li>
             <li><a href="/Root/Dashboards/Own-Profiles/User/EDIT_PROFILE.php">Edit Profile</a></li>
-            <?php
-                include('/xampp/htdocs/DBMS_Project_Organized_One/Root/Notifications/MAIN_NOTIFI.php');
-            ?>
           </ul>
         </div>
   
       </nav>
     </header>
 
+    <div class="notification-container">
+        <?php
+        if(isset($_SESSION['success'])){
+            echo '<div class="alert one">
+                    <h5>'.$_SESSION['success'].'</h5>
+                </div>';
+            unset($_SESSION['success']);
+        }
+        if(isset($_SESSION['error'])){
+            echo '<div class="alert two">
+                    <h5>'.$_SESSION['error'].'</h5>
+                </div>';
+            unset($_SESSION['error']);
+        }
+        ?>
+    </div>
+
     <div class="container">
         <div class="left_portion">
             <div class="userDetails1">
-                <div class="profile">
-                    <figure><img src= "<?php echo $user_image ?>" alt="profile" width="250px" height="250px"></figure>
+                <div>
+                    <img src= "<?php echo $user_image ?>" alt="profile" width="250px" height="250px">
                 </div>
                 <div class="userDetails">
                     <div class="userName">
@@ -53,12 +67,6 @@
                     <div class="map">
                         <i class="ri-map-pin-fill ri"></i>
                         <p><?php echo $user_address, ", ", $user_location ?></p>
-                    </div>
-                    <div class="inner_container">
-                        <div class="map">
-                            <i class='bx bxs-send'></i>
-                            <p class="msg">Messages</p>
-                        </div>
                     </div>
                 </div>
             </div>
@@ -119,9 +127,22 @@
             </div>
         </div>
     </div>
-
-
-    <script src="/Root/Notifications/Notification_POPUP.js"></script>
-    <script src="/Root/Notifications/Notification_color.js"></script>
 </body>
 </html>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+    const alerts = document.querySelectorAll('.notification-container > div');
+    alerts.forEach(function(alert) {
+        setTimeout(function() {
+        alert.style.opacity = '1';
+        setTimeout(function() {
+            alert.style.opacity = '0';
+            setTimeout(function() {
+            alert.style.display = 'none';
+            }, 500);
+        }, 6000);
+        }, 500);
+    });
+    });
+</script>

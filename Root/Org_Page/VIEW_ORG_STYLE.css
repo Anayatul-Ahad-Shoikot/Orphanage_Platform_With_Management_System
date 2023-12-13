@@ -136,6 +136,15 @@ body::-webkit-scrollbar {
   align-items: center;
   gap: 10px;
 }
+.container .left_portion .userDetails button {
+    background: none;
+    border: none;
+    font-size: 17px;
+    font-weight: 600;
+    color: var(--color4);
+    cursor: pointer;
+}
+
 .container .left_portion .userDetails .inner_container {
   display: flex;
   align-items: center;
@@ -270,7 +279,7 @@ body::-webkit-scrollbar {
 
 
 .chat-container {
-  background: white;
+  background: rgb(255, 255, 255);
   width: 555px;
   border-radius: 0;
   display: flex;
@@ -337,6 +346,8 @@ body::-webkit-scrollbar {
   border-bottom: 1px solid white;
   display: flex;
   justify-content: flex-start;
+  justify-content: center;
+  align-items: center;
   background-color: rgba(0, 0, 0, 0.2);
 }
 .chat .chat-header img {
@@ -344,7 +355,7 @@ body::-webkit-scrollbar {
   width: 60px;
   height: 60px;
   border-radius: 50%;
-  border: 2px solid rgb(12, 152, 40);
+  border: 4px solid rgb(0, 131, 26);
 }
 .chat .chat-header .chat-about {
   float: left;
@@ -355,11 +366,12 @@ body::-webkit-scrollbar {
 
 .chat .chat-header .bx {
   font-size: xx-large;
-  color: red;
+  color: black;
 }
 .chat .chat-header .chat-with {
   font-weight: bold;
-  font-size: 16px;
+  font-size: 20px;
+  color: var(--color7);
 }
 .chat .chat-header .chat-num-messages {
   color: #92959e;
@@ -383,7 +395,7 @@ body::-webkit-scrollbar {
   display: none;
 }
 .chat .chat-history .message-data {
-  margin-bottom: 15px;
+  margin-bottom: 1px;
   font-size: small;
 }
 .chat .chat-history .message-data-time {
@@ -392,12 +404,12 @@ body::-webkit-scrollbar {
 }
 .chat .chat-history .message {
   display: flex;
-  color: white;
+  color: var(--text-dark);
   padding: 10px 13px;
   line-height: 26px;
   font-size: 16px;
   border-radius: 7px;
-  margin-bottom: 30px;
+  margin-bottom: 8px;
   width: fit-content;
   overflow-wrap: break-word;
   max-width: 80%;
@@ -417,13 +429,14 @@ body::-webkit-scrollbar {
   display: flex;
   align-items: center;
   border-top: 2px solid white;
+  background-color: rgba(0, 0, 0, 0.2);
 }
 .chat .chat-message input {
   padding: 10px 10px;
   font: 14px/22px "Lato", Arial, sans-serif;
   border-radius: 5px;
   resize: none;
-  width: 402px;
+  width: 390px;
   height: 44px;
 }
 .chat .chat-message .fa-file-o,
@@ -433,17 +446,19 @@ body::-webkit-scrollbar {
   cursor: pointer;
 }
 .chat .chat-message button {
-  float: right;
-  color: #94c2ed;
-  font-size: 16px;
-  text-transform: uppercase;
-  border: none;
-  cursor: pointer;
-  font-weight: bold;
-  background: #f2f5f8;
+    color: var(--text-dark);
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+    background: var(--color5);
+    padding: 9px 13px;
+    border-radius: 10px;
+    margin-left: 9px;
 }
 .chat .chat-message button:hover {
-  color: #75b1e8;
+  color: var(--text-dark);
+  background: var(--color4);
 }
 
 .online,

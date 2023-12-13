@@ -138,8 +138,36 @@ body::-webkit-scrollbar {
   transition: 0.5s;
 }
 
+.notification-container {
+  display: flex;
+  align-items: center;
+  justify-content: right;
+  margin: 1rem;
+  position: fixed;
+  top: 5rem;
+  right: 1rem;
+  z-index: 9999;
+}
+.alert {
+  width: fit-content;
+  padding: 12px 46px;
+  color: rgb(0, 0, 0);
+  font-weight: 600;
+  font-size: large;
+  border-radius: 10px;
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
+}
 
+.alert.one {
+  background-color: rgb(170, 255, 170, 0.5);
+  border: 1px solid rgb(0, 255, 0);
+}
 
+.alert.two {
+  background-color: rgba(255, 170, 170, 0.5);
+  border: 1px solid rgb(255, 0, 0);
+}
 
 .container {
   display: flex;
@@ -166,18 +194,13 @@ body::-webkit-scrollbar {
   box-shadow: 0 0 25px rgba(255, 255, 255, 0.5);
   align-items: center;
 }
-.container .left_portion .profile {
-  width: 12.5rem;
-  height: 12.5rem;
-  border-radius: 50%;
-  background: rgb(0, 0, 0);
-  margin: var(--p-1-5) var(--p-2-5);
-}
-.container .left_portion .profile figure img {
+
+.container .left_portion img {
   width: 12rem;
   height: 12rem;
   border-radius: 50%;
-  margin: 3.7px 0 0 3.95px;
+  border: 6px solid black;
+  margin: 2rem;
 }
  .container .left_portion .userDetails {
   min-width: 550px;
@@ -189,6 +212,7 @@ body::-webkit-scrollbar {
 .container .left_portion .userDetails1 {
   display: flex;
   justify-content: center;
+  align-items: center;
   background-color: #dbf4ff21;
   box-shadow: 1rem 1rem 4rem rgba(0, 0, 0, 0.3);
   border-radius: 15px;

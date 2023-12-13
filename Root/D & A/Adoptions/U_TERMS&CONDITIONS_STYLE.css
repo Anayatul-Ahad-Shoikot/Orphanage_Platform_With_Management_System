@@ -38,8 +38,9 @@
     max-width: 100%;
     height: 730px;
     background: #ffffff;
-    border-radius: 15px;
     box-shadow: 0 0 25px rgba(255, 255, 255, 0.5);
+    border: 1px solid gray;
+    border-radius: 15px 15px 0px 0px;
 }
 
 .terms_service .text {

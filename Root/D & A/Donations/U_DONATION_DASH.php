@@ -1,138 +1,96 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" >
-        <link rel="stylesheet" href="fonts/remixicon.css">
-        <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
-        <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet"/>
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css"/>
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
-        <link rel="stylesheet" href="/Root/D & A/Donations/U_DONATION_DASH_STYLE.css">
-        <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
-        <title>CareSenerity.org | D&A</title>
-    </head>
-    <body>
-        <?php
-            include("/xampp/htdocs/DBMS_Project_Organized_One/Root/Dashboards/Own-Profiles/User/PROFILE_DETAILS_BE.php");
-        ?>
-        <header class="header">
-            <nav>
-                <div class="logo">
-                <a href="/Root/Home_Page/U_HOME.php"><img src="/Root/Landing_Page/LOGO_NoBackground.png" alt="LOGO"></a>
-                </div>
-                <div class="links">
-                <ul>
-                    <li><a href="/Root/Home_Page/U_HOME.php">Home</a></li>
-                    <li><a href="/Root/Org_Page/U_ORG.php">Orgs.</a></li>
-                    <li><a href="/Root/Dashboards/Own-Profiles/User/PROFILE_DETAILS.php" class="edit_profile">Profile</a></li>
-                </ul>
-                </div>
-            </nav>
-        </header>
-        
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> CareSenerity.org | Donate </title>
+    <link rel="stylesheet" href="/Root/Orphanage/ORPHAN_DASH_STYLE.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"></script>
+
+</head>
+
+<body>
+    <header class="header">
+        <nav>
+            <div class="logo">
+            <a href="/Root/Home_Page/U_HOME.php"><img src="/Root/Landing_Page/LOGO_NoBackground.png" alt="LOGO"></a>
+            </div>
+            <div class="links">
+            <ul>
+                <li><a href="/Root/Home_Page/U_HOME.php">Home</a></li>
+                <li><a href="/Root/Dashboards/Own-Profiles/User/PROFILE_DETAILS.php">Profile</a></li>
+                <li><a href="/Root/Org_Page/U_ORG.php">Orgs.</a></li>
+                <li><a href="/Root/D & A/Donations/U_DONATION_DASH.php" class="active">Donate</a></li>
+                <li><a href="/Root/D & A/Adoptions/U_ADOPTION_DASH.php">Adopt</a></li>
+                <li><a href="/Root/Dashboards/Own-Profiles/User/EDIT_PROFILE.php">Edit Profile</a></li>
+            </ul>
+            </div>
+        </nav>
+    </header>
+
+    <section class="don-sec" id="donation">
         <div class="container">
-            <div class="left_portion">
-                <div class="userDetails1">
-                    <div class="profile">
-                        <figure><img src= "..//..//Dashboards/Own-Profiles/Org/<?php echo $logo_path ?>" alt="profile" width="250px" height="250px"></figure>
-                    </div>
-                    <div class="userDetails">
-                        <div class="userName">
-                            <h1><?php echo $org_name ?></h1>
-                        </div>
-                        <div class="map">
-                            <i class="ri-map-pin-fill ri"></i>
-                            <p><?php echo $location ?>, <?php echo $country ?></p>
-                        </div>
-                        <div class="map">
-                            <i class='bx bxs-briefcase'></i>
-                            <p><?php echo $acc_type ?></p>
-                        </div>
-                        <div class="inner_container">
-                            <div class="map">
-                                <i class='bx bxs-send'></i>
-                                <p>Messages</p>
-                            </div>
-                            <div class="map">
-                                <i class='bx bxs-error-alt'></i>
-                                <p>Reports</p>
-                            </div>
-                        </div>
+
+            <div class="heading">
+                <h2>We Receive Donation like..</h2>
+            </div>
+            <div class="row">
+                <div class="col-lg-4">
+                    <div class="don-box">
+                        <img src="img/don/salary.png" alt="img">
+                        <h3>Fund</h3>
+                        <p>Supports our organization's growth and development</p>
+                        <a href="#contact" class="btn1">Donate Now</a>
                     </div>
                 </div>
+                <div class="col-lg-4">
+                        <div class="don-box">
+                            <img src="img/don/shopping-bag.png" alt="img">
+                            <h3>Food</h3>
+                            <p>Aids our orphans in overcoming hunger and maintaining good health</p>
+                            <a href="#contact" class="btn1">Donate Now</a>
+                        </div>
+                </div>
             </div>
-            
-            <div class="options">
-                <a href="#" class="btn">button</a>
-                <a href="#" class="btn">button</a>
-                <form action="#" method="GET">
-                    <input type="text" name="query" placeholder="Search Child">
-                    <button type="submit" class="btn"><i class="ri-search-line"></i></button>
-                </form>
+            <div class="row">
+            <div class="col-lg-4">
+                <div class="don-box">
+                    <img src="img/don/clothing.png" alt="img">
+                    <h3>Clothes</h3>
+                    <p>Empowers our orphans by providing them with clothing for a better appearance and confidence</p>
+                    <a href="#contact" class="btn1">Donate Now</a>
+                </div>
             </div>
-
-            <div class="box-info fst">
-                <li>
-                    <a href="#"><i class="fas fa-people-group"></i></a>
-                    <span class="text">
-                    <p>Received Donations</p>
-                    <h3>156K $</h3>
-                    </span>
-                </li>
-                <li>
-                <a href="#"><i class="fas fa-people-group"></i></a>
-                    <span class="text">
-                    <p>Current Ammount</p>
-                    <h3>96K $</h3>
-                    </span>
-                </li>
-                <li>
-                    <a href="#"><i class="fas fa-people-group"></i></a>
-                    <span class="text">
-                    <p>Adoption Request</p>
-                    <h3>13</h3>
-                    </span>
-                </li>
+            <div class="col-lg-4">
+                <div class="don-box">
+                    <img src="img/don/sneakers.png" alt="img">
+                    <h3>Footware</h3>
+                    <p>Assists our orphans in acquiring footwear for comfort and style</p>
+                    <a href="#contact" class="btn1">Donate Now</a>
+                </div>
             </div>
+            <div class="col-lg-4">
+                <div class="don-box">
+                    <img src="img/don/book.png" alt="img">
+                    <h3>Stationary</h3>
+                    <p>Enables our orphans to access essential stationery for their educational pursuits</p>
+                    <a href="#contact" class="btn1">Donate Now</a>
+                </div>
+            </div>
+                
+            </div>
+        </div>
+    </section>
 
-            <section class="donation-details">
-                <h2>Donations Received</h2>
-                <!-- Table displaying donation details -->
-                <table class="donation-table">
-                    <thead>
-                    <tr>
-                        <th>ID</th>
-                        <th>From</th>
-                        <th>Amount</th>
-                        <th>Date</th>
-                        <th>Action</th>
-                    </tr>
-                    </thead>
-                    <tbody>
-                    <!-- Donation details will be populated here -->
-                    </tbody>
-                </table>
-            </section>
-
-            <section class="adoption-details">
-                <h2>Adoption Requests</h2>
-                <!-- Table displaying adoption requests -->
-                <table class="adoption-table">
-                    <thead>
-                    <tr>
-                        <th>ID</th>
-                        <th>From</th>
-                        <th>To</th>
-                        <th>Date</th>
-                        <th>Action</th>
-                    </tr>
-                    </thead>
-                    <tbody>
-                    <!-- Adoption request details will be populated here -->
-                    </tbody>
-                </table>
-            </section>
-    </div>
+    <script src="js/script.js"></script>
 </body>
+
 </html>

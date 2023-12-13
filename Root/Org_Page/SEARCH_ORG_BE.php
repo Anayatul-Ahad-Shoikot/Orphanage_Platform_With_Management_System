@@ -27,6 +27,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'GET' && isset($_GET['query'])) {
                             echo '<a href="/Root/Org_Page/O_VIEW_ORG.php?org_id=' . $row['org_id'] . '"  class="blog-post_cta" > View </a>';
                         } else if ( $role == 'user' ) {
                             echo '<a href="/Root/Org_Page/U_VIEW_ORG.php?org_id=' . $row['org_id'] . '"  class="blog-post_cta" > View </a>';
+                            echo '<a href="/Root/D & A/Donations/U_DONATION_DASH.php?org_id=' . $row['org_id'] . '" class="blog-post_cta" > Donate </a>';
                         } else {
                             echo '<a href="#"  class="blog-post_cta" > View </a>';
                         }

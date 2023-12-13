@@ -20,6 +20,7 @@
             <li><a href="/Root/Landing_Page/INDEX.php">Home</a></li>
             <li><a href="#">Blogs</a></li>
             <li><a href="#">Donate</a></li>
+            <li><a href="#">Gallery</a></li>
             <li><a href="/Root/AboutUs_Page/ABOUTUS_PAGE.php" class="active">About Us</a></li>
           </ul>
         </div>

@@ -1,0 +1,218 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700&display=swap');
+
+:root {
+    --text-dark: #18181b;
+    --white: #ffffff;
+    --color1: #DDE6ED;
+    --color2: #27374D;   
+    --color3: #526D82;      
+    --color4: #FF597B;       
+    --color5: #f3254e;
+    --color6: #62CDFF;
+    --color7: #0099cc;
+    --color8: #33ccff;
+    --f3-color: rgba(0, 0, 0, 0.8);
+    --bg1-color: #fff;
+    --bg2-color: #000;
+    --l-fs: 1.4rem;
+    --m-fs: 1.2rem;
+    --m-1-8: 1.8rem;
+    --m-0-6: 0.6rem;
+    --p-2-5: 2.5rem;
+    --p-1-5: 1.5rem;
+  }
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    scroll-behavior: smooth;
+}
+
+body{
+    margin: 0;
+}
+
+.don-sec .container {
+    padding: 10px 0 0 0;
+}
+
+/* Heading */
+.heading h2{
+    font-size: 28px;
+    font-weight: 500;
+    border-left: 8px solid #303054;
+    padding: 5px 15px;
+    margin-bottom: 15px;
+}
+.heading p{
+    font-size: 18px;
+}
+.heading p span{
+    font-weight: 600;
+    color: #303054;
+}
+
+/* Buttons */
+.btn1{
+    font-size: 1rem;
+    font-weight: 400;
+    background-color: var(--color4);
+    color: var(--text-dark);
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none !important;
+    transition: all 0.7s;
+    font-weight: 500;
+}
+.btn1:hover{
+    transition: all .7s;
+    background-color: var(--color7);
+    color: var(--bg1-color);
+}
+
+/* Header */
+header{
+    background-color: #303054;
+    width: 100%;
+    
+}
+
+header .navbar-brand{
+    font-size: 22px;
+    font-weight: 600;
+    color: #fff;
+}
+
+.cont-sec{
+    padding: 8px;
+    background-color: #e6edff;
+    width: 100%;
+}
+
+.cont-sec .contact-cont{
+    display: flex;
+    flex-wrap: wrap;
+}
+.cont-sec p{
+    margin: 0;
+}
+
+.cont-sec p a{
+    text-decoration: none;
+    color: #303054;
+}
+
+.cont-sec .social{
+    text-align: right
+}
+
+.cont-sec .social a img{
+    width: 20px;
+    margin-left: 15px;
+}
+
+.home-sec{
+    /* height: 100vh; */
+    padding: 100px 0;
+}
+
+.home-sec .home-content {
+    align-items: center;
+}
+
+.home-sec .home-content h1{
+    font-size: 2.3rem;
+    font-weight: 600;
+    margin-bottom: 20px;
+
+} 
+.home-sec .home-content h2 span{
+    color: #14e20d;
+}
+
+.home-sec .home-content h2{
+    font-size: 1.8rem;
+    font-weight: 600;
+    margin-bottom: 30px;
+}
+.home-sec .home-content p{
+    font-size: 1.3rem;
+    margin-bottom: 30px;
+}
+
+.home-sec .img-sec{
+    display: flex;
+    justify-content: center;
+}
+
+.home-sec .img-sec img{
+    width: 400px;
+}
+
+.home-sec .home-content{
+    align-items: center;
+    padding: 150px 0;
+}
+
+/* About section */
+.about-sec{
+    padding: 150px 0;
+    background-color: #e6edff;
+}
+
+.about-sec img{
+    width: 350px;
+    border: 5px solid #303054;
+    border-radius: 5px;
+}
+
+.about-sec .about-txt p{
+    font-size: 18px;
+}
+
+/* Donation Section */
+.don-sec .don-box{
+    margin: 45px 0;
+    background-color: #fff;
+    padding: 50px;
+    text-align: center;
+    border-radius: 5px;
+    box-shadow: 0 0 15px #b4afaf;
+    transition: all 1s;
+    height: 390px;
+}
+
+.don-sec .don-box img{
+    width: 70px;
+    transition: all 1s;
+}
+
+.don-sec .don-box h3{
+    margin: 15px 0 18px;
+    font-size: 1.6rem;
+    color: var(--text-dark);
+}
+
+.don-sec .don-box p{
+    margin-bottom: 25px;
+    color: var(--color3);
+}
+
+.don-sec .don-box:hover img{
+    transform: scale(1.3) translateY(-12px);
+}
+
+/* Scroll Bar */
+
+::-webkit-scrollbar{
+    width: 5px;
+}
+
+::-webkit-scrollbar-track{
+    border: 7px solid transparent;
+}
+
+::-webkit-scrollbar-thumb{
+    background: #303054;
+}

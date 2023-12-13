@@ -95,10 +95,12 @@
                     $SQL="UPDATE user_list SET user_image = '$image_path' WHERE user_id = $user_id LIMIT 1";
                     mysqli_query($con, $SQL);
                 }
+                $_SESSION['success'] = "Profile Updated successfully";
                 header("Location: /Root/Dashboards/Own-Profiles/User/PROFILE_DETAILS.php");
             } else {
-                echo "Error to update information";
-            }
-        }    
+                $_SESSION['error'] = "Error to update information";
+                header("Location: /Root/Dashboards/Own-Profiles/User/PROFILE_DETAILS.php");
+        } 
+    }  
     mysqli_close($con);
 ?>

@@ -13,7 +13,7 @@
             echo '<h1>' . $row2['first_name'] . '  ' . $row2['last_name'] . '</h1>';
             echo '</div>';
             echo '<div class="buttons">';
-            echo '<a href="#" class="message">Remove</a>';
+            echo '<a href="#" class="message">Gift</a>';
             echo '<a href="/Root/D & A/Adoptions/U_ORPHAN_PROFILE.php?orphan_id=' . $row2['orphan_id'] . '" class="message"> View </a>';
             echo '</div>';
             echo '</div>';
