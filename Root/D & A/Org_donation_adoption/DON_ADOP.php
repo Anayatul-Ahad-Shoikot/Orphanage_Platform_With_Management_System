@@ -88,7 +88,7 @@
                             </thead>
                             <tbody>
                                 <?php
-                                    include('#');
+                                    include('/xampp/htdocs/DBMS_Project_Organized_One/Root/D & A/Org_donation_adoption/FETCH_ADOPTION_REQUEST_BE.php');
                                 ?>
                             </tbody>
                         </table>
