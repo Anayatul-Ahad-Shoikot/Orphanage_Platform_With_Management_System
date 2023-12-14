@@ -17,7 +17,7 @@
 
   <body>
     <header class="header">
-      <nav>
+      <nav id="fixedNav">
           <div class="logo">
             <a href="/Root/Home_Page/U_HOME.php"><img src="/Root/Landing_Page/LOGO_NoBackground.png" alt="LOGO"></a>
           </div>
@@ -69,6 +69,23 @@
       </div>
 
     </header>
+
+    <div class="notification-container">
+        <?php
+        if(isset($_SESSION['success'])){
+            echo '<div class="alert one">
+                    <h5>'.$_SESSION['success'].'</h5>
+                </div>';
+            unset($_SESSION['success']);
+        }
+        if(isset($_SESSION['error'])){
+            echo '<div class="alert two">
+                    <h5>'.$_SESSION['error'].'</h5>
+                </div>';
+            unset($_SESSION['error']);
+        }
+        ?>
+    </div>
     
     <div class="container">
         <div class="option">
@@ -109,9 +126,34 @@
     </footer>
 
 
-
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+        const alerts = document.querySelectorAll('.notification-container > div');
+        alerts.forEach(function(alert) {
+            setTimeout(function() {
+            alert.style.opacity = '1';
+            setTimeout(function() {
+                alert.style.opacity = '0';
+                setTimeout(function() {
+                alert.style.display = 'none';
+                }, 500);
+            }, 6000);
+            }, 500);
+        });
+        });
+    </script>
     <script src="/LandingPage/main.js"></script>
     <script src="/Root/Notifications/Notification_POPUP.js"></script>
     <script src="/Root/Notifications/Notification_color.js"></script>
+    <script>
+        window.addEventListener('scroll', function() {
+            var nav = document.getElementById('fixedNav');
+            if (window.scrollY > 600) { 
+                nav.classList.add('scrolled');
+            } else {
+                nav.classList.remove('scrolled');
+            }
+        });
+    </script>
   </body>
 </html>

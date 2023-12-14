@@ -139,6 +139,18 @@ body::-webkit-scrollbar {
   font-size: 1.3rem; 
 }
 
+#fixedNav {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+  transition: background-color 0.6s ease;
+}
+#fixedNav.scrolled {
+  background-color: rgba(0, 0, 0, 0.8);
+  transition: background-color 0.6s ease;
+}
+
 
 .section__container {
   max-width: var(--max-width);
@@ -204,13 +216,47 @@ body::-webkit-scrollbar {
   border: 1px solid var(--white);
   border-radius: 100%;
 }
+
+
+
+.notification-container {
+  display: flex;
+  align-items: center;
+  justify-content: right;
+  margin: 1rem;
+  position: fixed;
+  top: 5rem;
+  right: 1rem;
+  z-index: 9999;
+}
+.alert {
+  width: fit-content;
+  padding: 12px 46px;
+  color: rgb(0, 0, 0);
+  font-weight: 600;
+  font-size: large;
+  border-radius: 10px;
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
+}
+
+.alert.one {
+  background-color: rgb(170, 255, 170, 0.5);
+  border: 1px solid rgb(0, 255, 0);
+}
+
+.alert.two {
+  background-color: rgba(255, 170, 170, 0.5);
+  border: 1px solid rgb(255, 0, 0);
+}
+
+
 .container {
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-    margin-left: 3rem;
-    padding: 100px 200px 200px 200px;
-    align-items: center;
+  display: flex;
+  flex-direction: column;
+  margin-left: 3rem;
+  align-items: center;
+  margin: 5rem 20rem 10rem 20rem;
 }
 
 .container .option {
@@ -238,6 +284,11 @@ body::-webkit-scrollbar {
     border-radius: .8rem;
     margin: 10px;
 }
+
+.container .blog-post:hover {
+  transform: scale(1.01) translateY(-0.2rem);
+}
+
 .container .blog-post_img {
     min-width: 25rem;
     max-width: 25rem;
@@ -285,7 +336,7 @@ body::-webkit-scrollbar {
 }
 .blog-post_content {
     margin-bottom: 1rem;
-    font-size: .8rem;
+    font-size: 1rem;
     color: #000000b3;
 }
 .blog-post .info {
@@ -301,17 +352,20 @@ body::-webkit-scrollbar {
 }
 .blog-post .blog-post_cta {
     display: inline-block;
-    padding: 1rem 1.5rem;
+    padding: .8rem 1.2rem;
     text-transform: uppercase;
     font-size: .8rem;
-    font-weight: 500;
-    color: #fff;
+    font-weight: 700;
+    color: white;
     text-decoration: none;
     border-radius: .8rem;
-    background: linear-gradient(to right, var(--color4) 0%, var(--color6) 100%);
+    background: var(--color4);
+    transition: .8s;
 }
 .blog-post_cta:hover {
-    background: linear-gradient(to right, var(--color6) 0%, var(--color4) 100%);
+    background: var(--color5);
+    color: var(--text-dark);
+    transition: .8s;
 }
 
 @media screen and (max-width: 1068px) {

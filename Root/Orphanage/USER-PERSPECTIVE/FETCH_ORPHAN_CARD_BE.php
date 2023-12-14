@@ -14,10 +14,11 @@
             echo '<h1>' . $row['first_name'] . '  ' . $row['last_name'] . '</h1>';
             echo '</div>';
             echo '<div class="buttons">';
-            echo '<a href="#?orphan_id=' . $row['orphan_id'] . '" class="message">Gift</a>';
             if ($role == 'user'){
+                echo '<a href="/Root/D & A/Donations/U_DONATION_DASH_2.php?orphan_id=' . $row['orphan_id'] . '" class="message">Gift</a>';
                 echo '<a href="/Root/Orphanage/USER-PERSPECTIVE/U_UP_ORPHAN_PROFILE.php?orphan_id=' . $row['orphan_id'] . '" class="message"> View </a>';
             } else {
+                echo '<a href="#?orphan_id=' . $row['orphan_id'] . '" class="message">Gift</a>';
                 echo '<a href="/Root/Orphanage/USER-PERSPECTIVE/O_UP_ORPHAN_PROFILE.php?orphan_id=' . $row['orphan_id'] . '" class="message"> View </a>';
             }
             echo '</div>';

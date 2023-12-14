@@ -78,7 +78,7 @@
             </div>
         </div>  
         <div class="options">
-            <a href="#?orphan_id=<?php echo $orphan_id ?>" class="btn x"> Donate </a>
+            <a href="/Root/D & A/Donations/U_DONATION_DASH_2.php?orphan_id=<?php echo $orphan_id ?>" class="btn x">Gift</a>
             <a href="/Root/D & A/Adoptions/U_TERMS_CONDITIONS.php?orphan_id=<?php echo $orphan_id ?>" class="btn y">Adopt</a></button>
         </div>
         <div class="right_portion">

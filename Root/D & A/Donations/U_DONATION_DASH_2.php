@@ -48,7 +48,7 @@
                         <img src="img/don/salary.png" alt="img">
                         <h3>Fund</h3>
                         <p>Supports our organization's growth and development</p>
-                        <a href="/Root/D & A/Donations/U_DONATION_FORM.php?org_id=<?php echo $_GET['org_id'] ?>" class="btn1">Donate Now</a>
+                        <a href="/Root/D & A/Donations/U_DONATION_FORM_2.php?orphan_id=<?php echo $_GET['orphan_id'] ?>" class="btn1">Gift Now</a>
                     </div>
                 </div>
                 <div class="col-lg-4">
@@ -56,7 +56,7 @@
                             <img src="img/don/shopping-bag.png" alt="img">
                             <h3>Food</h3>
                             <p>Aids our orphans in overcoming hunger and maintaining good health</p>
-                            <a href="#contact" class="btn1">Donate Now</a>
+                            <a href="#contact" class="btn1">Gift Now</a>
                         </div>
                 </div>
             </div>
@@ -66,7 +66,7 @@
                     <img src="img/don/clothing.png" alt="img">
                     <h3>Clothes</h3>
                     <p>Empowers our orphans by providing them with clothing for a better appearance and confidence</p>
-                    <a href="#contact" class="btn1">Donate Now</a>
+                    <a href="#contact" class="btn1">Gift Now</a>
                 </div>
             </div>
             <div class="col-lg-4">
@@ -74,7 +74,7 @@
                     <img src="img/don/sneakers.png" alt="img">
                     <h3>Footware</h3>
                     <p>Assists our orphans in acquiring footwear for comfort and style</p>
-                    <a href="#contact" class="btn1">Donate Now</a>
+                    <a href="#contact" class="btn1">Gift Now</a>
                 </div>
             </div>
             <div class="col-lg-4">
@@ -82,7 +82,7 @@
                     <img src="img/don/book.png" alt="img">
                     <h3>Stationary</h3>
                     <p>Enables our orphans to access essential stationery for their educational pursuits</p>
-                    <a href="#contact" class="btn1">Donate Now</a>
+                    <a href="#contact" class="btn1">Gift Now</a>
                 </div>
             </div>
                 

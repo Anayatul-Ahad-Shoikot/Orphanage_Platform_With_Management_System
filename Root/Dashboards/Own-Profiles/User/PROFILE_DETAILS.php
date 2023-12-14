@@ -33,7 +33,6 @@
             <li><a href="/Root/Dashboards/Own-Profiles/User/EDIT_PROFILE.php">Edit Profile</a></li>
           </ul>
         </div>
-  
       </nav>
     </header>
 

@@ -30,9 +30,6 @@
                 <li><a href="/Root/Org_Page/U_ORG.php">Donate</a></li>
                 <li><a href="/Root/D & A/Adoptions/U_ADOPTION_DASH.php">Adopt</a></li>
                 <li><a href="/Root/Dashboards/Own-Profiles/User/EDIT_PROFILE.php" class="active">Edit Profile</a></li>
-                    <?php
-                        include('/xampp/htdocs/DBMS_Project_Organized_One/Root/Notifications/MAIN_NOTIFI.php');
-                    ?>
                 </ul>
             </div>
         </nav>

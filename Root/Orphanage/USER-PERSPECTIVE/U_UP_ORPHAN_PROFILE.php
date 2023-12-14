@@ -53,16 +53,6 @@
                         <i class="ri-map-pin-fill ri"></i>
                         <p><?php echo $org_location ?></p>
                     </div>
-                    <div class="inner_container">
-                        <div class="map">
-                            <i class='bx bxs-send'></i>
-                            <p>Gift</p>
-                        </div>
-                        <div class="map">
-                            <i class='bx bxs-error-alt'></i>
-                            <p>Reports</p>
-                        </div>
-                    </div>
                 </div>
             </div>
             <div class="work">
@@ -78,8 +68,8 @@
             </div>
         </div>  
         <div class="options">
-            <a href="/Root/D & A/Adoptions/U_TERMS_CONDITIONS.php?orphan_id=<?php echo $orphanId ?> " class="btn y"> Adopt </a>
-            <a href="#?org_id=<?php echo $org_id ?> " class="btn y"> Gift </a>
+            <a href="/Root/D & A/Adoptions/U_TERMS_CONDITIONS.php?orphan_id=<?php echo $orphanId ?> " class="btn y">Adopt</a>
+            <a href="/Root/D & A/Donations/U_DONATION_DASH_2.php?orphan_id=<?php echo $orphanId ?>" class="btn y">Gift</a>
         </div>
 
 
