@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Dec 08, 2023 at 08:45 PM
+-- Generation Time: Dec 14, 2023 at 11:25 AM
 -- Server version: 10.4.28-MariaDB
 -- PHP Version: 8.2.4
 
@@ -42,7 +42,7 @@ CREATE TABLE `accounts` (
 
 INSERT INTO `accounts` (`acc_id`, `acc_name`, `acc_pass`, `acc_email`, `role`, `acc_join_date`) VALUES
 (1000, 'ls_foundation', '$2y$10$bCGz2kiPwRj.qCoh.PSuhuOzLVQliuC6/QApt/lAvn1dCVmWO8yvK', 'ls_foundation@gamil.com', 'org', '2023-12-02'),
-(1001, 'Anayatul Ahad Shoikot', '$2y$10$ow5X0gQeOAUD2wJk0GMzL.wXEjekv9YVM8k43b12GAlQKC30N58/K', 'shoikot@gmail.com', 'user', '2023-12-03'),
+(1001, 'ahad', '$2y$10$ow5X0gQeOAUD2wJk0GMzL.wXEjekv9YVM8k43b12GAlQKC30N58/K', 'aashoikot002@gmail.com', 'user', '2023-12-03'),
 (1002, 'AAS_charity', '$2y$10$.jKISymcs1T1Aw2i56IeCuVHB8KR24u3D3iw3zmLpbo00Diw193mK', 'AAS_charity.org.com', 'org', '2023-12-03'),
 (1003, 'ShomajSeba', '$2y$10$FYq/19TSnwIlw3n8OOXuw.qZ/KLtJ1XdgyFUA11doGLyVp/R5ig5u', 'shomajseba@example.com', 'org', '2011-09-15'),
 (1004, 'DhakaFoundation', '$2y$10$DQf3SsaKPp./QMfMrkGcxuXgqKSoDkxhY7xzQjntb3TQwlJfyAAlm', 'dhakafoundation@example.com', 'org', '2010-05-20'),
@@ -54,7 +54,8 @@ INSERT INTO `accounts` (`acc_id`, `acc_name`, `acc_pass`, `acc_email`, `role`, `
 (1010, 'NariShakti', '$2y$10$3kfdL83JxDWgJCBkousbJOeejbC2aCano6TJa3yxGv.gqV5G.spem', 'narishakti@example.com', 'org', '2017-12-18'),
 (1011, 'AgroVista', '$2y$10$fe0.D3g177cbRbz7cI/WouugIx8eui5X8CJftXHpVN0.VWUT4ANH6', 'agrovista@example.com', 'org', '2018-08-30'),
 (1012, 'SustainableBD', '$2y$10$fHPsmqW1XGwkXRp9hWdjKe5JdhgUwHOxmTTZzZn27Cfg8ws75fhRW', 'sustainablebd@example.com', 'org', '2019-10-12'),
-(1013, 'admin1', '$2y$10$hNr.buN/lErXXQzREDeqa.zo4E6mL3DNEuNsm6VI2eHL9WIbZnwNa', 'admin1@gmail.com', 'admin', '2023-12-07');
+(1013, 'admin1', '$2y$10$hNr.buN/lErXXQzREDeqa.zo4E6mL3DNEuNsm6VI2eHL9WIbZnwNa', 'admin1@gmail.com', 'admin', '2023-12-07'),
+(1018, 'zamun123', '$2y$10$K6A4y/fYxWWHiT5YE22qUenrtp72p/j91a4PB9FiMIWJh9Xw3s26u', 'sabrina@gmail.com', 'user', '2023-12-11');
 
 -- --------------------------------------------------------
 
@@ -76,7 +77,7 @@ CREATE TABLE `admin_list` (
 --
 
 INSERT INTO `admin_list` (`admin_id`, `acc_id`, `admin_name`, `admin_contact`, `admin_priyority`, `admin_image`) VALUES
-(1, 1013, 'Ahad Shoikot', '01973336001', 1, 'img/011-212-107.jpg');
+(1, 1013, 'Ahad Shoikot', '0197333798', 1, 'img/011-212-107.jpg');
 
 -- --------------------------------------------------------
 
@@ -111,8 +112,8 @@ INSERT INTO `adoptions` (`adoption_id`, `orphan_id`, `acc_id`, `request_date`, `
 (8, 23, 1001, '2023-12-07', 'Pending', NULL, 'sayma@gmail.com', '01973336002', 'Student', 25000, 'married', 'Hello', 6, 'good', 'Bad', 'Sad'),
 (9, 23, 1001, '2023-12-07', 'Pending', NULL, 'sayma@gmail.com', '01973336002', 'Student', 25000, 'divorced', 'Hello', 6, 'good', 'Bad', 'Sad'),
 (10, 23, 1001, '2023-12-07', 'Pending', NULL, 'sayma@gmail.com', '01973336002', 'Student', 25000, 'married', 'Hello', 6, 'good', 'Bad', 'Sad'),
-(11, 47, 1001, '2023-12-08', 'Pending', NULL, 'sayma@gmail.com', '01973336002', 'Student', 25000, 'divorced', 'Hello', 6, 'good', 'Bad', 'Sad'),
-(12, 23, 1001, '2023-12-09', 'Pending', NULL, 'asdwad@g.com', 'awdasd', 'awdsd', 9278400000, 'divorced', 'awd', 0, 'aWD', 'fdhbxdf', 'ghjtfh');
+(12, 23, 1001, '2023-12-09', 'Pending', NULL, 'asdwad@g.com', 'awdasd', 'awdsd', 9278400000, 'divorced', 'awd', 0, 'aWD', 'fdhbxdf', 'ghjtfh'),
+(13, 23, 1018, '2023-12-11', 'Pending', NULL, 'ashoikot212107@bscse.uiu.ac.bd', '01973336001', 'Student', 25000, 'single', 'for testing', 0, 'good', 'Bad', 'ghjtfh');
 
 -- --------------------------------------------------------
 
@@ -182,6 +183,84 @@ CREATE TABLE `blog_post` (
 INSERT INTO `blog_post` (`post_id`, `acc_id`, `post_title`, `post_content`, `post_category`, `post_image`, `published`) VALUES
 (51, 1000, 'Anayatul Ahad Shoikot\'s post', 'I am now fixing my database table. ', 'child', 'img/AnayatulAhadShoikotspost_656ca2ff0972e.jpg', '2023-12-03'),
 (54, 1001, 'Anayatul Ahad Shoikot\'s post', 'awdasdw', 'old', 'img/AnayatulAhadShoikotspost_656da61d3ad96.jpg', '2023-12-04');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `chats`
+--
+
+CREATE TABLE `chats` (
+  `chat_id` int(5) NOT NULL,
+  `sender_id` int(5) NOT NULL,
+  `receiver_id` int(5) NOT NULL,
+  `date_time` datetime NOT NULL DEFAULT current_timestamp(),
+  `msg` text DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Dumping data for table `chats`
+--
+
+INSERT INTO `chats` (`chat_id`, `sender_id`, `receiver_id`, `date_time`, `msg`) VALUES
+(28, 19, 18, '2023-12-14 12:51:40', 'hi');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `donations`
+--
+
+CREATE TABLE `donations` (
+  `donation_id` int(11) NOT NULL,
+  `donor_id` int(11) NOT NULL,
+  `receiver_id` int(11) NOT NULL,
+  `receiver_type` varchar(20) NOT NULL,
+  `payment_method` varchar(50) NOT NULL,
+  `donor_email` varchar(100) NOT NULL,
+  `card_no` varchar(20) DEFAULT NULL,
+  `card_cvc` varchar(10) DEFAULT NULL,
+  `card_exp_month` varchar(12) DEFAULT NULL,
+  `card_exp_year` year(4) DEFAULT NULL,
+  `bkash_no` varchar(15) DEFAULT NULL,
+  `Bkash_trans` varchar(20) DEFAULT NULL,
+  `amount` float NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_swedish_ci;
+
+--
+-- Dumping data for table `donations`
+--
+
+INSERT INTO `donations` (`donation_id`, `donor_id`, `receiver_id`, `receiver_type`, `payment_method`, `donor_email`, `card_no`, `card_cvc`, `card_exp_month`, `card_exp_year`, `bkash_no`, `Bkash_trans`, `amount`) VALUES
+(7, 19, 24, 'orphan', 'card', 'sabrina@gmail.com', '123456789', '6655', 'january', '2030', NULL, NULL, 1000000),
+(8, 19, 24, 'orphan', 'card', 'sabrina@gmail.com', '123456789', '6655', 'january', '2030', NULL, NULL, 1000000),
+(9, 19, 29, 'organization', 'card', 'sabrina@gmail.com', '3454', '6655', 'january', '2030', NULL, NULL, 1000000),
+(10, 19, 23, 'orphan', 'bkash', 'ela@g.com', NULL, NULL, NULL, NULL, '019723336001', '#4de996e43', 500);
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `gallery`
+--
+
+CREATE TABLE `gallery` (
+  `img_id` int(11) NOT NULL,
+  `uploader_id` int(11) NOT NULL,
+  `img_title` varchar(100) NOT NULL,
+  `img_path` varchar(255) NOT NULL,
+  `img_reacts` int(5) NOT NULL DEFAULT 0
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Dumping data for table `gallery`
+--
+
+INSERT INTO `gallery` (`img_id`, `uploader_id`, `img_title`, `img_path`, `img_reacts`) VALUES
+(4, 1000, 'awd', '1702399440.png', 0),
+(5, 1000, 'asdasf', '1702399449.png', 0),
+(7, 1000, 'dsfgvsd', '1702399476.png', 0),
+(22, 1001, 'uyi', '1702449665.png', 0),
+(23, 1001, 'uyi', '1702449674.png', 0);
 
 -- --------------------------------------------------------
 
@@ -272,10 +351,11 @@ INSERT INTO `local_orphan_guardian` (`guardian_id`, `guardian_name`, `guardian_c
 CREATE TABLE `notifications` (
   `notification_id` int(11) NOT NULL,
   `user_id` int(11) NOT NULL,
-  `org_id` int(11) NOT NULL,
-  `orphan_id` int(11) NOT NULL,
+  `org_id` int(11) DEFAULT NULL,
+  `orphan_id` int(11) DEFAULT NULL,
   `is_read` tinyint(1) NOT NULL DEFAULT 0,
   `content` varchar(100) NOT NULL,
+  `amount` float DEFAULT NULL,
   `date` timestamp NOT NULL DEFAULT current_timestamp()
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
@@ -283,10 +363,16 @@ CREATE TABLE `notifications` (
 -- Dumping data for table `notifications`
 --
 
-INSERT INTO `notifications` (`notification_id`, `user_id`, `org_id`, `orphan_id`, `is_read`, `content`, `date`) VALUES
-(1, 17, 18, 23, 1, 'requested to adopt', '2023-12-07 17:48:39'),
-(2, 17, 20, 47, 1, 'requested to adopt', '2023-12-07 19:07:25'),
-(3, 17, 18, 23, 1, 'requested to adopt', '2023-12-08 18:05:21');
+INSERT INTO `notifications` (`notification_id`, `user_id`, `org_id`, `orphan_id`, `is_read`, `content`, `amount`, `date`) VALUES
+(1, 17, 18, 23, 1, 'requested to adopt', NULL, '2023-12-07 17:48:39'),
+(3, 17, 18, 23, 1, 'requested to adopt', NULL, '2023-12-08 18:05:21'),
+(4, 19, 18, 23, 1, 'requested to adopt', NULL, '2023-12-11 17:27:31'),
+(8, 19, 18, NULL, 1, 'Donation 1500 Tk sent to Little Sprouts Foundation', NULL, '2023-12-14 04:51:18'),
+(9, 19, 18, NULL, 1, 'Donation 500 Tk sent to Little Sprouts Foundation', NULL, '2023-12-14 05:32:31'),
+(10, 19, 24, NULL, 1, 'Donation 500 Tk sent to ShishuKalyan', NULL, '2023-12-14 06:03:45'),
+(12, 19, NULL, 24, 1, 'Donation 1000000 Tk sent to Shorifa Rani', NULL, '2023-12-14 06:26:41'),
+(13, 19, 29, NULL, 1, 'Donation 1000000 Tk sent to SustainableBD', NULL, '2023-12-14 06:27:26'),
+(14, 19, 23, NULL, 1, 'Donation 500 Tk sent to Anayatul Shoikot', NULL, '2023-12-14 06:37:17');
 
 -- --------------------------------------------------------
 
@@ -368,8 +454,7 @@ INSERT INTO `orphan_list` (`orphan_id`, `org_id`, `guardian_id`, `first_name`, `
 (22, 18, 1, 'Sabrina', 'Ahad', 25, 'male', 'muslim', '2023-12-02', '2023-12-04', 'other', 'good', 'secondary_school', 'None', 'Gamming', 'Ice Cream', 'Badminton', 'Fast learners', 'Full Stack Developer', 'none', 'All okay', 'img/sabrina.png', '0', '0'),
 (23, 18, 2, 'Anayatul', 'Shoikot', 11, 'male', 'hindu', '2023-12-22', '2023-12-04', 'past Away', 'deaf', 'junior_high_school', 'None', 'Gamming', 'Ice Cream', 'Badminton', 'xyz', 'A good House Wife ', 'overthinking ', 'All okay', 'img/Shoikot_656d88af00193.jpeg', '0', '0'),
 (24, 18, 3, 'Shorifa', 'Rani', 2, 'male', 'buddha', '2023-12-11', '2023-12-04', 'unknow', 'blind', 'elementary', 'None', 'Gamming', 'Ice Cream', 'Badminton', 'xyz', 'A good House Wife ', 'overthinking ', 'All okay', 'img/Rani_656d88d7267b4.jpeg', '0', '0'),
-(46, 20, 38, 'Zahid', 'Rahman', 10, 'male', 'muslim', '2023-12-03', '2023-12-06', 'abondoned', 'good', 'primary_school', '', '', '', '', '', '', '', '', 'img/Rahman_65703f0377491.', '0', '0'),
-(47, 20, 39, 'Anika', 'Akhter', 8, '', '', '0000-00-00', '2023-12-06', '', '', '', '', '', '', '', '', '', '', '', 'img/Akhter_65703f3a1d8db.', '0', '0');
+(46, 20, 38, 'Zahid', 'Rahman', 10, 'male', 'muslim', '2023-12-03', '2023-12-06', 'abondoned', 'good', 'primary_school', '', '', '', '', '', '', '', '', 'img/862-06540774en_Masterfile.jpg', '0', '0');
 
 -- --------------------------------------------------------
 
@@ -397,7 +482,8 @@ CREATE TABLE `user_list` (
 --
 
 INSERT INTO `user_list` (`user_id`, `user_name`, `acc_id`, `user_birth`, `user_contact`, `user_gender`, `user_NID`, `user_address`, `user_website`, `user_job`, `user_location`, `user_image`) VALUES
-(17, 'anayatul ahad shoikot', 1001, '2000-11-30', '01973336001', 'Male', '1208937821463278', '40 Safe Haven Road, mirpur -2,', 'www.ahad.com', 'Student', 'Mirpur-02', 'img/anayatulahadshoikot_656c174e40478.png');
+(17, 'anayatul ahad shoikot', 1001, '2000-11-30', '01973336002', 'Male', '1208937821463278', '40 Safe Haven Road, mirpur -2', 'www.ahad.com', 'Student', 'Dhaka', 'img/anayatulahadshoikot_656c174e40478.png'),
+(19, 'Sabrina Zaman Oishee', 1018, '2002-02-27', '01718038822', 'Female', '1208937821463278', 'Madani avenew, Notun bazar', 'www.SabrinaZaman.com', 'Student', 'Dhaka', 'img/SabrinaZamanOishee_65772eb949f73.png');
 
 --
 -- Indexes for dumped tables
@@ -445,6 +531,27 @@ ALTER TABLE `blog_post`
   ADD KEY `acc_id` (`acc_id`);
 
 --
+-- Indexes for table `chats`
+--
+ALTER TABLE `chats`
+  ADD PRIMARY KEY (`chat_id`),
+  ADD KEY `receiver_id` (`receiver_id`),
+  ADD KEY `chats_ibfk_1` (`sender_id`);
+
+--
+-- Indexes for table `donations`
+--
+ALTER TABLE `donations`
+  ADD PRIMARY KEY (`donation_id`);
+
+--
+-- Indexes for table `gallery`
+--
+ALTER TABLE `gallery`
+  ADD PRIMARY KEY (`img_id`),
+  ADD KEY `uploader_id` (`uploader_id`);
+
+--
 -- Indexes for table `like_handle`
 --
 ALTER TABLE `like_handle`
@@ -462,8 +569,8 @@ ALTER TABLE `local_orphan_guardian`
 ALTER TABLE `notifications`
   ADD PRIMARY KEY (`notification_id`),
   ADD KEY `org_id` (`org_id`),
-  ADD KEY `orphan_id` (`orphan_id`),
-  ADD KEY `user_id` (`user_id`);
+  ADD KEY `user_id` (`user_id`),
+  ADD KEY `orphan_id` (`orphan_id`);
 
 --
 -- Indexes for table `org_list`
@@ -495,25 +602,43 @@ ALTER TABLE `user_list`
 -- AUTO_INCREMENT for table `accounts`
 --
 ALTER TABLE `accounts`
-  MODIFY `acc_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=1014;
+  MODIFY `acc_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=1019;
 
 --
 -- AUTO_INCREMENT for table `admin_list`
 --
 ALTER TABLE `admin_list`
-  MODIFY `admin_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `admin_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
 -- AUTO_INCREMENT for table `adoptions`
 --
 ALTER TABLE `adoptions`
-  MODIFY `adoption_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
+  MODIFY `adoption_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
 
 --
 -- AUTO_INCREMENT for table `blog_post`
 --
 ALTER TABLE `blog_post`
   MODIFY `post_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=56;
+
+--
+-- AUTO_INCREMENT for table `chats`
+--
+ALTER TABLE `chats`
+  MODIFY `chat_id` int(5) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=29;
+
+--
+-- AUTO_INCREMENT for table `donations`
+--
+ALTER TABLE `donations`
+  MODIFY `donation_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
+
+--
+-- AUTO_INCREMENT for table `gallery`
+--
+ALTER TABLE `gallery`
+  MODIFY `img_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=24;
 
 --
 -- AUTO_INCREMENT for table `local_orphan_guardian`
@@ -525,7 +650,7 @@ ALTER TABLE `local_orphan_guardian`
 -- AUTO_INCREMENT for table `notifications`
 --
 ALTER TABLE `notifications`
-  MODIFY `notification_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `notification_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
 
 --
 -- AUTO_INCREMENT for table `org_list`
@@ -543,7 +668,7 @@ ALTER TABLE `orphan_list`
 -- AUTO_INCREMENT for table `user_list`
 --
 ALTER TABLE `user_list`
-  MODIFY `user_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=19;
+  MODIFY `user_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=20;
 
 --
 -- Constraints for dumped tables
@@ -581,6 +706,19 @@ ALTER TABLE `blog_post`
   ADD CONSTRAINT `blog_post_ibfk_1` FOREIGN KEY (`acc_id`) REFERENCES `accounts` (`acc_id`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 --
+-- Constraints for table `chats`
+--
+ALTER TABLE `chats`
+  ADD CONSTRAINT `chats_ibfk_1` FOREIGN KEY (`sender_id`) REFERENCES `user_list` (`user_id`) ON DELETE CASCADE ON UPDATE CASCADE,
+  ADD CONSTRAINT `chats_ibfk_2` FOREIGN KEY (`receiver_id`) REFERENCES `org_list` (`org_id`) ON DELETE CASCADE ON UPDATE CASCADE;
+
+--
+-- Constraints for table `gallery`
+--
+ALTER TABLE `gallery`
+  ADD CONSTRAINT `gallery_ibfk_1` FOREIGN KEY (`uploader_id`) REFERENCES `accounts` (`acc_id`) ON DELETE CASCADE ON UPDATE CASCADE;
+
+--
 -- Constraints for table `like_handle`
 --
 ALTER TABLE `like_handle`
@@ -591,8 +729,8 @@ ALTER TABLE `like_handle`
 --
 ALTER TABLE `notifications`
   ADD CONSTRAINT `notifications_ibfk_2` FOREIGN KEY (`org_id`) REFERENCES `org_list` (`org_id`) ON DELETE CASCADE ON UPDATE CASCADE,
-  ADD CONSTRAINT `notifications_ibfk_3` FOREIGN KEY (`orphan_id`) REFERENCES `orphan_list` (`orphan_id`) ON DELETE CASCADE ON UPDATE CASCADE,
-  ADD CONSTRAINT `notifications_ibfk_4` FOREIGN KEY (`user_id`) REFERENCES `user_list` (`user_id`) ON DELETE CASCADE ON UPDATE CASCADE;
+  ADD CONSTRAINT `notifications_ibfk_4` FOREIGN KEY (`user_id`) REFERENCES `user_list` (`user_id`) ON DELETE CASCADE ON UPDATE CASCADE,
+  ADD CONSTRAINT `notifications_ibfk_5` FOREIGN KEY (`orphan_id`) REFERENCES `orphan_list` (`orphan_id`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 --
 -- Constraints for table `org_list`
