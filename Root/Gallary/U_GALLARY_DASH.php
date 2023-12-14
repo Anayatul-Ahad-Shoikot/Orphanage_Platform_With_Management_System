@@ -52,23 +52,21 @@
         </div>
     </header>
 
-    <div>
-      <div class="alert one">
-          <?php
-              if(isset($_SESSION['notify'])){
-                  echo "<h5>".$_SESSION['notify']."</h5>";
-                  unset($_SESSION['notify']);
-              }
-          ?>
-      </div>
-      <div class="alert two">
-          <?php
-              if(isset($_SESSION['status-2'])){
-                  echo "<h5>".$_SESSION['status-2']."</h5>";
-                  unset($_SESSION['status-2']);
-              }
-          ?>
-      </div>
+    <div class="notification-container">
+        <?php
+        if(isset($_SESSION['success'])){
+            echo '<div class="alert one">
+                    <h5>'.$_SESSION['success'].'</h5>
+                </div>';
+            unset($_SESSION['success']);
+        }
+        if(isset($_SESSION['error'])){
+            echo '<div class="alert two">
+                    <h5>'.$_SESSION['error'].'</h5>
+                </div>';
+            unset($_SESSION['error']);
+        }
+        ?>
     </div>
 
 
@@ -112,13 +110,31 @@
 
     
     <script type="text/javascript">
-    $(document).ready(function() {
-        $(".fancybox").fancybox({
-            openEffect: "none",
-            closeEffect: "none",
+      $(document).ready(function() {
+          $(".fancybox").fancybox({
+              openEffect: "none",
+              closeEffect: "none",
+          });
+      });
+    </script> 
+
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+        const alerts = document.querySelectorAll('.notification-container > div');
+        alerts.forEach(function(alert) {
+            setTimeout(function() {
+            alert.style.opacity = '1';
+            setTimeout(function() {
+                alert.style.opacity = '0';
+                setTimeout(function() {
+                alert.style.display = 'none';
+                }, 500);
+            }, 6000);
+            }, 500);
         });
-    });
-</script> 
+        });
+    </script>
 </body>
 </html>
 

@@ -17,10 +17,11 @@
           </div>
           <div class="links">
             <ul>
-            <li><a href="/Root/Home_Page/O_HOME.php" class="active">Home</a></li>
-            <li><a href="/Root/Org_Page/O_ORG.php">Orgs.</a></li>
-            <li><a href="#">Donations</a></li>
-            <li><a href="/Root/Dashboards/Own-Profiles/Org/PROFILE_DETAILS.php" class="edit_profile">Profile</a></li>
+                <li><a href="/Root/Home_Page/O_HOME.php" class="active">Home</a></li>
+                <li><a href="/Root/Dashboards/Own-Profiles/Org/PROFILE_DETAILS.php">Profile</a></li>
+                <li><a href="/Root/Org_Page/O_ORG.php">Orgs.</a></li>
+                <li><a href="/Root//Gallary//O_GALLERY_DASH.php">Gallery</a></li>
+                <li><a href="/Root/Dashboards/Own-Profiles/Org/EDIT_PROFILE.php">Edit Profile</a></li>
             </ul>
           </div>
       </nav>
@@ -35,6 +36,7 @@
               <option value="">Category</option>
                 <option value="child">Child</option>
                 <option value="old">Old</option>
+                <option value="other">Other</option>
             </select>
             <input class="img" type="file" name="img" accept="image/*">
             </div>

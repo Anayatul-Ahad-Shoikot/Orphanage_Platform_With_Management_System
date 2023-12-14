@@ -24,11 +24,13 @@
         </div>
         
         <div class="links">
-          <ul>
-            <li><a href="/Root/Home_Page/O_HOME.php">Home</a></li>
-            <li><a href="/Root/Org_Page/O_ORG.php">Orgs.</a></li>
-            <li><a href="/Root/Dashboards/Own-Profiles/Org/EDIT_PROFILE.php" class="edit_profile">Edit Profile</a></li>
-          </ul>
+            <ul>
+                <li><a href="/Root/Home_Page/O_HOME.php">Home</a></li>
+                <li><a href="/Root/Dashboards/Own-Profiles/Org/PROFILE_DETAILS.php" class="active">Profile</a></li>
+                <li><a href="/Root/Org_Page/O_ORG.php">Orgs.</a></li>
+                <li><a href="/Root//Gallary//O_GALLERY_DASH.php">Gallery</a></li>
+                <li><a href="/Root/Dashboards/Own-Profiles/Org/EDIT_PROFILE.php" class="edit_profile">Edit Profile</a></li>
+            </ul>
         </div>
   
       </nav>
@@ -77,7 +79,7 @@
         </div>
 
         <div class="options">
-            <a href="/Root/D & A/DON_ADOP.php" class="btn z">Donation & Adoptions</a>
+            <a href="/Root/D & A/Org_donation_adoption/DON_ADOP.php" class="btn z">Donations & Adoptions</a>
             <a href="#" class="btn x">Oldage</a>
             <a href="/Root/Orphanage/ORPHAN_DASH.php" class="btn y">Orphanage</a>
         </div>

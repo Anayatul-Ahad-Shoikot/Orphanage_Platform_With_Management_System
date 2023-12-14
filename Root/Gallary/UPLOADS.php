@@ -16,49 +16,49 @@
             $result = mysqli_query($con, $sql);
             if($result) {
                 if($role == 'user') {
-                    $_SESSION['notify'] = 'Image Uploaded successfully.';
+                    $_SESSION['success'] = 'Image Upload successful.';
                     header("Location: /Root/Gallary/U_GALLARY_DASH.php");
                 } elseif ($role == 'org') {
-                    $_SESSION['notify'] = 'Image Uploaded successfully.';
-                    header("Location: /Root/Gallary/O_GALLARY_DASH.php");
+                    $_SESSION['success'] = 'Image Upload successful.';
+                    header("Location: /Root/Gallary/O_GALLERY_DASH.php");
                 } else {
-                    $_SESSION['notify'] = 'Image Uploaded successfully.';
-                    header("Location: /Root/Gallary/A_GALLARY_DASH.php");
+                    $_SESSION['success'] = 'Image Uploaded successfully.';
+                    header("Location: #");
                 }
             } 
             else {
                 if($role == 'user') {
-                    $_SESSION['status-2'] = 'image uploading failed';
+                    $_SESSION['error'] = 'Image uploading failed';
                     header("Location: /Root/Gallary/U_GALLARY_DASH.php");
                 } elseif ($role == 'org') {
-                    $_SESSION['status-2'] = 'image uploading failed';
-                    header("Location: /Root/Gallary/O_GALLARY_DASH.php");
+                    $_SESSION['error'] = 'Image uploading failed';
+                    header("Location: /Root/Gallary/O_GALLERY_DASH.php");
                 } else {
-                    $_SESSION['status-2'] = 'image uploading failed';
+                    $_SESSION['error'] = 'Image uploading failed';
                     header("Location: /Root/Gallary/A_GALLARY_DASH.php");
                 }
             }
         } else {
             if($role == 'user') {
-                $_SESSION['status-2'] = 'image uploading failed';
+                $_SESSION['error'] = 'image uploading failed';
                 header("Location: /Root/Gallary/U_GALLARY_DASH.php");
             } elseif ($role == 'org') {
-                $_SESSION['status-2'] = 'image uploading failed';
-                header("Location: /Root/Gallary/O_GALLARY_DASH.php");
+                $_SESSION['error'] = 'image uploading failed';
+                header("Location: /Root/Gallary/O_GALLERY_DASH.php");
             } else {
-                $_SESSION['status-2'] = 'image uploading failed';
+                $_SESSION['error'] = 'image uploading failed';
                 header("Location: /Root/Gallary/A_GALLARY_DASH.php");
             }
         }
     } else {
         if($role == 'user') {
-            $_SESSION['status-2'] = 'Please Select Image or Write title';
+            $_SESSION['error'] = 'Please Select Image or Write title';
             header("Location: /Root/Gallary/U_GALLARY_DASH.php");
         } elseif ($role == 'org') {
-            $_SESSION['status-2'] = 'Please Select Image or Write title';
-            header("Location: /Root/Gallary/O_GALLARY_DASH.php");
+            $_SESSION['error'] = 'Please Select Image or Write title';
+            header("Location: /Root/Gallary/O_GALLERY_DASH.php");
         } else {
-            $_SESSION['status-2'] = 'Please Select Image or Write title';
+            $_SESSION['error'] = 'Please Select Image or Write title';
             header("Location: /Root/Gallary/A_GALLARY_DASH.php");
         }
     }

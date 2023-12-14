@@ -14,6 +14,7 @@
     <title>Admin Panel</title>
   </head>
   <body>
+
     <section class="sidebar">
       <a href="/Root/Admin_Side/Dash/ADMIN_DASH.php" class="logo">
         <img src="/Root/Landing_Page/LOGO_NoBackground.png" alt="Logo" />
@@ -66,39 +67,39 @@
     </section>
 
     <section class="content">
-      <nav class="e">
-        <i class="fas fa-bars menu-btn"></i>
-        <form action="#">
-          <div class="form-input">
-            <input type="search" placeholder="search..." />
-            <button class="search-btn">
-              <i class="fas fa-search search-icon"></i>
-            </button>
-          </div>
-        </form>
+        <nav class="e">
+          <i class="fas fa-bars menu-btn"></i>
+            <form action="#">
+              <div class="form-input">
+                  <input type="search" placeholder="search..." />
+                  <button class="search-btn"><i class="fas fa-search search-icon"></i></button>
+              </div>
+          </form>
+          <input type="checkbox" hidden id="switch-mode" />
+          <label for="switch-mode" class="switch-mode"></label>
 
-        <input type="checkbox" hidden id="switch-mode" />
-        <label for="switch-mode" class="switch-mode"></label>
-
-        <a href="#" class="notification">
-          <i class="fas fa-bell"></i>
-          <span class="num">28</span>
-        </a>
-        <a href="/Root/Admin_Side/Dash/Admin/ADMIN_PROFILE.php" class="profile">
-          <img src="Admin/<?php echo $admin_image ?>" alt="profile" />
-        </a>
-      </nav>
-      <main>
-        <div class="head-title">
-          <div class="left">
-            <h1>Dashboard</h1>
-          </div>
-
-          <a href="#" class="download-btn">
-            <i class="fas fa-cloud-download-alt"></i>
-            <span class="text">Download Report</span>
+          <a href="#" class="notification">
+            <i class="fas fa-bell"></i>
+            <span class="num">4</span>
           </a>
-        </div>
+          <a href="/Root/Admin_Side/Dash/Admin/ADMIN_PROFILE.php" class="profile">
+            <img src="Admin/<?php echo $admin_image ?>" alt="profile" />
+          </a>
+        </nav>
+
+
+
+      <main>
+
+          <div class="head-title">
+              <div class="left">
+                  <h1>Dashboard</h1>
+              </div>
+              <a href="#" class="download-btn">
+                  <i class="fas fa-cloud-download-alt"></i>
+                  <span class="text">Download Report</span>
+              </a>
+          </div>
 
         <div class="box-info fst">
           <li>
@@ -109,7 +110,7 @@
             </span>
           </li>
           <li>
-           <a href="/Root/Admin_Side//Dash/Organizations/ORG_DASH.php"><i class="fas fa-people-group"></i></a>
+            <a href="/Root/Admin_Side//Dash/Organizations/ORG_DASH.php"><i class="fas fa-people-group"></i></a>
             <span class="text">
               <p>Organizations</p>
               <h3><?php echo $totalOrgs ?></h3>
@@ -149,7 +150,8 @@
         </div>
 
         <div class="table-data">
-          <div class="order">
+          
+        <div class="order">
             <div class="head">
               <h3>Recent Blogs</h3>
               <i class="fas fa-search"></i>
@@ -171,6 +173,7 @@
               </tbody>
             </table>
           </div>
+
           <div class="todo">
             <div class="head">
               <h3>Todos</h3>
@@ -202,7 +205,9 @@
             </ul>
           </div>
         </div>
+      
       </main>
+
     </section>
 
     <script src="/Root/Admin_Side/Dash/ADMIN_DASH_JS.js"></script>

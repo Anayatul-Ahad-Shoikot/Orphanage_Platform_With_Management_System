@@ -1,5 +1,5 @@
 <?php
-    include("/xampp/htdocs/DBMS_Project_Organized_One/Root/Dashboards/Own-Profiles/User/PROFILE_DETAILS_BE.php");
+    include("/xampp/htdocs/DBMS_Project_Organized_One/Root/Dashboards/Own-Profiles/Org/PROFILE_DETAILS_BE.php");
 ?>
 
 <!DOCTYPE html>
@@ -16,27 +16,26 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.css" media="screen">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.js"></script>
     <link rel="stylesheet" href="/Root//Gallary/GALLARY_STYLE.css">
-    <title>CareSenerity.org | Gallery</title>
+    <title> CareSenerity.org | Gallery</title>
 </head>
 
 <body>
 
     <header class="header">
-    <nav>
-        <div class="logo">
-            <a href="/Root/Home_Page/U_HOME.php"><img src="/Root/Landing_Page/LOGO_NoBackground.png" alt="LOGO"></a>
-        </div>
-        <div class="links">
-            <ul>
-                <li><a href="/Root/Home_Page/U_HOME.php">Home</a></li>
-                <li><a href="/Root/Dashboards/Own-Profiles/User/PROFILE_DETAILS.php">Profile</a></li>
-                <li><a href="/Root/Org_Page/U_ORG.php">Orgs.</a></li>
-                <li><a href="/Root//D & A//DON_ADOP.php">Donate</a></li>
-                <li><a href="/Root/D & A/Adoptions/U_ADOPTION_DASH.php">Adopt</a></li>
-                <li><a href="/Root/Gallary/U_GALLARY_DASH.php" class="active">Gellary</a></li>
-            </ul>
-        </div>
-    </nav>
+        <nav>
+            <div class="logo">
+                <a href="/Root/Home_Page/O_HOME.php"><img src="/Root/Landing_Page/LOGO_NoBackground.png" alt="LOGO"></a>
+            </div>
+            <div class="links">
+                <ul>
+                    <li><a href="/Root/Home_Page/O_HOME.php">Home</a></li>
+                    <li><a href="/Root/Dashboards/Own-Profiles/Org/PROFILE_DETAILS.php">Profile</a></li>
+                    <li><a href="/Root/Org_Page/O_ORG.php">Orgs.</a></li>
+                    <li><a href="/Root/Gallary/O_GALLERY_DASH.php" class="active">Gallery</a></li>
+                    <li><a href="/Root/Dashboards/Own-Profiles/Org/EDIT_PROFILE.php" class="edit_profile">Edit Profile</a></li>
+                </ul>
+            </div>
+        </nav>
 
         <div class="upload_form">
             <form action="./UPLOADS.php" method="POST" enctype="multipart/form-data">
@@ -52,23 +51,21 @@
         </div>
     </header>
 
-    <div>
-    <div class="alert one">
+    <div class="notification-container">
         <?php
-            if(isset($_SESSION['notify'])){
-                echo "<h5>".$_SESSION['notify']."</h5>";
-                unset($_SESSION['notify']);
-            }
+        if(isset($_SESSION['success'])){
+            echo '<div class="alert one">
+                    <h5>'.$_SESSION['success'].'</h5>
+                </div>';
+            unset($_SESSION['success']);
+        }
+        if(isset($_SESSION['error'])){
+            echo '<div class="alert two">
+                    <h5>'.$_SESSION['error'].'</h5>
+                </div>';
+            unset($_SESSION['error']);
+        }
         ?>
-        </div>
-        <div class="alert two">
-            <?php
-                if(isset($_SESSION['status-2'])){
-                    echo "<h5>".$_SESSION['status-2']."</h5>";
-                    unset($_SESSION['status-2']);
-                }
-            ?>
-        </div>
     </div>
 
 
@@ -84,13 +81,30 @@
 
     
     <script type="text/javascript">
-    $(document).ready(function() {
-        $(".fancybox").fancybox({
-            openEffect: "none",
-            closeEffect: "none",
+        $(document).ready(function() {
+            $(".fancybox").fancybox({
+                openEffect: "none",
+                closeEffect: "none",
+            });
         });
-    });
-</script> 
+    </script> 
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+        const alerts = document.querySelectorAll('.notification-container > div');
+        alerts.forEach(function(alert) {
+            setTimeout(function() {
+            alert.style.opacity = '1';
+            setTimeout(function() {
+                alert.style.opacity = '0';
+                setTimeout(function() {
+                alert.style.display = 'none';
+                }, 500);
+            }, 6000);
+            }, 500);
+        });
+        });
+    </script>
 </body>
 </html>
 

@@ -22,9 +22,11 @@
           </div>
           <div class="links">
             <ul>
-              <li><a href="/Root/Home_Page/O_HOME.php" class="active">Home</a></li>
-              <li><a href="/Root/Org_Page/O_ORG.php">Orgs.</a></li>
-              <<li><a href="/Root/Dashboards/Own-Profiles/Org/PROFILE_DETAILS.php">Profile</a></li>
+                <li><a href="/Root/Home_Page/O_HOME.php" class="active">Home</a></li>
+                <li><a href="/Root/Dashboards/Own-Profiles/Org/PROFILE_DETAILS.php">Profile</a></li>
+                <li><a href="/Root/Org_Page/O_ORG.php">Orgs.</a></li>
+                <li><a href="/Root//Gallary//O_GALLERY_DASH.php">Gallery</a></li>
+                <li><a href="/Root/Dashboards/Own-Profiles/Org/EDIT_PROFILE.php">Edit Profile</a></li>
             </ul>
           </div>
       </nav>
@@ -85,5 +87,16 @@
         }
       });
   </script>
+
+
+    <!-- <script>
+        const scrollPosition = window.scrollY || window.pageYOffset;
+        setTimeout(function() {
+            window.location.href = window.location.href;
+        }, 6000);
+        window.onload = function() {
+            window.scrollTo(0, scrollPosition);
+        };
+    </script> -->
 </body>
 </html>

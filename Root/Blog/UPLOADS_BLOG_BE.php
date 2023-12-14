@@ -29,25 +29,27 @@
                         $query1 = "INSERT INTO blog_likes (post_id) VALUES ($post_id)";
                         if (mysqli_query($con, $query1)) {
                             if($_SESSION['role']=='user'){
+                                $_SESSION['success'] = "Bolg successfully uploaded";
                                 header("Location: /Root/Home_Page/U_HOME.php");
                                 exit(0);
                             }   elseif ($_SESSION['role']=='admin') {
                                 header("Location: /Root/Admin_Side/website/HOME.php");
                                 exit(0);
                             }   else {
+                                $_SESSION['success'] = "Bolg successfully uploaded";
                                 header("Location: /Root/Home_Page/O_HOME.php");
                                 exit(0);
                             }
                         }   
                     } else {
-                        echo "Error: " . mysqli_error($con);
+                        $_SESSION['error'] = "Bolg upload failed";
                     }
                     mysqli_stmt_close($stmt);
                 } else {
-                    echo "Error: " . mysqli_error($con);
+                    $_SESSION['error'] = "Bolg upload failed";
                 }
             } else {
-                echo "Upload Error";
+                $_SESSION['error'] = "Bolg upload failed";
             }
         }
     mysqli_close($con);

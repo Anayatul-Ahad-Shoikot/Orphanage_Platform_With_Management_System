@@ -17,15 +17,17 @@
                 if ($role == 'org'){
                     header("Location: /Root/Blog/O_VIEW_BLOG.php?post_id=$post_id");
                     exit();
-                } else {
+                } elseif($role == 'user') {
                     header("Location: /Root/Blog/U_VIEW_BLOG.php?post_id=$post_id");
                 exit();
                 }
                 
             } else {
+                $_SESSION['error'] = "Comment failed failed.";
                 echo "Error: " . mysqli_error($con);
             }
         } else {
+            $_SESSION['error'] = "Error occured.";
             echo "Invalid request method.";
         }
     mysqli_close($con);

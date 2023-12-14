@@ -16,37 +16,37 @@
             $delete_result = $con->query($sql);
             if ($delete_result) {
                 if($role == 'user') {
-                    $_SESSION['notify'] = 'Image deleted successfully.';
+                    $_SESSION['success'] = 'Image deleted successfully.';
                     header("Location: /Root/Gallary/U_GALLARY_DASH.php");
-                } else {
-                    $_SESSION['notify'] = 'Image deleted successfully.';
-                    header("Location: /Root/Gallary/O_GALLARY_DASH.php");
+                } elseif ($role == 'org') {
+                    $_SESSION['success'] = 'Image deleted successfully.';
+                    header("Location: /Root/Gallary/O_GALLERY_DASH.php");
                 }
             } else {
                 if($role == 'user') {
-                    $_SESSION['status-2'] = 'Failed to delete image.';
+                    $_SESSION['error'] = 'Failed to delete image.';
                     header("Location: /Root/Gallary/U_GALLARY_DASH.php");
-                } else {
-                    $_SESSION['status-2'] = 'Failed to delete image.';
-                    header("Location: /Root/Gallary/O_GALLARY_DASH.php");
+                } elseif ($role == 'org') {
+                    $_SESSION['error'] = 'Failed to delete image.';
+                    header("Location: /Root/Gallary/O_GALLERY_DASH.php");
                 }
             }
         } else {
             if($role == 'user') {
-                $_SESSION['status-2'] = 'You cannot delete this photo.';
+                $_SESSION['error'] = 'You cannot delete this photo.';
                 header("Location: /Root/Gallary/U_GALLARY_DASH.php");
-            } else {
-                $_SESSION['status-2'] = 'You cannot delete this photo.';
-                header("Location: /Root/Gallary/O_GALLARY_DASH.php");
+            } elseif ($role == 'org') {
+                $_SESSION['error'] = 'You cannot delete this photo.';
+                header("Location: /Root/Gallary/O_GALLERY_DASH.php");
             }
         }
     } else {
         if($role == 'user') {
-            $_SESSION['status-2'] = 'Invalid Request.';
+            $_SESSION['error'] = 'Invalid Request.';
             header("Location: /Root/Gallary/U_GALLARY_DASH.php");
-        } else {
-            $_SESSION['status-2'] = 'Invalid Request.';
-            header("Location: /Root/Gallary/O_GALLARY_DASH.php");
+        } elseif ($role == 'org') {
+            $_SESSION['error'] = 'Invalid Request.';
+            header("Location: /Root/Gallary/O_GALLERY_DASH.php");
         }
     }
 ?>
