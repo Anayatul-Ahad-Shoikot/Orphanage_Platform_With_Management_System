@@ -18,7 +18,6 @@
             <ul>
               <li><a href="/Root//Landing_Page//INDEX.php" class="active">Home</a></li>
               <li><a href="#">Donate</a></li>
-              <li><a href="#">Blogs</a></li>
               <li><a href="/Root/AboutUs_Page/ABOUTUS_PAGE.php">About Us</a></li>
               <li><a href="/Root//Login_Page//LOGIN_FORM.php" class="btn">LogIn</a></li>
             </ul>
@@ -27,33 +26,11 @@
 
       <div class="section__container header__container">
         <h1>Join us to make Lives Better</h1>
-        <!-- <h1>Join Us to make <span class="auto-type"> </span></h1>
-        <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
-          <script>
-            var typed;
-            function startTyped() {
-              typed = new Typed(".auto-type", {
-                strings: ["lives better", "big changes"],
-                typeSpeed: 100,
-                backSpeed: 50,
-                loop: true,
-                easing: "easeInOutQuad"
-              });
-            }
-            function stopTyped() {
-              if (typed) {
-                typed.destroy();
-              }
-            }
-            window.addEventListener("focus", startTyped);
-            window.addEventListener("blur", startTyped);
-            startTyped();
-          </script> -->
         <p>
           A platform for Organizations. Stay connected with orphans and elderly to change lives with each click. 
           Spread kindness to all.
         </p>
-        <form action="/">
+        <form action="#">
           <input type="text" placeholder="Search organizations" />
           <button><i class="ri-search-line"></i></button>
         </form>
@@ -90,6 +67,5 @@
 
     <script src="https://unpkg.com/scrollreveal"></script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
-    <!-- <script src="/Root/Landing_Page/INDEX_JS.js"></script> -->
   </body>
 </html>
