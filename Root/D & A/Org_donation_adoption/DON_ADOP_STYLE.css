@@ -318,20 +318,22 @@ main .table-data > div {
   border-radius: 20px;
   background: var(--light);
   padding: 24px;
-  overflow-x: auto;
+  /*overflow-x: auto;*/
   box-shadow: 1rem 1rem 4rem rgba(0, 0, 0, 0.3);
 }
 
 main .table-data .head {
   display: flex;
   align-items: center;
-  gap: 16px;
-  margin-bottom: 24px;
+  gap: 15px;
+  margin-bottom: 10px;
+  color: var(--color6);
+  padding: 11px;
 }
 
 main .table-data .head h3 {
   margin-right: auto;
-  font-size: 24px;
+  font-size: 29px;
   font-weight: 600;
 }
 
@@ -353,7 +355,6 @@ main .table-data .order table {
 main .table-data .order table th {
   padding-bottom: 12px;
   font-size: 13px;
-  text-align: left;
   border-bottom: 1px solid var(--grey);
 }
 
@@ -362,17 +363,33 @@ main .table-data .order table .x {
   justify-content: center;
 }
 
+main .table-data .order table tbody tr {
+  border-bottom: 1px solid lightgray;
+  border-top: 1px solid lightgray;
+  transition: .5s;
+}
+main .table-data .order table tbody tr:hover {
+  color: lightgray;
+  transform: scale(1.05) translateY(-5px);
+  transition: .5s;
+}
+
+
 main .table-data .order table td {
-  padding: 16px 0;
+  padding: 16px 10px;
+  text-align: center;
+  width: 35%;
 }
-
-main .table-data .order table td:first-child {
-  display: flex;
-  align-items: center;
-  gap: 12px;
-  padding-left: 6px;
+main .table-data .order table td  a{
+  text-decoration: none;
+  text-transform: capitalize;
+  color: var(--text-dark);
+  transition: .5s;
 }
-
+main .table-data .order table td a:hover {
+  color: var(--color5);
+  transition: .5s;
+}
 main .table-data .order table td img {
   width: 36px;
   height: 36px;
@@ -390,6 +407,46 @@ main .table-data .order table tr td .status {
   color: var(--light);
   border-radius: 20px;
   font-weight: 700;
+}
+
+main .table-data .order table tr td .dropbtn {
+  background-color: #3498db;
+  color: white;
+  padding: 10px;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+  z-index: 500;
+  transition: .4s;
+}
+main .table-data .order table tr td .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #ff8fa6;
+    min-width: 120px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 9999;
+    border-radius: 10px;
+    top: -1cm;
+    left: 14.5cm;
+}
+main .table-data .order table tr td .dropdown-content a {
+  display: block;
+  padding: 10px;
+  text-decoration: none;
+  color: black;
+  transition: .4s;
+}
+
+main .table-data .order table tr td .dropdown-content a:hover {
+  background-color: #f1f1f1;
+  border-radius: 10px;
+  transition: .4s;
+}
+
+main .table-data .order table tr td .dropdown:hover .dropdown-content{
+  display: block;
+  transition: .8s;
 }
 
 main .table-data .order table td .btn{

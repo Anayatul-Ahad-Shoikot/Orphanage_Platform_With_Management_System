@@ -60,34 +60,32 @@
             <main>
                 <div class="box-info fst">
                     <li>
-                        <a href="/Root/Admin_Side//Dash/Orphans/ORPHAN_DASH.php"><i class="fas fa-people-group"></i></a>
+                        <a href="#"><i class="fas fa-people-group"></i></a>
                         <span class="text"><p>Totall Donation Amount</p><h3><?php echo 5000 ?></h3></span>
                     </li>
                     <li>
-                        <a href="/Root/Admin_Side//Dash/Organizations/ORG_DASH.php"><i class="fas fa-people-group"></i></a>
+                        <a href="#"><i class="fas fa-people-group"></i></a>
                         <span class="text"><p>Donation Received</p><h3><?php echo 56 ?></h3></span>
                     </li>
                     <li>
-                        <a href="/Root/Admin_Side/Dash/Users/USER_DASH.php"><i class="fas fa-people-group"></i></a>
-                        <span class="text"><p>Adoption Requests</p><h3><?php echo $total_adoptions ?></h3></span>
+                        <a href="#"><i class="fas fa-people-group"></i></a>
+                        <span class="text"><p>Total Adoption Requests</p><h3><?php echo $total_adoptions ?></h3></span>
                     </li>
                 </div>
                 <div class="table-data">
                     <div class="order">
                         <div class="head">
-                            <h3>Recent Blogs</h3>
-                            <i class="fas fa-search"></i>
-                            <i class="fas fa-filter"></i>
+                            <h3>Adoption Requests</h3>
                         </div>
                         <table>
                             <thead>
                                 <tr>
-                                    <th>Title</th>
-                                    <th>By</th>
+                                    <th>Requested by</th>
+                                    <th>Requested for</th>
                                     <th class="x">Action</th>
                                 </tr>
                             </thead>
-                            <tbody>
+                            <tbody style="overflow-y: auto;">
                                 <?php
                                     foreach ($namesArray as $names) {
                                         echo '<tr>
@@ -95,12 +93,16 @@
                                                     <a href="/Root/Dashboards/Other-Profile/O_VIEW_USER_PROFILE.php?user_id=' . $names['user_id'] . '">' . $names['user_name'] . '</a>
                                                 </td>
                                                 <td>
-                                                    <a href="/Root/Orphanage/ORPHAN_PROFILE.php?orphan_id=' . $names['orphan_id'] . '">' . $names['first_name'] . '</a>
+                                                    <a href="/Root/Orphanage/ORPHAN_PROFILE.php?orphan_id=' . $names['orphan_id'] . '">' . $names['first_name'] . ' ' . $names['last_name'] . '</a>
                                                 </td>
                                                 <td>
-                                                    <div class="btn">
-                                                        <a href="#?adoption_id'. $names['adoption_id'] .'">View</a>
-                                                        <a href="#">remove</a>
+                                                    <div class="dropdown">
+                                                        <button onclick="toggleDropdown(this)" class="dropbtn">Actions</button>
+                                                        <div id="myDropdown" class="dropdown-content">
+                                                            <a href="/Root/D & A/Org_donation_adoption/VIEW_REQUEST_DETAILS.php?adoption_id=' . $names['adoption_id'] . '&user_name=' . $names['user_name'] . '&first_name=' . $names['first_name'] . '&last_name=' . $names['last_name'] . '">View</a>
+                                                            <a href="remove?adoption_id="' .$names['adoption_id'] . '">Accept</a>
+                                                            <a href="reject?adoption_id="' .$names['adoption_id'] . '">Reject</a>
+                                                        </div>
                                                     </div>
                                                 </td>
                                             </tr>';
@@ -112,8 +114,6 @@
                     <div class="todo">
                         <div class="head">
                             <h3>Todos</h3>
-                            <i class="fas fa-plus"></i>
-                            <i class="fas fa-filter"></i>
                         </div>
                         <ul class="todo-list">
                             <li class="not-completed">
