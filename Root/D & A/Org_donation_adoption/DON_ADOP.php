@@ -15,6 +15,7 @@
     <body>
         <?php
             include("/xampp/htdocs/DBMS_Project_Organized_One/Root/Dashboards/Own-Profiles/Org/PROFILE_DETAILS_BE.php");
+            include('/xampp/htdocs/DBMS_Project_Organized_One/Root/D & A/Org_donation_adoption/FETCH_ADOPTION_REQUEST_BE.php');
         ?>
         <header class="header">
             <nav>
@@ -27,7 +28,7 @@
                     <li><a href="/Root/Dashboards/Own-Profiles/Org/PROFILE_DETAILS.php" class="active">Profile</a></li>
                     <li><a href="/Root/Org_Page/O_ORG.php">Orgs.</a></li>
                     <li><a href="/Root//Gallary//O_GALLERY_DASH.php">Gallery</a></li>
-                    <li><a href="/Root/Dashboards/Own-Profiles/Org/EDIT_PROFILE.php" class="edit_profile">Edit Profile</a></li>
+                    <li><a href="/Root/Dashboards/Own-Profiles/Org/EDIT_PROFILE.php">Edit Profile</a></li>
                 </ul>
                 </div>
             </nav>
@@ -68,7 +69,7 @@
                     </li>
                     <li>
                         <a href="/Root/Admin_Side/Dash/Users/USER_DASH.php"><i class="fas fa-people-group"></i></a>
-                        <span class="text"><p>Adoption Requests</p><h3><?php echo 12 ?></h3></span>
+                        <span class="text"><p>Adoption Requests</p><h3><?php echo $total_adoptions ?></h3></span>
                     </li>
                 </div>
                 <div class="table-data">
@@ -88,7 +89,22 @@
                             </thead>
                             <tbody>
                                 <?php
-                                    include('/xampp/htdocs/DBMS_Project_Organized_One/Root/D & A/Org_donation_adoption/FETCH_ADOPTION_REQUEST_BE.php');
+                                    foreach ($namesArray as $names) {
+                                        echo '<tr>
+                                                <td>
+                                                    <a href="/Root/Dashboards/Other-Profile/O_VIEW_USER_PROFILE.php?user_id=' . $names['user_id'] . '">' . $names['user_name'] . '</a>
+                                                </td>
+                                                <td>
+                                                    <a href="/Root/Orphanage/ORPHAN_PROFILE.php?orphan_id=' . $names['orphan_id'] . '">' . $names['first_name'] . '</a>
+                                                </td>
+                                                <td>
+                                                    <div class="btn">
+                                                        <a href="#?adoption_id'. $names['adoption_id'] .'">View</a>
+                                                        <a href="#">remove</a>
+                                                    </div>
+                                                </td>
+                                            </tr>';
+                                    }
                                 ?>
                             </tbody>
                         </table>
