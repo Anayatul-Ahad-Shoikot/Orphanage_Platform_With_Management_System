@@ -1,10 +1,15 @@
 <?php
     include('/xampp/htdocs/DBMS_Project_Organized_One/Includes/db_con.php');
     $acc_id_current = $_SESSION['acc_id'];
+
+    
     $query1 = "SELECT org_id FROM org_list WHERE acc_id = $acc_id_current";
     $result1 = mysqli_query($con, $query1);
     $row1 = mysqli_fetch_assoc($result1);
     $org_id_current = $row1['org_id'];
+
+
+
     $query2 = "SELECT COUNT(*) AS total_adoptions FROM adoptions AS ad
                     JOIN orphan_list AS orl ON ad.orphan_id = orl.orphan_id
                     WHERE orl.org_id = $org_id_current
@@ -12,6 +17,9 @@
     $result2 = mysqli_query($con, $query2);
     $row2 = mysqli_fetch_assoc($result2);
     $total_adoptions = $row2['total_adoptions'];
+    
+    
+    
     $query3 = "SELECT orl.first_name, orl.last_name, orl.orphan_id, ul.user_name, ul.user_id ,ad.adoption_id, ad.status
                     FROM adoptions ad
                     JOIN orphan_list orl ON ad.orphan_id = orl.orphan_id

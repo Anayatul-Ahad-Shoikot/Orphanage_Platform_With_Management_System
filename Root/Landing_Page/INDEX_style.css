@@ -152,6 +152,7 @@ body::-webkit-scrollbar {
   font-size: 4.5rem;
   font-weight: 600;
   font-family: var(--header-font);
+  color: wheat;
 }
 .header__container span {
   color: var(--color4);
@@ -338,4 +339,10 @@ body::-webkit-scrollbar {
   .footer__bar {
     flex-direction: column;
   }
+}
+
+
+#count {
+  color: var(--color5);
+  font-size: 4rem;
 }

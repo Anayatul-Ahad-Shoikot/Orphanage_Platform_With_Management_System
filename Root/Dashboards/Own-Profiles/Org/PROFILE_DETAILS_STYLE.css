@@ -228,21 +228,22 @@ body::-webkit-scrollbar {
   margin: 2rem;
 } 
 .container .right_portion .info_box {
-  display: flex;
+  display: flex; */
   flex-direction: row;
-  margin-bottom: 2rem;
+  /* margin-bottom: 2rem; */
   font-size: 20px;
-  padding-left: 2.5rem;
+  /* padding-left: 2.5rem; */
   align-items: center;
+  margin: 2rem 10rem;
 }
 .container .right_portion .info_box .top{
-  margin-left: 4rem;
+  /* margin-left: 4rem; */
   display: flex;
   flex-direction: column;
   width: 95%;
 }
 .container .right_portion .info_box .cel {
-  width: 90%;
+  /* width: 90%; */
   display: flex;
   align-items: center;
   background-color: #dbf4ff21;

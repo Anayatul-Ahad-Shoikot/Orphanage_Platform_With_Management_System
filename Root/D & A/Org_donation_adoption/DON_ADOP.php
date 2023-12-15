@@ -62,15 +62,19 @@
                 <div class="box-info fst">
                     <li>
                         <a href="#"><i class="fas fa-people-group"></i></a>
-                        <span class="text"><p>Totall Donation Amount</p><h3><?php echo 5000 ?></h3></span>
+                        <span class="text"><p>Donation Received</p><h3><?php echo $total_amount_received ?></h3></span>
                     </li>
                     <li>
                         <a href="#"><i class="fas fa-people-group"></i></a>
-                        <span class="text"><p>Donation Received</p><h3><?php echo $total_donations ?></h3></span>
+                        <span class="text"><p>Donation Received for orphans</p><h3><?php echo $total_amount_received_by_orphans ?></h3></span>
                     </li>
                     <li>
                         <a href="#"><i class="fas fa-people-group"></i></a>
-                        <span class="text"><p>Total Adoption Requests</p><h3><?php echo $total_adoptions ?></h3></span>
+                        <span class="text"><p>Donation counts</p><h3><?php echo $total_donations ?></h3></span>
+                    </li>
+                    <li>
+                        <a href="#"><i class="fas fa-people-group"></i></a>
+                        <span class="text"><p>Adoption Requests</p><h3><?php echo $total_adoptions ?></h3></span>
                     </li>
                 </div>
                 <div class="table-data">
@@ -120,17 +124,18 @@
                     </div>
                     <div class="todo">
                         <div class="head">
-                            <h3>Todos</h3>
+                            <h3>Donation Received</h3>
                         </div>
                         <ul class="todo-list">
-                            <li class="not-completed">
-                                <p>Todo List</p>
-                                <i class="fas fa-ellipsis-vertical"></i>
-                            </li>
-                            <li class="completed">
-                                <p>Todo List</p>
-                                <i class="fas fa-ellipsis-vertical"></i>
-                            </li>
+                            <?php
+                                foreach ($resultArray as $row) {
+                                    if ($row['receiver_type'] === 'organization') {
+                                        echo '<li class="completed"><p>Donation Received ' . $row['amount'] . 'TK from <a href="/Root/Dashboards/Other-Profile/O_VIEW_USER_PROFILE.php?user_id=' . $row['user_id'] . '">' . $row['user_name'] . '</a></p></li>';
+                                    } elseif ($row['receiver_type'] === 'orphan') {
+                                        echo '<li class="not-completed"><p>' . $row['first_name'] . ' ' . $row['last_name'] . ' received ' . $row['amount'] . 'TK from <a href="/Root/Dashboards/Other-Profile/O_VIEW_USER_PROFILE.php?user_id=' . $row['user_id'] . '">' . $row['user_name'] . '</a></p></li>';
+                                    }
+                                }
+                            ?>
                         </ul>
                     </div>
                 </div>
