@@ -16,6 +16,7 @@
         <?php
             include("/xampp/htdocs/DBMS_Project_Organized_One/Root/Dashboards/Own-Profiles/Org/PROFILE_DETAILS_BE.php");
             include('/xampp/htdocs/DBMS_Project_Organized_One/Root/D & A/Org_donation_adoption/FETCH_ADOPTION_REQUEST_BE.php');
+            include('/xampp/htdocs/DBMS_Project_Organized_One/Root/D & A/Org_donation_adoption/FETCH_DONATIONS_BE.php');
         ?>
         <header class="header">
             <nav>
@@ -65,7 +66,7 @@
                     </li>
                     <li>
                         <a href="#"><i class="fas fa-people-group"></i></a>
-                        <span class="text"><p>Donation Received</p><h3><?php echo 56 ?></h3></span>
+                        <span class="text"><p>Donation Received</p><h3><?php echo $total_donations ?></h3></span>
                     </li>
                     <li>
                         <a href="#"><i class="fas fa-people-group"></i></a>
@@ -83,6 +84,7 @@
                                     <th>Requested by</th>
                                     <th>Requested for</th>
                                     <th class="x">Action</th>
+                                    <th>Process</th>
                                 </tr>
                             </thead>
                             <tbody style="overflow-y: auto;">
@@ -105,6 +107,11 @@
                                                         </div>
                                                     </div>
                                                 </td>
+                                                <td>
+                                                    <p class="' . ($names['status'] === 'done' ? 'done-status' : 'pending-status') . '">
+                                                        ' . $names['status'] . '
+                                                    </p>
+                                                </td>
                                             </tr>';
                                     }
                                 ?>
@@ -117,18 +124,6 @@
                         </div>
                         <ul class="todo-list">
                             <li class="not-completed">
-                                <p>Todo List</p>
-                                <i class="fas fa-ellipsis-vertical"></i>
-                            </li>
-                            <li class="not-completed">
-                                <p>Todo List</p>
-                                <i class="fas fa-ellipsis-vertical"></i>
-                            </li>
-                            <li class="completed">
-                                <p>Todo List</p>
-                                <i class="fas fa-ellipsis-vertical"></i>
-                            </li>
-                            <li class="completed">
                                 <p>Todo List</p>
                                 <i class="fas fa-ellipsis-vertical"></i>
                             </li>

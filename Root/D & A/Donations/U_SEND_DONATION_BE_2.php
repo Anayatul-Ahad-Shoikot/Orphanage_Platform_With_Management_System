@@ -67,7 +67,7 @@
                 if(mysqli_query($con, $insert_query)) {
 
                     $content = "$amount Tk sent to $first_name $last_name as gift";
-                    $queryNotifications = "INSERT INTO notifications (user_id, org_id, content) VALUES (?, ?, ?)";
+                    $queryNotifications = "INSERT INTO notifications (user_id, orphan_id, content) VALUES (?, ?, ?)";
                     $stmtNotifications = mysqli_prepare($con, $queryNotifications);
                     mysqli_stmt_bind_param($stmtNotifications, "iis", $user_id, $orphan_id, $content);
                     mysqli_stmt_execute($stmtNotifications);
@@ -79,7 +79,7 @@
                 } else {
 
                     $content = "$amount Tk failed to sent $first_name $last_name as gift";
-                    $queryNotifications = "INSERT INTO notifications (user_id, org_id, content) VALUES (?, ?, ?)";
+                    $queryNotifications = "INSERT INTO notifications (user_id, orphan_id, content) VALUES (?, ?, ?)";
                     $stmtNotifications = mysqli_prepare($con, $queryNotifications);
                     mysqli_stmt_bind_param($stmtNotifications, "iis", $user_id, $orphan_id, $content);
                     mysqli_stmt_execute($stmtNotifications);

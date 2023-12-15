@@ -327,7 +327,7 @@ main .table-data .head {
   align-items: center;
   gap: 15px;
   margin-bottom: 10px;
-  color: var(--color6);
+  color: var(--color5);
   padding: 11px;
 }
 
@@ -369,7 +369,6 @@ main .table-data .order table tbody tr {
   transition: .5s;
 }
 main .table-data .order table tbody tr:hover {
-  color: lightgray;
   transform: scale(1.05) translateY(-5px);
   transition: .5s;
 }
@@ -385,6 +384,23 @@ main .table-data .order table td  a{
   text-transform: capitalize;
   color: var(--text-dark);
   transition: .5s;
+}
+
+.order table td p {
+  padding: 2px 11px;
+  border-radius: 26px;
+  font-size: small;
+  text-align: center;
+}
+
+.done-status {
+  background-color: lightgreen;
+  color: darkgreen;
+}
+
+.pending-status {
+  background-color: lightpink;
+  color: darkred;
 }
 main .table-data .order table td a:hover {
   color: var(--color5);
@@ -422,13 +438,13 @@ main .table-data .order table tr td .dropbtn {
 main .table-data .order table tr td .dropdown-content {
     display: none;
     position: absolute;
-    background-color: #ff8fa6;
+    background-color: #bbbbbb;
     min-width: 120px;
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
     z-index: 9999;
     border-radius: 10px;
-    top: -1cm;
-    left: 14.5cm;
+    top: -2cm;
+    left: 17.5cm;
 }
 main .table-data .order table tr td .dropdown-content a {
   display: block;

@@ -61,7 +61,7 @@
                 $bkash_no = $_POST['bkash_no'];
                 $Bkash_trans = $_POST['Bkash_trans'];
 
-                $insert_query = "INSERT INTO donations (donor_id, receiver_id, donor_email, payment_method, bkash_no, Bkash_trans, amount) VALUES ($user_id, $org_id, '$donor_email', '$payment_method', '$bkash_no' , '$Bkash_trans', $amount)";
+                $insert_query = "INSERT INTO donations (donor_id, receiver_id, receiver_type, donor_email, payment_method, bkash_no, Bkash_trans, amount) VALUES ($user_id, $org_id, 'organization', '$donor_email', '$payment_method', '$bkash_no' , '$Bkash_trans', $amount)";
 
                 if(mysqli_query($con, $insert_query)) {
 

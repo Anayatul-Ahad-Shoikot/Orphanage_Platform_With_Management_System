@@ -75,7 +75,7 @@
             </div>
         </div>  
         <div class="options">
-            <a href="/Root/Orphanage/USER-PERSPECTIVE/UP_ORPHAN_DASH.php?org_id=<?php echo $org_id ?> " class="btn y">Orphanage</a>
+            <!-- <a href="/Root/Orphanage/USER-PERSPECTIVE/UP_ORPHAN_DASH.php?org_id=<?php echo $org_id ?> " class="btn y">Orphanage</a> -->
         </div>
 
 
