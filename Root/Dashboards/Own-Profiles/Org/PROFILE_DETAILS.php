@@ -39,8 +39,8 @@
     <div class="container">
         <div class="left_portion">
             <div class="userDetails1">
-                <div class="profile">
-                    <figure><img src= "<?php echo $org_logo ?>" alt="profile" width="250px" height="250px"></figure>
+                <div>
+                    <img src= "<?php echo $org_logo ?>" alt="profile" width="250px" height="250px">
                 </div>
                 <div class="userDetails">
                     <div class="userName">

@@ -91,7 +91,7 @@ body::-webkit-scrollbar {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  margin: 2rem 9rem;
+  margin: 2rem 19rem;
 }
 .container .left_portion {
   display: flex;
@@ -109,11 +109,12 @@ body::-webkit-scrollbar {
   background: rgb(0, 0, 0);
   margin: var(--p-1-5) var(--p-2-5);
 }
-.container .left_portion .profile figure img {
+.container .left_portion img {
   width: 12rem;
   height: 12rem;
   border-radius: 50%;
-  margin: 3.7px 0 0 3.95px;
+  border: 6px solid black;
+  margin-left: 2rem;
 }
  .container .left_portion .userDetails {
   min-width: 550px;
@@ -124,10 +125,12 @@ body::-webkit-scrollbar {
 }
 .container .left_portion .userDetails1 {
   display: flex;
-  justify-content: center;
-  background-color: #dbf4ff21;
-  box-shadow: 1rem 1rem 4rem rgba(0, 0, 0, 0.3);
-  border-radius: 15px;
+    justify-content: left;
+    width: -webkit-fill-available;
+    background-color: #dbf4ff21;
+    box-shadow: 1rem 1rem 4rem rgba(0, 0, 0, 0.3);
+    border-radius: 15px;
+    padding: 1.5rem;
 }
 .container .left_portion .userDetails .userName h1 {
   font-size: 3rem;
@@ -142,7 +145,7 @@ body::-webkit-scrollbar {
   display: flex;
   align-items: center;
   gap: 2.5rem;
-  margin-top: 1rem;
+
 }
 .container .left_portion .work {
   min-width: 500px;
