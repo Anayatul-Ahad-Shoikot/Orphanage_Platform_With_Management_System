@@ -1,0 +1,140 @@
+@import url("https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700");
+
+/* Variables */
+:root {
+  --base-spacing-unit: 24px;
+  --half-spacing-unit: calc(var(--base-spacing-unit) / 2);
+  --color-alpha: #1772ff;
+  --color-form-highlight: #eeeeee;
+  --color2: #27374D;   
+  --color3: #526D82;      
+  --color4: #FF597B;       
+  --color5: #f3254e;
+  --color6: #62CDFF;
+  --color7: #0099cc;
+  --color8: #33ccff;
+}
+.container{
+    padding: 0;
+}
+.container .container_1 {
+  max-width: 1000px;
+  margin-right: auto;
+  margin-left: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+/* Table styles */
+.container .table {
+  width: 100%;
+  border: 1px solid var(--color-form-highlight);
+}
+
+.table-header {
+  display: flex;
+  width: 100%;
+  background: #000;
+  padding: calc(var(--half-spacing-unit) * 1.5) 0;
+}
+
+.table-row {
+  display: flex;
+  width: 100%;
+  padding: calc(var(--half-spacing-unit) * 1.5) 0;
+}
+
+.table-row:nth-of-type(odd) {
+  background: var(--color-form-highlight);
+}
+
+.table-data,
+.header__item {
+  flex: 1 1 20%;
+  text-align: center;
+}
+
+.header__item {
+  text-transform: uppercase;
+  color: wheat;
+}
+
+.filter__link {
+  color: white;
+  text-decoration: none;
+  position: relative;
+  display: inline-block;
+  padding-left: var(--base-spacing-unit);
+  padding-right: var(--base-spacing-unit);
+}
+
+.filter__link::after {
+  content: "";
+  position: absolute;
+  right: calc(-1 * var(--half-spacing-unit) * 1.5);
+  color: white;
+  font-size: var(--half-spacing-unit);
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.filter__link.desc::after {
+  content: "(desc)";
+}
+
+.filter__link.asc::after {
+  content: "(asc)";
+}
+#tab {
+    margin: 0rem 11rem 2rem 1rem;
+}
+#deductionModal  {
+    display: none;
+    background: lightgray;
+    padding: 1rem;
+    width: fit-content;
+    border-radius: 15px;
+    position: fixed;
+    top: 635px;
+    left: 86%;
+    transform: translateX(-50%);
+    z-index: 999;
+}
+
+#deductionModal .row_1 {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 30px;
+}
+#deductionModal .row_1 span:hover{
+    cursor: pointer;
+}
+
+
+#deductionModal  input {
+    font-size: larger;
+    padding: 5px;
+    width: 145px
+}
+
+#deductionModal button , .edit-btn{
+    padding: 5px;
+    width: 70px;
+    font-size: larger;
+    border-radius: 9px;
+    margin: .5rem 0rem .5rem .5rem;
+    color: var(--text-dark);
+    background: var(--color7);
+    border: none;
+    cursor: pointer;
+    transition: all .5s;
+}
+
+#deductionModal button:hover , .edit-btn:hover {
+    background-color: var(--color6);
+    scale: 1.1;
+    transition: all .5s;
+}

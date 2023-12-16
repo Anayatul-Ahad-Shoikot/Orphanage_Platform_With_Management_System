@@ -79,7 +79,7 @@
                             <span class="text"><p>Donation Received</p><h3><?php echo $total_amount_received ?></h3></span>
                         </li>
                         <li>
-                            <a href="/Root//D & A//Org_donation_adoption//ORPHAN_AMOUNT_DASH.php"><i class='bx bx-dollar bx-tada' ></i></a>
+                            <a href="/Root/D & A/Org_donation_adoption/ORPHAN_AMOUNT_DASH.php"><i class='bx bx-dollar bx-tada' ></i></a>
                             <span class="text"><p>Donation for orphans</p><h3><?php echo $total_amount_received_by_orphans ?></h3></span>
                         </li>
                         <li>

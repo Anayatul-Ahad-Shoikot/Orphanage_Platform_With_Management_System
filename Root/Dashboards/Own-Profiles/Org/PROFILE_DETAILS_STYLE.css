@@ -175,7 +175,7 @@ body::-webkit-scrollbar {
   /* //line-height: 1.6rem; */
 }
 .container .options {
-  margin: 4rem 3rem 0 0;
+  margin: 4rem 0 0 0;
   display: flex;
   align-items: center;
   justify-content: right;
@@ -204,6 +204,7 @@ body::-webkit-scrollbar {
   transition: .5s;
 }
 .container .right_portion {
+  width: -webkit-fill-available;
   display: flex;
   flex-direction: column;
 }
@@ -228,7 +229,7 @@ body::-webkit-scrollbar {
   margin: 2rem;
 } 
 .container .right_portion .info_box {
-  display: flex; */
+  display: flex;
   flex-direction: row;
   /* margin-bottom: 2rem; */
   font-size: 20px;
@@ -256,6 +257,7 @@ body::-webkit-scrollbar {
   font-weight: bold;
   display: block;
   margin-left: 1.5rem;
+  width: 290px;
 }
 .cel input {
   width: 85%;

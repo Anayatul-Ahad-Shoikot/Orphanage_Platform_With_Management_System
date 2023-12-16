@@ -46,9 +46,11 @@
                 </div>
                 <div class="notifi-box" id="box">
                     <h2>Notifications</h2>
+                    <div id="content">
                     <?php
                       include('/xampp/htdocs/DBMS_Project_Organized_One/Root/Notifications/U_FETCH_NOTIFICATION_BE.php');
                     ?>
+                    </div>
                 </div>
               </ul>
             </div>
@@ -88,11 +90,9 @@
         <div class="option">
           <h2><a href="/Root/Blog/O_CREATE_BLOG.php">CreatePost</a></h2>
         </div>
-        <div id="content">
           <?php 
               include('/xampp/htdocs/DBMS_Project_Organized_One/Root/Blog/SHOW_BLOG_BE.php');
           ?>
-        </div>
     </div> 
 
 
