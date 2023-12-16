@@ -173,7 +173,7 @@ body::-webkit-scrollbar {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  margin: 2rem 9rem;
+  margin: 2rem 19rem;
   align-items: center;
 }
 .container p {
@@ -193,6 +193,7 @@ body::-webkit-scrollbar {
   border-radius: 15px;
   box-shadow: 0 0 25px rgba(255, 255, 255, 0.5);
   align-items: center;
+  width: -webkit-fill-available;
 }
 
 .container .left_portion img {
@@ -203,7 +204,7 @@ body::-webkit-scrollbar {
   margin: 2rem;
 }
  .container .left_portion .userDetails {
-  min-width: 550px;
+  width: -webkit-fill-available;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -216,6 +217,7 @@ body::-webkit-scrollbar {
   background-color: #dbf4ff21;
   box-shadow: 1rem 1rem 4rem rgba(0, 0, 0, 0.3);
   border-radius: 15px;
+  width: -webkit-fill-available;
 }
 .container .left_portion .userDetails .userName h1 {
   font-size: 3rem;
@@ -230,10 +232,9 @@ body::-webkit-scrollbar {
   display: flex;
   align-items: center;
   gap: 2.5rem;
-  margin-top: 1rem;
 }
 .container .left_portion .work {
-  min-width: 500px;
+  width: 400px;
   padding: 2.5rem;
   background-color: #dbf4ff21;
   box-shadow: 1rem 1rem 4rem rgba(0, 0, 0, 0.3);
@@ -293,9 +294,9 @@ body::-webkit-scrollbar {
   transition: .5s;
 }
 .container .right_portion {
-  width: 1600px;
   display: flex;
   flex-direction: column;
+  width: -webkit-fill-available;
 }
 .container .right_portion .tabs {
   display: flex;

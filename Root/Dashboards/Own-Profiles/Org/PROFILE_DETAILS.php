@@ -48,7 +48,7 @@
                     </div>
                     <div class="map">
                         <i class="ri-map-pin-fill ri"></i>
-                        <p><?php echo $org_location ?></p>
+                        <p><?php echo $org_location ?>, Bangladesh</p>
                     </div>
                     <div class="map">
                         <i class='bx bxs-briefcase'></i>

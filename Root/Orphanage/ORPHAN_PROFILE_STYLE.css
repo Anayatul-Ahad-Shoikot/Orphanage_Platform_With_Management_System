@@ -91,7 +91,7 @@ body::-webkit-scrollbar {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  margin: 2rem 9rem;
+  margin: 2rem 19rem;
 }
 .container .left_portion {
   display: flex;
@@ -100,6 +100,7 @@ body::-webkit-scrollbar {
   backdrop-filter: blur(10px);
   border-radius: 15px;
   box-shadow: 0 0 25px rgba(255, 255, 255, 0.5);
+  width: -webkit-fill-available;
 }
 .container .left_portion .profile {
   width: 12.5rem;
@@ -108,14 +109,15 @@ body::-webkit-scrollbar {
   background: rgb(0, 0, 0);
   margin: var(--p-1-5) var(--p-2-5);
 }
-.container .left_portion .profile figure img {
-  width: 12rem;
-  height: 12rem;
+.container .left_portion img {
+  width: 12.5rem;
+  height: 12.5rem;
+  border: 6px solid black;
   border-radius: 50%;
-  margin: 3.7px 0 0 3.95px;
+  margin: 2rem;
 }
  .container .left_portion .userDetails {
-  min-width: 700px;
+  width: -webkit-fill-available;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -128,6 +130,7 @@ body::-webkit-scrollbar {
   background-color: #dbf4ff21;
   box-shadow: 1rem 1rem 4rem rgba(0, 0, 0, 0.3);
   border-radius: 15px;
+  width: -webkit-fill-available;
 }
 .container .left_portion .userDetails .userName h1 {
   font-size: 3rem;
@@ -171,11 +174,12 @@ body::-webkit-scrollbar {
   line-height: 1.6rem;
 }
 .container .options {
-  margin: 4rem 3rem 0 0;
+  margin: 4rem 0rem 0rem 0rem;
   display: flex;
   align-items: center;
   justify-content: right;
   gap: 20px;
+  width: -webkit-fill-available;
 }
 .options a {
   display: inline-block;

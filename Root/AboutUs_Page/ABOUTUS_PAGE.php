@@ -28,10 +28,8 @@
     </header>
     <section class="about">
         <div class="about-content">
-            <h1>About Our Company</h1>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus vel scelerisque nulla. Quisque auctor ipsum nec metus condimentum, nec euismod lorem vulputate. Proin fringilla sapien id massa scelerisque.</p>
-            <p>Mauris posuere bibendum purus, sed lacinia nibh feugiat sit amet. Sed sollicitudin quam sit amet sapien convallis, eget laoreet justo tincidunt. Sed vitae posuere quam.</p>
-            <p>Proin sed mauris elit. Vestibulum et convallis elit. Nulla facilisi. In nec augue ut metus scelerisque laoreet. Nulla id magna vitae est ullamcorper volutpat.</p>
+            <h1>Lets Know our work</h1>
+            <p>Welcome to our platform, a digital space dedicated to fostering connections between caring individuals, organizations, and those in need. We aim to create meaningful impacts by facilitating connections between generous donors and vulnerable members of our society.</p> <p>At <b>CareSenrenity.org</b>, our mission is to facilitate connections that matter. Through our intuitive interface, we enable organizations to reach out, support, and make a real difference in the lives of orphans and the elderly community members.</p> <p>Adopt an orphan, explore orphanages and organizations, extend support with donations to specific causes or children. View detailed profiles of orphans, post thoughts on orphanage situations, hunger, and more, accompanied by photos and comments. Share moments in the gallery, embrace the opportunity to adopt a child, and anticipate upcoming services for elderly individuals. Together, let's make a difference in the lives of the vulnerable.</p>
         </div>
     </section>
     <section>

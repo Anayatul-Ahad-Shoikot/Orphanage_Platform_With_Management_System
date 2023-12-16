@@ -67,6 +67,20 @@
                         <i class="ri-map-pin-fill ri"></i>
                         <p><?php echo $user_address, ", ", $user_location ?></p>
                     </div>
+                    <div class="map">
+                        <i class='bx bxs-briefcase'></i>
+                        <p><?php echo $role ?></p>
+                    </div>
+                    <div class="inner_container">
+                        <div class="map">
+                            <i class='bx bxs-send'></i>
+                            <p>Messages</p>
+                        </div>
+                        <div class="map">
+                            <i class='bx bxs-error-alt'></i>
+                            <p>Reports</p>
+                        </div>
+                    </div>
                 </div>
             </div>
             <div class="work">

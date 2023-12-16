@@ -91,7 +91,7 @@ body::-webkit-scrollbar {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  margin: 2rem 9rem;
+  margin: 2rem 19rem;
 }
 .container .left_portion {
   display: flex;

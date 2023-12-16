@@ -100,7 +100,7 @@ body::-webkit-scrollbar {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  margin: 2rem 9rem;
+  margin: 2rem 19rem;
 }
 .container .left_portion {
   width: -webkit-fill-available;
@@ -108,7 +108,7 @@ body::-webkit-scrollbar {
   backdrop-filter: blur(10px);
   border-radius: 15px;
   box-shadow: 0 0 25px rgba(255, 255, 255, 0.5);
-  margin: 0rem 7rem;
+  margin: 0rem 0rem;
 }
 
 .container .left_portion img {
@@ -144,12 +144,11 @@ body::-webkit-scrollbar {
 .container .left_portion .userDetails .inner_container {
   display: flex;
   align-items: center;
-  gap: 2.5rem;
-  margin-top: 1rem;
+  gap: 2rem;
 }
 
 .container .options {
-  margin: 2rem 7rem;
+  margin: 2rem 0rem;
   display: flex;
   align-items: center;
   justify-content: right;
@@ -220,7 +219,7 @@ body::-webkit-scrollbar {
 
 
 main {
-  margin: 0rem 7rem 3rem 7rem; 
+  margin: 0rem 0 3rem 0; 
 }
 
 .container main .box-info {
@@ -261,6 +260,7 @@ main .box-info li i {
 }
 
 main .box-info.fst li:nth-child(1) i {
+  font-size: 4rem;
   background: lightgreen;
   color: black;
   transition: .8s;
@@ -274,6 +274,7 @@ main .box-info.fst li:nth-child(1) i:hover {
 }
 
 main .box-info.fst li:nth-child(2) i {
+  font-size: 4rem;
   background: lightpink;
   color: black;
   transition: .8s;
@@ -287,6 +288,7 @@ main .box-info.fst li:nth-child(2) i:hover {
 }
 
 main .box-info.fst li:nth-child(3) i {
+  font-size: 4rem;
   background: lightblue;
   color: black;
   transition: .8s;
@@ -300,6 +302,7 @@ main .box-info.fst li:nth-child(3) i:hover {
 }
 
 main .box-info.fst li:nth-child(4) i {
+  font-size: 4rem;
   background: rgb(255, 206, 116);
   color: black;
   transition: .8s;
@@ -314,10 +317,11 @@ main .box-info.fst li:nth-child(4) i:hover {
 
 
 main .box-info li .text h3 {
-  font-size: 24px;
-  font-weight: 600;
-  color: var(--dark);
-  transition: .8s;
+  font-size: 30px;
+    font-weight: 600;
+    color: orangered;
+    color: var(--color7);
+    transition: .8s;
 }
 
 main .box-info li .text p {
@@ -367,8 +371,18 @@ main .table-data .order {
 }
 
 main .table-data .order table {
-  width: 100%;
+  max-width: 100%; /* Set maximum width */
+  width: 100%; /* Occupy full available width */
+  table-layout: fixed; /* Distribute table width evenly */
   border-collapse: collapse;
+  overflow-y: auto;
+  display: block;
+  height: 350px;
+}
+
+.order table thead {
+  position: sticky;
+  top: 0;
 }
 
 main .table-data .order table th {
@@ -522,8 +536,15 @@ main .todo {
 }
 
 main .todo .todo-list {
+  height: 350px;
+  display: block;
   width: 100%;
   overflow-Y: auto;
+}
+
+.todo-list .head {
+  position: sticky;
+  top: 0;
 }
 
 main .todo .todo-list li {

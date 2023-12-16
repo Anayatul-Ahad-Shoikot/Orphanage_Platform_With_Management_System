@@ -169,7 +169,7 @@ body::-webkit-scrollbar {
 }
 
 .ctn {
-  margin: 2rem 13rem 1rem 13rem;
+  margin: 2rem 19rem;
   display: flex;
   align-items: center;
   justify-content: right;
@@ -211,9 +211,9 @@ body::-webkit-scrollbar {
 .container {
     display: flex;
     flex-direction: column;
-    width: 100%;
-    padding: 0px 270px;
+    width: -webkit-fill-available;
     align-items: center;
+    margin: 2rem 19rem;
 }
 .container .options {
   margin: 4rem 0 0 0;

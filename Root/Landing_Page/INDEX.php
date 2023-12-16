@@ -42,43 +42,44 @@
           Spread kindness to all.
         </p>
       </div>
+
+        <div class="row diag-ro" id="info_web">
+              <div class="about-diag" id="info_cell">
+                <div class="icon"><i class="fas fa-arrow-right"></i></div>
+                <div class="tex">
+                    <p id="text">There are over</p>
+                    <h3 id="count"><?php echo $total_orphans ?></h3><p id="text">orphans to help</p>
+                </div>
+            </div>
+            <div class="about-diag" id="info_cell">
+                <div class="icon"><i class="fas fa-arrow-right"></i></div>
+                <div class="tex">
+                    <p id="text">We have total</p>
+                    <h3 id="count"><?php echo $total_organizations ?></h3><p id="text">organizations</p>
+                </div>
+            </div>
+            <div class="about-diag" id="info_cell">
+                <div class="icon"><i class="fas fa-arrow-right"></i></div>
+                <div class="tex">
+                    <p id="text">We serverd over</p>
+                    <h3 id="count"><?php echo $total_donation_Serverd ?></h3><p id="text">BDT as Donation</p>
+                </div>
+            </div>
+        </div>
     </header>
 
 
-    <div class="about-us">
+    <div class="about-us" id="body_tag">
         <div class="container">
             <div class="session-title">
                 <p>Help us to Achieve our Goal</p>
-                <h2>About Our Charity</h2>
+                <h1 id="highlight">Joining Hands, Changing Stories</h1>
             </div>
             <div class="about-row row">
                 <div class="col-md-8">
                     <div class="abut-detail">
-                         <h4>BUILDING SCHOOL IN AFRICAN COMMUNITIES.</h4>
-                        <p>Integer vulputate vehicula dolor a eleifend. Duis aliquam condimentum sapien, eget tempor justo. Aenean porttitor nibh metus, sollicitudin egestas metus posuere et . Fusce egestas volutpat metus, in sodales sem bibendum porta. Nunc hendrerit nunc sit </p> <p> Amet tellus posuere, at malesuada sem gravida. Integer maximus ultricies augue, at dapibus elit bibendum consequat. Cras faucibus tellus eleifend, fermentum purus in, dapibus sapien. Praesent nec ornare risus. Etiam iaculis, ligula vel gravida vestibulum, urna justo posuere ante, id pretium massa arcu sed mi. Nunc a sollicitudin sem. Duis tempus</p>
-                    </div>
-                    <div class="row diag-ro">
-                        <div class="about-diag">
-                            <div class="icon"><i class="fas fa-arrow-right"></i></div>
-                            <div class="tex">
-                                <p>There are over</p>
-                                <h3 id="count"><?php echo $total_orphans ?></h3><p>orphans to help</p>
-                            </div>
-                        </div>
-                        <div class="about-diag">
-                            <div class="icon"><i class="fas fa-arrow-right"></i></div>
-                            <div class="tex">
-                                <p>We have total</p>
-                                <h3 id="count"><?php echo $total_organizations ?></h3><p>organizations</p>
-                            </div>
-                        </div>
-                        <div class="about-diag">
-                            <div class="icon"><i class="fas fa-arrow-right"></i></div>
-                            <div class="tex">
-                                <p>We serverd over</p>
-                                <h3 id="count"><?php echo $total_donation_Serverd ?></h3><p>BDT All over the country</p>
-                            </div>
-                        </div>
+                         <h4>Fostering Change, One Connection at a Time</h4>
+                        <p>Welcome to our platform, a digital space dedicated to fostering connections between caring individuals, organizations, and those in need. We aim to create meaningful impacts by facilitating connections between generous donors and vulnerable members of our society.</p> <p>At <b>CareSenrenity.org</b>, our mission is to facilitate connections that matter. Through our intuitive interface, we enable organizations to reach out, support, and make a real difference in the lives of orphans and the elderly community members.</p> <p>Adopt an orphan, explore orphanages and organizations, extend support with donations to specific causes or children. View detailed profiles of orphans, post thoughts on orphanage situations, hunger, and more, accompanied by photos and comments. Share moments in the gallery, embrace the opportunity to adopt a child, and anticipate upcoming services for elderly individuals. Together, let's make a difference in the lives of the vulnerable.</p>
                     </div>
                 </div>
                 <div class="col-md-4">
@@ -92,36 +93,38 @@
       <div class="what-we-do big-padding container-fluid">
             <div class="container">
                 <div class="section-title row">
-                    <h2>What we do?</h2>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ac accumsan ante. Proin ac lectus porttitor, pharetra lorem sit amet, euismod tortor. Donec blandit accumsan elit</p>
+                    <h2 id="highlight">What we Have?</h2>
+                    <p>A platform for Organizations. Stay connected with orphans and elderly to change lives with each click. 
+          Spread kindness to all.</p>
                 </div>
                 <div class="row mt-4 whd">
-                    <div class="col-md-4 text-center mb-5">
-                        <i class="bi text-primary fs-1 bi-egg-fried"></i>
-                        <h4 class="fs-6 fw-bold mt-3">RAISE FUND FOR HEALTHY FOOD</h4>
-                        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nulla  consectetur adipiscing elit. Sed ac accumsan hic deserunt facere et animi</p>
+                    <div class="col-md-4 text-center mb-5" id="part">
+                        <i class="bi fs-1 bi-egg-fried" id="icon_i"></i>
+                        <h4 class="fs-6 fw-bold mt-3">RAISE FUND FOR ORGs</h4>
+                        <p>Facilitate financial support for organizations, empowering them to achieve their noble goals.</p>
                     </div>
-                      <div class="col-md-4 text-center mb-5">
-                        <i class="bi fs-1 text-primary bi-house-door"></i>
-                        <h4 class="fs-6 fw-bold mt-3">HUGE HELP TO HOMELESS PUPIL</h4>
-                        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nulla  consectetur adipiscing elit. Sed ac accumsan hic deserunt facere et animi</p>
+                      <div class="col-md-4 text-center mb-5" id="part">
+                        <i class="bi fs-1 bi-house-door" id="icon_i"></i>
+                        <h4 class="fs-6 fw-bold mt-3">Enabling Adoptions, Enriching Lives</h4>
+                        <p>Empower life-changing adoptions, enriching lives for both adoptive parents and the adopted children.</p>
                     </div>
-                      <div class="col-md-4 text-center mb-5">
+                    <div class="col-md-4 text-center mb-5" id="part">
+                        <i class="bi fs-1 bi-currency-dollar" id="icon_i"></i>
+                        <h4 class="fs-6 fw-bold mt-3">Dynamic Donation System</h4>
+                        <p>A versatile donation system that allows seamless and flexible contributions to various causes and organizations.</p>
+                    </div>
+                    <div class="col-md-4 text-center mb-5" style="visibility: hidden;">
                         <i class="bi fs-1 text-primary bi-book-half"></i>
                         <h4 class="fs-6 fw-bold mt-3">EDUCATION FOR POOR CHILDREN</h4>
                         <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nulla  consectetur adipiscing elit. Sed ac accumsan hic deserunt facere et animi</p>
                     </div>
-                      <div class="col-md-4 text-center mb-5">
-                        <i class="bi fs-1 text-primary bi-currency-dollar"></i>
-                        <h4 class="fs-6 fw-bold mt-3">MASSIVE DONATION TO POOR</h4>
-                        <p>Lorem ipsum dolor sit amet consectetur,  consectetur adipiscing elit. Sed ac accumsan adipisicing elit. Nulla hic deserunt facere et animi</p>
+                      
+                      <div class="col-md-4 text-center mb-5" id="part">
+                        <i class="bi fs-1 bi-building" id="icon_i"></i>
+                        <h4 class="fs-6 fw-bold mt-3">Access to Orphanage for Everyone</h4>
+                        <p>Ensure inclusive access to orphanages, making them accessible and reachable for everyone in need.</p>
                     </div>
-                      <div class="col-md-4 text-center mb-5">
-                        <i class="bi fs-1 text-primary bi-building"></i>
-                        <h4 class="fs-6 fw-bold mt-3">LET'S BUILD SOME HOMES</h4>
-                        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nulla  consectetur adipiscing elit. Sed ac accumsan hic deserunt facere et animi</p>
-                    </div>
-                      <div class="col-md-4 text-center mb-5">
+                      <div class="col-md-4 text-center mb-5" style="visibility: hidden;">
                         <i class="bi fs-1 text-primary bi-heart-pulse"></i>
                         <h4 class="fs-6 fw-bold mt-3">MEDICAL FACILITIES</h4>
                         <p>Lorem ipsum dolor sit amet consectetur,  consectetur adipiscing elit. Sed ac accumsan adipisicing elit. Nulla hic deserunt facere et animi</p>
