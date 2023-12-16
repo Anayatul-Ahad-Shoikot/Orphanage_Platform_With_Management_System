@@ -1,6 +1,18 @@
 <?php 
     include("/xampp/htdocs/DBMS_Project_Organized_One/Root/Dashboards/Own-Profiles/Org/PROFILE_DETAILS_BE.php");
-    include('/xampp/htdocs/DBMS_Project_Organized_One/Root/D & A/Org_donation_adoption/ORPHAN__AMOUNT_DASH_BE.php');
+    include('/xampp/htdocs/DBMS_Project_Organized_One/Root/D & A/Org_donation_adoption/ORPHAN_AMOUNT_DASH_BE.php');
+
+    $searchQuery = isset($_GET['query']) ? $_GET['query'] : '';
+
+    // Filter the $Array based on the search query
+    $filteredArray = [];
+    foreach ($Array as $row) {
+        // Modify this condition based on your search criteria
+        if (strpos(strtolower($row['first_name']), strtolower($searchQuery)) !== false 
+            || strpos(strtolower($row['last_name']), strtolower($searchQuery)) !== false) {
+            $filteredArray[] = $row;
+        }
+    }
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -32,6 +44,25 @@
             </div>
         </nav>
     </header>
+
+    <div class="notification-container">
+        <?php
+            if(isset($_SESSION['success'])){
+                echo '<div class="alert one">
+                        <h5>'.$_SESSION['success'].'</h5>
+                    </div>';
+                unset($_SESSION['success']);
+            }
+            if(isset($_SESSION['error'])){
+                echo '<div class="alert two">
+                        <h5>'.$_SESSION['error'].'</h5>
+                    </div>';
+                unset($_SESSION['error']);
+            }
+        ?>
+    </div>
+
+
     <div class="container">
         <div class="left_portion">
             <div class="userDetails1">
@@ -65,7 +96,7 @@
         </div>
         <div class="options">
             <a href="#" class="btn">####</a>
-            <form action="#" method="GET">
+            <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="GET">
                 <input type="text" name="query" placeholder="Search Child...">
                 <button type="submit" class="btn"><i class="ri-search-line"></i></button>
             </form>
@@ -108,29 +139,42 @@
     </div>
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-
     <script>
         $(document).ready(function() {
-    $('.edit-btn').click(function() {
-        var orphanID = $(this).data('orphan_id');
-        $('#orphanId').val(orphanID);
-        $('#deductionModal').css('display', 'block');
-    });
-
-    $('.close').click(function() {
-        $('#deductionModal').css('display', 'none');
-    });
-
-    $('#confirmDeduction').click(function() {
-        var orphanId = $('#orphanId').val();
-        var deductAmount = $('#deductAmount').val();
-
-        // Log data (for verification)
-        console.log('Orphan ID:', orphanId);
-        console.log('Deduct Amount:', deductAmount);
-    });
-});
+            $('.edit-btn').click(function() {
+                var orphanID = $(this).data('orphan_id');
+                $('#orphanId').val(orphanID);
+                $('#deductionModal').css('display', 'block');
+            });
+            $('.close').click(function() {
+                $('#deductionModal').css('display', 'none');
+            });
+            $('#confirmDeduction').click(function() {
+                var orphanId = $('#orphanId').val();
+                var deductAmount = $('#deductAmount').val();
+                console.log('Orphan ID:', orphanId);
+                console.log('Deduct Amount:', deductAmount);
+            });
+        });
     </script>
+
+
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const alerts = document.querySelectorAll('.notification-container > div');
+        alerts.forEach(function(alert) {
+            setTimeout(function() {
+                alert.style.opacity = '1';
+                setTimeout(function() {
+                    alert.style.opacity = '0';
+                    setTimeout(function() {
+                        alert.style.display = 'none';
+                    }, 500);
+                }, 5000);
+            }, 500);
+        });
+    });
+</script>
 
 
 
