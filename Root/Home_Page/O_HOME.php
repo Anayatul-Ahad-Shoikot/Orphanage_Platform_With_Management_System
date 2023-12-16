@@ -88,9 +88,11 @@
         <div class="option">
           <h2><a href="/Root/Blog/O_CREATE_BLOG.php">CreatePost</a></h2>
         </div>
-        <?php 
-            include('/xampp/htdocs/DBMS_Project_Organized_One/Root/Blog/SHOW_BLOG_BE.php');
-        ?>
+        <div id="content">
+          <?php 
+              include('/xampp/htdocs/DBMS_Project_Organized_One/Root/Blog/SHOW_BLOG_BE.php');
+          ?>
+        </div>
     </div> 
 
 

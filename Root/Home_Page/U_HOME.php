@@ -47,9 +47,11 @@
               </div>
               <div class="notifi-box" id="box">
                   <h2>Notifications</h2>
-                  <?php
-                    include('/xampp/htdocs/DBMS_Project_Organized_One/Root/Notifications/U_FETCH_NOTIFICATION_BE.php');
-                  ?>
+                  <div id="content">
+                    <?php
+                      include('/xampp/htdocs/DBMS_Project_Organized_One/Root/Notifications/U_FETCH_NOTIFICATION_BE.php');
+                    ?>
+                  </div>
               </div>
             </ul>
           </div>
