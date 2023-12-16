@@ -154,17 +154,21 @@
         });
     </script>
 
-        <!-- Auto Refresh .. not good at all :(
-          
-        <script>
-        const scrollPosition = window.scrollY || window.pageYOffset;
-        setTimeout(function() {
-            window.location.href = window.location.href;
-        }, 6000);
-        window.onload = function() {
-            window.scrollTo(0, scrollPosition);
-        };
-    </script> -->
-
+  <script>
+      document.addEventListener('DOMContentLoaded', function() {
+      const alerts = document.querySelectorAll('.notification-container > div');
+      alerts.forEach(function(alert) {
+          setTimeout(function() {
+          alert.style.opacity = '1';
+          setTimeout(function() {
+              alert.style.opacity = '0';
+              setTimeout(function() {
+              alert.style.display = 'none';
+              }, 500);
+          }, 6000);
+          }, 500);
+      });
+      });
+  </script>
   </body>
 </html>

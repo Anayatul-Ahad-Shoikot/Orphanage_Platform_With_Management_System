@@ -176,12 +176,14 @@
             $SQL="UPDATE orphan_list SET orphan_image = '$image_path' WHERE orphan_id = $orphan_id LIMIT 1";
             mysqli_query($con, $SQL);
         }
+        $_SESSION['success'] = "Orphan profile updated successfully.";
         header("Location: /Root/Orphanage/ORPHAN_PROFILE.php?orphan_id=$orphan_id");
         } 
         
         
-            else {
-                echo "Error to update information";
+        else {
+            $_SESSION['error'] = "Failed to update orphan profile.";
+            header("Location: /Root/Orphanage/ORPHAN_PROFILE.php?orphan_id=$orphan_id");
         }
     mysqli_close($con);
 ?>

@@ -80,11 +80,10 @@ body::-webkit-scrollbar {
     transition: 0.5s;
 }
 .about {
-    padding: 4rem 0;
+    margin: 6rem 26rem;
     text-align: center;
 }
 .about-content {
-    max-width: 800px;
     margin: 0 auto;
 }
 .about h1 {

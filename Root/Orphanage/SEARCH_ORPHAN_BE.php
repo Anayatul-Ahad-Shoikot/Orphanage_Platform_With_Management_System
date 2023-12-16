@@ -27,13 +27,18 @@
                     echo '</div>';
                     echo '</div>';
                 }
+                $_SESSION['success'] = "Search matched";
+                header("Location: /Root/Orphanage/ORPHAN_DASH.php");
             } else {
-                echo 'No Orphan Records found';
+                $_SESSION['error'] = "No orphan found";
+                header("Location: /Root/Orphanage/ORPHAN_DASH.php");
             }
         } else {
-            echo '<p>Please provide what you want to search.</p>';
+            $_SESSION['error'] = "Nothing to search with empty word !";
+            header("Location: /Root/Orphanage/ORPHAN_DASH.php");
         }
     } else {
+        $_SESSION['error'] = "Invalid request !";
         header("Location: /Root/Orphanage/ORPHAN_DASH.php");
         exit(0);
     }

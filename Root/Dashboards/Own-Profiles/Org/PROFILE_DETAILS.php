@@ -32,9 +32,25 @@
                 <li><a href="/Root/Dashboards/Own-Profiles/Org/EDIT_PROFILE.php" class="edit_profile">Edit Profile</a></li>
             </ul>
         </div>
-  
       </nav>
     </header>
+
+    <div class="notification-container">
+        <?php
+        if(isset($_SESSION['success'])){
+            echo '<div class="alert one">
+                    <h5>'.$_SESSION['success'].'</h5>
+                </div>';
+            unset($_SESSION['success']);
+        }
+        if(isset($_SESSION['error'])){
+            echo '<div class="alert two">
+                    <h5>'.$_SESSION['error'].'</h5>
+                </div>';
+            unset($_SESSION['error']);
+        }
+        ?>
+    </div>
     
     <div class="container">
         <div class="left_portion">
@@ -142,5 +158,23 @@
             </div>
         </div>
     </div>
+
+
+    <script>
+    document.addEventListener('DOMContentLoaded', function() {
+    const alerts = document.querySelectorAll('.notification-container > div');
+    alerts.forEach(function(alert) {
+        setTimeout(function() {
+        alert.style.opacity = '1';
+        setTimeout(function() {
+            alert.style.opacity = '0';
+            setTimeout(function() {
+            alert.style.display = 'none';
+            }, 500);
+        }, 6000);
+        }, 500);
+    });
+    });
+</script>
 </body>
 </html>

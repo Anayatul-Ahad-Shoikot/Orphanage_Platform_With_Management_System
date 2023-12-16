@@ -24,7 +24,7 @@
             echo '</div>';
         }
     } else {
-        echo 'No Orphan Records found';
+        echo 'No orphan found to show.';
     }
 
     mysqli_close($con);

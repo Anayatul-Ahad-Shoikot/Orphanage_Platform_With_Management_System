@@ -140,10 +140,8 @@
             </div>
         </div>
     </div>
-</body>
-</html>
 
-<script>
+    <script>
     document.addEventListener('DOMContentLoaded', function() {
     const alerts = document.querySelectorAll('.notification-container > div');
     alerts.forEach(function(alert) {
@@ -159,3 +157,7 @@
     });
     });
 </script>
+</body>
+</html>
+
+

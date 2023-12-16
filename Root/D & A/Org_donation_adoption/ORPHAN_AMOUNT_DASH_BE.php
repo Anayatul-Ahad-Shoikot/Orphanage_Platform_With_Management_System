@@ -8,9 +8,9 @@
     $org_id_current = $row1['org_id'];
 
     $query2 = "SELECT orl.orphan_id, orl.first_name, orl.last_name, COALESCE(dor.total_amount, 0) AS total_amount
-        FROM orphan_list AS orl
-        LEFT JOIN donations_orphan AS dor ON orl.orphan_id = dor.orphan_id
-        WHERE orl.org_id = $org_id_current";
+    FROM orphan_list AS orl
+    RIGHT JOIN donations_orphan AS dor ON orl.orphan_id = dor.orphan_id AND dor.total_amount != 0.00
+    WHERE orl.org_id = $org_id_current";
     
     $Array = [];
     $result2 = mysqli_query($con, $query2);
@@ -27,6 +27,5 @@
     } else {
         echo "Error retrieving orphans' data: " . mysqli_error($con);
     }
-    
 
 ?>

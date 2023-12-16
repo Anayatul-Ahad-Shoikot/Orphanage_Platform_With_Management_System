@@ -32,7 +32,7 @@
                 </div>
             </nav>
         </header>
-        
+
         <div class="container">
             <div class="left_portion">
                 <div class="userDetails1">
@@ -83,6 +83,5 @@
                 ?>
             </div>
         </div>
-
     </body>
 </html>

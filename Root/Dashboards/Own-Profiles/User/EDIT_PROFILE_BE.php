@@ -98,7 +98,7 @@
                 $_SESSION['success'] = "Profile Updated successfully";
                 header("Location: /Root/Dashboards/Own-Profiles/User/PROFILE_DETAILS.php");
             } else {
-                $_SESSION['error'] = "Error to update information";
+                $_SESSION['error'] = "Prfile update failed";
                 header("Location: /Root/Dashboards/Own-Profiles/User/PROFILE_DETAILS.php");
         } 
     }  

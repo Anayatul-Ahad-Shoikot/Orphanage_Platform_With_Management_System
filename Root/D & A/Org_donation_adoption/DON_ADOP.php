@@ -33,6 +33,24 @@
                     </div>
                 </nav>
             </header>
+
+            <div class="notification-container">
+                <?php
+                if(isset($_SESSION['success'])){
+                    echo '<div class="alert one">
+                            <h5>'.$_SESSION['success'].'</h5>
+                        </div>';
+                    unset($_SESSION['success']);
+                }
+                if(isset($_SESSION['error'])){
+                    echo '<div class="alert two">
+                            <h5>'.$_SESSION['error'].'</h5>
+                        </div>';
+                    unset($_SESSION['error']);
+                }
+                ?>
+            </div>
+
             <div class="container">
                 <div class="left_portion">
                     <div class="userDetails1">
@@ -65,11 +83,11 @@
                     </div>
                 </div>
                 <div class="options">
-                    <a href="#" class="btn">Add Child</a>
-                    <form action="#" method="GET">
+                    <a href="#" class="btn">###</a>
+                    <!-- <form action="#" method="GET">
                         <input type="text" name="query" placeholder="Search Child...">
                         <button type="submit" class="btn"><i class="ri-search-line"></i></button>
-                    </form>
+                    </form> -->
                 </div>
 
                 <main>
@@ -120,7 +138,7 @@
                                                             <button onclick="toggleDropdown(this)" class="dropbtn">Actions</button>
                                                             <div id="myDropdown" class="dropdown-content">
                                                                 <a href="/Root/D & A/Org_donation_adoption/VIEW_REQUEST_DETAILS.php?adoption_id=' . $names['adoption_id'] . '&user_name=' . $names['user_name'] . '&first_name=' . $names['first_name'] . '&last_name=' . $names['last_name'] . '">View</a>
-                                                                <a href="remove?adoption_id="' .$names['adoption_id'] . '">Accept</a>
+                                                                <a href="/Root/D & A/Org_donation_adoption/ACCEPT_ADOPTION_REQUEST_BE.php?adoption_id=' .$names['adoption_id'] . '&user_id=' . $names['user_id'] . '&orphan_id='. $names['orphan_id'] .'">Accept</a>
                                                                 <a href="reject?adoption_id="' .$names['adoption_id'] . '">Reject</a>
                                                             </div>
                                                         </div>
@@ -155,5 +173,23 @@
                     </div>
                 </main>
             </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+        const alerts = document.querySelectorAll('.notification-container > div');
+        alerts.forEach(function(alert) {
+            setTimeout(function() {
+            alert.style.opacity = '1';
+            setTimeout(function() {
+                alert.style.opacity = '0';
+                setTimeout(function() {
+                alert.style.display = 'none';
+                }, 500);
+            }, 6000);
+            }, 500);
+        });
+        });
+    </script>
+
     </body>
 </html>

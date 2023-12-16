@@ -87,6 +87,40 @@ body::-webkit-scrollbar {
   color: var(--color6);
   transition: 0.5s;
 }
+
+
+.notification-container {
+  display: flex;
+  align-items: center;
+  justify-content: right;
+  margin: 1rem;
+  position: fixed;
+  top: 5rem;
+  right: 1rem;
+  z-index: 9999;
+}
+.alert {
+  width: fit-content;
+  padding: 12px 46px;
+  color: rgb(0, 0, 0);
+  font-weight: 600;
+  font-size: large;
+  border-radius: 10px;
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
+}
+
+.alert.one {
+  background-color: rgb(170, 255, 170, 0.5);
+  border: 1px solid rgb(0, 255, 0);
+}
+
+.alert.two {
+  background-color: rgba(255, 170, 170, 0.5);
+  border: 1px solid rgb(255, 0, 0);
+}
+
+
 .container {
   display: flex;
   flex-direction: column;
