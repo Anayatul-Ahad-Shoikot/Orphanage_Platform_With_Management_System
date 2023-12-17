@@ -17,6 +17,7 @@
             $row = mysqli_fetch_array($sql_result);
 
             $_SESSION['org_id'] = $row['org_id'];
+            $org_id = $row['org_id'];
             $acc_name = $row['acc_name'];
             $acc_email = $row['acc_email'];
             $role = $row['role'];

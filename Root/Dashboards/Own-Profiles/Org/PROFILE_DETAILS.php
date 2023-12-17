@@ -73,7 +73,7 @@
                     <div class="inner_container">
                         <div class="map">
                             <i class='bx bxs-send'></i>
-                            <p>Messages</p>
+                            <a href="/Root//Chats//O_CHAT_DASH.php?org_id=<?php echo $org_id ?>" style="text-decoration: none;"><p>Messages</p></a>
                         </div>
                         <div class="map">
                             <i class='bx bxs-error-alt'></i>

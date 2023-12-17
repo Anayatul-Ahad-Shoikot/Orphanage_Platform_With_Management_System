@@ -211,7 +211,7 @@ body::-webkit-scrollbar {
 
 
 .container {
-    margin: 1rem 35rem;
+    margin: 1rem 35rem 30rem 35rem;
     width: -webkit-fill-available;
 }
 

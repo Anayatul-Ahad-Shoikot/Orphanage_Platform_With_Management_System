@@ -1,6 +1,8 @@
 <?php 
     session_start();
-    $_SESSION['showChatBox'] = 0;
+    if (!isset($_SESSION['showChatBox'])) {
+        $_SESSION['showChatBox'] = 1;
+    }
 ?>
 
 <!DOCTYPE html>

@@ -35,7 +35,10 @@
 
         <div class="container">
             <div class="options">
-                <a href="#" class="btn">Available Childs</a>
+                <form action="#" method="GET" id="neo">
+                    <input type="hidden" name="query0" value="100">
+                    <button type="submit" class="btn">Available Childs</i></button>
+                </form>
                 <form action="#" method="GET">
                     <input type="text" name="query" placeholder="Search Child...">
                     <button type="submit" class="btn"><i class="ri-search-line"></i></button>
@@ -46,7 +49,9 @@
                 <?php
                 if (isset($_GET['query'])){
                     include('/xampp/htdocs/DBMS_Project_Organized_One/Root/D & A/Adoptions/U_SEARCH_ORPHAN_DASH_BE.php');
-                }   else {
+                } elseif(isset($_GET['query0'])){
+                    include('/xampp/htdocs/DBMS_Project_Organized_One/Root/D & A/Adoptions/U_AVAILABLE_ORPHAN_BE.php');
+                } else {
                     include ('/xampp/htdocs/DBMS_Project_Organized_One/Root/D & A/Adoptions/U_ADOPTION_DASH_BE.php');
                 }
                 ?>
