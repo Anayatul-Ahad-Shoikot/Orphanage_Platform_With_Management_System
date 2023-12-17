@@ -7,7 +7,7 @@
     if (mysqli_num_rows($result) > 0) {
         while ($row = mysqli_fetch_assoc($result)) {
             echo '<div class="card">';
-            echo '<div class="pb"  style="background-image: url(\'../../../../Orphanage/' . $row['orphan_image'] . '\');"></div>';
+            echo '<div class="pb"  style="background-image: url(\'../../../Orphanage/' . $row['orphan_image'] . '\');"></div>';
             echo '<div class="info">';
             echo '<h1>' . $row['first_name'] . '  ' . $row['last_name'] . '</h1>';
             echo '</div>';
@@ -21,7 +21,6 @@
         echo 'No Orphan Records found';
     }
     mysqli_close($con);
-    
 ?>
 
 

@@ -24,40 +24,28 @@
       </a>
 
       <ul class="side-menu top">
-        <li>
+      <li>
           <a href="/Root/Admin_Side/Dash/ADMIN_DASH.php" class="nav-link">
             <i class="fas fa-border-all"></i>
             <span class="text">Dashboard</span>
           </a>
         </li>
-        <li  class="active">
+        <li class="active">
           <a href="/Root/Admin_Side/website/HOME.php" class="nav-link">
-            <i class="fas fa-shopping-cart"></i>
+            <i class="fa fa-globe"></i>
             <span class="text">Website</span>
           </a>
         </li>
         <li>
           <a href="/Root/Admin_Side/Donation/DONATION_DASH.php" class="nav-link">
-            <i class="fas fa-chart-simple"></i>
+          <i class="fa fa-usd"></i>
             <span class="text">Donations</span>
-          </a>
-        </li>
-        <li>
-          <a href="#" class="nav-link">
-            <i class="fas fa-message"></i>
-            <span class="text">Message</span>
           </a>
         </li>
         <li>
           <a href="/Root/Admin_Side/Dash/Admin/ADMIN_PROFILE.php" class="nav-link">
             <i class="fas fa-people-group"></i>
             <span class="text">Team</span>
-          </a>
-        </li>
-        <li>
-          <a href="#">
-            <i class="fas fa-cog"></i>
-            <span class="text">Settings</span>
           </a>
         </li>
         <li>
@@ -72,7 +60,7 @@
         <nav class="e">
             <i class="fas fa-bars menu-btn"></i>
             <form action="#">
-            <div class="form-input">
+            <div class="form-input" style="visibility: hidden;">
                 <input type="search" placeholder="search..." />
                 <button class="search-btn">
                 <i class="fas fa-search search-icon"></i>
@@ -83,13 +71,8 @@
             <input type="checkbox" hidden id="switch-mode" />
             <label for="switch-mode" class="switch-mode"></label>
 
-            <a href="#" class="notification">
-            <i class="fas fa-bell"></i>
-            <span class="num">28</span>
-            </a>
-
             <a href="/Root/Admin_Side/Dash/Admin/ADMIN_PROFILE.php" class="profile">
-            <img src="../Dash/Admin/<?php echo $image ?>" alt="profile" />
+            <img src="../Dash/Admin/<?php echo $admin_image ?>" alt="profile" />
             </a>
         </nav>
         <main>

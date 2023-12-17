@@ -7,7 +7,7 @@
         while ($row = mysqli_fetch_assoc($result)) {
             echo '<div class="blog-post">';
             echo '<div class="x">';
-            echo '<div class="blog-post_img"><img src="../../../../Dashboards/Own-Profiles/Org/' . $row['org_logo'] . '" alt=""></div>';
+            echo '<div class="blog-post_img"><img src="../../../Dashboards/Own-Profiles/Org/' . $row['org_logo'] . '" alt=""></div>';
             echo '<div class="blog-post_info">';
             echo '<h1 class="blog-post_title">' . $row['org_name'] . '</h1>';
             echo '<div class="blog-post_date">';
