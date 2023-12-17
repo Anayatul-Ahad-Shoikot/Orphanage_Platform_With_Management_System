@@ -3,7 +3,7 @@
 
             $current_user = $_GET['org_id'];
 
-            $query = "SELECT 
+        $query =    "SELECT 
                         subquery.user_id,
                         CASE 
                             WHEN ul.user_id IS NOT NULL THEN ul.user_name
@@ -33,9 +33,9 @@
                 while ($row = mysqli_fetch_assoc($result)) {
                     echo '<li class="clearfix">';
                         if (isset($row['image']) && strpos($row['image'], 'user_image') !== false) {
-                            echo '<img src="#" alt="----">';
+                            echo '<img src="../../Dashboards/Own-Profiles/User/'. $row['image'] .'" alt="----">';
                         } else {
-                            echo '<img src="#" alt="-----">';
+                            echo '<img src="../../Dashboards/Own-Profiles/Org/'. $row['image'] .'" alt="-----">';
                         }
                         echo '<div class="about">';
                         echo '<div class="name">' . $row['name'] . '</div>';
