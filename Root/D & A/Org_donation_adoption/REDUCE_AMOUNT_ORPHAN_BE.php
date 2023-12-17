@@ -11,12 +11,12 @@
             if ($result && mysqli_num_rows($result) > 0) {
                 $row = mysqli_fetch_assoc($result);
                 $currentAmount = $row['total_amount'];
-                if ($deductAmount <= $currentAmount) {
+                if ($currentAmount >= $deductAmount) {
                     $newAmount = $currentAmount - $deductAmount;
                     $updateQuery = "UPDATE donations_orphan SET total_amount = $newAmount WHERE orphan_id = $orphanId";
                     if (mysqli_query($con, $updateQuery)) {
                         $_SESSION['success'] = "$deductAmount TK reduced from Orphan-ID = $orphanId";
-                       header("Location: /Root/D & A/Org_donation_adoption/ORPHAN_AMOUNT_DASH.php");
+                        header("Location: /Root/D & A/Org_donation_adoption/ORPHAN_AMOUNT_DASH.php");
                     } else {
                         $_SESSION['error'] = "Operation Failed";
                         header("Location: /Root/D & A/Org_donation_adoption/ORPHAN_AMOUNT_DASH.php");

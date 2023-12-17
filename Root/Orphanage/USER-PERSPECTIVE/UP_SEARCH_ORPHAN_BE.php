@@ -31,10 +31,10 @@
                     echo '</div>';
                 }
             } else {
-                echo 'No Orphan Records found';
+                echo "No orphan to show";
             }
         } else {
-            echo '<p>Please provide what you want to search.</p>';
+            echo "insert valid query";
         }
     } else {
         header("Location: /Root/Orphanage/USER-PERSPECTIVE/UP_ORPHAN_DASH.php");

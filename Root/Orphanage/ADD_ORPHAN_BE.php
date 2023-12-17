@@ -54,18 +54,22 @@
             if ($stmt) {
                 mysqli_stmt_bind_param($stmt, "iississssssssssssssss", $org_id ,$guardian_id, $first_name, $last_name, $age, $gender, $religion, $date_of_birth, $time, $family_status, $physical_condition, $education_level, $medical_history, $hobby, $favorite_food, $favorite_game, $skills, $dreams, $problems, $other_comments, $image_path);
                 if (mysqli_stmt_execute($stmt)) {
+                    $_SESSION['success'] = "Orphan has been registered";
                     header("Location: /Root/Orphanage/ORPHAN_DASH.php");
                     exit(0);
                 } else {
-                    echo "Register Error L-48";
+                    $_SESSION['error'] = "Orphan registration failed";
+                    header("Location: /Root/Orphanage/ORPHAN_DASH.php");
                 }
                 mysqli_stmt_close($stmt);
             } else {
-                echo "Register Error L-52";
+                $_SESSION['error'] = "Orphan registration failed";
+                header("Location: /Root/Orphanage/ORPHAN_DASH.php");
             }
             mysqli_close($con);
         }
     }   else {
+        $_SESSION['error'] = "please login first";
         header("Location: /Root/Login_Page/LOGIN_FORM.php");
         exit(0);
     }

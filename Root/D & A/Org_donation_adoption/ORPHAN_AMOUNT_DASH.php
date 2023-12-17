@@ -95,7 +95,7 @@
             </div>
         </div>
         <div class="options">
-            <a href="#" class="btn">####</a>
+            <a href="#" class="btn" onclick="location.reload();">Refresh</a>
             <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="GET">
                 <input type="text" name="query" placeholder="Search Child...">
                 <button type="submit" class="btn"><i class="ri-search-line"></i></button>
@@ -111,26 +111,52 @@
                 </div>
                 <div class="table-content">	
                     <?php
-                        foreach ($Array as $row) {
-                            echo '<div class="table-row">';
-                            echo '<div class="table-data">' . $row['orphan_id'] . '</div>';
-                            echo '<div class="table-data">' . $row['first_name'] . ' ' . $row['last_name'] . '</div>';
-                            echo '<div class="table-data">' . $row['total_amount'] . '</div>';
-                            echo '<div class="table-data"><button class="edit-btn" data-orphan_id="' . $row['orphan_id'] . '">edit</button></div>';
-                            echo '</div>';
+                        if ($_SERVER["REQUEST_METHOD"] == "GET" && isset($_GET['query'])) {
+                            $searchQuery = $_GET['query'];
+                            $searchResults = [];
+                            foreach ($Array as $row) {
+                                if (strpos(strtolower($row['first_name']), strtolower($searchQuery)) !== false
+                                    || strpos(strtolower($row['last_name']), strtolower($searchQuery)) !== false
+                                    || strpos(strtolower($row['orphan_id']), strtolower($searchQuery)) !== false) {
+                                    $searchResults[] = $row;
+                                }
+                            }
+                            if (!empty($searchResults)) {
+                                foreach ($searchResults as $row) {
+                                    echo '<div class="table-row">';
+                                    echo '<div class="table-data">' . $row['orphan_id'] . '</div>';
+                                    echo '<div class="table-data">' . $row['first_name'] . ' ' . $row['last_name'] . '</div>';
+                                    echo '<div class="table-data">' . $row['total_amount'] . '</div>';
+                                    echo '<div class="table-data"><button class="edit-btn" data-orphan_id="' . $row['orphan_id'] . '">edit</button></div>';
+                                    echo '</div>';
+                                }
+                            } else {
+                                $_SESSION['error'] = "No results found";
+                                header("Location: /Root/D & A/Org_donation_adoption/ORPHAN_AMOUNT_DASH.php");
+                            }
+                        } else {
+                            foreach ($Array as $row) {
+                                echo '<div class="table-row">';
+                                echo '<div class="table-data">' . $row['orphan_id'] . '</div>';
+                                echo '<div class="table-data">' . $row['first_name'] . ' ' . $row['last_name'] . '</div>';
+                                echo '<div class="table-data">' . $row['total_amount'] . '</div>';
+                                echo '<div class="table-data"><button class="edit-btn" data-orphan_id="' . $row['orphan_id'] . '">Action</button></div>';
+                                echo '</div>';
+                            }
                         }
                     ?>
+
                 </div>
         </div>
 
         <div id="deductionModal" class="modal">
             <div class="modal-content">
                 <div class="row_1">
-                    <h2>Detach Amount</h2>
                     <span class="close">&times;</span>
                 </div>
                 <form action="/Root/D & A/Org_donation_adoption/REDUCE_AMOUNT_ORPHAN_BE.php" method="POST">
-                    <input type="number" id="deductAmount" name="deductAmount" required>
+                    <input type="number" id="deductAmount" name="deductAmount" placeholder="substract">
+                    <input type="number" id="addAmount" name="addAmount" placeholder="add">
                     <input type="hidden" id="orphanId" name="orphanId" value="">
                     <button id="confirmDeduction">OK</button>
                 </form>
@@ -170,7 +196,7 @@
                     setTimeout(function() {
                         alert.style.display = 'none';
                     }, 500);
-                }, 5000);
+                }, 6000);
             }, 500);
         });
     });

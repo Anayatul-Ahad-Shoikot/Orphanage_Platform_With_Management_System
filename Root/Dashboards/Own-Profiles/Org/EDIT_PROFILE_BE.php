@@ -89,9 +89,11 @@
                     $SQL="UPDATE org_list SET org_logo = '$image_path' WHERE org_id = $org_id LIMIT 1";
                     mysqli_query($con, $SQL);
                 }
+                $_SESSION['success'] = "Profile Updated successfully";
                 header("Location: /Root/Dashboards/Own-Profiles/Org/PROFILE_DETAILS.php");
             } else {
-                echo "Error to update information";
+                $_SESSION['error'] = "Profile update failed";
+                header("Location: /Root/Dashboards/Own-Profiles/Org/PROFILE_DETAILS.php");
             }
         }    
     mysqli_close($con);
