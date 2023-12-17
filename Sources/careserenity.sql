@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Dec 16, 2023 at 07:08 PM
+-- Generation Time: Dec 16, 2023 at 11:43 PM
 -- Server version: 10.4.28-MariaDB
 -- PHP Version: 8.2.4
 
@@ -91,7 +91,7 @@ CREATE TABLE `adoptions` (
   `orphan_id` int(11) NOT NULL,
   `acc_id` int(11) NOT NULL,
   `request_date` date DEFAULT current_timestamp(),
-  `status` varchar(15) DEFAULT 'Pending',
+  `status` varchar(15) DEFAULT 'pending',
   `issued_date` date DEFAULT NULL,
   `email` varchar(50) DEFAULT NULL,
   `phone` varchar(11) DEFAULT NULL,
@@ -112,8 +112,8 @@ CREATE TABLE `adoptions` (
 INSERT INTO `adoptions` (`adoption_id`, `orphan_id`, `acc_id`, `request_date`, `status`, `issued_date`, `email`, `phone`, `occupation`, `income`, `maritalStatus`, `reason`, `children`, `livingEnvironment`, `expectations`, `additionalInfo`) VALUES
 (8, 23, 1001, '2023-12-07', 'Pending', NULL, 'sayma@gmail.com', '01973336002', 'Student', 25000, 'married', 'Hello', 6, 'good', 'Bad', 'Sad'),
 (9, 23, 1001, '2023-12-07', 'Pending', NULL, 'sayma@gmail.com', '01973336002', 'Student', 25000, 'divorced', 'Hello', 6, 'good', 'Bad', 'Sad'),
-(10, 24, 1001, '2023-12-07', 'Pending', NULL, 'sayma@gmail.com', '01973336002', 'Student', 25000, 'married', 'Hello', 6, 'good', 'Bad', 'Sad'),
-(12, 23, 1001, '2023-12-09', 'done', NULL, 'asdwad@g.com', 'awdasd', 'awdsd', 9278400000, 'divorced', 'awd', 0, 'aWD', 'fdhbxdf', 'ghjtfh'),
+(10, 24, 1001, '2023-12-07', 'done', '2023-12-16', 'sayma@gmail.com', '01973336002', 'Student', 25000, 'married', 'Hello', 6, 'good', 'Bad', 'Sad'),
+(12, 23, 1001, '2023-12-09', 'Pending', '0000-00-00', 'asdwad@g.com', 'awdasd', 'awdsd', 9278400000, 'divorced', 'awd', 0, 'aWD', 'fdhbxdf', 'ghjtfh'),
 (14, 48, 1019, '2023-12-15', 'Pending', NULL, 'aashoikot002@gmail.com', '37467235454', 'Doctor', 100, 'married', 'No baby', 0, 'best living place', 'none', 'none'),
 (15, 48, 1001, '2023-12-15', 'Pending', NULL, 'ashoikot212107@bscse.uiu.ac.bd', '37467235454', 'Doctor', 100, 'divorced', 'No baby', 3, 'best living place', 'none', 'none'),
 (16, 49, 1001, '2023-12-16', 'Pending', NULL, 'shoikotofficial@gmail.com', '37467235454', 'Doctor', 100, 'married', 'No baby', 3, 'best living place', 'none', 'none');
@@ -164,7 +164,8 @@ CREATE TABLE `blog_likes` (
 
 INSERT INTO `blog_likes` (`post_id`, `likes`) VALUES
 (51, 3),
-(54, 2);
+(54, 2),
+(56, 0);
 
 -- --------------------------------------------------------
 
@@ -188,7 +189,8 @@ CREATE TABLE `blog_post` (
 
 INSERT INTO `blog_post` (`post_id`, `acc_id`, `post_title`, `post_content`, `post_category`, `post_image`, `published`) VALUES
 (51, 1000, 'Anayatul Ahad Shoikot\'s post', 'I am now fixing my database table. ', 'child', 'img/AnayatulAhadShoikotspost_656ca2ff0972e.jpg', '2023-12-03'),
-(54, 1001, 'Anayatul Ahad Shoikot\'s post', 'awdasdw', 'old', 'img/AnayatulAhadShoikotspost_656da61d3ad96.jpg', '2023-12-04');
+(54, 1001, 'Anayatul Ahad Shoikot\'s post', 'awdasdw', 'old', 'img/AnayatulAhadShoikotspost_656da61d3ad96.jpg', '2023-12-04'),
+(56, 1000, '123', '123', 'old', 'img/123_657df6b4d1992.jpeg', '2023-12-16');
 
 -- --------------------------------------------------------
 
@@ -267,7 +269,7 @@ CREATE TABLE `donations_orphan` (
 --
 
 INSERT INTO `donations_orphan` (`orphan_id`, `total_amount`) VALUES
-(22, 4.00),
+(22, 0.00),
 (23, 55230.00),
 (24, 3993263.00),
 (46, 76.00);
@@ -376,7 +378,9 @@ INSERT INTO `local_orphan_guardian` (`guardian_id`, `guardian_name`, `guardian_c
 (38, 'Rahim Khan', '+8805012345711', 'Chittagong'),
 (39, 'Safia Begum', '+8804912345710', 'Rangpur'),
 (40, 'Xafor Iquebal', '01973336001', 'Bshabo, Dhaka-1216'),
-(41, 'Nizamuddin', '01711404674', 'mirpur-2, dhaka-1216');
+(41, 'Nizamuddin', '01711404674', 'mirpur-2, dhaka-1216'),
+(42, '', '0324325436', 'Madani avenew, Notun bazar, Dh'),
+(43, 'n', 'n', 'n');
 
 -- --------------------------------------------------------
 
@@ -409,8 +413,7 @@ INSERT INTO `notifications` (`notification_id`, `user_id`, `org_id`, `orphan_id`
 (12, 19, NULL, 24, 1, 'Donation 1000000 Tk sent to Shorifa Rani', NULL, '2023-12-14 06:26:41'),
 (13, 19, 29, NULL, 1, 'Donation 1000000 Tk sent to SustainableBD', NULL, '2023-12-14 06:27:26'),
 (14, 19, 23, NULL, 1, 'Donation 500 Tk sent to Anayatul Shoikot', NULL, '2023-12-14 06:37:17'),
-(15, 17, NULL, 24, 1, '1000000 Tk sent to Shorifa Rani as gift', NULL, '2023-12-14 18:31:00'),
-(16, 17, NULL, 24, 1, '1000000 Tk sent to Shorifa Rani as gift', NULL, '2023-12-14 18:31:00'),
+(16, 17, NULL, 24, 0, 'Adoption request approved for Shorifa Rani', NULL, '2023-12-14 18:31:00'),
 (17, 17, 22, NULL, 1, '1000000 Tk sent to Sabrina Ahad as gift', NULL, '2023-12-15 05:06:10'),
 (20, 20, 18, NULL, 1, 'Donation 92934 Tk sent to Little Sprouts Foundation', NULL, '2023-12-15 12:14:59'),
 (21, 20, 21, NULL, 1, 'Donation 550 Tk sent to DhakaFoundation', NULL, '2023-12-15 12:16:42'),
@@ -452,7 +455,7 @@ CREATE TABLE `org_list` (
 --
 
 INSERT INTO `org_list` (`org_id`, `org_name`, `acc_id`, `org_description`, `org_email`, `org_phone`, `org_website`, `org_logo`, `established`, `org_location`, `org_vision`, `org_reviews`) VALUES
-(18, 'Little Sprouts Foundation', 1000, 'Care, care and care. nothing else is found here', 'info@littlesproutsfoundation.o', '+880667788990', 'LittleSproutsFoundation.org', 'img/LittleSproutsFoundation_656c039da12d5.jpg', '2023-10-26', 'Jessore', 'To save childer life', NULL),
+(18, 'Shetus best charity', 1000, 'Care, care and care. nothing else is found here', 'ela@g.com', '0324325436', 'LittleSproutsFoundation.org', 'img/LittleSproutsFoundation_656c039da12d5.jpg', '2023-10-26', 'Madani avenew, Notun bazar, Dh', 'To save childer life .', NULL),
 (19, 'Safe Haven Orphanage', 1002, 'Care, care and care. nothing else is found here', 'info@safehaven.org', '+880112233445', 'SafeHavenOrphanage.com', 'img/SafeHavenOrphanage_656ccaf3a3e45.jpg', '2023-12-09', 'Khulna', 'To save childer life', NULL),
 (20, 'ShomajSeba', 1003, 'Shomaj Seba is committed to improving the lives of orphaned children and elderly people in rural areas. They provide essential support and services to both segments of society.', 'shomajseba@example.com', '+8801812345679', 'www.shomajseba.org', 'img/ShomajSeba_65703538d3cc7.jpg', '1991-11-12', 'Rajshahi', 'Creating a better future for o', NULL),
 (21, 'DhakaFoundation', 1004, 'Care, care and care. nothing else is found here', 'dhakafoundation@example.com', '+8801712345678', 'www.dhakafoundation.org', 'img/DhakaFoundation_657034a53c5c9.png', '2000-02-12', 'Dhaka', 'Empower every orphan and elder', NULL),
@@ -508,7 +511,9 @@ INSERT INTO `orphan_list` (`orphan_id`, `org_id`, `guardian_id`, `first_name`, `
 (24, 18, 3, 'Shorifa', 'Rani', 2, 'male', 'buddha', '2023-12-11', '2023-12-04', 'unknow', 'blind', 'elementary', 'None', 'Gamming', 'Ice Cream', 'Badminton', 'xyz', 'A good House Wife ', 'overthinking ', 'All okay', 'img/Rani_656d88d7267b4.jpeg', '0', '0'),
 (46, 20, 38, 'Zahid', 'Rahman', 10, 'male', 'muslim', '2023-12-03', '2023-12-06', 'abondoned', 'good', 'primary_school', '', '', '', '', '', '', '', '', 'img/img_2505.jpg', '0', '0'),
 (48, 21, 40, 'Maisha Maliha ', 'Neha', 23, 'female', 'muslim', '2023-11-28', '2023-12-15', 'other', 'good', 'secondary_school', 'Major Accident occures at the age of 19', 'Baking', 'Cake', 'Badmintion ', 'Making Cake', 'To be a good beker', 'N/A', 'N/A', 'img/Neha_657c3f9496606.jpg', '0', '0'),
-(49, 21, 41, 'Nihan', 'Ashraf', 9, 'male', 'hindu', '2023-11-28', '2023-12-15', 'past Away', 'blind', 'primary_school', 'None', 'Gamming', 'Fast Food', 'Cricket', 'Singing Skills', 'Full Stack Developer', 'overthinking ', 'Loves exploring new things', 'img/Ashraf_657c4040389a2.jpg', '0', '0');
+(49, 21, 41, 'Nihan', 'Ashraf', 9, 'male', 'hindu', '2023-11-28', '2023-12-15', 'past Away', 'blind', 'primary_school', 'None', 'Gamming', 'Fast Food', 'Cricket', 'Singing Skills', 'Full Stack Developer', 'overthinking ', 'Loves exploring new things', 'img/Ashraf_657c4040389a2.jpg', '0', '0'),
+(50, 18, 42, 'Anayatul', 'Shoikot', 1, '', '', '0000-00-00', '2023-12-16', '', '', '', '', '', '', '', '', '', '', '', 'img/Shoikot_657e0198c0cfb.jpeg', '0', '0'),
+(51, 18, 43, 'xyz', 'abc', 12, 'female', 'other', '2023-12-16', '2023-12-16', 'past Away', 'autistic', 'senior_high_school', 'n', 'n', 'n', 'n', 'n', 'n', 'n', 'n', 'img/girl-dos-300x300.jpg', '0', '0');
 
 -- --------------------------------------------------------
 
@@ -680,7 +685,7 @@ ALTER TABLE `adoptions`
 -- AUTO_INCREMENT for table `blog_post`
 --
 ALTER TABLE `blog_post`
-  MODIFY `post_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=56;
+  MODIFY `post_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=57;
 
 --
 -- AUTO_INCREMENT for table `chats`
@@ -704,7 +709,7 @@ ALTER TABLE `gallery`
 -- AUTO_INCREMENT for table `local_orphan_guardian`
 --
 ALTER TABLE `local_orphan_guardian`
-  MODIFY `guardian_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=42;
+  MODIFY `guardian_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=44;
 
 --
 -- AUTO_INCREMENT for table `notifications`
@@ -722,7 +727,7 @@ ALTER TABLE `org_list`
 -- AUTO_INCREMENT for table `orphan_list`
 --
 ALTER TABLE `orphan_list`
-  MODIFY `orphan_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=50;
+  MODIFY `orphan_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=52;
 
 --
 -- AUTO_INCREMENT for table `user_list`

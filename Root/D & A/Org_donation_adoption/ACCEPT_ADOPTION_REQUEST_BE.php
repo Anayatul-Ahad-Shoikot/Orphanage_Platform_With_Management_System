@@ -15,8 +15,10 @@
     }
     $query2 = "UPDATE adoptions AS ad SET ad.status = 'done', ad.issued_date = '$current_date' WHERE ad.adoption_id = $adoption_id AND ad.status != 'done'";
         if(mysqli_query($con, $query2)) {
+
             $query3 = "UPDATE notifications SET is_read = 0, content = 'Adoption request approved for $firstName $lastName' WHERE user_id = $user_id AND orphan_id = $orphan_id";
-            if(mysqli_query($con, $query3)){
+            $query4 = "UPDATE orphan_list SET adoption_status = '1' WHERE orphan_id = $orphan_id";
+            if((mysqli_query($con, $query3)) && (mysqli_query($con, $query4))){
                 $_SESSION['success'] = "Request approved";
                 header("Location: /Root/D & A/Org_donation_adoption/DON_ADOP.php");
             } else {
