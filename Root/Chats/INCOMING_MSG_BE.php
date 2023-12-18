@@ -1,7 +1,7 @@
 <?php 
     include('/xampp/htdocs/DBMS_Project_Organized_One/Includes/db_con.php');
 
-            $current_user = $_GET['org_id'];
+        $current_user = $_GET['org_id'];
 
         $query =    "SELECT 
                         subquery.user_id,
@@ -12,7 +12,7 @@
                         CASE 
                             WHEN ul.user_id IS NOT NULL THEN ul.user_image
                             ELSE ol.org_logo
-                        END AS image
+                        END AS imageee
                     FROM (
                         SELECT sender_id AS user_id
                         FROM chats
@@ -33,10 +33,10 @@
                 while ($row = mysqli_fetch_assoc($result)) {
                     echo '<a href="/Root/Chats/O_CHAT_DASH.php?org_id='.$current_user.'&current_user=' . $current_user . '&selected_user=' . $row['user_id'] . '">';
                     echo '<li class="clearfix" data-user-id="' . $row['user_id'] . '">';
-                        if (isset($row['image']) && strpos($row['image'], 'user_image') !== false) {
-                            echo '<img src="../../Dashboards/Own-Profiles/User/'. $row['image'] .'" alt="----">';
+                        if (isset($row['imageee']) && strpos($row['imageee'], 'user_image') !== false) {
+                            echo '<img src="../Dashboards/Own-Profiles/User/'. $row['imageee'] .'" alt="----">';
                         } else {
-                            echo '<img src="../../Dashboards/Own-Profiles/Org/'. $row['image'] .'" alt="-----">';
+                            echo '<img src="../Dashboards/Own-Profiles/Org/'. $row['imageee'] .'" alt="-----">';
                         }
                         echo '<div class="about">';
                         echo '<div class="name">' . $row['name'] . '</div>';

@@ -4,10 +4,31 @@
     <meta charset="UTF-8">
     <title>Organization Profile</title>
     <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" />
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css"/>
+    <link rel="stylesheet" href="/Root/Dashboards/Own-Profiles/Org/PROFILE_DETAILS_STYLE.css">
     <link rel='stylesheet' href='https://cdn.jsdelivr.net/npm/bootstrap@4.5.0/dist/css/bootstrap.min.css'>
     <link rel="stylesheet" href="/Root/Chats/CHAT_DASH_STYLE.css">
 </head>
 <body>
+    <header class="header">
+      <nav>
+        <div class="logo">
+          <a href="/Root/Home_Page/O_HOME.php"><img src="/Root/Landing_Page/LOGO_NoBackground.png" alt="LOGO"></a>
+        </div>
+        
+        <div class="links">
+            <ul>
+                <li><a href="/Root/Home_Page/O_HOME.php">Home</a></li>
+                <li><a href="/Root/Dashboards/Own-Profiles/Org/PROFILE_DETAILS.php" class="active">Profile</a></li>
+                <li><a href="/Root/Org_Page/O_ORG.php">Orgs.</a></li>
+                <li><a href="/Root//Gallary//O_GALLERY_DASH.php">Gallery</a></li>
+                <li><a href="/Root/Dashboards/Own-Profiles/Org/EDIT_PROFILE.php" class="edit_profile">Edit Profile</a></li>
+            </ul>
+        </div>
+      </nav>
+    </header>
 <div class="container">
     <div class="row clearfix">
         <div class="col-lg-12">
@@ -28,23 +49,6 @@
                 <div class="chat">
                     <div class="chat-header clearfix">
                     </div>
-<<<<<<< HEAD
-                    <div class="chat-history">
-                        <ul class="m-b-0">
-                            <li class="clearfix">
-                                <div class="message-data">
-                                    <span class="message-data-time">10:12 AM, Today</span>
-                                </div>
-                                <div class="message my-message">Are we meeting today?</div>                                    
-                            </li>                               
-                            <li class="clearfix">
-                                <div class="message-data">
-                                    <span class="message-data-time">10:15 AM, Today</span>
-                                </div>
-                                <div class="message my-message">Project has been already finished and I have results to show you.</div>
-                            </li>
-                        </ul>
-=======
                     <div class="chat-history" id="chat-history">
                             <?php 
                                 include('/xampp/htdocs/DBMS_Project_Organized_One/Includes/db_con.php');
@@ -80,14 +84,14 @@
                         } 
                             mysqli_close($con);
                             ?>
->>>>>>> 5e0c52f8432589cc9aed6455ac4ded8e4fe4ec8b
+
                     </div>
                     <div class="chat-message clearfix">
                         <div class="input-group mb-0">
-                            <div class="input-group-prepend">
-                                <span class="input-group-text"><i class="fa fa-send"></i></span>
-                            </div>
-                            <input type="text" class="form-control" placeholder="Enter text here...">                                    
+                            <form action="/Root/Chats/CHAT_ORG_INSERT_BE.php?selected_user=<?php echo $selected_user ?>&current_user=<?php echo $current_user ?>" method="POST">
+                            <input name="msg" id="message-to-send" placeholder ="Type your message"></input>
+                            <button id="sendMessageBtn">Send</button>
+                            </form>                            
                         </div>
                     </div>
                 </div>
@@ -115,5 +119,9 @@
 });
 </script>
 <script src='https://cdn.jsdelivr.net/npm/bootstrap@4.5.0/dist/js/bootstrap.bundle.min.js'></script>
+
+
+
+<a href="../Dashboards/Own-Profiles/"></a>
 </body>
 </html>
