@@ -177,15 +177,19 @@
         if (isset($_FILES["image"]["name"]) && !empty($_FILES["image"]["name"])) {
             $image_name = $_FILES["image"]["name"];
             $image_tmp_name = $_FILES["image"]["tmp_name"];
+            $desired_folder = "../../../Orphanage/img/";
             $image_path = "img/" . $image_name;
-            move_uploaded_file($image_tmp_name, $image_path);
-            $SQL="UPDATE orphan_list SET orphan_image = '$image_path' WHERE orphan_id = $child LIMIT 1";
+            $new_image_path = $desired_folder . $image_name;
+            move_uploaded_file($image_tmp_name, $new_image_path);
+            $SQL="UPDATE orphan_list SET orphan_image = '$image_path' WHERE orphan_id = $child";
             mysqli_query($con, $SQL);
         }
-        header("Location: /Root/Admin_Side/Dash/Orphans/VIEW_CHILD.php?orphan_id=$child");
+        $_SESSION['success'] = "Profile Update Successful";
+        header("Location: /Root/Admin_Side/Dash/Orphans/ORPHAN_DASH.php");
         } 
             else {
-                echo "Error to update information";
+                $_SESSION['error'] = "Profile Update Failed";
+                header("Location: /Root/Admin_Side/Dash/Orphans/ORPHAN_DASH.php");
         }
     mysqli_close($con);
 ?>

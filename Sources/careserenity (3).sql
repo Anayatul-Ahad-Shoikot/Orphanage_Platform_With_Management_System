@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Dec 16, 2023 at 11:43 PM
+-- Generation Time: Dec 18, 2023 at 01:44 AM
 -- Server version: 10.4.28-MariaDB
 -- PHP Version: 8.2.4
 
@@ -56,7 +56,8 @@ INSERT INTO `accounts` (`acc_id`, `acc_name`, `acc_pass`, `acc_email`, `role`, `
 (1012, 'SustainableBD', '$2y$10$fHPsmqW1XGwkXRp9hWdjKe5JdhgUwHOxmTTZzZn27Cfg8ws75fhRW', 'sustainablebd@example.com', 'org', '2019-10-12'),
 (1013, 'admin1', '$2y$10$hNr.buN/lErXXQzREDeqa.zo4E6mL3DNEuNsm6VI2eHL9WIbZnwNa', 'admin1@gmail.com', 'admin', '2023-12-07'),
 (1018, 'zamun123', '$2y$10$K6A4y/fYxWWHiT5YE22qUenrtp72p/j91a4PB9FiMIWJh9Xw3s26u', 'sabrina@gmail.com', 'user', '2023-12-11'),
-(1019, 'Jftaas', '$2y$10$u50AAENyAk9jo6pOYkl9n.io5ZpdtkIhjeUp/gHi.cMGrXLWkk5o6', 'jannattanjum@gmail.con', 'user', '2023-12-15');
+(1019, 'Jftaas', '$2y$10$u50AAENyAk9jo6pOYkl9n.io5ZpdtkIhjeUp/gHi.cMGrXLWkk5o6', 'jannattanjum@gmail.con', 'user', '2023-12-15'),
+(1023, 'admin2', '$2y$10$1h1k6kvHXOMMB3ZDFIdUZ.GAiRqjH9Z70YqfSmWfm5yeZKOW6nbuu', 'mdin@gmail.com', 'admin', '2023-12-17');
 
 -- --------------------------------------------------------
 
@@ -78,7 +79,8 @@ CREATE TABLE `admin_list` (
 --
 
 INSERT INTO `admin_list` (`admin_id`, `acc_id`, `admin_name`, `admin_contact`, `admin_priyority`, `admin_image`) VALUES
-(1, 1013, 'Ahad Shoikot', '0197333798', 1, 'img/011-212-107.jpg');
+(1, 1013, 'Ahad Shoikot', '0197333798', 1, 'img/011-212-107.jpg'),
+(8, 1023, 'Mashrif Al din', '01973336001', 2, 'img/011212107.jpg');
 
 -- --------------------------------------------------------
 
@@ -136,16 +138,10 @@ CREATE TABLE `blog_comment` (
 --
 
 INSERT INTO `blog_comment` (`post_id`, `viewer_acc_name`, `comment`, `comment_date`) VALUES
-(51, 'ls_foundation', 's', '2023-12-03'),
-(51, 'ls_foundation', 'aadwadsad', '2023-12-03'),
-(51, 'AAS_charity', 'oip', '2023-12-03'),
 (54, 'Anayatul Ahad Shoikot', 'dawsad', '2023-12-04'),
 (54, 'Anayatul Ahad Shoikot', 'awsdwa', '2023-12-04'),
-(51, 'Anayatul Ahad Shoikot', 'wad', '2023-12-04'),
 (54, 'Anayatul Ahad Shoikot', 'oi', '2023-12-05'),
-(54, 'ahad', 'awdawd', '2023-12-15'),
-(51, 'DhakaFoundation', 'da', '2023-12-15'),
-(51, 'DhakaFoundation', 'dwadawd', '2023-12-15');
+(54, 'ahad', 'awdawd', '2023-12-15');
 
 -- --------------------------------------------------------
 
@@ -163,9 +159,8 @@ CREATE TABLE `blog_likes` (
 --
 
 INSERT INTO `blog_likes` (`post_id`, `likes`) VALUES
-(51, 3),
 (54, 2),
-(56, 0);
+(57, 0);
 
 -- --------------------------------------------------------
 
@@ -188,9 +183,8 @@ CREATE TABLE `blog_post` (
 --
 
 INSERT INTO `blog_post` (`post_id`, `acc_id`, `post_title`, `post_content`, `post_category`, `post_image`, `published`) VALUES
-(51, 1000, 'Anayatul Ahad Shoikot\'s post', 'I am now fixing my database table. ', 'child', 'img/AnayatulAhadShoikotspost_656ca2ff0972e.jpg', '2023-12-03'),
 (54, 1001, 'Anayatul Ahad Shoikot\'s post', 'awdasdw', 'old', 'img/AnayatulAhadShoikotspost_656da61d3ad96.jpg', '2023-12-04'),
-(56, 1000, '123', '123', 'old', 'img/123_657df6b4d1992.jpeg', '2023-12-16');
+(57, 1013, 'This is Admin Post', 'this is admin post', 'child', 'img/ThisisAdminPost_657f31a6e37c6.jpg', '2023-12-17');
 
 -- --------------------------------------------------------
 
@@ -314,9 +308,6 @@ CREATE TABLE `like_handle` (
 --
 
 INSERT INTO `like_handle` (`post_id`, `viewer_acc_id`) VALUES
-(51, 1000),
-(51, 1002),
-(51, 1001),
 (54, 1001),
 (54, 1004);
 
@@ -506,8 +497,8 @@ CREATE TABLE `orphan_list` (
 --
 
 INSERT INTO `orphan_list` (`orphan_id`, `org_id`, `guardian_id`, `first_name`, `last_name`, `age`, `gender`, `religion`, `date_of_birth`, `since`, `family_status`, `physical_condition`, `education_level`, `medical_history`, `hobby`, `favorite_food`, `favorite_game`, `skills`, `dreams`, `problems`, `other_comments`, `orphan_image`, `adoption_status`, `removed_status`) VALUES
-(22, 18, 1, 'Sabrina', 'Ahad', 25, 'male', 'muslim', '2023-12-02', '2023-12-04', 'other', 'good', 'secondary_school', 'None', 'Gamming', 'Ice Cream', 'Badminton', 'Fast learners', 'Full Stack Developer', 'none', 'All okay', 'img/sabrina.png', '0', '0'),
-(23, 18, 2, 'Anayatul', 'Shoikot', 11, 'male', 'hindu', '2023-12-22', '2023-12-04', 'past Away', 'deaf', 'junior_high_school', 'None', 'Gamming', 'Ice Cream', 'Badminton', 'xyz', 'A good House Wife ', 'overthinking ', 'All okay', 'img/Shoikot_656d88af00193.jpeg', '0', '0'),
+(22, 18, 1, 'Abdur', 'Rahim', 10, 'male', 'muslim', '2023-12-09', '2023-12-04', 'past Away', 'good', 'primary_school', 'Allergy to Dust', 'playing marble', 'Ice Cream', 'Cricket', 'N/A', 'N/A', 'Laugh too much', 'All okay', 'img/862-06540774en_Masterfile.jpg', '0', '0'),
+(23, 18, 2, 'Anayatul', 'Shoikot', 12, 'male', 'hindu', '2023-12-22', '2023-12-04', 'past Away', 'deaf', 'junior_high_school', 'None', 'Gamming', 'Ice Cream', 'Badminton', 'xyz', 'A good House Wife ', 'overthinking ', 'All okay', 'img/Shoikot_656d88af00193.jpeg', '0', '0'),
 (24, 18, 3, 'Shorifa', 'Rani', 2, 'male', 'buddha', '2023-12-11', '2023-12-04', 'unknow', 'blind', 'elementary', 'None', 'Gamming', 'Ice Cream', 'Badminton', 'xyz', 'A good House Wife ', 'overthinking ', 'All okay', 'img/Rani_656d88d7267b4.jpeg', '0', '0'),
 (46, 20, 38, 'Zahid', 'Rahman', 10, 'male', 'muslim', '2023-12-03', '2023-12-06', 'abondoned', 'good', 'primary_school', '', '', '', '', '', '', '', '', 'img/img_2505.jpg', '0', '0'),
 (48, 21, 40, 'Maisha Maliha ', 'Neha', 23, 'female', 'muslim', '2023-11-28', '2023-12-15', 'other', 'good', 'secondary_school', 'Major Accident occures at the age of 19', 'Baking', 'Cake', 'Badmintion ', 'Making Cake', 'To be a good beker', 'N/A', 'N/A', 'img/Neha_657c3f9496606.jpg', '0', '0'),
@@ -667,13 +658,13 @@ ALTER TABLE `user_list`
 -- AUTO_INCREMENT for table `accounts`
 --
 ALTER TABLE `accounts`
-  MODIFY `acc_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=1020;
+  MODIFY `acc_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=1024;
 
 --
 -- AUTO_INCREMENT for table `admin_list`
 --
 ALTER TABLE `admin_list`
-  MODIFY `admin_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+  MODIFY `admin_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
 
 --
 -- AUTO_INCREMENT for table `adoptions`
@@ -685,7 +676,7 @@ ALTER TABLE `adoptions`
 -- AUTO_INCREMENT for table `blog_post`
 --
 ALTER TABLE `blog_post`
-  MODIFY `post_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=57;
+  MODIFY `post_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=58;
 
 --
 -- AUTO_INCREMENT for table `chats`

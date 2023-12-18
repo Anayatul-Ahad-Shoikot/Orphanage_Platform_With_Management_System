@@ -11,7 +11,7 @@
         $org_id = $_POST["org_id"];
         $org_name = $_POST["org_name"];
         if ($msg){
-            $sql = "INSERT INTO chats (sender_id, receiver_id, msg) VALUES ($user_id, $org_id, '$msg')";
+            $sql = "INSERT INTO chats (sender_id, receiver_id, msg, msg_status) VALUES ($user_id, $org_id, '$msg', 0)";
             if (mysqli_query($con, $sql)) {
                 echo '<script>window.location.href = "/Root/Org_Page/U_VIEW_ORG.php?org_id=' . $org_id . '";</script>';
             }

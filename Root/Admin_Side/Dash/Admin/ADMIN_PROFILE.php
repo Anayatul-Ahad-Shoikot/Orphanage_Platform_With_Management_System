@@ -15,13 +15,31 @@
     <title>orphans</title>
   </head>
   <body>
+
+  <div class="notification-container">
+        <?php
+        if(isset($_SESSION['success'])){
+            echo '<div class="alert one">
+                    <h5>'.$_SESSION['success'].'</h5>
+                </div>';
+            unset($_SESSION['success']);
+        }
+        if(isset($_SESSION['error'])){
+            echo '<div class="alert two">
+                    <h5>'.$_SESSION['error'].'</h5>
+                </div>';
+            unset($_SESSION['error']);
+        }
+        ?>
+    </div>
+
     <section class="sidebar">
       <a href="/Root/Admin_Side/Dash/ADMIN_DASH.php" class="logo">
         <img src="/Root/Landing_Page/LOGO_NoBackground.png" alt="Logo" />
       </a>
 
       <ul class="side-menu top">
-        <li class="active">
+        <li>
           <a href="/Root/Admin_Side/Dash/ADMIN_DASH.php" class="nav-link">
             <i class="fas fa-border-all"></i>
             <span class="text">Dashboard</span>
@@ -29,32 +47,20 @@
         </li>
         <li>
           <a href="/Root/Admin_Side/website/HOME.php" class="nav-link">
-            <i class="fas fa-shopping-cart"></i>
+            <i class="fa fa-globe"></i>
             <span class="text">Website</span>
           </a>
         </li>
         <li>
           <a href="/Root/Admin_Side/Donation/DONATION_DASH.php" class="nav-link">
-            <i class="fas fa-chart-simple"></i>
+          <i class="fa fa-usd"></i>
             <span class="text">Donations</span>
           </a>
         </li>
-        <li>
-          <a href="#" class="nav-link">
-            <i class="fas fa-message"></i>
-            <span class="text">Message</span>
-          </a>
-        </li>
-        <li>
+        <li class="active">
           <a href="/Root/Admin_Side/Dash/Admin/ADMIN_PROFILE.php" class="nav-link">
             <i class="fas fa-people-group"></i>
             <span class="text">Team</span>
-          </a>
-        </li>
-        <li>
-          <a href="#">
-            <i class="fas fa-cog"></i>
-            <span class="text">Settings</span>
           </a>
         </li>
         <li>
@@ -80,34 +86,12 @@
 
         <input type="checkbox" hidden id="switch-mode" />
         <label for="switch-mode" class="switch-mode"></label>
-
-        <a href="#" class="notification">
-          <i class="fas fa-bell"></i>
-          <span class="num">1</span>
-        </a>
-
         <a href="#" class="profile">
           <img src="<?php echo $admin_image ?>" alt="profile" />
         </a>
       </nav>
 
       <main>
-        <div class="alert one">
-          <?php
-              if(isset($_SESSION['notification-1'])){
-                  echo "<h5>".$_SESSION['notification-1']."</h5>";
-                  unset($_SESSION['notification-1']);
-              }
-          ?>
-        </div>
-        <div class="alert two">
-            <?php
-                if(isset($_SESSION['notification-2'])){
-                    echo "<h5>".$_SESSION['notification-2']."</h5>";
-                    unset($_SESSION['notification-2']);
-                }
-            ?>
-        </div>
         <div class="head-title">
             <div class="left">
                 <h1>Admin</h1>
@@ -172,6 +156,23 @@
       </main>
 
     </section>
+
+    <script>
+    document.addEventListener('DOMContentLoaded', function() {
+    const alerts = document.querySelectorAll('.notification-container > div');
+    alerts.forEach(function(alert) {
+        setTimeout(function() {
+        alert.style.opacity = '1';
+        setTimeout(function() {
+            alert.style.opacity = '0';
+            setTimeout(function() {
+            alert.style.display = 'none';
+            }, 500);
+        }, 6000);
+        }, 500);
+    });
+    });
+</script>
     <script src="/Root/Admin_Side/Dash/ADMIN_DASH_JS.js"></script>
   </body>
 </html>

@@ -1,9 +1,9 @@
 <?php 
-    include('/xampp//htdocs/DBMS_Project_Organized_One/Includes/db_con.php');
+    include('/xampp/htdocs/DBMS_Project_Organized_One/Includes/db_con.php');
 
             $current_user = $_GET['org_id'];
 
-            $query = "SELECT 
+        $query =    "SELECT 
                         subquery.user_id,
                         CASE 
                             WHEN ul.user_id IS NOT NULL THEN ul.user_name
@@ -31,17 +31,18 @@
 
             if (mysqli_num_rows($result) > 0) {
                 while ($row = mysqli_fetch_assoc($result)) {
-                    echo '<li class="clearfix">';
+                    echo '<a href="/Root/Chats/O_CHAT_DASH.php?org_id='.$current_user.'&current_user=' . $current_user . '&selected_user=' . $row['user_id'] . '">';
+                    echo '<li class="clearfix" data-user-id="' . $row['user_id'] . '">';
                         if (isset($row['image']) && strpos($row['image'], 'user_image') !== false) {
-                            echo '<img src="#" alt="----">';
+                            echo '<img src="../../Dashboards/Own-Profiles/User/'. $row['image'] .'" alt="----">';
                         } else {
-                            echo '<img src="#" alt="-----">';
+                            echo '<img src="../../Dashboards/Own-Profiles/Org/'. $row['image'] .'" alt="-----">';
                         }
                         echo '<div class="about">';
                         echo '<div class="name">' . $row['name'] . '</div>';
-                        echo '<div class="status">' . $row['user_id'] . '</div>';
                         echo '</div>';
                     echo '</li>';
+                    echo '</a>';
                 }
             } else {
                 echo '<p>No users found.</p>';

@@ -16,46 +16,34 @@
     <title>orphans</title>
   </head>
   <body>
-    <section class="sidebar">
+
+  <section class="sidebar">
       <a href="/Root/Admin_Side/Dash/ADMIN_DASH.php" class="logo">
         <img src="/Root/Landing_Page/LOGO_NoBackground.png" alt="Logo" />
       </a>
-
       <ul class="side-menu top">
-        <li class="active">
+        <li  class="active">
           <a href="/Root/Admin_Side/Dash/ADMIN_DASH.php" class="nav-link">
             <i class="fas fa-border-all"></i>
             <span class="text">Dashboard</span>
           </a>
         </li>
         <li>
-          <a href="#" class="nav-link">
-            <i class="fas fa-shopping-cart"></i>
+          <a href="/Root/Admin_Side/website/HOME.php" class="nav-link">
+            <i class="fa fa-globe"></i>
             <span class="text">Website</span>
           </a>
         </li>
         <li>
           <a href="/Root/Admin_Side/Donation/DONATION_DASH.php" class="nav-link">
-            <i class="fas fa-chart-simple"></i>
+          <i class="fa fa-usd"></i>
             <span class="text">Donations</span>
           </a>
         </li>
         <li>
-          <a href="#" class="nav-link">
-            <i class="fas fa-message"></i>
-            <span class="text">Message</span>
-          </a>
-        </li>
-        <li>
-          <a href="#" class="nav-link">
+          <a href="/Root/Admin_Side/Dash/Admin/ADMIN_PROFILE.php" class="nav-link">
             <i class="fas fa-people-group"></i>
             <span class="text">Team</span>
-          </a>
-        </li>
-        <li>
-          <a href="#">
-            <i class="fas fa-cog"></i>
-            <span class="text">Settings</span>
           </a>
         </li>
         <li>
@@ -70,8 +58,7 @@
     <section class="content">
       <nav>
         <i class="fas fa-bars menu-btn"></i>
-        <!-- <a href="#" class="nav-link">Categories</a> -->
-        <form action="#">
+        <form action="#" style="visibility:hidden;">
           <div class="form-input">
             <input type="search" placeholder="search..." />
             <button class="search-btn">
@@ -82,12 +69,6 @@
 
         <input type="checkbox" hidden id="switch-mode" />
         <label for="switch-mode" class="switch-mode"></label>
-
-        <a href="#" class="notification">
-          <i class="fas fa-bell"></i>
-          <span class="num">28</span>
-        </a>
-
         <a href="/Root/Admin_Side/Dash/Admin/ADMIN_PROFILE.php" class="profile">
           <img src="../Admin/<?php echo $admin_image ?>" alt="profile" />
         </a>
@@ -102,20 +83,13 @@
                             </li>
                             <li>></li>
                             <li>
-                                <a class="active" href="/Root/Admin_Side//Dash/Orphans/ORPHAN_DASH.php">Orphans</a>
+                                <a class="active" href="/Root/Admin_Side/Dash/Orphans/ORPHAN_DASH.php">Orphans</a>
                             </li>
                             <li>></li>
                             <li>
                                 <a class="active" href="#">Profile</a>
                             </li>
                         </ul>
-                </div>
-
-                <div class="ctn">
-                    <form action="#" method="GET">
-                        <input type="text" name="query" placeholder="Search Child">
-                        <button type="submit" class="btn"><i class="ri-search-line"></i></button>
-                    </form>
                 </div>
             </div>
 
@@ -126,7 +100,6 @@
                 <h2>Orphan Details</h2>
                 <form action="/Root/Admin_Side/Dash/Orphans/VIEW_UPDATE_BE.php" method="post" enctype="multipart/form-data">
 
-                    <!-- <img src="../../../Orphanage/<?php echo $orphan_image ?>" alt="picture"> -->
                     <div class="row">
                       <label>Orphan ID:</label>
                       <input type="text" name="orphan_id " placeholder="<?php echo $orphanId ?>" disabled>
@@ -154,18 +127,6 @@
                     <div class="row">
                       <label>Since:</label>
                       <input type="number" name="Since" placeholder="<?php echo $since ?>">
-                    </div>
-                    <div class="row">
-                      <label>Guardian Name:</label>
-                      <input type="text" name="guardian_name" placeholder="<?php echo $guardian_name ?>" >
-                    </div>
-                    <div class="row">
-                      <label>Guardian Contact:</label>
-                      <input type="text" name="guardian_contact" placeholder="<?php echo $guardian_contact ?>" >
-                    </div>
-                    <div class="row">
-                      <label>Guardian Location:</label>
-                      <input type="text" name="guardian_location" placeholder="<?php echo $guardian_contact ?>" >
                     </div>
                     <div class="opt">
                         <div class="part">
@@ -272,7 +233,6 @@
             </div>
         </main>
     </section>
-
 
     <script src="/Root/Admin_Side/Dash/ADMIN_DASH_JS.js"></script>
   </body>

@@ -29,32 +29,20 @@
         </li>
         <li>
           <a href="/Root/Admin_Side/website/HOME.php" class="nav-link">
-            <i class="fas fa-shopping-cart"></i>
+            <i class="fa fa-globe"></i>
             <span class="text">Website</span>
           </a>
         </li>
         <li>
           <a href="/Root/Admin_Side/Donation/DONATION_DASH.php" class="nav-link">
-            <i class="fas fa-chart-simple"></i>
+          <i class="fa fa-usd"></i>
             <span class="text">Donations</span>
-          </a>
-        </li>
-        <li>
-          <a href="#" class="nav-link">
-            <i class="fas fa-message"></i>
-            <span class="text">Message</span>
           </a>
         </li>
         <li>
           <a href="/Root/Admin_Side/Dash/Admin/ADMIN_PROFILE.php" class="nav-link">
             <i class="fas fa-people-group"></i>
             <span class="text">Team</span>
-          </a>
-        </li>
-        <li>
-          <a href="#">
-            <i class="fas fa-cog"></i>
-            <span class="text">Settings</span>
           </a>
         </li>
         <li>
@@ -65,11 +53,10 @@
         </li>
       </ul>
     </section>
-
     <section class="content">
         <nav class="e">
           <i class="fas fa-bars menu-btn"></i>
-            <form action="#">
+            <form action="#" style="visibility: hidden;">
               <div class="form-input">
                   <input type="search" placeholder="search..." />
                   <button class="search-btn"><i class="fas fa-search search-icon"></i></button>
@@ -77,11 +64,6 @@
           </form>
           <input type="checkbox" hidden id="switch-mode" />
           <label for="switch-mode" class="switch-mode"></label>
-
-          <a href="#" class="notification">
-            <i class="fas fa-bell"></i>
-            <span class="num">4</span>
-          </a>
           <a href="/Root/Admin_Side/Dash/Admin/ADMIN_PROFILE.php" class="profile">
             <img src="Admin/<?php echo $admin_image ?>" alt="profile" />
           </a>
@@ -95,22 +77,18 @@
               <div class="left">
                   <h1>Dashboard</h1>
               </div>
-              <a href="#" class="download-btn">
-                  <i class="fas fa-cloud-download-alt"></i>
-                  <span class="text">Download Report</span>
-              </a>
           </div>
 
         <div class="box-info fst">
           <li>
-            <a href="/Root/Admin_Side//Dash/Orphans/ORPHAN_DASH.php"><i class="fas fa-people-group"></i></a>
+            <a href="/Root/Admin_Side/Dash/Orphans/ORPHAN_DASH.php"><i class="fas fa-people-group"></i></a>
             <span class="text">
               <p>Orphans</p>
               <h3><?php echo $totalOrphans ?></h3>
             </span>
           </li>
           <li>
-            <a href="/Root/Admin_Side//Dash/Organizations/ORG_DASH.php"><i class="fas fa-people-group"></i></a>
+            <a href="/Root/Admin_Side/Dash/Organizations/ORG_DASH.php"><i class="fas fa-people-group"></i></a>
             <span class="text">
               <p>Organizations</p>
               <h3><?php echo $totalOrgs ?></h3>

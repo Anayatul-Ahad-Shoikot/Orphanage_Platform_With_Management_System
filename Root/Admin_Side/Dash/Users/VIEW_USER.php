@@ -1,5 +1,5 @@
 <?php 
-  include('/xampp/htdocs/DBMS_Project_Organized_One/Root/Admin_Side/Dash/ADMIN_DASH_BE.php');
+  include('/xampp/htdocs/DBMS_Project_Organized_One/Root/Admin_Side/Dash/Users/VIEW_USER_BE.php');
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -101,76 +101,43 @@
                 <h2>Organization Profile</h2>
                 <form action="/Root/Admin_Side/Dash/Organizations/VIEW_UPDATE_BE.php" method="post" enctype="multipart/form-data">
                     <div class="row">
-                        <label>User ID :</label>
-                        <input type="text" name="acc_id" placeholder="<?php echo $acc_id ?>" disabled>
-                    </div>
-                    <div class="row">
                         <label>User Name :</label>
-                        <input type="text" name="acc_name" placeholder="<?php echo $acc_name ?>" disabled>
+                        <input type="text" name="acc_name" placeholder="<?php echo $user_name ?>" disabled>
                     </div>
                     <div class="row">
                         <label>User Email :</label>
                         <input type="text" name="acc_email" placeholder="<?php echo $acc_email ?>" disabled>
                     </div>
                     <div class="row">
-                        <label>Account Type :</label>
-                        <input type="text" name="role" placeholder="<?php echo $role ?>" disabled>
+                        <label>User Job :</label>
+                        <input type="text" name="user_job" placeholder="<?php echo $user_job ?>" disabled>
                     </div>
+
                     <div class="row">
                         <label>Since :</label>
                         <input type="text" name="acc_join_date" placeholder="<?php echo $acc_join_date ?>" disabled>
                     </div>
                     <div class="row">
-                        <label>Organization's Name :</label>
-                        <input type="text" name="org_name" placeholder="<?php echo $org_name ?>" disabled>
+                        <label>User Contact :</label>
+                        <input type="text" name="org_phone" placeholder="<?php echo $user_contact ?>" disabled>
                     </div>
                     <div class="row">
-                        <label>Established Date :</label>
-                        <input type="date" name="established" value="<?php echo $established ?>" disabled>
+                        <label>User Address :</label>
+                        <input type="text" name="org_location" placeholder="<?php echo $user_address ?>" disabled>
                     </div>
                     <div class="row">
-                        <label>Description :</label>
-                        <input type="text" name="org_description" placeholder="<?php echo $org_description ?>" disabled>
-                    </div>
-                    <div class="row">
-                        <label>Organization's Email :</label>
-                        <input type="text" name="org_email" placeholder="<?php echo $org_email ?>" disabled>
-                    </div>
-                    <div class="row">
-                        <label>Organization Contact :</label>
-                        <input type="text" name="org_phone" placeholder="<?php echo $org_phone ?>" disabled>
-                    </div>
-                    <div class="row">
-                        <label>Orgamization's Address :</label>
-                        <input type="text" name="org_location" placeholder="<?php echo $org_location ?>" disabled>
-                    </div>
-                    <div class="row">
-                        <label>Organization's Website :</label>
-                        <input type="text" name="org_website" placeholder="<?php echo $org_website ?>" disabled>
-                    </div>
-                    <div class="row">
-                        <label>Vision :</label>
-                        <input type="text" name="org_vision"  placeholder="<?php echo $org_vision ?>" disabled>
+                        <label>User website :</label>
+                        <input type="text" name="org_website" placeholder="<?php echo $user_website ?>" disabled>
                     </div>
                     <label>Orginization's Logo :</label>
                     <input type="file" name="image" accept="image/*">
-                    <input type="hidden" name="org_id" value="<?php echo $org_id ?>">
+                    <input type="hidden" name="org_id" value="<?php echo $user_id ?>">
                     <div class="btn">
                         <button type="submit" name="update">Update</button>
                     </div>
                 </form>
             </div>
 
-            <div class="container_2">
-                <div class="left">
-                    <h1>Orphans</h1>
-                </div>
-                <div class="plate">
-                    <?php 
-                        include('/xampp/htdocs/DBMS_Project_Organized_One/Root/Admin_Side/Dash/Organizations/FETCH_ORPHAN_FROM_ORG_BE.php');
-                    ?>
-                </div>
-            </div>
         </main>
     </section>
     <script src="/Root/Admin_Side/Dash/ADMIN_DASH_JS.js"></script>
