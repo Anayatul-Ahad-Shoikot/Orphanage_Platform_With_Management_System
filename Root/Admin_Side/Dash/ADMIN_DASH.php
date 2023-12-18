@@ -104,7 +104,7 @@
         </div>
 
         <div class="box-info sec">
-          <li>
+          <li style="visibility:hidden;">
             <a href="#"><i class="fas fa-calendar-check"></i></a>
             <span class="text">
               <p>Old</p>
@@ -118,7 +118,7 @@
               <h3><?php echo $totaladmins ?></h3>
             </span>
           </li>
-          <li>
+          <li style="visibility:hidden;">
             <i class="fas fa-calendar-check"></i>
             <span class="text">
               <p>Accounts</p>
@@ -161,7 +161,7 @@
 
             <ul class="todo-list">
               <li class="not-completed">
-                <p>Todo List</p>
+                <p>Donation Histories</p>
                 <i class="fas fa-ellipsis-vertical"></i>
               </li>
               <li class="not-completed">

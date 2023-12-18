@@ -19,34 +19,34 @@
       </a>
 
       <ul class="side-menu top">
-        <li>
+      <li>
           <a href="/Root/Admin_Side/Dash/ADMIN_DASH.php" class="nav-link">
             <i class="fas fa-border-all"></i>
             <span class="text">Dashboard</span>
           </a>
         </li>
         <li>
-          <a href="#" class="nav-link">
-            <i class="fas fa-shopping-cart"></i>
-            <span class="text">My Store</span>
+          <a href="/Root/Admin_Side/website/HOME.php" class="nav-link">
+            <i class="fa fa-globe"></i>
+            <span class="text">Website</span>
           </a>
         </li>
-        <li class="active">
+        <li  class="active">
           <a href="/Root/Admin_Side/Donation/DONATION_DASH.php" class="nav-link">
-            <i class="fas fa-chart-simple"></i>
+          <i class="fa fa-usd"></i>
             <span class="text">Donations</span>
           </a>
         </li>
         <li>
-          <a href="#" class="nav-link">
-            <i class="fas fa-message"></i>
-            <span class="text">Message</span>
+          <a href="/Root/Admin_Side/Dash/Admin/ADMIN_PROFILE.php" class="nav-link">
+            <i class="fas fa-people-group"></i>
+            <span class="text">Team</span>
           </a>
         </li>
         <li>
-          <a href="#" class="nav-link">
-            <i class="fas fa-people-group"></i>
-            <span class="text">Team</span>
+          <a href="/Includes/logout.php" class="logout">
+            <i class="fas fa-right-from-bracket"></i>
+            <span class="text">Logout</span>
           </a>
         </li>
     </section>
@@ -54,8 +54,7 @@
     <section class="content">
       <nav>
         <i class="fas fa-bars menu-btn"></i>
-        <a href="#" class="nav-link">Categories</a>
-        <form action="#">
+        <form action="#" style="visibility: hidden;">
           <div class="form-input">
             <input type="search" placeholder="search..." />
             <button class="search-btn">
@@ -67,11 +66,6 @@
         <input type="checkbox" hidden id="switch-mode" />
         <label for="switch-mode" class="switch-mode"></label>
 
-        <a href="#" class="notification">
-          <i class="fas fa-bell"></i>
-          <span class="num">28</span>
-        </a>
-
         <a href="/Root/Admin_Side/Dash/Admin/ADMIN_PROFILE.php" class="profile">
           <img src="../Dash/Admin/<?php echo $image ?>" alt="profile" />
         </a>
@@ -82,11 +76,6 @@
           <div class="left">
             <h1>Donations</h1>
           </div>
-
-          <a href="#" class="download-btn">
-            <i class="fas fa-cloud-download-alt"></i>
-            <span class="text">Download Report</span>
-          </a>
         </div>
         <p>this is donation dash</p>
       </main>

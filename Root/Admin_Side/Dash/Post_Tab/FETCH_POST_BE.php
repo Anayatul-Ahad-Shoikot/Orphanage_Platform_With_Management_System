@@ -17,7 +17,7 @@
                     <td>
                         <div class="btn">
                             <a href="#">View</a>
-                            <a href="/Root/Admin_Side/Dash/ADMIN_DASH.php?post_id='.$row['post_id'].'">remove</a>
+                            <a href="/Root/Admin_Side/website/REMOVE_BE.php?post_id='.$row['post_id'].'">remove</a>
                         </div>
                     </td>
                 </tr>';

@@ -22,6 +22,7 @@
             $acc_email = $row['acc_email'];
             $role = $row['role'];
             $acc_join_date = $row['acc_join_date'];
+            $user_id = $row['user_id'];
             $user_name = $row['user_name'];
             $user_birth = $row['user_birth'];
             $user_contact = $row['user_contact'];

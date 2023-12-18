@@ -33,7 +33,7 @@
                   include('/xampp/htdocs/DBMS_Project_Organized_One/Includes/db_con.php');
                   $acc_id = $_SESSION['acc_id'];
                   $fetchUnreadNotificationsQuery = "SELECT COUNT(*) as unread_count FROM notifications 
-                                                    WHERE is_read = 0 AND user_id = (SELECT user_id FROM user_list WHERE acc_id = $acc_id)";
+                                                    WHERE is_read = 0 AND org_id = (SELECT org_id FROM org_list WHERE acc_id = $acc_id)";
                   $unreadNotificationsResult = mysqli_query($con, $fetchUnreadNotificationsQuery);
                   $unreadCount = 0;
                   if ($unreadNotificationsResult) {
@@ -48,7 +48,7 @@
                     <h2>Notifications</h2>
                     <div id="content">
                     <?php
-                      include('/xampp/htdocs/DBMS_Project_Organized_One/Root/Notifications/U_FETCH_NOTIFICATION_BE.php');
+                      include('/xampp/htdocs/DBMS_Project_Organized_One/Root/Notifications/O_FETCH_NOTIFICATION_BE.php');
                     ?>
                     </div>
                 </div>
