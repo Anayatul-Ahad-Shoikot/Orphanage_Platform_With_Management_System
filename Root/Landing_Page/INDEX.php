@@ -10,7 +10,6 @@
     <link rel="shortcut icon" href="assets/images/fav.png" type="image/x-icon">
     <link rel="shortcut icon" href="assets/images/fav.jpg">
     <link rel="stylesheet" href="assets/css/bootstrap.min.css">
-    <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css"> -->
     <link rel="stylesheet" type="text/css" href="assets/css/style.css" />
     <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet"/>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css"/>
@@ -23,14 +22,14 @@
     <header class="header">
       <nav>
           <div class="logo">
-            <a href="/Root//Landing_Page//INDEX.php"><img src="/Root/Landing_Page/LOGO_NoBackground.png" alt="LOGO"></a>
+            <a href="/Root/Landing_Page/INDEX.php"><img src="/Root/Landing_Page/LOGO_NoBackground.png" alt="LOGO"></a>
           </div>
           <div class="links">
             <ul>
-              <li><a href="/Root//Landing_Page//INDEX.php" class="active">Home</a></li>
+              <li><a href="/Root/Landing_Page/INDEX.php" class="active">Home</a></li>
               <li><a href="#">Donate</a></li>
               <li><a href="/Root/AboutUs_Page/ABOUTUS_PAGE.php">About Us</a></li>
-              <li><a href="/Root//Login_Page//LOGIN_FORM.php" class="btn">LogIn</a></li>
+              <li><a href="/Root/Login_Page/LOGIN_FORM.php" class="btn">LogIn</a></li>
             </ul>
           </div>
       </nav>
@@ -78,7 +77,7 @@
             <div class="about-row row">
                 <div class="col-md-8">
                     <div class="abut-detail">
-                         <h4>Fostering Change, One Connection at a Time</h4>
+                        <h4>Fostering Change, One Connection at a Time</h4>
                         <p>Welcome to our platform, a digital space dedicated to fostering connections between caring individuals, organizations, and those in need. We aim to create meaningful impacts by facilitating connections between generous donors and vulnerable members of our society.</p> <p>At <b>CareSenrenity.org</b>, our mission is to facilitate connections that matter. Through our intuitive interface, we enable organizations to reach out, support, and make a real difference in the lives of orphans and the elderly community members.</p> <p>Adopt an orphan, explore orphanages and organizations, extend support with donations to specific causes or children. View detailed profiles of orphans, post thoughts on orphanage situations, hunger, and more, accompanied by photos and comments. Share moments in the gallery, embrace the opportunity to adopt a child, and anticipate upcoming services for elderly individuals. Together, let's make a difference in the lives of the vulnerable.</p>
                     </div>
                 </div>

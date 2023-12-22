@@ -34,6 +34,7 @@
                 } else {
                     echo '<p>No chat history found.</p>';
                 }
+            header("Location: /Root/Chats/U_CHAT_DASH_2.php?selected_user=' . $selected_user . '&current_user='.$current_user.'");
     } 
 
     mysqli_close($con);

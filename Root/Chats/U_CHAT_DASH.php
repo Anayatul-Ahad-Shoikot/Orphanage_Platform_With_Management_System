@@ -15,16 +15,16 @@
     <header class="header">
       <nav>
         <div class="logo">
-          <a href="/Root/Home_Page/O_HOME.php"><img src="/Root/Landing_Page/LOGO_NoBackground.png" alt="LOGO"></a>
+          <a href="/Root/Home_Page/U_HOME.php"><img src="/Root/Landing_Page/LOGO_NoBackground.png" alt="LOGO"></a>
         </div>
         
         <div class="links">
             <ul>
-                <li><a href="/Root/Home_Page/O_HOME.php">Home</a></li>
-                <li><a href="/Root/Dashboards/Own-Profiles/Org/PROFILE_DETAILS.php" class="active">Profile</a></li>
-                <li><a href="/Root/Org_Page/O_ORG.php">Orgs.</a></li>
-                <li><a href="/Root//Gallary//O_GALLERY_DASH.php">Gallery</a></li>
-                <li><a href="/Root/Dashboards/Own-Profiles/Org/EDIT_PROFILE.php" class="edit_profile">Edit Profile</a></li>
+                <li><a href="/Root/Home_Page/U_HOME.php">Home</a></li>
+                <li><a href="/Root/Dashboards/Own-Profiles/User/PROFILE_DETAILS.php" class="active">Profile</a></li>
+                <li><a href="/Root/Org_Page/U_ORG.php">Orgs.</a></li>
+                <li><a href="/Root/Gallary/U_GALLERY_DASH.php">Gallery</a></li>
+                <li><a href="/Root/Dashboards/Own-Profiles/User/EDIT_PROFILE.php" class="edit_profile">Edit Profile</a></li>
             </ul>
         </div>
       </nav>
@@ -42,13 +42,23 @@
                     </div>
                     <ul class="list-unstyled chat-list mt-2 mb-0">
                         <?php 
-                            include('/xampp/htdocs/DBMS_Project_Organized_One/Root/Chats/INCOMING_MSG_BE.php');
+                            include('/xampp/htdocs/DBMS_Project_Organized_One/Root/Chats/U_CHAT_LIST_FETCH_BE.php');
                         ?>
                     </ul>
                 </div>
                 <div class="chat">
-                    <div class="chat-header clearfix">
-                    </div>
+                    <div class="chat-header clearfix" style="visibility: hidden;">
+                        <div class="row">
+                            <div class="col-lg-6" id="header_box">
+                                <a href="javascript:void(0);" data-toggle="modal" data-target="#view_info">
+                                    <img src="https://bootdey.com/img/Content/avatar/avatar2.png" alt="avatar">
+                                </a>
+                                <div class="chat-about">
+                                    <h6>Aiden Chavez</h6>
+                                </div>
+                            </div>
+                        </div>
+                    </div> 
                     <div class="chat-history" id="chat-history">
                             <?php 
                                 include('/xampp/htdocs/DBMS_Project_Organized_One/Includes/db_con.php');
@@ -58,7 +68,7 @@
                                     $query = "SELECT * FROM chats 
                                             WHERE (sender_id = $current_user AND receiver_id = $selected_user)
                                             OR (sender_id = $selected_user AND receiver_id = $current_user)
-                                            ORDER BY date_time";
+                                            ORDER BY date_time DESC";
                                     $result = mysqli_query($con, $query);
                                     if (mysqli_num_rows($result) > 0) {
                                         echo '<ul class="m-b-0">';
@@ -81,19 +91,19 @@
                                     } else {
                                         echo '<p>No chat history found.</p>';
                                     }
-                        } 
-                            mysqli_close($con);
+                                } 
+                                mysqli_close($con);
                             ?>
 
                     </div>
-                    <div class="chat-message clearfix">
-                        <div class="input-group mb-0">
-                            <form action="/Root/Chats/CHAT_ORG_INSERT_BE.php?selected_user=<?php echo $selected_user ?>&current_user=<?php echo $current_user ?>" method="POST">
-                            <input name="msg" id="message-to-send" placeholder ="Type your message"></input>
-                            <button id="sendMessageBtn">Send</button>
+                    <div class="chat-message clearfix" style="visibility: hidden;">
+                        <div class="input-group mb-0" id="footer_box">
+                            <form action="/Root/Chats/U_CHAT_INSERT_BE.php?selected_user=<?php echo $selected_user ?>&current_user=<?php echo $current_user ?>" method="POST">
+                                <input name="msg" id="message-to-send" placeholder ="Type your message"></input>
+                                <button id="sendMessageBtn">Send</button>
                             </form>                            
                         </div>
-                    </div>
+                    </div> 
                 </div>
             </div>
         </div>
@@ -102,26 +112,56 @@
 
 <script>
     $(document).ready(function() {
-    $("ul.list-unstyled").on("click", "li", function() {
-        var selectedUserId = $(this).data("user-id");
-        $.ajax({
-            url: '/Root/Chats/GET_SELECTED_CHATS_BE.php',
-            type: 'POST',
-            data: { current_user: <?php echo $current_user; ?>, selected_user: selectedUserId },
-            success: function(response) {
-                $('#chat-history').html(response);
-            },
-            error: function(xhr, status, error) {
-                console.error(xhr.responseText);
-            }
+        $("ul.list-unstyled").on("click", "li", function(event) {
+            var selectedUserId = $(this).data("user-id");
+            $.ajax({
+                url: '/Root/Chats/GET_SELECTED_CHATS_BE.php',
+                type: 'POST',
+                data: { current_user: <?php echo $current_user; ?>, selected_user: selectedUserId },
+                success: function(response) {
+                    $('#chat-history').html(response);
+                },
+                error: function(xhr, status, error) {
+                    console.error(xhr.responseText);
+                }
+            });
+        });
+    });
+</script>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    const footerBox = document.getElementById('footer_box');
+    const headerBox = document.getElementById('header_box');
+    
+    // Check localStorage to determine whether to show or hide the boxes
+    const isChatClicked = localStorage.getItem('chatClicked');
+
+    footerBox.style.display = 'none';
+    headerBox.style.display = 'none';
+
+    if (isChatClicked === 'true') {
+        footerBox.style.display = 'block';
+        headerBox.style.display = 'block';
+    } else {
+        footerBox.style.display = 'none';
+        headerBox.style.display = 'none';
+    }
+
+    // Get all anchor tags inside the chat-list
+    const chatLinks = document.querySelectorAll('.chat-list a');
+
+    // Add a click event listener to each anchor tag
+    chatLinks.forEach(function(link) {
+        link.addEventListener('click', function(event) {
+            // Store a value in localStorage to indicate that chat was clicked
+            localStorage.setItem('chatClicked', 'true');
         });
     });
 });
+
+
 </script>
 <script src='https://cdn.jsdelivr.net/npm/bootstrap@4.5.0/dist/js/bootstrap.bundle.min.js'></script>
-
-
-
-<a href="../Dashboards/Own-Profiles/"></a>
 </body>
 </html>

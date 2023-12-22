@@ -12,7 +12,7 @@
     $result1 = mysqli_query($con, $query1);
     $row1 = mysqli_fetch_assoc($result1);
     $user_id = $row1['user_id'];
-    $query2 = "SELECT * FROM chats WHERE (sender_id = $user_id AND receiver_id = $org_id) OR (sender_id = $org_id AND receiver_id = $user_id) ORDER BY date_time ASC";
+    $query2 = "SELECT * FROM chats WHERE (sender_id = $user_id AND receiver_id = $org_id) OR (sender_id = $org_id AND receiver_id = $user_id) ORDER BY date_time";
     $result2 = mysqli_query($con, $query2);
     if (!$result2) {
         die('Query Error: ' . mysqli_error($con));
