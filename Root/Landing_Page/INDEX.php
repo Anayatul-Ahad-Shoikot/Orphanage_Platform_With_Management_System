@@ -20,15 +20,16 @@
   <body>
 
     <header class="header">
-      <nav>
+      <nav id="fixedNav">
           <div class="logo">
-            <a href="/Root/Landing_Page/INDEX.php"><img src="/Root/Landing_Page/LOGO_NoBackground.png" alt="LOGO"></a>
+             <a href="/Root/Landing_Page/INDEX.php"><img src="/Root/Landing_Page/LOGO.png" height="35px"><span class="icon first">Care</span><span class="icon second">Serenity</span><span class="icon"></span></a>
           </div>
           <div class="links">
             <ul>
-              <li><a href="/Root/Landing_Page/INDEX.php" class="active">Home</a></li>
-              <li><a href="#">Donate</a></li>
-              <li><a href="/Root/AboutUs_Page/ABOUTUS_PAGE.php">About Us</a></li>
+              <li><a href="/Root/Landing_Page/INDEX.php" class="active">Home</a></li><p id="H-bar"></p>
+              <li><a href="#">Donate</a></li><p id="H-bar"></p>
+              <li><a href="#">Gallary</a></li><p id="H-bar"></p>
+              <li><a href="/Root/AboutUs_Page/ABOUTUS_PAGE.php">About Us</a></li><p id="H-bar"></p>
               <li><a href="/Root/Login_Page/LOGIN_FORM.php" class="btn">LogIn</a></li>
             </ul>
           </div>
@@ -41,7 +42,6 @@
           Spread kindness to all.
         </p>
       </div>
-
         <div class="row diag-ro" id="info_web">
               <div class="about-diag" id="info_cell">
                 <div class="icon"><i class="fas fa-arrow-right"></i></div>
@@ -169,5 +169,15 @@
     <script src="assets/js/script.js"></script>
     <script src="https://unpkg.com/scrollreveal"></script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+    <script>
+        window.addEventListener('scroll', function() {
+            var nav = document.getElementById('fixedNav');
+            if (window.scrollY > 600) { 
+                nav.classList.add('scrolled');
+            } else {
+                nav.classList.remove('scrolled');
+            }
+        });
+    </script>
   </body>
 </html>
