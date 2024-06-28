@@ -1,5 +1,5 @@
 <?php
-    include("/xampp/htdocs/DBMS_Project_Organized_One/Root/Dashboards/Own-Profiles/Org/PROFILE_DETAILS_BE.php");
+    include("../Dashboards/Own-Profiles/Org/PROFILE_DETAILS_BE.php");
 ?>
 
 <!DOCTYPE html>
@@ -15,7 +15,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.css" media="screen">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.js"></script>
-    <link rel="stylesheet" href="/Root//Gallary/GALLARY_STYLE.css">
+    <link rel="stylesheet" href="/Root/Gallary/GALLARY_STYLE.css">
     <title> CareSenerity.org | Gallery</title>
 </head>
 
@@ -73,7 +73,7 @@
         <div class="row">
             <div class='list-group gallery' style="width:100%;">
                 <?php
-                    include('/xampp/htdocs/DBMS_Project_Organized_One/Root/Gallary/FETCH_IMG_BE.php');
+                    include('FETCH_IMG_BE.php');
                 ?>
             </div> 
         </div> 

@@ -1,5 +1,5 @@
 <?php
-    include('/xampp/htdocs/DBMS_Project_Organized_One/Includes/db_con.php');
+    include('../../Includes/db_con.php');
     $acc_id = $_SESSION['acc_id'];
     $fetchUnreadNotificationsQuery = "SELECT COUNT(*) as unread_count FROM notifications 
                                         WHERE is_read = 0 AND user_id = (SELECT user_id FROM user_list WHERE acc_id = $acc_id)";
@@ -17,6 +17,6 @@
     <div class="notifi-box" id="box">
         <h2>Notifications</h2>
         <?php
-            include('/xampp/htdocs/DBMS_Project_Organized_One/Root/Notifications/U_FETCH_NOTIFICATION_BE.php');
+            include('U_FETCH_NOTIFICATION_BE.php');
         ?>
     </div>

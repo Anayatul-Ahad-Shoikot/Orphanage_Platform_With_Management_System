@@ -1,5 +1,5 @@
 <?php
-    include('/xampp/htdocs/DBMS_Project_Organized_One/Includes/db_con.php');
+    include('../../Includes/db_con.php');
     session_start();
 
     if(isset($_POST['login_btn'])) {
@@ -19,28 +19,28 @@
                     $_SESSION['role'] = $row['role'];
 
                     if($_SESSION['role'] == "admin") {
-                        header("Location: /Root/Admin_Side/Dash/ADMIN_DASH.php");
+                        header("Location: ../Admin_Side/Dash/ADMIN_DASH.php");
                         exit(0);
                     } else if ($_SESSION['role'] == "org") {
-                        header("Location: /Root/Dashboards/Own-Profiles/Org/PROFILE_DETAILS.php");
+                        header("Location: ../Dashboards/Own-Profiles/Org/PROFILE_DETAILS.php");
                         exit(0);
                     } else {
-                        header("Location: /Root/Dashboards/Own-Profiles/User/PROFILE_DETAILS.php");
+                        header("Location: ../Dashboards/Own-Profiles/User/PROFILE_DETAILS.php");
                         exit(0);
                     }
                 } else {
                     $_SESSION['notify'] = "Warning: Wrong password";
-                    header("Location: /Root/Login_Page/LOGIN_FORM.php");
+                    header("Location: LOGIN_FORM.php");
                     exit(0);
                 }
             } else {
                 $_SESSION['notify'] = "Warning: Username does not exist";
-                header("Location: /Root/Login_Page/LOGIN_FORM.php");
+                header("Location: LOGIN_FORM.php");
                 exit(0);
             }
         } else {
             $_SESSION['notify'] = "Warning: Please provide both username and password";
-            header("Location: /Root/Login_Page/LOGIN_FORM.php");
+            header("Location: LOGIN_FORM.php");
             exit(0);
         }
     }

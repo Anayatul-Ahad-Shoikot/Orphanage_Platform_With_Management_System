@@ -1,6 +1,6 @@
 <?php
 
-    include('/xampp/htdocs/DBMS_Project_Organized_One/Includes/db_con.php');
+    include('../../../../Includes/db_con.php');
     session_start();
 
     if (!isset($_SESSION['acc_id']) && !isset($_SESSION['role'])) {

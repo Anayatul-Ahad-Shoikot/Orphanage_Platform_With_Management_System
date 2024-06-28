@@ -1,5 +1,5 @@
 <?php
-    include('/xampp/htdocs/DBMS_Project_Organized_One/Includes/db_con.php');
+    include('../../Includes/db_con.php');
     $notificationId = $_GET['id'];
     $updateQuery = "UPDATE notifications SET is_read = 1 WHERE notification_id = $notificationId";
     $result = mysqli_query($con, $updateQuery);

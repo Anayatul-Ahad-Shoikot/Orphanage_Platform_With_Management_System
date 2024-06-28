@@ -1,5 +1,5 @@
 <?php
-    include('/xampp/htdocs/DBMS_Project_Organized_One/Includes/db_con.php');
+    include('../../Includes/db_con.php');
 
     $query1 = "SELECT SUM(amount) AS total_amount FROM donations";
     $result1 = mysqli_query($con, $query1);

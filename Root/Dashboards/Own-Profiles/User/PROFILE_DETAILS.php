@@ -1,5 +1,5 @@
 <?php
-    include("/xampp/htdocs/DBMS_Project_Organized_One/Root/Dashboards/Own-Profiles/User/PROFILE_DETAILS_BE.php");
+    include("PROFILE_DETAILS_BE.php");
 ?>
 
 <!DOCTYPE html>
@@ -11,7 +11,7 @@
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet"/>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css"/>
-    <link rel="stylesheet" href="/Root/Dashboards/Own-Profiles/User/PROFILE_DETAILS_STYLE.css">
+    <link rel="stylesheet" href="PROFILE_DETAILS_STYLE.css">
     <link rel="stylesheet" href="/Notification_style.css">
     <title>CareSenerity.org | Profile</title>
 </head>
@@ -20,7 +20,7 @@
     <header class="header">
       <nav>
         <div class="logo">
-          <a href="/Root/Home_Page/U_HOME.php"><img src="/Root/Landing_Page/LOGO_NoBackground.png" alt="LOGO"></a>
+          <a href="../../../Home_Page/U_HOME.php"><img src="/Root/Landing_Page/LOGO_NoBackground.png" alt="LOGO"></a>
         </div>
         
         <div class="links">

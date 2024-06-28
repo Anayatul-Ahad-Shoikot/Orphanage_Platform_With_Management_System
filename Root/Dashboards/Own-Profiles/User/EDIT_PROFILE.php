@@ -1,5 +1,5 @@
 <?php
-    include("/xampp/htdocs/DBMS_Project_Organized_One/Root/Dashboards/Own-Profiles/User/PROFILE_DETAILS_BE.php");
+    include("PROFILE_DETAILS_BE.php");
 ?>
 <!DOCTYPE html>
 <html lang="en">

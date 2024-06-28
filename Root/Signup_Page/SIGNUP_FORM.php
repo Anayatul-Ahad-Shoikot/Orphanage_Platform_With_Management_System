@@ -7,7 +7,7 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="/Root/Signup_Page/SIGNUP_FORM_STYLE.css">
+        <link rel="stylesheet" href="SIGNUP_FORM_STYLE.css">
         <title>CareSerenity.org | Sign up page</title>
     </head>
     <body>
@@ -20,7 +20,7 @@
             ?>
         </div>
         <div class="container">
-            <form action="/Root/Signup_Page/SIGNUP_FORM_BE.php" method="POST">
+            <form action="SIGNUP_FORM_BE.php" method="POST">
                 <h1>SignUp</h1>
                 <div class="row">  
                     <div class="input-container">
@@ -52,8 +52,8 @@
                 </div>
                 <button type="submit" name="signup_btn">SignUp</button>
             </form>
-            <p>Already have an account?  <a href="/Root/Login_Page/LOGIN_FORM.php">Login</a></p>
-            <a href="/Root/Landing_Page/INDEX.php">Go Back</a>
+            <p>Already have an account?  <a href="../Login_Page/LOGIN_FORM.php">Login</a></p>
+            <a href="../Landing_Page/INDEX.php">Go Back</a>
         </div>
     </body>
     </body>

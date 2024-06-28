@@ -1,6 +1,6 @@
 <?php
 session_start();
-include_once "/xampp/htdocs/DBMS_Project_Organized_One/Includes/db_con.php";
+include_once "../../Includes/db_con.php";
 
 $acc_id = $_SESSION['acc_id'];
 $sql1 = "SELECT user_id FROM user_list WHERE acc_id = $acc_id";

@@ -1,5 +1,5 @@
 <?php
-    include('/xampp/htdocs/DBMS_Project_Organized_One/Includes/db_con.php');
+    include('../../Includes/db_con.php');
     $acc_id = $_SESSION['acc_id'];
     $fetchNotificationsQuery = "SELECT * FROM notifications 
                                 WHERE user_id = (SELECT user_id FROM user_list WHERE acc_id = $acc_id)

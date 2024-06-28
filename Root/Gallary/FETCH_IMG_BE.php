@@ -1,5 +1,5 @@
 <?php
-    include('/xampp/htdocs/DBMS_Project_Organized_One/Includes/db_con.php');
+    include('../../Includes/db_con.php');
 
     $sql = "SELECT * FROM gallery";
     $images = $con->query($sql);

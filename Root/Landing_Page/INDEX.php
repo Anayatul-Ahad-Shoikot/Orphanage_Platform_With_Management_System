@@ -1,5 +1,5 @@
 <?php
-  include('/xampp/htdocs/DBMS_Project_Organized_One/Root/Landing_Page/INDEX_BE.php');
+  include('INDEX_BE.php');
 ?>
 
 <!DOCTYPE html>

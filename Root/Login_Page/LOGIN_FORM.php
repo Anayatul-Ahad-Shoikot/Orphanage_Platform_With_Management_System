@@ -6,7 +6,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/Root/Login_Page/LOGIN_FORM_STYLE.css">
+    <link rel="stylesheet" href="LOGIN_FORM_STYLE.css">
     <title>Home</title>
 </head>
 <body>
@@ -27,7 +27,7 @@
         ?>
     </div>
     <div class="login-container">
-        <form action="/Root/Login_Page/LOGIN_FORM_BE.php" method="POST">
+        <form action="LOGIN_FORM_BE.php" method="POST">
             <h1>LogIn</h1>
             <div class="input-container">
                 <label>Account Name</label>
@@ -40,10 +40,10 @@
             <button type="submit" name="login_btn">LogIn</button>
         </form>
         <div class="forgetPass">
-            <a href="/Root/Reset_Password/RESET.php">Forget password?</a>
+            <a href="../Reset_Password/RESET.php">Forget password?</a>
         </div>
-        <p>Don't have an account?  <a href="/Root/Signup_Page/SIGNUP_FORM.php">SignUp</a></p>
-        <a href="/Root/Landing_Page/INDEX.php" class="goback">Go Back</a>
+        <p>Don't have an account?  <a href="../Signup_Page/SIGNUP_FORM.php">SignUp</a></p>
+        <a href="../Landing_Page/INDEX.php" class="goback">Go Back</a>
     </div>
 </body>
 </body>

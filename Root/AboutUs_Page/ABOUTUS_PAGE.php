@@ -44,7 +44,7 @@
             <div class="column">
                 <div class="card">
                     <div class="img-ctn">
-                        <img src="/Root//AboutUs_Page//ahnaf.jpg" alt="">
+                        <img src="/Root/AboutUs_Page/ahnaf.jpg" alt="">
                     </div>
                     <h2>Ahnaf Tahmid</h2>
                     <p>Co-Founder</p>
@@ -58,7 +58,7 @@
             <div class="column">
                 <div class="card">
                     <div class="img-ctn">
-                        <img src="/Root//AboutUs_Page//ahad.jpg" alt="">
+                        <img src="/Root/AboutUs_Page/ahad.jpg" alt="">
                     </div>
                     <h2>Anayatul Ahad</h2>
                     <p>Founder & Developer</p>
@@ -72,7 +72,7 @@
             <div class="column">
                 <div class="card">
                     <div class="img-ctn">
-                        <img src="/Root//AboutUs_Page//ela.jpg" alt="Ahad picture">
+                        <img src="/Root/AboutUs_Page/ela.jpg" alt="Ahad picture">
                     </div>
                     <h2>Afia Zahin</h2>
                     <p>Trustee</p>

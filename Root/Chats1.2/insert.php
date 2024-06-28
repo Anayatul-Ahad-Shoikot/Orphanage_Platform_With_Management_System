@@ -1,6 +1,6 @@
 <?php 
     session_start();
-        include_once "/xampp/htdocs/DBMS_Project_Organized_One/Includes/db_con.php";
+        include_once "../../Includes/db_con.php";
         
         $outgoing_id = mysqli_real_escape_string($con, $_POST['outgoing_id']);
         $incoming_id = mysqli_real_escape_string($con, $_POST['incoming_id']);
